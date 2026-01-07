@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Capa_Corte_Transversal/Capa_Corte_Transversal.csproj" Id="b412f725-8db7-49d5-a300-10f2a0b81675" />
+  <Project Path="Datos_Acceso/Datos_Acceso.csproj" Id="f8f7c0bf-54ef-4cac-9b4c-5658815a2b98" />
+  <Project Path="Dominio_SISV/Dominio_SISV.csproj" Id="f825fd9d-0bf9-492b-aa1e-92a9cb8dbddb" />
+  <Project Path="Union_Formularios_SISV/Union_Formularios_SISV.csproj" Id="f1ed4ec6-6b27-4c5a-9e9e-1fdeb697663b" />
+</Solution>

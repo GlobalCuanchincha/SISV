@@ -1,0 +1,6 @@
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Capa_Corte_Transversal\bin\Debug\Capa_Corte_Transversal.dll
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Capa_Corte_Transversal\bin\Debug\Capa_Corte_Transversal.pdb
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Capa_Corte_Transversal\obj\Debug\Capa_Corte_Transversal.csproj.AssemblyReference.cache
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Capa_Corte_Transversal\obj\Debug\Capa_Corte_Transversal.csproj.CoreCompileInputs.cache
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Capa_Corte_Transversal\obj\Debug\Capa_Corte_Transversal.dll
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Capa_Corte_Transversal\obj\Debug\Capa_Corte_Transversal.pdb

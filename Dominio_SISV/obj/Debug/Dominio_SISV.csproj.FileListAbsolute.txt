@@ -1,0 +1,11 @@
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\bin\Debug\Dominio_SISV.dll
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\bin\Debug\Dominio_SISV.pdb
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\bin\Debug\Capa_Corte_Transversal.dll
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\bin\Debug\Datos_Acceso.dll
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\bin\Debug\Capa_Corte_Transversal.pdb
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\bin\Debug\Datos_Acceso.pdb
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Dominio_SISV.csproj.AssemblyReference.cache
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Dominio_SISV.csproj.CoreCompileInputs.cache
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Dominio_.1D4EC201.Up2Date
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Dominio_SISV.dll
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Dominio_SISV.pdb
