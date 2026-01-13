@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos_Acceso.Common;
+using Dominio_SISV.Services;
 using System.Windows.Forms;
 
 namespace Union_Formularios_SISV
@@ -28,16 +29,19 @@ namespace Union_Formularios_SISV
             label10.BackColor = Color.Transparent;
             label10.Location = new Point((guna2PictureBox1.Width - label10.Width) / 30, guna2PictureBox1.Height - label10.Height - 25);
 
-            try
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            var auth = new AuthService();
+            var res = auth.Login(txt_user.Text, txt_pass.Text);
+
+            if (!res.Ok)
             {
-                var dt = SqlExecutor.ExecuteDataTable("dbo.sp_TestConnection");
-                MessageBox.Show($"Conexión: {dt.Rows[0]["Estado"]}\nFecha: {dt.Rows[0]["Fecha"]}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error conectando a la BD:\n" + ex.Message);
+                MessageBox.Show(res.Error, "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
+            MessageBox.Show("Login correcto. Rol: " + res.RoleID);
         }
     }
 }

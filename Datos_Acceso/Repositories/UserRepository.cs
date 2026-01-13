@@ -5,28 +5,33 @@ namespace Datos_Acceso.Repositories
 {
     public class UserRepository
     {
-        public UserDto GetByLogin(string login)
+        public UserData GetByLogin(string login)
         {
-            return SqlExecutor.ExecuteReaderSingle("sec.sp_User_GetByLogin", rd =>
-            {
-                return new UserDto
+            return SqlExecutor.ExecuteReaderSingle(
+                "dbo.sp_User_GetByLogin",
+                rd => new UserData
                 {
                     UserID = (int)rd["UserID"],
                     LoginName = rd["LoginName"].ToString(),
-                    PasswordHash = (byte[])rd["Password"],
+                    Hash = (byte[])rd["Password"],
+                    Salt = (byte[])rd["PasswordSalt"],
+                    Iterations = (int)rd["PasswordIterations"],
                     RoleID = (int)rd["RoleID"],
-                    Estado = (bool)rd["Estado_Users"]
-                };
-            }, new SqlParameter("@LoginName", login));
+                    IsActive = (bool)rd["Estado_Users"]
+                },
+                new SqlParameter("@LoginName", login)
+            );
         }
     }
 
-    public class UserDto
+    public class UserData
     {
-        public int UserID { get; set; }
-        public string LoginName { get; set; }
-        public byte[] PasswordHash { get; set; }
-        public int RoleID { get; set; }
-        public bool Estado { get; set; }
+        public int UserID;
+        public string LoginName;
+        public byte[] Hash;
+        public byte[] Salt;
+        public int Iterations;
+        public int RoleID;
+        public bool IsActive;
     }
 }

@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.txt_usu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_user = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_pass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -68,32 +68,32 @@
             // 
             this.guna2ShadowForm1.TargetForm = this;
             // 
-            // txt_usu
+            // txt_user
             // 
-            this.txt_usu.Animated = true;
-            this.txt_usu.BorderRadius = 14;
-            this.txt_usu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_usu.DefaultText = "";
-            this.txt_usu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_usu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_usu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_usu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_usu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.txt_usu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_usu.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_usu.ForeColor = System.Drawing.Color.Black;
-            this.txt_usu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_usu.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txt_usu.IconLeftSize = new System.Drawing.Size(28, 28);
-            this.txt_usu.Location = new System.Drawing.Point(38, 249);
-            this.txt_usu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_usu.Name = "txt_usu";
-            this.txt_usu.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txt_usu.PlaceholderText = "Ingrese el usuario";
-            this.txt_usu.SelectedText = "";
-            this.txt_usu.Size = new System.Drawing.Size(376, 51);
-            this.txt_usu.TabIndex = 1;
-            this.txt_usu.TextOffset = new System.Drawing.Point(8, 0);
+            this.txt_user.Animated = true;
+            this.txt_user.BorderRadius = 14;
+            this.txt_user.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_user.DefaultText = "";
+            this.txt_user.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_user.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_user.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_user.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_user.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.txt_user.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_user.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_user.ForeColor = System.Drawing.Color.Black;
+            this.txt_user.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_user.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txt_user.IconLeftSize = new System.Drawing.Size(28, 28);
+            this.txt_user.Location = new System.Drawing.Point(38, 249);
+            this.txt_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_user.PlaceholderText = "Ingrese el usuario";
+            this.txt_user.SelectedText = "";
+            this.txt_user.Size = new System.Drawing.Size(376, 51);
+            this.txt_user.TabIndex = 1;
+            this.txt_user.TextOffset = new System.Drawing.Point(8, 0);
             // 
             // txt_pass
             // 
@@ -125,24 +125,25 @@
             this.txt_pass.TextOffset = new System.Drawing.Point(8, 0);
             this.txt_pass.UseSystemPasswordChar = true;
             // 
-            // guna2GradientButton1
+            // btnLogin
             // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.BorderRadius = 14;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(73)))), ((int)(((byte)(154)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(38, 452);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(376, 50);
-            this.guna2GradientButton1.TabIndex = 18;
-            this.guna2GradientButton1.Text = "ACCEDER";
+            this.btnLogin.Animated = true;
+            this.btnLogin.BorderRadius = 14;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(73)))), ((int)(((byte)(154)))));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(38, 452);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(376, 50);
+            this.btnLogin.TabIndex = 18;
+            this.btnLogin.Text = "ACCEDER";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label16
             // 
@@ -374,9 +375,9 @@
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txt_pass);
-            this.Controls.Add(this.txt_usu);
+            this.Controls.Add(this.txt_user);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Login";
@@ -394,9 +395,9 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_usu;
+        private Guna.UI2.WinForms.Guna2TextBox txt_user;
         private Guna.UI2.WinForms.Guna2TextBox txt_pass;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLogin;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;

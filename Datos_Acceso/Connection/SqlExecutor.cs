@@ -52,5 +52,22 @@ namespace Datos_Acceso.Common
                 }
             }
         }
+        public static DataTable ExecuteDataTable(string spName, params SqlParameter[] parameters)
+        {
+            using (var cn = DbConnection.Create())
+            using (var cmd = new SqlCommand(spName, cn))
+            using (var da = new SqlDataAdapter(cmd))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                if (parameters != null && parameters.Length > 0)
+                    cmd.Parameters.AddRange(parameters);
+
+                var dt = new DataTable();
+                cn.Open();
+                da.Fill(dt);
+                return dt;
+            }
+        }
     }
 }
