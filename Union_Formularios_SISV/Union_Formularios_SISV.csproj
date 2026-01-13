@@ -88,10 +88,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recursos_SISV\AcrylicHelper.cs" />
-    <Compile Include="Recursos_SISV\AcrylicPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>

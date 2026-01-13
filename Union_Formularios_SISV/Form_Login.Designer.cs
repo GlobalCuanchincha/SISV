@@ -45,13 +45,6 @@
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Chbox_Recuerdame = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.Panel_Derecho_Info = new Guna.UI2.WinForms.Guna2Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Lnk_Olvidaste_pass = new System.Windows.Forms.LinkLabel();
@@ -63,7 +56,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.Panel_Derecho_Info.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -262,77 +254,6 @@
             this.Chbox_Recuerdame.UncheckedState.BorderThickness = 0;
             this.Chbox_Recuerdame.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 20;
-            this.guna2Elipse2.TargetControl = this.Panel_Derecho_Info;
-            // 
-            // Panel_Derecho_Info
-            // 
-            this.Panel_Derecho_Info.BackColor = System.Drawing.Color.Transparent;
-            this.Panel_Derecho_Info.Controls.Add(this.label9);
-            this.Panel_Derecho_Info.Controls.Add(this.label8);
-            this.Panel_Derecho_Info.Controls.Add(this.label7);
-            this.Panel_Derecho_Info.Controls.Add(this.label6);
-            this.Panel_Derecho_Info.Location = new System.Drawing.Point(74, 52);
-            this.Panel_Derecho_Info.Name = "Panel_Derecho_Info";
-            this.Panel_Derecho_Info.Size = new System.Drawing.Size(457, 150);
-            this.Panel_Derecho_Info.TabIndex = 37;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(14, 109);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(182, 20);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "la orden hasta la factura. ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(14, 87);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(431, 20);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "realizados y venta de repuestos/ítems, con trazabilidad desde ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(14, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(434, 20);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Controla ingreso de equipos, asignación de técnicos, servicios ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(12, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(300, 32);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Servicio técnico + ventas";
-            // 
-            // guna2DragControl3
-            // 
-            this.guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl3.TargetControl = this.Panel_Derecho_Info;
-            this.guna2DragControl3.UseTransparentDrag = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -426,7 +347,6 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.Panel_Derecho_Info);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Location = new System.Drawing.Point(448, -8);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -464,8 +384,6 @@
             this.Load += new System.EventHandler(this.Form_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.Panel_Derecho_Info.ResumeLayout(false);
-            this.Panel_Derecho_Info.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -489,9 +407,6 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private Guna.UI2.WinForms.Guna2CheckBox Chbox_Recuerdame;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2Panel Panel_Derecho_Info;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel Lnk_Olvidaste_pass;
@@ -499,10 +414,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label msg_error;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
