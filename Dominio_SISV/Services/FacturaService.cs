@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dominio_SISV
+namespace Dominio_SISV.Services
 {
-    public class Class1
+    internal class FacturaService
     {
     }
 }

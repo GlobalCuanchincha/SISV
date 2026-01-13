@@ -14,8 +14,6 @@ namespace Union_Formularios_SISV
         {
             string serverName = txt_Nombre_Servidor.Text;
 
-            Conexion_SQL.GuardarServidorEnArchivo(serverName);
-
             this.Close();
         }
     }

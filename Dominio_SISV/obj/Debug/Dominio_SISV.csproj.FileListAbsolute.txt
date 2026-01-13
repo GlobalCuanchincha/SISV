@@ -9,3 +9,5 @@ C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Domin
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Dominio_.1D4EC201.Up2Date
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Dominio_SISV.dll
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\obj\Debug\Dominio_SISV.pdb
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Dominio_SISV\bin\Debug\System.Configuration.ConfigurationManager.xml

@@ -32,6 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.10.0.1\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,19 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mailservices\Servidor_de_Correo_Maestro.cs" />
-    <Compile Include="mailservices\Soporte_Del_Correo.cs" />
+    <Compile Include="Common\DbConnection.cs" />
+    <Compile Include="Connection\SqlExecutor.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sqlserver\ConexionSQL_Implementacion.cs" />
-    <Compile Include="sqlserver\Conexion_SQL.cs" />
-    <Compile Include="sqlserver\Datos_Usuario.cs" />
-    <Compile Include="sqlserver\Registro_Datos_Usuario.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\EquipoRepository.cs" />
+    <Compile Include="Repositories\ProductoRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Corte_Transversal\Capa_Corte_Transversal.csproj">
       <Project>{b412f725-8db7-49d5-a300-10f2a0b81675}</Project>
       <Name>Capa_Corte_Transversal</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

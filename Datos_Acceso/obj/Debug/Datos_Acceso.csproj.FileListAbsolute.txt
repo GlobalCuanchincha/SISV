@@ -7,3 +7,5 @@ C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Ac.51D9DE6E.Up2Date
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.dll
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.pdb
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\System.Configuration.ConfigurationManager.xml

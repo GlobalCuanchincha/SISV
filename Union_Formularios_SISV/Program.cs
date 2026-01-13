@@ -13,19 +13,10 @@ namespace Union_Formularios
         [STAThread]
         static void Main()
         {
-            string filePath = "servidor_config.txt";
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (!File.Exists(filePath))
-            {
-                Application.Run(new Pedir_Nom_Servidor());
-            }
-            else
-            {
-                Application.Run(new Form_Login());
-            }
+            Application.Run(new Form_Login());
         }
     }
 }
