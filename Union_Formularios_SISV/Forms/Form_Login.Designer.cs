@@ -37,11 +37,9 @@
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btn_Minus = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btn_Close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Chbox_Recuerdame = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -165,27 +163,6 @@
             this.guna2DragControl1.TargetControl = this;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1007, 6);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(32, 31);
-            this.guna2ControlBox2.TabIndex = 28;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1045, 6);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(32, 31);
-            this.guna2ControlBox1.TabIndex = 27;
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
@@ -197,30 +174,30 @@
             this.guna2PictureBox2.TabIndex = 33;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // guna2ControlBox3
+            // btn_Minus
             // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
-            this.guna2ControlBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2ControlBox3.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.LightGray;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(992, 6);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(43, 31);
-            this.guna2ControlBox3.TabIndex = 35;
+            this.btn_Minus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Minus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
+            this.btn_Minus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Minus.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Minus.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.btn_Minus.FillColor = System.Drawing.Color.Transparent;
+            this.btn_Minus.IconColor = System.Drawing.Color.LightGray;
+            this.btn_Minus.Location = new System.Drawing.Point(532, 17);
+            this.btn_Minus.Name = "btn_Minus";
+            this.btn_Minus.Size = new System.Drawing.Size(43, 31);
+            this.btn_Minus.TabIndex = 35;
             // 
-            // guna2ControlBox4
+            // btn_Close
             // 
-            this.guna2ControlBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
-            this.guna2ControlBox4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox4.IconColor = System.Drawing.Color.LightGray;
-            this.guna2ControlBox4.Location = new System.Drawing.Point(1034, 6);
-            this.guna2ControlBox4.Name = "guna2ControlBox4";
-            this.guna2ControlBox4.Size = new System.Drawing.Size(43, 31);
-            this.guna2ControlBox4.TabIndex = 34;
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
+            this.btn_Close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_Close.IconColor = System.Drawing.Color.LightGray;
+            this.btn_Close.Location = new System.Drawing.Point(581, 17);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(43, 31);
+            this.btn_Close.TabIndex = 34;
             // 
             // guna2DragControl2
             // 
@@ -353,6 +330,8 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btn_Minus);
+            this.guna2Panel1.Controls.Add(this.btn_Close);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Location = new System.Drawing.Point(448, -8);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -388,11 +367,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Chbox_Recuerdame);
-            this.Controls.Add(this.guna2ControlBox3);
-            this.Controls.Add(this.guna2ControlBox4);
             this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.guna2ControlBox2);
-            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txt_pass);
@@ -420,11 +395,9 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnLogin;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox4;
+        private Guna.UI2.WinForms.Guna2ControlBox btn_Minus;
+        private Guna.UI2.WinForms.Guna2ControlBox btn_Close;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private Guna.UI2.WinForms.Guna2CheckBox Chbox_Recuerdame;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

@@ -10,7 +10,6 @@ namespace Union_Formularios_SISV
 {
     public partial class Form_Login : Form
     {
-        // Animación error
         private Timer _errAnim;
         private int _errTargetHeight = 36;
         private int _errStep = 4;
@@ -18,24 +17,26 @@ namespace Union_Formularios_SISV
         private int _errAlpha = 0;
         private bool _errShowing = false;
 
-        // Auto-hide error
         private Timer _errHideTimer;
         private int _errDisplayMs = 2000;
 
-        // Evento para AppContext
         public event EventHandler<LoginSession> LoginSucceeded;
 
         public Form_Login()
         {
             InitializeComponent();
-            InitErrorUi(); // timers + estilo base (para que nunca sea null)
+            InitErrorUi(); 
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
             try
             {
-                // Label sobre la imagen
+                btn_Close.Parent = guna2PictureBox1;
+                btn_Close.BackColor = Color.Transparent;
+                btn_Minus.Parent = guna2PictureBox1;
+                btn_Minus.BackColor = Color.Transparent;
+
                 label10.Parent = guna2PictureBox1;
                 label10.BackColor = Color.Transparent;
                 label10.Location = new Point(
