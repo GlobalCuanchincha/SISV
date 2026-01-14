@@ -54,9 +54,12 @@
             this.msg_error = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Pnl_Error = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.Pnl_Error.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -324,15 +327,16 @@
             // 
             // msg_error
             // 
-            this.msg_error.AutoSize = true;
-            this.msg_error.BackColor = System.Drawing.Color.White;
+            this.msg_error.BackColor = System.Drawing.Color.Transparent;
+            this.msg_error.Dock = System.Windows.Forms.DockStyle.Fill;
             this.msg_error.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msg_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.msg_error.Location = new System.Drawing.Point(159, 529);
+            this.msg_error.Location = new System.Drawing.Point(0, 0);
             this.msg_error.Name = "msg_error";
-            this.msg_error.Size = new System.Drawing.Size(125, 20);
+            this.msg_error.Size = new System.Drawing.Size(379, 54);
             this.msg_error.TabIndex = 44;
             this.msg_error.Text = "mensaje de error";
+            this.msg_error.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -354,14 +358,28 @@
             this.guna2Panel1.Size = new System.Drawing.Size(689, 625);
             this.guna2Panel1.TabIndex = 47;
             // 
+            // Pnl_Error
+            // 
+            this.Pnl_Error.BorderRadius = 10;
+            this.Pnl_Error.Controls.Add(this.msg_error);
+            this.Pnl_Error.Location = new System.Drawing.Point(35, 514);
+            this.Pnl_Error.Name = "Pnl_Error";
+            this.Pnl_Error.Size = new System.Drawing.Size(379, 54);
+            this.Pnl_Error.TabIndex = 48;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 20;
+            this.guna2Elipse2.TargetControl = this.Pnl_Error;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1087, 592);
+            this.Controls.Add(this.Pnl_Error);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.msg_error);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -386,6 +404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.Pnl_Error.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,5 +436,7 @@
         private System.Windows.Forms.Label msg_error;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel Pnl_Error;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

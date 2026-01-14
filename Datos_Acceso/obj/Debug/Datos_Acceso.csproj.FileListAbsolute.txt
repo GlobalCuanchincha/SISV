@@ -9,3 +9,4 @@ C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.pdb
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\Capa_Corte_Transversal.dll.config

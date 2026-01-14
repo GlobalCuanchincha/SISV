@@ -84,11 +84,23 @@
     <Compile Include="Forms\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_Recu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Recu.Designer.cs">
+      <DependentUpon>Form_Recu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Pedir_Nom_Servidor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Pedir_Nom_Servidor.Designer.cs">
       <DependentUpon>Pedir_Nom_Servidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Panel_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Panel_Principal.Designer.cs">
+      <DependentUpon>Form_Panel_Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
