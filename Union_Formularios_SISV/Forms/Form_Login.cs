@@ -1,6 +1,9 @@
 ﻿using Capa_Corte_Transversal.Security;
 using Datos_Acceso.Common;
+using Dominio_SISV.Services;
 using System;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
@@ -44,18 +47,33 @@ namespace Union_Formularios_SISV
                     guna2PictureBox1.Height - label10.Height - 25
                 );
 
-                // Posición del mensaje debajo del botón
-                RepositionError();
-
-                // Password UI
                 txt_pass.UseSystemPasswordChar = true;
-
-                // Cargar "Recuérdame"
+                RepositionError();
                 LoadRememberMe();
             }
             catch
             {
-                // nunca se cae
+            }
+            try
+            {
+                if (!SecurityDbBootstrapper.AnyUserExists())
+                {
+                    using (var f = new Form_CreatePK())
+                    {
+                        var r = f.ShowDialog(this);
+                        if (r != DialogResult.OK)
+                        {
+                            Application.Exit();
+                            return;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo verificar/crear el primer usuario:\n" + ex.Message,
+                    "SISV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
             }
         }
 
@@ -168,92 +186,94 @@ namespace Union_Formularios_SISV
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            DoLogin();
-        }
-
-        private void DoLogin()
+        private void btnlogin_Click(object sender, EventArgs e)
         {
             try
             {
-                ClearError();
+                string username = (txt_user.Text ?? "").Trim();
+                string password = txt_pass.Text ?? "";
 
-                string user = (txt_user.Text ?? "").Trim();
-                string pass = txt_pass.Text ?? "";
+                if (string.IsNullOrWhiteSpace(username))
+                    throw new Exception("Ingrese el usuario.");
 
-                if (string.IsNullOrWhiteSpace(user))
-                {
-                    ShowError("Ingrese el usuario.");
-                    txt_user.Focus();
-                    return;
-                }
+                if (string.IsNullOrWhiteSpace(password))
+                    throw new Exception("Ingrese la contraseña.");
 
-                if (string.IsNullOrWhiteSpace(pass))
-                {
-                    ShowError("Ingrese la contraseña.");
-                    txt_pass.Focus();
-                    return;
-                }
+                var user = GetUserByUsername(username);
+                if (user == null)
+                    throw new Exception("Usuario o contraseña incorrectos.");
 
-                var dt = SqlExecutor.ExecuteDataTable(
-                    "dbo.sp_Usuario_GetByUsername",
-                    new SqlParameter("@Username", user)
-                );
+                if (!user.Activo)
+                    throw new Exception("El usuario está desactivado.");
 
-                if (dt == null || dt.Rows.Count == 0)
-                {
-                    ShowError("Usuario no existe.");
-                    return;
-                }
-
-                var row = dt.Rows[0];
-
-                bool activo = row["Activo_Usuarios"] != DBNull.Value && (bool)row["Activo_Usuarios"];
-                if (!activo)
-                {
-                    ShowError("Usuario inactivo.");
-                    return;
-                }
-
-                if (row["PasswordSalt_Usuarios"] == DBNull.Value)
-                {
-                    ShowError("Contraseña no configurada. Use '¿Olvidaste tu contraseña?' para restablecer.");
-                    return;
-                }
-
-                byte[] hash = (byte[])row["PasswordHash_Usuarios"];
-                byte[] salt = (byte[])row["PasswordSalt_Usuarios"];
-                int iterations = row["PasswordIterations_Usuarios"] == DBNull.Value ? 10000 : (int)row["PasswordIterations_Usuarios"];
-
-                bool ok = PasswordHasher.Verify(pass, hash, salt, iterations);
+                bool ok = PasswordHasher.Verify(password, user.PasswordHash, user.PasswordSalt, user.PasswordIterations);
                 if (!ok)
                 {
-                    ShowError("Contraseña incorrecta.");
+                    ShowError("Usuario o contraseña incorrectos.");
                     return;
                 }
 
-                // RememberMe (no debe tumbar el login si falla)
-                SaveRememberMe(user, pass);
-
-                // Crear sesión y notificar al AppContext
-                byte roleId = (byte)row["RoleID_Usuarios"];
-                int usuarioId = (int)row["UsuarioID_Usuarios"];
+                SaveRememberMe(user.Username, password);
 
                 LoginSucceeded?.Invoke(this, new LoginSession
                 {
-                    UsuarioId = usuarioId,
-                    Username = user,
-                    RoleId = roleId
+                    UsuarioId = user.UsuarioId,
+                    Username = user.Username,
+                    RoleId = user.RoleId
                 });
 
-                // IMPORTANTÍSIMO: no sigas ejecutando lógica aquí, el AppContext cerrará el form
-                return;
+                MessageBox.Show("Login correcto", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Ejemplo:
+                // new Form_Panel_Principal().Show();
+                // this.Hide();
             }
-            catch
+            catch (Exception ex)
             {
-                ShowError("Error al iniciar sesión. Verifique conexión e intente nuevamente.");
+                ShowError(ex.Message);
             }
+        }
+
+        private UsuarioLoginDto GetUserByUsername(string username)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["SISV"]?.ConnectionString;
+            if (string.IsNullOrWhiteSpace(cs))
+                throw new Exception("No se encontró el connectionString 'SISV' en App.config.");
+
+            using (var cn = new SqlConnection(cs))
+            using (var cmd = new SqlCommand("dbo.sp_Usuario_GetByUsername", cn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@Username", SqlDbType.VarChar, 100).Value = username;
+
+                cn.Open();
+                using (var rd = cmd.ExecuteReader())
+                {
+                    if (!rd.Read()) return null;
+
+                    return new UsuarioLoginDto
+                    {
+                        UsuarioId = rd.GetInt32(rd.GetOrdinal("UsuarioID_Usuarios")),
+                        Username = rd.GetString(rd.GetOrdinal("Username_Usuarios")),
+                        PasswordHash = (byte[])rd["PasswordHash_Usuarios"],
+                        PasswordSalt = rd["PasswordSalt_Usuarios"] == DBNull.Value ? null : (byte[])rd["PasswordSalt_Usuarios"],
+                        PasswordIterations = Convert.ToInt32(rd["PasswordIterations_Usuarios"]),
+                        Activo = Convert.ToBoolean(rd["Activo_Usuarios"]),
+                        RoleId = Convert.ToByte(rd["RoleID_Usuarios"])
+                    };
+                }
+            }
+        }
+
+        private class UsuarioLoginDto
+        {
+            public int UsuarioId { get; set; }
+            public string Username { get; set; }
+            public byte[] PasswordHash { get; set; }
+            public byte[] PasswordSalt { get; set; }
+            public int PasswordIterations { get; set; }
+            public bool Activo { get; set; }
+            public byte RoleId { get; set; }
         }
 
         private void LoadRememberMe()

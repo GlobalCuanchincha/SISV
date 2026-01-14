@@ -22,13 +22,7 @@ namespace Union_Formularios_SISV
 
         private void Form_Panel_Principal_Load(object sender, EventArgs e)
         {
-            try
-            {
-                this.Text = $"SISV - Panel Principal ({_session.Username})";
-            }
-            catch
-            {
-            }
+           
         }
     }
 

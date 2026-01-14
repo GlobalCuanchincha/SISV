@@ -186,7 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
-    <Folder Include="Resources_SISV\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_search.png" />

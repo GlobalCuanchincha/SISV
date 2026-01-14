@@ -54,10 +54,12 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Pnl_Error = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.Pnl_Error.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -144,7 +146,7 @@
             this.btnLogin.Size = new System.Drawing.Size(376, 50);
             this.btnLogin.TabIndex = 18;
             this.btnLogin.Text = "ACCEDER";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // label16
             // 
@@ -352,12 +354,24 @@
             this.guna2Elipse2.BorderRadius = 20;
             this.guna2Elipse2.TargetControl = this.Pnl_Error;
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::Union_Formularios_SISV.Properties.Resources.png_ojo_abierto;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(370, 352);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(44, 32);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 49;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1087, 592);
+            this.Controls.Add(this.guna2PictureBox3);
             this.Controls.Add(this.Pnl_Error);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
@@ -381,6 +395,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.Pnl_Error.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,5 +427,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel Pnl_Error;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }
