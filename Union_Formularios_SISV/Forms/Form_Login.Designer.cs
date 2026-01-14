@@ -206,7 +206,7 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.LightGray;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(994, 6);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(992, 6);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(43, 31);
             this.guna2ControlBox3.TabIndex = 35;
@@ -293,6 +293,7 @@
             this.Lnk_Olvidaste_pass.TabIndex = 40;
             this.Lnk_Olvidaste_pass.TabStop = true;
             this.Lnk_Olvidaste_pass.Text = "¿Olvidaste tu contraseña?";
+            this.Lnk_Olvidaste_pass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Lnk_Olvidaste_pass_LinkClicked);
             // 
             // label2
             // 

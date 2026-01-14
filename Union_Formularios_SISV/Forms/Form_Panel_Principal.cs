@@ -12,13 +12,23 @@ namespace Union_Formularios_SISV
 {
     public partial class Form_Panel_Principal : Form
     {
-        private readonly LoginSession _session;
+        private readonly Union_Formularios_SISV.LoginSession _session;
 
-        public Form_Panel_Principal(LoginSession session)
+        public Form_Panel_Principal(Union_Formularios_SISV.LoginSession session)
         {
             InitializeComponent();
             _session = session;
-            lblUser.Text = _session.Username;
+        }
+
+        private void Form_Panel_Principal_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Text = $"SISV - Panel Principal ({_session.Username})";
+            }
+            catch
+            {
+            }
         }
     }
 
