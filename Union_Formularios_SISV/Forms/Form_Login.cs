@@ -19,6 +19,7 @@ namespace Union_Formularios_SISV
         private bool _errShowing = false;
         private Timer _errHideTimer;
         private int _errDisplayMs = 2000;
+        public event EventHandler<LoginSession> LoginSucceeded;
 
         public Form_Login()
         {
@@ -198,11 +199,28 @@ namespace Union_Formularios_SISV
                     return;
                 }
 
+                byte roleId = (byte)row["RoleID_Usuarios"];
+                int usuarioId = (int)row["UsuarioID_Usuarios"];
+
+                LoginSucceeded?.Invoke(this, new LoginSession
+                {
+                    UsuarioId = usuarioId,
+                    Username = user,
+                    RoleId = roleId
+                });
+
+
                 // Login OK
                 SaveRememberMe(user, pass);
 
-                // TODO: abrir menú principal según rol
-                // MessageBox.Show("Login correcto");
+                var session = new LoginSession
+                {
+                    UsuarioId = usuarioId,
+                    Username = user,
+                    RoleId = roleId
+                };
+
+                SaveRememberMe(user, pass);
             }
             catch
             {
