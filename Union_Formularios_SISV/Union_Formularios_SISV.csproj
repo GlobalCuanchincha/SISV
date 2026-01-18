@@ -90,6 +90,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContextSISV.cs" />
+    <Compile Include="Controls\DesktopHost.cs" />
+    <Compile Include="Controls\FormHost.cs" />
+    <Compile Include="Forms\Form_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Config.Designer.cs">
+      <DependentUpon>Form_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Clientes.Designer.cs">
+      <DependentUpon>Form_Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form_CreatePK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,17 +116,41 @@
     <Compile Include="Forms\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_Ordenes_Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Ordenes_Servicio.Designer.cs">
+      <DependentUpon>Form_Ordenes_Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Productos.Designer.cs">
+      <DependentUpon>Form_Productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form_Recu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form_Recu.Designer.cs">
       <DependentUpon>Form_Recu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Pedir_Nom_Servidor.cs">
+    <Compile Include="Forms\Form_Resumen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Pedir_Nom_Servidor.Designer.cs">
-      <DependentUpon>Pedir_Nom_Servidor.cs</DependentUpon>
+    <Compile Include="Forms\Form_Resumen.Designer.cs">
+      <DependentUpon>Form_Resumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Usuarios.Designer.cs">
+      <DependentUpon>Form_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Ventas.Designer.cs">
+      <DependentUpon>Form_Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Panel_Principal.cs">
       <SubType>Form</SubType>
@@ -120,19 +158,43 @@
     <Compile Include="Forms\Form_Panel_Principal.Designer.cs">
       <DependentUpon>Form_Panel_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_Ventas_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Ventas_Consulta.Designer.cs">
+      <DependentUpon>Form_Ventas_Consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Form_Config.resx">
+      <DependentUpon>Form_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Clientes.resx">
+      <DependentUpon>Form_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_CreatePK.resx">
       <DependentUpon>Form_CreatePK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Ordenes_Servicio.resx">
+      <DependentUpon>Form_Ordenes_Servicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Panel_Principal.resx">
       <DependentUpon>Form_Panel_Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Pedir_Nom_Servidor.resx">
-      <DependentUpon>Pedir_Nom_Servidor.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Resumen.resx">
+      <DependentUpon>Form_Resumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Usuarios.resx">
+      <DependentUpon>Form_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Ventas.resx">
+      <DependentUpon>Form_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Ventas_Consulta.resx">
+      <DependentUpon>Form_Ventas_Consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -184,9 +246,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icon_search.png" />
   </ItemGroup>
