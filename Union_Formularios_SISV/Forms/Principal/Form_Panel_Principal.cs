@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Union_Formularios_SISV.Controls;
 using Union_Formularios_SISV.Forms;
+using Union_Formularios_SISV.Forms.Proveedores;
 
 namespace Union_Formularios_SISV
 {
@@ -17,7 +18,6 @@ namespace Union_Formularios_SISV
         {
             InitializeComponent();
             _session = session;
-
             Load += Form_Panel_Principal_Load;
         }
 
@@ -29,6 +29,15 @@ namespace Union_Formularios_SISV
             lbl_Cargo.Text = GetCargo(_session?.RoleId ?? (byte)0);
 
             AbrirPanelPrincipal();
+        }
+        public void OpenChild(Form form, string titulo, string descripcion)
+        {
+            if (form == null) return;
+
+            if (_host == null)
+                _host = new FormHost(Panel_Escritorio, lbl_Titulo, lbl_Descripcion_Titulo);
+
+            _host.Open(form, titulo, descripcion);
         }
 
         private void AbrirPanelPrincipal()
@@ -45,7 +54,7 @@ namespace Union_Formularios_SISV
         private void btn_Ventas_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            _host.Open(new Form_Ventas(), "Ventas / Facturación", "Emitir • Consultar • Anular");
+            _host.Open(new Form_Ventas(), "Ventas / Facturación", "Emitir factura");
         }
         private void btn_Ordenes_Servicio_Click(object sender, EventArgs e)
         {
@@ -57,19 +66,25 @@ namespace Union_Formularios_SISV
             ActivateButton(sender, RGBColors.color4);
             _host.Open(new Form_Clientes(), "Clientes", "Registrar y consultar clientes");
         }
-        private void btn_Productos_Click(object sender, EventArgs e)
+        private void btn_Proveedores_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            _host.Open(new Form_Productos(), "Productos", "Gestión de inventario y productos");
+            _host.Open(new Form_Proveedores(), "Proveedores", "Catálogo de proveedores (registrar, consultar, actualizar, desactivar)");
         }
-        private void btn_Usuarios_Click(object sender, EventArgs e)
+        private void btn_Productos_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
+            _host.Open(new Form_Productos(), "Productos", "Gestión de inventario y productos");
+        }
+       
+        private void btn_Usuarios_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color7);
             _host.Open(new Form_Usuarios(), "Gestion de usuarios", "Crear • Actualizar • Desactivar");
         }
         private void btn_Configuracion_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color7);
+            ActivateButton(sender, RGBColors.color8);
             _host.Open(new Form_Config(), "Configuracion", "Configuración de la aplicación");
         }
 
@@ -97,9 +112,10 @@ namespace Union_Formularios_SISV
             public static Color color2 = Color.FromArgb(14, 165, 233);
             public static Color color3 = Color.FromArgb(28, 188, 135);
             public static Color color4 = Color.FromArgb(243, 140, 16);
-            public static Color color5 = Color.FromArgb(255, 45, 77);
-            public static Color color6 = Color.FromArgb(29, 150, 226);
-            public static Color color7 = Color.FromArgb(110, 57, 152);
+            public static Color color5 = Color.FromArgb(160, 97, 55);
+            public static Color color6 = Color.FromArgb(255, 45, 77);
+            public static Color color7 = Color.FromArgb(29, 150, 226);
+            public static Color color8 = Color.FromArgb(110, 57, 152);
         }
         private string GetCargo(byte roleId)
         {

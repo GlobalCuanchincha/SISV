@@ -21,30 +21,41 @@ namespace Union_Formularios_SISV.Controls
         {
             if (form == null) throw new ArgumentNullException(nameof(form));
 
-            if (_activo != null)
+            _panel.SuspendLayout();
+
+            try
             {
-                _activo.Close();
-                _activo.Dispose();
-                _activo = null;
+                if (_activo != null)
+                {
+                    _activo.Close();
+                    _activo.Dispose();
+                    _activo = null;
+                }
+
+                _activo = form;
+
+                form.TopLevel = false;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
+
+                _panel.Controls.Clear();
+                _panel.Controls.Add(form);
+                _panel.Tag = form;
+
+                form.BringToFront();
+                form.Show();
+
+                if (_lblTitulo != null)
+                    _lblTitulo.Text = string.IsNullOrWhiteSpace(titulo) ? form.Text : titulo;
+
+                if (_lblDescripcion != null && descripcion != null)
+                    _lblDescripcion.Text = descripcion;
             }
-
-            _activo = form;
-
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-
-            _panel.Controls.Clear();
-            _panel.Controls.Add(form);
-            _panel.Tag = form;
-            form.BringToFront();
-            form.Show();
-
-            if (_lblTitulo != null)
-                _lblTitulo.Text = string.IsNullOrWhiteSpace(titulo) ? form.Text : titulo;
-
-            if (_lblDescripcion != null && descripcion != null)
-                _lblDescripcion.Text = descripcion;
+            finally
+            {
+                _panel.ResumeLayout(true);
+            }
         }
+
     }
 }

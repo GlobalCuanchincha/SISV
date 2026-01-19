@@ -98,28 +98,28 @@
     <Compile Include="Forms\Form_Config.Designer.cs">
       <DependentUpon>Form_Config.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Clientes.cs">
+    <Compile Include="Forms\Clientes\Form_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Clientes.Designer.cs">
+    <Compile Include="Forms\Clientes\Form_Clientes.Designer.cs">
       <DependentUpon>Form_Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_CreatePK.cs">
+    <Compile Include="Forms\Autenticacion\Form_CreatePK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_CreatePK.Designer.cs">
+    <Compile Include="Forms\Autenticacion\Form_CreatePK.Designer.cs">
       <DependentUpon>Form_CreatePK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Login.cs">
+    <Compile Include="Forms\Autenticacion\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Login.Designer.cs">
+    <Compile Include="Forms\Autenticacion\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Ordenes_Servicio.cs">
+    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Ordenes_Servicio.Designer.cs">
+    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio.Designer.cs">
       <DependentUpon>Form_Ordenes_Servicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Productos.cs">
@@ -128,16 +128,16 @@
     <Compile Include="Forms\Form_Productos.Designer.cs">
       <DependentUpon>Form_Productos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Recu.cs">
+    <Compile Include="Forms\Autenticacion\Form_Recu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Recu.Designer.cs">
+    <Compile Include="Forms\Autenticacion\Form_Recu.Designer.cs">
       <DependentUpon>Form_Recu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Resumen.cs">
+    <Compile Include="Forms\Principal\Form_Resumen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Resumen.Designer.cs">
+    <Compile Include="Forms\Principal\Form_Resumen.Designer.cs">
       <DependentUpon>Form_Resumen.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Usuarios.cs">
@@ -146,22 +146,40 @@
     <Compile Include="Forms\Form_Usuarios.Designer.cs">
       <DependentUpon>Form_Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Ventas.cs">
+    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Atencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Ventas.Designer.cs">
+    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Atencion.Designer.cs">
+      <DependentUpon>Form_Ordenes_Servicio_Atencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Solicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Solicitud.Designer.cs">
+      <DependentUpon>Form_Ordenes_Servicio_Solicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedores\Form_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedores\Form_Proveedores.Designer.cs">
+      <DependentUpon>Form_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventas\Form_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventas\Form_Ventas.Designer.cs">
       <DependentUpon>Form_Ventas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Panel_Principal.cs">
+    <Compile Include="Forms\Principal\Form_Panel_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Panel_Principal.Designer.cs">
+    <Compile Include="Forms\Principal\Form_Panel_Principal.Designer.cs">
       <DependentUpon>Form_Panel_Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Ventas_Consulta.cs">
+    <Compile Include="Forms\Ventas\Form_Ventas_Consulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Ventas_Consulta.Designer.cs">
+    <Compile Include="Forms\Ventas\Form_Ventas_Consulta.Designer.cs">
       <DependentUpon>Form_Ventas_Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -169,31 +187,43 @@
     <EmbeddedResource Include="Forms\Form_Config.resx">
       <DependentUpon>Form_Config.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Clientes.resx">
+    <EmbeddedResource Include="Forms\Clientes\Form_Clientes.resx">
       <DependentUpon>Form_Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_CreatePK.resx">
+    <EmbeddedResource Include="Forms\Autenticacion\Form_CreatePK.resx">
       <DependentUpon>Form_CreatePK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Login.resx">
+    <EmbeddedResource Include="Forms\Autenticacion\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Ordenes_Servicio.resx">
+    <EmbeddedResource Include="Forms\Form_Productos.resx">
+      <DependentUpon>Form_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio.resx">
       <DependentUpon>Form_Ordenes_Servicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Panel_Principal.resx">
+    <EmbeddedResource Include="Forms\Principal\Form_Panel_Principal.resx">
       <DependentUpon>Form_Panel_Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Resumen.resx">
+    <EmbeddedResource Include="Forms\Principal\Form_Resumen.resx">
       <DependentUpon>Form_Resumen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Usuarios.resx">
       <DependentUpon>Form_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Ventas.resx">
+    <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Atencion.resx">
+      <DependentUpon>Form_Ordenes_Servicio_Atencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Solicitud.resx">
+      <DependentUpon>Form_Ordenes_Servicio_Solicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Proveedores\Form_Proveedores.resx">
+      <DependentUpon>Form_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventas\Form_Ventas.resx">
       <DependentUpon>Form_Ventas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Ventas_Consulta.resx">
+    <EmbeddedResource Include="Forms\Ventas\Form_Ventas_Consulta.resx">
       <DependentUpon>Form_Ventas_Consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
