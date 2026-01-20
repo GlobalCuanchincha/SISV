@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ventas_Consulta));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_LimpiarFactura = new Guna.UI2.WinForms.Guna2Button();
@@ -46,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_Añadir_Items = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.dgv_Servicios_Items = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Cmbox_TipoServicio = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,8 +57,6 @@
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
-            this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicios_Items)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel8.SuspendLayout();
             this.SuspendLayout();
@@ -281,7 +275,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(672, 19);
+            this.label5.Location = new System.Drawing.Point(693, 18);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(16, 18);
@@ -307,9 +301,9 @@
             this.btn_Añadir_Items.Image = ((System.Drawing.Image)(resources.GetObject("btn_Añadir_Items.Image")));
             this.btn_Añadir_Items.ImageOffset = new System.Drawing.Point(0, -1);
             this.btn_Añadir_Items.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_Añadir_Items.Location = new System.Drawing.Point(633, 71);
+            this.btn_Añadir_Items.Location = new System.Drawing.Point(656, 71);
             this.btn_Añadir_Items.Name = "btn_Añadir_Items";
-            this.btn_Añadir_Items.Size = new System.Drawing.Size(130, 40);
+            this.btn_Añadir_Items.Size = new System.Drawing.Size(130, 43);
             this.btn_Añadir_Items.TabIndex = 59;
             this.btn_Añadir_Items.Text = "Consultar";
             // 
@@ -320,7 +314,6 @@
             this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel1.BorderRadius = 10;
             this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel1.Controls.Add(this.dgv_Servicios_Items);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 130);
@@ -328,58 +321,8 @@
             this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(741, 336);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(764, 336);
             this.guna2GradientPanel1.TabIndex = 59;
-            // 
-            // dgv_Servicios_Items
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Servicios_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Servicios_Items.ColumnHeadersHeight = 4;
-            this.dgv_Servicios_Items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Servicios_Items.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Servicios_Items.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Servicios_Items.Location = new System.Drawing.Point(19, 16);
-            this.dgv_Servicios_Items.Name = "dgv_Servicios_Items";
-            this.dgv_Servicios_Items.RowHeadersVisible = false;
-            this.dgv_Servicios_Items.Size = new System.Drawing.Size(703, 313);
-            this.dgv_Servicios_Items.TabIndex = 61;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_Servicios_Items.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_Servicios_Items.ThemeStyle.ReadOnly = false;
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // Cmbox_TipoServicio
             // 
@@ -391,10 +334,10 @@
             this.Cmbox_TipoServicio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Cmbox_TipoServicio.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Cmbox_TipoServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Cmbox_TipoServicio.ItemHeight = 30;
-            this.Cmbox_TipoServicio.Location = new System.Drawing.Point(390, 73);
+            this.Cmbox_TipoServicio.ItemHeight = 37;
+            this.Cmbox_TipoServicio.Location = new System.Drawing.Point(406, 71);
             this.Cmbox_TipoServicio.Name = "Cmbox_TipoServicio";
-            this.Cmbox_TipoServicio.Size = new System.Drawing.Size(231, 36);
+            this.Cmbox_TipoServicio.Size = new System.Drawing.Size(231, 43);
             this.Cmbox_TipoServicio.TabIndex = 54;
             // 
             // label4
@@ -403,7 +346,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(390, 48);
+            this.label4.Location = new System.Drawing.Point(404, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 18);
             this.label4.TabIndex = 53;
@@ -442,7 +385,7 @@
             this.lbl_Descripcion_Titulo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Descripcion_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Descripcion_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Descripcion_Titulo.Location = new System.Drawing.Point(692, 18);
+            this.lbl_Descripcion_Titulo.Location = new System.Drawing.Point(712, 18);
             this.lbl_Descripcion_Titulo.Name = "lbl_Descripcion_Titulo";
             this.lbl_Descripcion_Titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_Descripcion_Titulo.Size = new System.Drawing.Size(77, 18);
@@ -479,7 +422,7 @@
             this.txt_Buscador_Items.Name = "txt_Buscador_Items";
             this.txt_Buscador_Items.PlaceholderText = "FAC-0001 / Cliente / Fecha...";
             this.txt_Buscador_Items.SelectedText = "";
-            this.txt_Buscador_Items.Size = new System.Drawing.Size(362, 43);
+            this.txt_Buscador_Items.Size = new System.Drawing.Size(376, 43);
             this.txt_Buscador_Items.TabIndex = 45;
             this.txt_Buscador_Items.TextOffset = new System.Drawing.Point(40, 0);
             // 
@@ -562,8 +505,6 @@
             this.guna2GradientPanel6.PerformLayout();
             this.Panel_Detalle_Factura.ResumeLayout(false);
             this.Panel_Detalle_Factura.PerformLayout();
-            this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicios_Items)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel8.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -583,7 +524,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel Panel_Detalle_Factura;
         private Guna.UI2.WinForms.Guna2Button btn_Añadir_Items;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_Servicios_Items;
         private Guna.UI2.WinForms.Guna2ComboBox Cmbox_TipoServicio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

@@ -92,11 +92,17 @@
     <Compile Include="AppContextSISV.cs" />
     <Compile Include="Controls\DesktopHost.cs" />
     <Compile Include="Controls\FormHost.cs" />
-    <Compile Include="Forms\Form_Config.cs">
+    <Compile Include="Forms\Administracion\Form_Config.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Config.Designer.cs">
+    <Compile Include="Forms\Administracion\Form_Config.Designer.cs">
       <DependentUpon>Form_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Autenticacion\Form_CreateSupAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Autenticacion\Form_CreateSupAd.Designer.cs">
+      <DependentUpon>Form_CreateSupAd.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Clientes\Form_Clientes.cs">
       <SubType>Form</SubType>
@@ -122,10 +128,10 @@
     <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio.Designer.cs">
       <DependentUpon>Form_Ordenes_Servicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Productos.cs">
+    <Compile Include="Forms\Inventario\Form_Productos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Productos.Designer.cs">
+    <Compile Include="Forms\Inventario\Form_Productos.Designer.cs">
       <DependentUpon>Form_Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Autenticacion\Form_Recu.cs">
@@ -140,10 +146,10 @@
     <Compile Include="Forms\Principal\Form_Resumen.Designer.cs">
       <DependentUpon>Form_Resumen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Usuarios.cs">
+    <Compile Include="Forms\Administracion\Form_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Usuarios.Designer.cs">
+    <Compile Include="Forms\Administracion\Form_Usuarios.Designer.cs">
       <DependentUpon>Form_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Atencion.cs">
@@ -184,8 +190,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Form_Config.resx">
+    <EmbeddedResource Include="Forms\Administracion\Form_Config.resx">
       <DependentUpon>Form_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Autenticacion\Form_CreateSupAd.resx">
+      <DependentUpon>Form_CreateSupAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clientes\Form_Clientes.resx">
       <DependentUpon>Form_Clientes.cs</DependentUpon>
@@ -196,7 +205,7 @@
     <EmbeddedResource Include="Forms\Autenticacion\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Productos.resx">
+    <EmbeddedResource Include="Forms\Inventario\Form_Productos.resx">
       <DependentUpon>Form_Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio.resx">
@@ -208,7 +217,7 @@
     <EmbeddedResource Include="Forms\Principal\Form_Resumen.resx">
       <DependentUpon>Form_Resumen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Usuarios.resx">
+    <EmbeddedResource Include="Forms\Administracion\Form_Usuarios.resx">
       <DependentUpon>Form_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Atencion.resx">

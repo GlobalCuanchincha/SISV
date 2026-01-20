@@ -398,10 +398,10 @@
             this.Cmbox_Descuento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Cmbox_Descuento.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Cmbox_Descuento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Cmbox_Descuento.ItemHeight = 30;
-            this.Cmbox_Descuento.Location = new System.Drawing.Point(19, 527);
+            this.Cmbox_Descuento.ItemHeight = 37;
+            this.Cmbox_Descuento.Location = new System.Drawing.Point(19, 520);
             this.Cmbox_Descuento.Name = "Cmbox_Descuento";
-            this.Cmbox_Descuento.Size = new System.Drawing.Size(311, 36);
+            this.Cmbox_Descuento.Size = new System.Drawing.Size(311, 43);
             this.Cmbox_Descuento.TabIndex = 61;
             // 
             // guna2GradientPanel4
@@ -501,7 +501,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(19, 502);
+            this.label7.Location = new System.Drawing.Point(19, 493);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(103, 18);
@@ -583,10 +583,10 @@
             this.Cmbox_TipoServicio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Cmbox_TipoServicio.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Cmbox_TipoServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Cmbox_TipoServicio.ItemHeight = 30;
-            this.Cmbox_TipoServicio.Location = new System.Drawing.Point(390, 73);
+            this.Cmbox_TipoServicio.ItemHeight = 37;
+            this.Cmbox_TipoServicio.Location = new System.Drawing.Point(390, 71);
             this.Cmbox_TipoServicio.Name = "Cmbox_TipoServicio";
-            this.Cmbox_TipoServicio.Size = new System.Drawing.Size(231, 36);
+            this.Cmbox_TipoServicio.Size = new System.Drawing.Size(231, 43);
             this.Cmbox_TipoServicio.TabIndex = 54;
             // 
             // label4

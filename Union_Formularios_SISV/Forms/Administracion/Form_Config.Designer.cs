@@ -1,6 +1,6 @@
-﻿namespace Union_Formularios_SISV.Forms
+﻿namespace Union_Formularios_SISV.Controls
 {
-    partial class Form_Productos
+    partial class Form_Config
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Productos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Config));
             this.SuspendLayout();
             // 
-            // Form_Productos
+            // Form_Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1458, 855);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_Productos";
+            this.Name = "Form_Config";
             this.ResumeLayout(false);
 
         }
