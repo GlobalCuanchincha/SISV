@@ -491,7 +491,7 @@
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBox1.MaxLength = 10;
             this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "1203464578";
+            this.guna2TextBox1.PlaceholderText = "PRD-0001";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(256, 48);
             this.guna2TextBox1.TabIndex = 64;

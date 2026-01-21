@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
 {
-    public partial class Form_Ordenes_Servicio_Atencion : Form
+    public partial class Form_Ordenes_Servicio_Recepcion : Form
     {
-        public Form_Ordenes_Servicio_Atencion()
+        public Form_Ordenes_Servicio_Recepcion()
         {
             InitializeComponent();
         }

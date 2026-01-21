@@ -70,6 +70,7 @@
     <Compile Include="Services\EquipoService.cs" />
     <Compile Include="Services\FacturaService.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
+    <Compile Include="Services\PasswordRecoveryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Corte_Transversal\Capa_Corte_Transversal.csproj">

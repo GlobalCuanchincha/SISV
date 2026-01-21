@@ -47,7 +47,6 @@
             this.btn_Resumen = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Nom_Usu = new System.Windows.Forms.Label();
             this.lbl_Cargo = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -70,11 +69,12 @@
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gn_Notificacion = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.gn_Notificacion_Ordenes = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Panel_Dashboard.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelLogo.SuspendLayout();
             this.Panel_indicador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Minus
@@ -397,18 +397,6 @@
             this.panel1.Size = new System.Drawing.Size(274, 63);
             this.panel1.TabIndex = 1;
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(17, 7);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 48);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 2;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // Nom_Usu
             // 
             this.Nom_Usu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -569,19 +557,19 @@
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this;
-            this.guna2DragControl1.UseTransparentDrag = true;
+            this.guna2DragControl1.TransparentWhileDrag = false;
             // 
             // guna2DragControl2
             // 
             this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl2.TargetControl = this.panelLogo;
-            this.guna2DragControl2.UseTransparentDrag = true;
+            this.guna2DragControl2.TransparentWhileDrag = false;
             // 
             // guna2DragControl3
             // 
             this.guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl3.TargetControl = this.Panel_indicador;
-            this.guna2DragControl3.UseTransparentDrag = true;
+            this.guna2DragControl3.TransparentWhileDrag = false;
             // 
             // guna2Elipse5
             // 
@@ -606,6 +594,18 @@
             this.gn_Notificacion_Ordenes.Location = new System.Drawing.Point(210, 13);
             this.gn_Notificacion_Ordenes.TargetControl = this.btn_Ordenes_Servicio;
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(17, 7);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 48);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 2;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // Form_Panel_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,11 +627,11 @@
             this.Panel_Dashboard.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.Panel_indicador.ResumeLayout(false);
             this.Panel_indicador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

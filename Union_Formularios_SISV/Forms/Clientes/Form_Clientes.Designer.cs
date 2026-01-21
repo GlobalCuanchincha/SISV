@@ -287,10 +287,10 @@
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 42;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(312, 201);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(304, 201);
             this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(248, 48);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(256, 48);
             this.guna2ComboBox1.TabIndex = 62;
             // 
             // guna2TextBox2
@@ -322,7 +322,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(309, 178);
+            this.label6.Location = new System.Drawing.Point(304, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 18);
             this.label6.TabIndex = 61;
@@ -436,11 +436,11 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(20, 178);
+            this.label13.Location = new System.Drawing.Point(27, 178);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 18);
+            this.label13.Size = new System.Drawing.Size(50, 18);
             this.label13.TabIndex = 69;
-            this.label13.Text = "Email";
+            this.label13.Text = "Coreo";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2TextBox3
@@ -493,7 +493,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(305, 98);
+            this.label10.Location = new System.Drawing.Point(304, 98);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 18);
             this.label10.TabIndex = 66;
@@ -554,7 +554,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(27, 18);
+            this.label8.Location = new System.Drawing.Point(28, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 18);
             this.label8.TabIndex = 60;

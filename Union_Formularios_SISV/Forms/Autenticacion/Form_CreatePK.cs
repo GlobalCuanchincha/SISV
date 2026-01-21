@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Union_Formularios_SISV.Forms
+namespace Union_Formularios_SISV.Forms.Autenticacion
 {
     public partial class Form_CreatePK : Form
     {
@@ -19,11 +19,9 @@ namespace Union_Formularios_SISV.Forms
         }
         private void Form_CreatePK_Load(object sender, EventArgs e)
         {
-            // Password char (Guna2TextBox también soporta esto)
             txt_pass.UseSystemPasswordChar = true;
             txt_confpass.UseSystemPasswordChar = true;
         }
-
         private void btn_createuser_Click(object sender, EventArgs e)
         {
             try
@@ -35,7 +33,6 @@ namespace Union_Formularios_SISV.Forms
                 string pass = txt_pass.Text ?? "";
                 string conf = txt_confpass.Text ?? "";
 
-                // Validaciones básicas
                 if (string.IsNullOrWhiteSpace(user)) throw new Exception("El usuario es obligatorio.");
                 if (user.Length < 4) throw new Exception("El usuario debe tener mínimo 4 caracteres.");
 

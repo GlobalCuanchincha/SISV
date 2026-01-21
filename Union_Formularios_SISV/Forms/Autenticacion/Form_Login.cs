@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using Union_Formularios_SISV.Forms;
+using Union_Formularios_SISV.Forms.Autenticacion;
 
 namespace Union_Formularios_SISV
 {
@@ -280,22 +281,25 @@ namespace Union_Formularios_SISV
         {
             try
             {
-                if (RememberMeStore.TryLoad(out string user, out string passProtected))
+                if (RememberMeStore.TryLoad(out string user, out _))
                 {
                     Chbox_Recuerdame.Checked = true;
-                    txt_user.Text = user;
-                    txt_pass.Text = Dpapi.Unprotect(passProtected);
+                    txt_user.Text = (user ?? "").Trim();
+                    txt_pass.Text = ""; 
                 }
                 else
                 {
                     Chbox_Recuerdame.Checked = false;
+                    txt_pass.Text = "";
                 }
             }
             catch
             {
                 Chbox_Recuerdame.Checked = false;
+                txt_pass.Text = "";
             }
         }
+
 
         private void SaveRememberMe(string user, string pass)
         {
