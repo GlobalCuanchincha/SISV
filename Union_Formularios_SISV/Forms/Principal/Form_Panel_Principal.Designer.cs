@@ -47,6 +47,7 @@
             this.btn_Resumen = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Nom_Usu = new System.Windows.Forms.Label();
             this.lbl_Cargo = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -69,12 +70,11 @@
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gn_Notificacion = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.gn_Notificacion_Ordenes = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Panel_Dashboard.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelLogo.SuspendLayout();
             this.Panel_indicador.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Minus
@@ -86,7 +86,7 @@
             this.btn_Minus.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btn_Minus.FillColor = System.Drawing.Color.Transparent;
             this.btn_Minus.IconColor = System.Drawing.Color.LightGray;
-            this.btn_Minus.Location = new System.Drawing.Point(1674, 12);
+            this.btn_Minus.Location = new System.Drawing.Point(1694, 12);
             this.btn_Minus.Name = "btn_Minus";
             this.btn_Minus.Size = new System.Drawing.Size(43, 31);
             this.btn_Minus.TabIndex = 37;
@@ -97,7 +97,7 @@
             this.btn_Close.BackColor = System.Drawing.Color.Transparent;
             this.btn_Close.FillColor = System.Drawing.Color.Transparent;
             this.btn_Close.IconColor = System.Drawing.Color.LightGray;
-            this.btn_Close.Location = new System.Drawing.Point(1723, 12);
+            this.btn_Close.Location = new System.Drawing.Point(1743, 12);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(43, 31);
             this.btn_Close.TabIndex = 36;
@@ -324,7 +324,7 @@
             this.btn_Ventas.ShadowDecoration.Enabled = true;
             this.btn_Ventas.Size = new System.Drawing.Size(238, 45);
             this.btn_Ventas.TabIndex = 52;
-            this.btn_Ventas.Text = "Ventas";
+            this.btn_Ventas.Text = "Facturación";
             this.btn_Ventas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Ventas.TextOffset = new System.Drawing.Point(30, 0);
             this.btn_Ventas.Click += new System.EventHandler(this.btn_Ventas_Click);
@@ -396,6 +396,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 63);
             this.panel1.TabIndex = 1;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(17, 7);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 48);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 2;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // Nom_Usu
             // 
@@ -480,7 +492,7 @@
             this.Panel_indicador.Controls.Add(this.lbl_Descripcion_Titulo);
             this.Panel_indicador.Location = new System.Drawing.Point(292, 13);
             this.Panel_indicador.Name = "Panel_indicador";
-            this.Panel_indicador.Size = new System.Drawing.Size(1474, 77);
+            this.Panel_indicador.Size = new System.Drawing.Size(1494, 77);
             this.Panel_indicador.TabIndex = 41;
             // 
             // guna2ControlBox1
@@ -492,7 +504,7 @@
             this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1369, 8);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1389, 8);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(43, 31);
             this.guna2ControlBox1.TabIndex = 43;
@@ -514,7 +526,7 @@
             this.guna2ControlBox2.BackColor = System.Drawing.Color.White;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1418, 8);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1438, 8);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(43, 31);
             this.guna2ControlBox2.TabIndex = 42;
@@ -544,8 +556,9 @@
             // 
             this.Panel_Escritorio.BackColor = System.Drawing.Color.White;
             this.Panel_Escritorio.Location = new System.Drawing.Point(292, 96);
+            this.Panel_Escritorio.Margin = new System.Windows.Forms.Padding(0);
             this.Panel_Escritorio.Name = "Panel_Escritorio";
-            this.Panel_Escritorio.Size = new System.Drawing.Size(1474, 894);
+            this.Panel_Escritorio.Size = new System.Drawing.Size(1494, 894);
             this.Panel_Escritorio.TabIndex = 39;
             // 
             // guna2Elipse4
@@ -594,24 +607,12 @@
             this.gn_Notificacion_Ordenes.Location = new System.Drawing.Point(210, 13);
             this.gn_Notificacion_Ordenes.TargetControl = this.btn_Ordenes_Servicio;
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(17, 7);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 48);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 2;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // Form_Panel_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(224)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1778, 1002);
+            this.ClientSize = new System.Drawing.Size(1798, 1002);
             this.Controls.Add(this.Panel_indicador);
             this.Controls.Add(this.Panel_Escritorio);
             this.Controls.Add(this.Panel_Dashboard);
@@ -627,11 +628,11 @@
             this.Panel_Dashboard.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.Panel_indicador.ResumeLayout(false);
             this.Panel_indicador.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

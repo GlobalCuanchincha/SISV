@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Union_Formularios_SISV.Forms.Ventas;
 
 namespace Union_Formularios_SISV.Forms
 {
@@ -15,9 +10,11 @@ namespace Union_Formularios_SISV.Forms
         public Form_Ventas_Consulta()
         {
             InitializeComponent();
+
             btn_EmitirFactura_View.Click -= btn_EmitirFactura_View_Click;
             btn_EmitirFactura_View.Click += btn_EmitirFactura_View_Click;
         }
+
         private void btn_EmitirFactura_View_Click(object sender, EventArgs e)
         {
             var main = Application.OpenForms.OfType<Form_Panel_Principal>().FirstOrDefault();
@@ -29,7 +26,10 @@ namespace Union_Formularios_SISV.Forms
                 return;
             }
 
-            main.OpenChild(new Form_Ventas(), "Ventas / Facturación", "Emitir factura");
+            var ventas = new Form_Ventas();
+            ventas.Ventas_RuntimeInit();
+
+            main.OpenChild(ventas, "Ventas / Facturación", "Emitir factura");
         }
     }
 }

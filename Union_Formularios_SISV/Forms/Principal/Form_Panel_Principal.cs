@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using Union_Formularios_SISV.Controls;
 using Union_Formularios_SISV.Forms;
 using Union_Formularios_SISV.Forms.Proveedores;
+using Union_Formularios_SISV.Forms.Ventas;
 
 namespace Union_Formularios_SISV
 {
@@ -30,6 +32,7 @@ namespace Union_Formularios_SISV
 
             AbrirPanelPrincipal();
         }
+
         public void OpenChild(Form form, string titulo, string descripcion)
         {
             if (form == null) return;
@@ -51,37 +54,57 @@ namespace Union_Formularios_SISV
             ActivateButton(sender, RGBColors.color1);
             AbrirPanelPrincipal();
         }
+
         private void btn_Ventas_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            _host.Open(new Form_Ventas(), "Ventas / Facturación", "Emitir factura");
+
+            try
+            {
+                var ventas = new Form_Ventas();
+
+                // Si existe Ventas_RuntimeInit(), la llamamos (evita que no se enganche nada)
+                InvokeIfExists(ventas, "Ventas_RuntimeInit");
+
+                _host.Open(ventas, "Facturación", "Emitir factura");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private void btn_Ordenes_Servicio_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            _host.Open(new Form_Ordenes_Servicio(), "Órdenes de servicio", "Ingreso de equipo, seguimiento, estados y asignación de técnico");
+            _host.Open(new Form_Ordenes_Servicio(), "Órdenes de servicio",
+                "Ingreso de equipo, seguimiento, estados y asignación de técnico");
         }
+
         private void btn_Clientes_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             _host.Open(new Form_Clientes(), "Clientes", "Registrar y consultar clientes");
         }
+
         private void btn_Proveedores_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
             _host.Open(new Form_Proveedores(), "Proveedores", "Catálogo de proveedores (registrar, consultar, actualizar, desactivar)");
         }
+
         private void btn_Productos_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
             _host.Open(new Form_Productos(), "Productos", "Gestión de inventario y productos");
         }
-       
+
         private void btn_Usuarios_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
             _host.Open(new Form_Usuarios(), "Gestion de usuarios", "Crear • Actualizar • Desactivar");
         }
+
         private void btn_Configuracion_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color8);
@@ -101,9 +124,19 @@ namespace Union_Formularios_SISV
             }
 
             _btnActivo = (Control)senderBtn;
-            _btnActivo.BackColor = Color.FromArgb(230, 240, 255);
-            _btnActivo.BackColor = Color.Transparent;
+            _btnActivo.BackColor = Color.Transparent; // si quieres highlight real, quita esta línea
             _btnActivo.ForeColor = color;
+        }
+
+        private static void InvokeIfExists(object target, string methodName)
+        {
+            if (target == null) return;
+
+            var mi = target.GetType().GetMethod(methodName,
+                BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+            if (mi != null && mi.GetParameters().Length == 0)
+                mi.Invoke(target, null);
         }
 
         private static class RGBColors
@@ -117,6 +150,7 @@ namespace Union_Formularios_SISV
             public static Color color7 = Color.FromArgb(29, 150, 226);
             public static Color color8 = Color.FromArgb(110, 57, 152);
         }
+
         private string GetCargo(byte roleId)
         {
             switch (roleId)
@@ -128,6 +162,5 @@ namespace Union_Formularios_SISV
                 default: return "Sin rol";
             }
         }
-
     }
 }

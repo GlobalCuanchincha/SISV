@@ -1,4 +1,4 @@
-﻿namespace Union_Formularios_SISV.Forms
+﻿namespace Union_Formularios_SISV.Forms.Ventas
 {
     partial class Form_Ventas
     {
@@ -28,67 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ventas));
-            this.txt_Buscador_Items = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl_Descripcion_Titulo = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txt_buscar_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbl_Codigo_VentasFacturas = new System.Windows.Forms.Label();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_Consultar_View = new Guna.UI2.WinForms.Guna2Button();
             this.btn_EmitirFactura_View = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Detalle_Factura = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_añadir_VentasFacturas = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.cmbox_descuento = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2VScrollBar2 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.flowDetalleItems = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2GradientPanel16 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.flowCatalog = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.btn_aplicar_descuento_VentasFacturas = new Guna.UI2.WinForms.Guna2Button();
+            this.cmbox_descuento_VentasFacturas = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lbl_Stock_selccionado = new System.Windows.Forms.Label();
+            this.lbl_Stock_selccionado_VentasFacturas = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Seleccion_Item = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_Seleccion_Item_VentasFacturas = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgv_Servicios_Items = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.Cmbox_TipoServicio = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbox_tipo_VentasFacturas = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.txt_telefono_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Nueva_Factura_VentasFacturas = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Guardar_Factura_VentasFacturas = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_telefono_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel14 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lbl_Total_VentasFacturas = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel13 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lbl_IVA_VentasFacturas = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel12 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lbl_descuento_VentasFacturas = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel11 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lbl_subtotal_VentasFacturas = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_email_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_direccion_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_nombre_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_apellido_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_cedula_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
@@ -96,17 +112,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.flpCatalogo1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flpCatalogo2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_Añadir_Items = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_aplicar_descuento_VentasFacturas = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.flowLayoutPanel_DetaleFactura = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2VScrollBar3 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.guna2GradientPanel8.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            this.guna2GradientPanel16.SuspendLayout();
+            this.guna2GradientPanel15.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicios_Items)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel10.SuspendLayout();
@@ -117,44 +133,44 @@
             this.guna2GradientPanel12.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             this.guna2GradientPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.flowLayoutPanel_DetaleFactura.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txt_Buscador_Items
+            // txt_buscar_VentasFacturas
             // 
-            this.txt_Buscador_Items.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Buscador_Items.BorderRadius = 15;
-            this.txt_Buscador_Items.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Buscador_Items.DefaultText = "";
-            this.txt_Buscador_Items.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Buscador_Items.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Buscador_Items.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Items.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Items.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Items.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_Buscador_Items.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Items.Location = new System.Drawing.Point(22, 71);
-            this.txt_Buscador_Items.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Buscador_Items.Name = "txt_Buscador_Items";
-            this.txt_Buscador_Items.PlaceholderText = "Para servicios: seleccione en la lista";
-            this.txt_Buscador_Items.SelectedText = "";
-            this.txt_Buscador_Items.Size = new System.Drawing.Size(362, 43);
-            this.txt_Buscador_Items.TabIndex = 45;
-            this.txt_Buscador_Items.TextOffset = new System.Drawing.Point(40, 0);
+            this.txt_buscar_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.txt_buscar_VentasFacturas.BorderRadius = 15;
+            this.txt_buscar_VentasFacturas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_buscar_VentasFacturas.DefaultText = "";
+            this.txt_buscar_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_buscar_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_buscar_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_buscar_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_buscar_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_buscar_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_buscar_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_buscar_VentasFacturas.Location = new System.Drawing.Point(15, 71);
+            this.txt_buscar_VentasFacturas.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_buscar_VentasFacturas.Name = "txt_buscar_VentasFacturas";
+            this.txt_buscar_VentasFacturas.PlaceholderText = "Para servicios: seleccione en la lista";
+            this.txt_buscar_VentasFacturas.SelectedText = "";
+            this.txt_buscar_VentasFacturas.Size = new System.Drawing.Size(409, 43);
+            this.txt_buscar_VentasFacturas.TabIndex = 45;
+            this.txt_buscar_VentasFacturas.TextOffset = new System.Drawing.Point(40, 0);
             // 
-            // lbl_Descripcion_Titulo
+            // lbl_Codigo_VentasFacturas
             // 
-            this.lbl_Descripcion_Titulo.AutoSize = true;
-            this.lbl_Descripcion_Titulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Descripcion_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Descripcion_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Descripcion_Titulo.Location = new System.Drawing.Point(692, 18);
-            this.lbl_Descripcion_Titulo.Name = "lbl_Descripcion_Titulo";
-            this.lbl_Descripcion_Titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_Descripcion_Titulo.Size = new System.Drawing.Size(74, 18);
-            this.lbl_Descripcion_Titulo.TabIndex = 47;
-            this.lbl_Descripcion_Titulo.Text = "FAC-0001";
-            this.lbl_Descripcion_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Codigo_VentasFacturas.AutoSize = true;
+            this.lbl_Codigo_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Codigo_VentasFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Codigo_VentasFacturas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Codigo_VentasFacturas.Location = new System.Drawing.Point(736, 18);
+            this.lbl_Codigo_VentasFacturas.Name = "lbl_Codigo_VentasFacturas";
+            this.lbl_Codigo_VentasFacturas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_Codigo_VentasFacturas.Size = new System.Drawing.Size(74, 18);
+            this.lbl_Codigo_VentasFacturas.TabIndex = 47;
+            this.lbl_Codigo_VentasFacturas.Text = "FAC-0001";
+            this.lbl_Codigo_VentasFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Titulo
             // 
@@ -162,7 +178,7 @@
             this.lbl_Titulo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Titulo.Location = new System.Drawing.Point(17, 13);
+            this.lbl_Titulo.Location = new System.Drawing.Point(10, 15);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(168, 25);
             this.lbl_Titulo.TabIndex = 48;
@@ -171,10 +187,11 @@
             // guna2GradientPanel8
             // 
             this.guna2GradientPanel8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2GradientPanel8.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel8.BorderRadius = 10;
             this.guna2GradientPanel8.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel8.BorderThickness = 1;
             this.guna2GradientPanel8.Controls.Add(this.btn_Consultar_View);
             this.guna2GradientPanel8.Controls.Add(this.btn_EmitirFactura_View);
             this.guna2GradientPanel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -193,6 +210,7 @@
             this.btn_Consultar_View.BackColor = System.Drawing.Color.Transparent;
             this.btn_Consultar_View.BorderColor = System.Drawing.Color.Transparent;
             this.btn_Consultar_View.BorderRadius = 15;
+            this.btn_Consultar_View.BorderThickness = 1;
             this.btn_Consultar_View.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Consultar_View.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Consultar_View.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -214,6 +232,7 @@
             this.btn_EmitirFactura_View.BackColor = System.Drawing.Color.Transparent;
             this.btn_EmitirFactura_View.BorderColor = System.Drawing.Color.Transparent;
             this.btn_EmitirFactura_View.BorderRadius = 15;
+            this.btn_EmitirFactura_View.BorderThickness = 1;
             this.btn_EmitirFactura_View.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_EmitirFactura_View.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_EmitirFactura_View.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -235,24 +254,48 @@
             this.Panel_Detalle_Factura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Panel_Detalle_Factura.BorderRadius = 10;
             this.Panel_Detalle_Factura.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.Panel_Detalle_Factura.Controls.Add(this.btn_Añadir_Items);
+            this.Panel_Detalle_Factura.Controls.Add(this.btn_añadir_VentasFacturas);
             this.Panel_Detalle_Factura.Controls.Add(this.guna2GradientPanel1);
-            this.Panel_Detalle_Factura.Controls.Add(this.Cmbox_TipoServicio);
+            this.Panel_Detalle_Factura.Controls.Add(this.cmbox_tipo_VentasFacturas);
             this.Panel_Detalle_Factura.Controls.Add(this.label4);
             this.Panel_Detalle_Factura.Controls.Add(this.label3);
             this.Panel_Detalle_Factura.Controls.Add(this.lbl_Titulo);
-            this.Panel_Detalle_Factura.Controls.Add(this.lbl_Descripcion_Titulo);
+            this.Panel_Detalle_Factura.Controls.Add(this.lbl_Codigo_VentasFacturas);
             this.Panel_Detalle_Factura.Controls.Add(this.guna2PictureBox1);
-            this.Panel_Detalle_Factura.Controls.Add(this.txt_Buscador_Items);
+            this.Panel_Detalle_Factura.Controls.Add(this.txt_buscar_VentasFacturas);
             this.Panel_Detalle_Factura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.Panel_Detalle_Factura.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.Panel_Detalle_Factura.Location = new System.Drawing.Point(12, 92);
+            this.Panel_Detalle_Factura.Location = new System.Drawing.Point(3, 3);
             this.Panel_Detalle_Factura.Name = "Panel_Detalle_Factura";
             this.Panel_Detalle_Factura.ShadowDecoration.BorderRadius = 14;
             this.Panel_Detalle_Factura.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.Panel_Detalle_Factura.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 751);
+            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(822, 906);
             this.Panel_Detalle_Factura.TabIndex = 59;
+            // 
+            // btn_añadir_VentasFacturas
+            // 
+            this.btn_añadir_VentasFacturas.Animated = true;
+            this.btn_añadir_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.btn_añadir_VentasFacturas.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_añadir_VentasFacturas.BorderRadius = 15;
+            this.btn_añadir_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_añadir_VentasFacturas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_añadir_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_añadir_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_añadir_VentasFacturas.FillColor = System.Drawing.Color.White;
+            this.btn_añadir_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_añadir_VentasFacturas.ForeColor = System.Drawing.Color.Black;
+            this.btn_añadir_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_añadir_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_añadir_VentasFacturas.Image = ((System.Drawing.Image)(resources.GetObject("btn_añadir_VentasFacturas.Image")));
+            this.btn_añadir_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_añadir_VentasFacturas.Location = new System.Drawing.Point(677, 74);
+            this.btn_añadir_VentasFacturas.Name = "btn_añadir_VentasFacturas";
+            this.btn_añadir_VentasFacturas.Size = new System.Drawing.Size(130, 40);
+            this.btn_añadir_VentasFacturas.TabIndex = 59;
+            this.btn_añadir_VentasFacturas.Text = "Añadir";
+            this.btn_añadir_VentasFacturas.Click += new System.EventHandler(this.btn_añadir_VentasFacturas_Click);
             // 
             // guna2GradientPanel1
             // 
@@ -261,39 +304,259 @@
             this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel1.BorderRadius = 10;
             this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel1.Controls.Add(this.flpCatalogo2);
-            this.guna2GradientPanel1.Controls.Add(this.flpCatalogo1);
+            this.guna2GradientPanel1.Controls.Add(this.guna2VScrollBar2);
+            this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel16);
+            this.guna2GradientPanel1.Controls.Add(this.guna2VScrollBar1);
+            this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel15);
+            this.guna2GradientPanel1.Controls.Add(this.flowDetalleItems);
+            this.guna2GradientPanel1.Controls.Add(this.flowCatalog);
             this.guna2GradientPanel1.Controls.Add(this.btn_aplicar_descuento_VentasFacturas);
-            this.guna2GradientPanel1.Controls.Add(this.cmbox_descuento);
+            this.guna2GradientPanel1.Controls.Add(this.cmbox_descuento_VentasFacturas);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel4);
             this.guna2GradientPanel1.Controls.Add(this.label7);
             this.guna2GradientPanel1.Controls.Add(this.dgv_Servicios_Items);
             this.guna2GradientPanel1.Controls.Add(this.label5);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 137);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(15, 122);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(741, 588);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(792, 765);
             this.guna2GradientPanel1.TabIndex = 59;
             // 
-            // cmbox_descuento
+            // guna2VScrollBar2
             // 
-            this.cmbox_descuento.BackColor = System.Drawing.Color.Transparent;
-            this.cmbox_descuento.BorderRadius = 10;
-            this.cmbox_descuento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbox_descuento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_descuento.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_descuento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_descuento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbox_descuento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbox_descuento.ItemHeight = 37;
-            this.cmbox_descuento.Location = new System.Drawing.Point(19, 526);
-            this.cmbox_descuento.Name = "cmbox_descuento";
-            this.cmbox_descuento.Size = new System.Drawing.Size(311, 43);
-            this.cmbox_descuento.TabIndex = 61;
+            this.guna2VScrollBar2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2VScrollBar2.BindingContainer = this.flowDetalleItems;
+            this.guna2VScrollBar2.BorderRadius = 5;
+            this.guna2VScrollBar2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2VScrollBar2.InUpdate = false;
+            this.guna2VScrollBar2.LargeChange = 217;
+            this.guna2VScrollBar2.Location = new System.Drawing.Point(757, 444);
+            this.guna2VScrollBar2.Maximum = 242;
+            this.guna2VScrollBar2.Name = "guna2VScrollBar2";
+            this.guna2VScrollBar2.ScrollbarSize = 18;
+            this.guna2VScrollBar2.Size = new System.Drawing.Size(18, 217);
+            this.guna2VScrollBar2.SmallChange = 5;
+            this.guna2VScrollBar2.TabIndex = 1;
+            // 
+            // flowDetalleItems
+            // 
+            this.flowDetalleItems.AutoScroll = true;
+            this.flowDetalleItems.Location = new System.Drawing.Point(19, 444);
+            this.flowDetalleItems.Name = "flowDetalleItems";
+            this.flowDetalleItems.Size = new System.Drawing.Size(756, 217);
+            this.flowDetalleItems.TabIndex = 65;
+            // 
+            // guna2GradientPanel16
+            // 
+            this.guna2GradientPanel16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2GradientPanel16.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2GradientPanel16.BorderRadius = 10;
+            this.guna2GradientPanel16.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel16.Controls.Add(this.label35);
+            this.guna2GradientPanel16.Controls.Add(this.label36);
+            this.guna2GradientPanel16.Controls.Add(this.label37);
+            this.guna2GradientPanel16.Controls.Add(this.label38);
+            this.guna2GradientPanel16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel16.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel16.Location = new System.Drawing.Point(19, 393);
+            this.guna2GradientPanel16.Name = "guna2GradientPanel16";
+            this.guna2GradientPanel16.ShadowDecoration.BorderRadius = 14;
+            this.guna2GradientPanel16.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.guna2GradientPanel16.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.guna2GradientPanel16.Size = new System.Drawing.Size(756, 50);
+            this.guna2GradientPanel16.TabIndex = 65;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label35.Location = new System.Drawing.Point(544, 17);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(67, 18);
+            this.label35.TabIndex = 71;
+            this.label35.Text = "SubTotal";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label36.Location = new System.Drawing.Point(411, 17);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(52, 18);
+            this.label36.TabIndex = 70;
+            this.label36.Text = "P. Unit";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label37.Location = new System.Drawing.Point(308, 18);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(43, 18);
+            this.label37.TabIndex = 69;
+            this.label37.Text = "Cant.";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label38.Location = new System.Drawing.Point(111, 16);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(36, 18);
+            this.label38.TabIndex = 68;
+            this.label38.Text = "Ítem";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2VScrollBar1.BindingContainer = this.flowCatalog;
+            this.guna2VScrollBar1.BorderRadius = 5;
+            this.guna2VScrollBar1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(757, 88);
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 237);
+            this.guna2VScrollBar1.TabIndex = 0;
+            // 
+            // flowCatalog
+            // 
+            this.flowCatalog.AutoScroll = true;
+            this.flowCatalog.Location = new System.Drawing.Point(19, 88);
+            this.flowCatalog.Name = "flowCatalog";
+            this.flowCatalog.Size = new System.Drawing.Size(756, 237);
+            this.flowCatalog.TabIndex = 64;
+            // 
+            // guna2GradientPanel15
+            // 
+            this.guna2GradientPanel15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2GradientPanel15.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2GradientPanel15.BorderRadius = 10;
+            this.guna2GradientPanel15.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel15.Controls.Add(this.label34);
+            this.guna2GradientPanel15.Controls.Add(this.label32);
+            this.guna2GradientPanel15.Controls.Add(this.label31);
+            this.guna2GradientPanel15.Controls.Add(this.label33);
+            this.guna2GradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel15.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel15.Location = new System.Drawing.Point(19, 39);
+            this.guna2GradientPanel15.Name = "guna2GradientPanel15";
+            this.guna2GradientPanel15.ShadowDecoration.BorderRadius = 14;
+            this.guna2GradientPanel15.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.guna2GradientPanel15.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.guna2GradientPanel15.Size = new System.Drawing.Size(756, 50);
+            this.guna2GradientPanel15.TabIndex = 65;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label34.Location = new System.Drawing.Point(613, 16);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(55, 18);
+            this.label34.TabIndex = 67;
+            this.label34.Text = "Estado";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label32.Location = new System.Drawing.Point(480, 16);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(47, 18);
+            this.label32.TabIndex = 66;
+            this.label32.Text = "Stock";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label31.Location = new System.Drawing.Point(377, 16);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(51, 18);
+            this.label31.TabIndex = 65;
+            this.label31.Text = "Precio";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label33.Location = new System.Drawing.Point(134, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(36, 18);
+            this.label33.TabIndex = 64;
+            this.label33.Text = "Ítem";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btn_aplicar_descuento_VentasFacturas
+            // 
+            this.btn_aplicar_descuento_VentasFacturas.Animated = true;
+            this.btn_aplicar_descuento_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.btn_aplicar_descuento_VentasFacturas.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_aplicar_descuento_VentasFacturas.BorderRadius = 15;
+            this.btn_aplicar_descuento_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_aplicar_descuento_VentasFacturas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_aplicar_descuento_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_aplicar_descuento_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_aplicar_descuento_VentasFacturas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_aplicar_descuento_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_aplicar_descuento_VentasFacturas.ForeColor = System.Drawing.Color.Black;
+            this.btn_aplicar_descuento_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_aplicar_descuento_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_aplicar_descuento_VentasFacturas.Image = ((System.Drawing.Image)(resources.GetObject("btn_aplicar_descuento_VentasFacturas.Image")));
+            this.btn_aplicar_descuento_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_aplicar_descuento_VentasFacturas.Location = new System.Drawing.Point(588, 703);
+            this.btn_aplicar_descuento_VentasFacturas.Name = "btn_aplicar_descuento_VentasFacturas";
+            this.btn_aplicar_descuento_VentasFacturas.Size = new System.Drawing.Size(187, 43);
+            this.btn_aplicar_descuento_VentasFacturas.TabIndex = 60;
+            this.btn_aplicar_descuento_VentasFacturas.Text = "Aplicar descuento";
+            this.btn_aplicar_descuento_VentasFacturas.Click += new System.EventHandler(this.btn_aplicar_descuento_VentasFacturas_Click);
+            // 
+            // cmbox_descuento_VentasFacturas
+            // 
+            this.cmbox_descuento_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_descuento_VentasFacturas.BorderRadius = 10;
+            this.cmbox_descuento_VentasFacturas.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_descuento_VentasFacturas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_descuento_VentasFacturas.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_descuento_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_descuento_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_descuento_VentasFacturas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_descuento_VentasFacturas.ItemHeight = 37;
+            this.cmbox_descuento_VentasFacturas.Location = new System.Drawing.Point(19, 703);
+            this.cmbox_descuento_VentasFacturas.Name = "cmbox_descuento_VentasFacturas";
+            this.cmbox_descuento_VentasFacturas.Size = new System.Drawing.Size(311, 43);
+            this.cmbox_descuento_VentasFacturas.TabIndex = 61;
             // 
             // guna2GradientPanel4
             // 
@@ -303,16 +566,15 @@
             this.guna2GradientPanel4.BorderRadius = 10;
             this.guna2GradientPanel4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel4.Controls.Add(this.guna2GradientPanel3);
-            this.guna2GradientPanel4.Controls.Add(this.Seleccion_Item);
-            this.guna2GradientPanel4.Controls.Add(this.label6);
+            this.guna2GradientPanel4.Controls.Add(this.lbl_Seleccion_Item_VentasFacturas);
             this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(19, 262);
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(19, 331);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
             this.guna2GradientPanel4.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel4.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(703, 50);
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(756, 50);
             this.guna2GradientPanel4.TabIndex = 62;
             // 
             // guna2GradientPanel3
@@ -323,11 +585,11 @@
             this.guna2GradientPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(166)))), ((int)(((byte)(244)))));
             this.guna2GradientPanel3.BorderRadius = 10;
             this.guna2GradientPanel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel3.Controls.Add(this.lbl_Stock_selccionado);
+            this.guna2GradientPanel3.Controls.Add(this.lbl_Stock_selccionado_VentasFacturas);
             this.guna2GradientPanel3.Controls.Add(this.label11);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(250)))), ((int)(((byte)(251)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(250)))), ((int)(((byte)(251)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(581, 10);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(608, 10);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel3.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -335,18 +597,18 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(103, 30);
             this.guna2GradientPanel3.TabIndex = 63;
             // 
-            // lbl_Stock_selccionado
+            // lbl_Stock_selccionado_VentasFacturas
             // 
-            this.lbl_Stock_selccionado.AutoSize = true;
-            this.lbl_Stock_selccionado.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Stock_selccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stock_selccionado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Stock_selccionado.Location = new System.Drawing.Point(58, 5);
-            this.lbl_Stock_selccionado.Name = "lbl_Stock_selccionado";
-            this.lbl_Stock_selccionado.Size = new System.Drawing.Size(16, 18);
-            this.lbl_Stock_selccionado.TabIndex = 65;
-            this.lbl_Stock_selccionado.Text = "0";
-            this.lbl_Stock_selccionado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Stock_selccionado_VentasFacturas.AutoSize = true;
+            this.lbl_Stock_selccionado_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Stock_selccionado_VentasFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stock_selccionado_VentasFacturas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Stock_selccionado_VentasFacturas.Location = new System.Drawing.Point(58, 5);
+            this.lbl_Stock_selccionado_VentasFacturas.Name = "lbl_Stock_selccionado_VentasFacturas";
+            this.lbl_Stock_selccionado_VentasFacturas.Size = new System.Drawing.Size(16, 18);
+            this.lbl_Stock_selccionado_VentasFacturas.TabIndex = 65;
+            this.lbl_Stock_selccionado_VentasFacturas.Text = "0";
+            this.lbl_Stock_selccionado_VentasFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
             // 
@@ -360,31 +622,18 @@
             this.label11.TabIndex = 45;
             this.label11.Text = "Stock:";
             // 
-            // Seleccion_Item
+            // lbl_Seleccion_Item_VentasFacturas
             // 
-            this.Seleccion_Item.AutoSize = true;
-            this.Seleccion_Item.BackColor = System.Drawing.Color.Transparent;
-            this.Seleccion_Item.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Seleccion_Item.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Seleccion_Item.Location = new System.Drawing.Point(111, 16);
-            this.Seleccion_Item.Name = "Seleccion_Item";
-            this.Seleccion_Item.Size = new System.Drawing.Size(36, 18);
-            this.Seleccion_Item.TabIndex = 64;
-            this.Seleccion_Item.Text = "Item";
-            this.Seleccion_Item.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(9, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 18);
-            this.label6.TabIndex = 63;
-            this.label6.Text = "Seleccionado:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Seleccion_Item_VentasFacturas.AutoSize = true;
+            this.lbl_Seleccion_Item_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Seleccion_Item_VentasFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Seleccion_Item_VentasFacturas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Seleccion_Item_VentasFacturas.Location = new System.Drawing.Point(19, 17);
+            this.lbl_Seleccion_Item_VentasFacturas.Name = "lbl_Seleccion_Item_VentasFacturas";
+            this.lbl_Seleccion_Item_VentasFacturas.Size = new System.Drawing.Size(36, 18);
+            this.lbl_Seleccion_Item_VentasFacturas.TabIndex = 64;
+            this.lbl_Seleccion_Item_VentasFacturas.Text = "Item";
+            this.lbl_Seleccion_Item_VentasFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
@@ -392,7 +641,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(19, 499);
+            this.label7.Location = new System.Drawing.Point(19, 676);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(103, 18);
@@ -402,26 +651,26 @@
             // 
             // dgv_Servicios_Items
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Servicios_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgv_Servicios_Items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Servicios_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_Servicios_Items.ColumnHeadersHeight = 4;
             this.dgv_Servicios_Items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Servicios_Items.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Servicios_Items.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_Servicios_Items.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Servicios_Items.Location = new System.Drawing.Point(19, 46);
             this.dgv_Servicios_Items.Name = "dgv_Servicios_Items";
@@ -464,21 +713,21 @@
             this.label5.Text = "Catálogo disponible — clic para seleccionar (servicios)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Cmbox_TipoServicio
+            // cmbox_tipo_VentasFacturas
             // 
-            this.Cmbox_TipoServicio.BackColor = System.Drawing.Color.Transparent;
-            this.Cmbox_TipoServicio.BorderRadius = 10;
-            this.Cmbox_TipoServicio.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Cmbox_TipoServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cmbox_TipoServicio.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Cmbox_TipoServicio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Cmbox_TipoServicio.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Cmbox_TipoServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Cmbox_TipoServicio.ItemHeight = 37;
-            this.Cmbox_TipoServicio.Location = new System.Drawing.Point(390, 71);
-            this.Cmbox_TipoServicio.Name = "Cmbox_TipoServicio";
-            this.Cmbox_TipoServicio.Size = new System.Drawing.Size(231, 43);
-            this.Cmbox_TipoServicio.TabIndex = 54;
+            this.cmbox_tipo_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_tipo_VentasFacturas.BorderRadius = 10;
+            this.cmbox_tipo_VentasFacturas.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_tipo_VentasFacturas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_tipo_VentasFacturas.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_tipo_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_tipo_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_tipo_VentasFacturas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_tipo_VentasFacturas.ItemHeight = 37;
+            this.cmbox_tipo_VentasFacturas.Location = new System.Drawing.Point(432, 71);
+            this.cmbox_tipo_VentasFacturas.Name = "cmbox_tipo_VentasFacturas";
+            this.cmbox_tipo_VentasFacturas.Size = new System.Drawing.Size(231, 43);
+            this.cmbox_tipo_VentasFacturas.TabIndex = 54;
             // 
             // label4
             // 
@@ -486,7 +735,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(390, 48);
+            this.label4.Location = new System.Drawing.Point(432, 48);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(37, 18);
@@ -508,6 +757,17 @@
             this.label3.Text = "Buscar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(34, 78);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(31, 28);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 46;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -520,12 +780,12 @@
             this.guna2GradientPanel2.Controls.Add(this.label1);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(820, 92);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(871, 73);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.ShadowDecoration.BorderRadius = 20;
             this.guna2GradientPanel2.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(615, 751);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(595, 737);
             this.guna2GradientPanel2.TabIndex = 60;
             // 
             // guna2GradientPanel5
@@ -535,20 +795,20 @@
             this.guna2GradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel5.Controls.Add(this.txt_telefono_VentasFacturas);
             this.guna2GradientPanel5.Controls.Add(this.btn_Nueva_Factura_VentasFacturas);
             this.guna2GradientPanel5.Controls.Add(this.btn_Guardar_Factura_VentasFacturas);
+            this.guna2GradientPanel5.Controls.Add(this.txt_telefono_VentasFacturas);
             this.guna2GradientPanel5.Controls.Add(this.guna2GradientPanel10);
             this.guna2GradientPanel5.Controls.Add(this.guna2GradientPanel9);
             this.guna2GradientPanel5.Controls.Add(this.guna2GradientPanel7);
             this.guna2GradientPanel5.Controls.Add(this.guna2GradientPanel6);
             this.guna2GradientPanel5.Controls.Add(this.guna2Separator1);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox6);
+            this.guna2GradientPanel5.Controls.Add(this.txt_email_VentasFacturas);
             this.guna2GradientPanel5.Controls.Add(this.label14);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox5);
+            this.guna2GradientPanel5.Controls.Add(this.txt_direccion_VentasFacturas);
             this.guna2GradientPanel5.Controls.Add(this.label13);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox3);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox4);
+            this.guna2GradientPanel5.Controls.Add(this.txt_nombre_VentasFacturas);
+            this.guna2GradientPanel5.Controls.Add(this.txt_apellido_VentasFacturas);
             this.guna2GradientPanel5.Controls.Add(this.label10);
             this.guna2GradientPanel5.Controls.Add(this.label12);
             this.guna2GradientPanel5.Controls.Add(this.txt_cedula_VentasFacturas);
@@ -556,13 +816,59 @@
             this.guna2GradientPanel5.Controls.Add(this.label8);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(22, 55);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(11, 48);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
             this.guna2GradientPanel5.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel5.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.guna2GradientPanel5.Size = new System.Drawing.Size(571, 670);
             this.guna2GradientPanel5.TabIndex = 64;
+            // 
+            // btn_Nueva_Factura_VentasFacturas
+            // 
+            this.btn_Nueva_Factura_VentasFacturas.Animated = true;
+            this.btn_Nueva_Factura_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Nueva_Factura_VentasFacturas.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Nueva_Factura_VentasFacturas.BorderRadius = 15;
+            this.btn_Nueva_Factura_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Nueva_Factura_VentasFacturas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Nueva_Factura_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Nueva_Factura_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Nueva_Factura_VentasFacturas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_Nueva_Factura_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Nueva_Factura_VentasFacturas.ForeColor = System.Drawing.Color.Black;
+            this.btn_Nueva_Factura_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Nueva_Factura_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Nueva_Factura_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Nueva_Factura_VentasFacturas.Location = new System.Drawing.Point(305, 615);
+            this.btn_Nueva_Factura_VentasFacturas.Name = "btn_Nueva_Factura_VentasFacturas";
+            this.btn_Nueva_Factura_VentasFacturas.Size = new System.Drawing.Size(244, 44);
+            this.btn_Nueva_Factura_VentasFacturas.TabIndex = 78;
+            this.btn_Nueva_Factura_VentasFacturas.Text = "Nueva Factura";
+            this.btn_Nueva_Factura_VentasFacturas.Click += new System.EventHandler(this.btn_Nueva_Factura_VentasFacturas_Click);
+            // 
+            // btn_Guardar_Factura_VentasFacturas
+            // 
+            this.btn_Guardar_Factura_VentasFacturas.Animated = true;
+            this.btn_Guardar_Factura_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar_Factura_VentasFacturas.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar_Factura_VentasFacturas.BorderRadius = 15;
+            this.btn_Guardar_Factura_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Guardar_Factura_VentasFacturas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Guardar_Factura_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Guardar_Factura_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Guardar_Factura_VentasFacturas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_Guardar_Factura_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Guardar_Factura_VentasFacturas.ForeColor = System.Drawing.Color.Black;
+            this.btn_Guardar_Factura_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Guardar_Factura_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Guardar_Factura_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Guardar_Factura_VentasFacturas.Location = new System.Drawing.Point(16, 615);
+            this.btn_Guardar_Factura_VentasFacturas.Name = "btn_Guardar_Factura_VentasFacturas";
+            this.btn_Guardar_Factura_VentasFacturas.Size = new System.Drawing.Size(269, 44);
+            this.btn_Guardar_Factura_VentasFacturas.TabIndex = 77;
+            this.btn_Guardar_Factura_VentasFacturas.Text = "Registrar";
+            this.btn_Guardar_Factura_VentasFacturas.Click += new System.EventHandler(this.btn_Guardar_Factura_VentasFacturas_Click);
             // 
             // txt_telefono_VentasFacturas
             // 
@@ -587,50 +893,6 @@
             this.txt_telefono_VentasFacturas.Size = new System.Drawing.Size(256, 48);
             this.txt_telefono_VentasFacturas.TabIndex = 75;
             // 
-            // btn_Nueva_Factura_VentasFacturas
-            // 
-            this.btn_Nueva_Factura_VentasFacturas.Animated = true;
-            this.btn_Nueva_Factura_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Nueva_Factura_VentasFacturas.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Nueva_Factura_VentasFacturas.BorderRadius = 15;
-            this.btn_Nueva_Factura_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Nueva_Factura_VentasFacturas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Nueva_Factura_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Nueva_Factura_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Nueva_Factura_VentasFacturas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btn_Nueva_Factura_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Nueva_Factura_VentasFacturas.ForeColor = System.Drawing.Color.Black;
-            this.btn_Nueva_Factura_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Nueva_Factura_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Nueva_Factura_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Nueva_Factura_VentasFacturas.Location = new System.Drawing.Point(294, 614);
-            this.btn_Nueva_Factura_VentasFacturas.Name = "btn_Nueva_Factura_VentasFacturas";
-            this.btn_Nueva_Factura_VentasFacturas.Size = new System.Drawing.Size(255, 44);
-            this.btn_Nueva_Factura_VentasFacturas.TabIndex = 74;
-            this.btn_Nueva_Factura_VentasFacturas.Text = "Nueva factura";
-            // 
-            // btn_Guardar_Factura_VentasFacturas
-            // 
-            this.btn_Guardar_Factura_VentasFacturas.Animated = true;
-            this.btn_Guardar_Factura_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar_Factura_VentasFacturas.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar_Factura_VentasFacturas.BorderRadius = 15;
-            this.btn_Guardar_Factura_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Guardar_Factura_VentasFacturas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Guardar_Factura_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Guardar_Factura_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Guardar_Factura_VentasFacturas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btn_Guardar_Factura_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Guardar_Factura_VentasFacturas.ForeColor = System.Drawing.Color.Black;
-            this.btn_Guardar_Factura_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Guardar_Factura_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Guardar_Factura_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Guardar_Factura_VentasFacturas.Location = new System.Drawing.Point(17, 614);
-            this.btn_Guardar_Factura_VentasFacturas.Name = "btn_Guardar_Factura_VentasFacturas";
-            this.btn_Guardar_Factura_VentasFacturas.Size = new System.Drawing.Size(255, 44);
-            this.btn_Guardar_Factura_VentasFacturas.TabIndex = 64;
-            this.btn_Guardar_Factura_VentasFacturas.Text = "Generar y guardar";
-            // 
             // guna2GradientPanel10
             // 
             this.guna2GradientPanel10.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -639,7 +901,7 @@
             this.guna2GradientPanel10.BorderRadius = 10;
             this.guna2GradientPanel10.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel10.Controls.Add(this.guna2GradientPanel14);
-            this.guna2GradientPanel10.Controls.Add(this.label22);
+            this.guna2GradientPanel10.Controls.Add(this.lbl_Total_VentasFacturas);
             this.guna2GradientPanel10.Controls.Add(this.label18);
             this.guna2GradientPanel10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -697,17 +959,17 @@
             this.label30.Text = "Listo";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label22
+            // lbl_Total_VentasFacturas
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(9, 24);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(49, 20);
-            this.label22.TabIndex = 77;
-            this.label22.Text = "$0.00";
+            this.lbl_Total_VentasFacturas.AutoSize = true;
+            this.lbl_Total_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Total_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Total_VentasFacturas.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Total_VentasFacturas.Location = new System.Drawing.Point(9, 24);
+            this.lbl_Total_VentasFacturas.Name = "lbl_Total_VentasFacturas";
+            this.lbl_Total_VentasFacturas.Size = new System.Drawing.Size(49, 20);
+            this.lbl_Total_VentasFacturas.TabIndex = 77;
+            this.lbl_Total_VentasFacturas.Text = "$0.00";
             // 
             // label18
             // 
@@ -730,7 +992,7 @@
             this.guna2GradientPanel9.BorderRadius = 10;
             this.guna2GradientPanel9.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel9.Controls.Add(this.guna2GradientPanel13);
-            this.guna2GradientPanel9.Controls.Add(this.label21);
+            this.guna2GradientPanel9.Controls.Add(this.lbl_IVA_VentasFacturas);
             this.guna2GradientPanel9.Controls.Add(this.label17);
             this.guna2GradientPanel9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -788,17 +1050,17 @@
             this.label28.Text = "Impuesto";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label21
+            // lbl_IVA_VentasFacturas
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(9, 27);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 20);
-            this.label21.TabIndex = 76;
-            this.label21.Text = "$0.00";
+            this.lbl_IVA_VentasFacturas.AutoSize = true;
+            this.lbl_IVA_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_IVA_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IVA_VentasFacturas.ForeColor = System.Drawing.Color.Black;
+            this.lbl_IVA_VentasFacturas.Location = new System.Drawing.Point(9, 27);
+            this.lbl_IVA_VentasFacturas.Name = "lbl_IVA_VentasFacturas";
+            this.lbl_IVA_VentasFacturas.Size = new System.Drawing.Size(49, 20);
+            this.lbl_IVA_VentasFacturas.TabIndex = 76;
+            this.lbl_IVA_VentasFacturas.Text = "$0.00";
             // 
             // label17
             // 
@@ -821,7 +1083,7 @@
             this.guna2GradientPanel7.BorderRadius = 10;
             this.guna2GradientPanel7.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel7.Controls.Add(this.guna2GradientPanel12);
-            this.guna2GradientPanel7.Controls.Add(this.label20);
+            this.guna2GradientPanel7.Controls.Add(this.lbl_descuento_VentasFacturas);
             this.guna2GradientPanel7.Controls.Add(this.label16);
             this.guna2GradientPanel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -880,17 +1142,17 @@
             this.label26.Text = "Opcional";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label20
+            // lbl_descuento_VentasFacturas
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(9, 27);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(49, 20);
-            this.label20.TabIndex = 75;
-            this.label20.Text = "$0.00";
+            this.lbl_descuento_VentasFacturas.AutoSize = true;
+            this.lbl_descuento_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_descuento_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_descuento_VentasFacturas.ForeColor = System.Drawing.Color.Black;
+            this.lbl_descuento_VentasFacturas.Location = new System.Drawing.Point(9, 27);
+            this.lbl_descuento_VentasFacturas.Name = "lbl_descuento_VentasFacturas";
+            this.lbl_descuento_VentasFacturas.Size = new System.Drawing.Size(49, 20);
+            this.lbl_descuento_VentasFacturas.TabIndex = 75;
+            this.lbl_descuento_VentasFacturas.Text = "$0.00";
             // 
             // label16
             // 
@@ -913,7 +1175,7 @@
             this.guna2GradientPanel6.BorderRadius = 10;
             this.guna2GradientPanel6.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel6.Controls.Add(this.guna2GradientPanel11);
-            this.guna2GradientPanel6.Controls.Add(this.label19);
+            this.guna2GradientPanel6.Controls.Add(this.lbl_subtotal_VentasFacturas);
             this.guna2GradientPanel6.Controls.Add(this.label15);
             this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -971,17 +1233,17 @@
             this.label23.Text = "Items";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label19
+            // lbl_subtotal_VentasFacturas
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(9, 25);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(49, 20);
-            this.label19.TabIndex = 65;
-            this.label19.Text = "$0.00";
+            this.lbl_subtotal_VentasFacturas.AutoSize = true;
+            this.lbl_subtotal_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_subtotal_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_subtotal_VentasFacturas.ForeColor = System.Drawing.Color.Black;
+            this.lbl_subtotal_VentasFacturas.Location = new System.Drawing.Point(9, 25);
+            this.lbl_subtotal_VentasFacturas.Name = "lbl_subtotal_VentasFacturas";
+            this.lbl_subtotal_VentasFacturas.Size = new System.Drawing.Size(49, 20);
+            this.lbl_subtotal_VentasFacturas.TabIndex = 65;
+            this.lbl_subtotal_VentasFacturas.Text = "$0.00";
             // 
             // label15
             // 
@@ -1003,27 +1265,27 @@
             this.guna2Separator1.Size = new System.Drawing.Size(565, 10);
             this.guna2Separator1.TabIndex = 73;
             // 
-            // guna2TextBox6
+            // txt_email_VentasFacturas
             // 
-            this.guna2TextBox6.Animated = true;
-            this.guna2TextBox6.BorderRadius = 15;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.Enabled = false;
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(17, 282);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PlaceholderText = "cliente@servicio.com";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(533, 48);
-            this.guna2TextBox6.TabIndex = 72;
+            this.txt_email_VentasFacturas.Animated = true;
+            this.txt_email_VentasFacturas.BorderRadius = 15;
+            this.txt_email_VentasFacturas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_email_VentasFacturas.DefaultText = "";
+            this.txt_email_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_email_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_email_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_email_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_email_VentasFacturas.Enabled = false;
+            this.txt_email_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_email_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_email_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_email_VentasFacturas.Location = new System.Drawing.Point(17, 282);
+            this.txt_email_VentasFacturas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_email_VentasFacturas.Name = "txt_email_VentasFacturas";
+            this.txt_email_VentasFacturas.PlaceholderText = "cliente@servicio.com";
+            this.txt_email_VentasFacturas.SelectedText = "";
+            this.txt_email_VentasFacturas.Size = new System.Drawing.Size(533, 48);
+            this.txt_email_VentasFacturas.TabIndex = 72;
             // 
             // label14
             // 
@@ -1038,27 +1300,27 @@
             this.label14.Text = "Email";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox5
+            // txt_direccion_VentasFacturas
             // 
-            this.guna2TextBox5.Animated = true;
-            this.guna2TextBox5.BorderRadius = 15;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.Enabled = false;
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(17, 201);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PlaceholderText = "Av. Siempreviva";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(533, 48);
-            this.guna2TextBox5.TabIndex = 70;
+            this.txt_direccion_VentasFacturas.Animated = true;
+            this.txt_direccion_VentasFacturas.BorderRadius = 15;
+            this.txt_direccion_VentasFacturas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_direccion_VentasFacturas.DefaultText = "";
+            this.txt_direccion_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_direccion_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_direccion_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_direccion_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_direccion_VentasFacturas.Enabled = false;
+            this.txt_direccion_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_direccion_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_direccion_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_direccion_VentasFacturas.Location = new System.Drawing.Point(17, 201);
+            this.txt_direccion_VentasFacturas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_direccion_VentasFacturas.Name = "txt_direccion_VentasFacturas";
+            this.txt_direccion_VentasFacturas.PlaceholderText = "Av. Siempreviva";
+            this.txt_direccion_VentasFacturas.SelectedText = "";
+            this.txt_direccion_VentasFacturas.Size = new System.Drawing.Size(533, 48);
+            this.txt_direccion_VentasFacturas.TabIndex = 70;
             // 
             // label13
             // 
@@ -1073,49 +1335,49 @@
             this.label13.Text = "Dirección";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox3
+            // txt_nombre_VentasFacturas
             // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.BorderRadius = 15;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.Enabled = false;
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(17, 121);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "Pedrito";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(256, 48);
-            this.guna2TextBox3.TabIndex = 68;
+            this.txt_nombre_VentasFacturas.Animated = true;
+            this.txt_nombre_VentasFacturas.BorderRadius = 15;
+            this.txt_nombre_VentasFacturas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_nombre_VentasFacturas.DefaultText = "";
+            this.txt_nombre_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_nombre_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_nombre_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_nombre_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_nombre_VentasFacturas.Enabled = false;
+            this.txt_nombre_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_nombre_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_nombre_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_nombre_VentasFacturas.Location = new System.Drawing.Point(17, 121);
+            this.txt_nombre_VentasFacturas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_nombre_VentasFacturas.Name = "txt_nombre_VentasFacturas";
+            this.txt_nombre_VentasFacturas.PlaceholderText = "Pedrito";
+            this.txt_nombre_VentasFacturas.SelectedText = "";
+            this.txt_nombre_VentasFacturas.Size = new System.Drawing.Size(256, 48);
+            this.txt_nombre_VentasFacturas.TabIndex = 68;
             // 
-            // guna2TextBox4
+            // txt_apellido_VentasFacturas
             // 
-            this.guna2TextBox4.Animated = true;
-            this.guna2TextBox4.BorderRadius = 15;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.Enabled = false;
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(294, 121);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PlaceholderText = "Pérez";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(256, 48);
-            this.guna2TextBox4.TabIndex = 67;
+            this.txt_apellido_VentasFacturas.Animated = true;
+            this.txt_apellido_VentasFacturas.BorderRadius = 15;
+            this.txt_apellido_VentasFacturas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_apellido_VentasFacturas.DefaultText = "";
+            this.txt_apellido_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_apellido_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_apellido_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_apellido_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_apellido_VentasFacturas.Enabled = false;
+            this.txt_apellido_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_apellido_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_apellido_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_apellido_VentasFacturas.Location = new System.Drawing.Point(294, 121);
+            this.txt_apellido_VentasFacturas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_apellido_VentasFacturas.Name = "txt_apellido_VentasFacturas";
+            this.txt_apellido_VentasFacturas.PlaceholderText = "Pérez";
+            this.txt_apellido_VentasFacturas.SelectedText = "";
+            this.txt_apellido_VentasFacturas.Size = new System.Drawing.Size(256, 48);
+            this.txt_apellido_VentasFacturas.TabIndex = 67;
             // 
             // label10
             // 
@@ -1197,7 +1459,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(487, 18);
+            this.label2.Location = new System.Drawing.Point(473, 20);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(109, 18);
@@ -1217,87 +1479,38 @@
             this.label1.TabIndex = 48;
             this.label1.Text = "Cliente";
             // 
-            // flpCatalogo1
+            // flowLayoutPanel_DetaleFactura
             // 
-            this.flpCatalogo1.AutoScroll = true;
-            this.flpCatalogo1.Location = new System.Drawing.Point(19, 39);
-            this.flpCatalogo1.Name = "flpCatalogo1";
-            this.flpCatalogo1.Size = new System.Drawing.Size(703, 212);
-            this.flpCatalogo1.TabIndex = 64;
+            this.flowLayoutPanel_DetaleFactura.AutoScroll = true;
+            this.flowLayoutPanel_DetaleFactura.Controls.Add(this.Panel_Detalle_Factura);
+            this.flowLayoutPanel_DetaleFactura.Location = new System.Drawing.Point(12, 95);
+            this.flowLayoutPanel_DetaleFactura.Name = "flowLayoutPanel_DetaleFactura";
+            this.flowLayoutPanel_DetaleFactura.Size = new System.Drawing.Size(851, 736);
+            this.flowLayoutPanel_DetaleFactura.TabIndex = 61;
             // 
-            // flpCatalogo2
+            // guna2VScrollBar3
             // 
-            this.flpCatalogo2.AutoScroll = true;
-            this.flpCatalogo2.Location = new System.Drawing.Point(19, 322);
-            this.flpCatalogo2.Name = "flpCatalogo2";
-            this.flpCatalogo2.Size = new System.Drawing.Size(703, 168);
-            this.flpCatalogo2.TabIndex = 65;
-            // 
-            // btn_Añadir_Items
-            // 
-            this.btn_Añadir_Items.Animated = true;
-            this.btn_Añadir_Items.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Añadir_Items.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Añadir_Items.BorderRadius = 15;
-            this.btn_Añadir_Items.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Añadir_Items.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Añadir_Items.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Añadir_Items.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Añadir_Items.FillColor = System.Drawing.Color.White;
-            this.btn_Añadir_Items.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Añadir_Items.ForeColor = System.Drawing.Color.Black;
-            this.btn_Añadir_Items.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Añadir_Items.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Añadir_Items.Image = ((System.Drawing.Image)(resources.GetObject("btn_Añadir_Items.Image")));
-            this.btn_Añadir_Items.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Añadir_Items.Location = new System.Drawing.Point(633, 71);
-            this.btn_Añadir_Items.Name = "btn_Añadir_Items";
-            this.btn_Añadir_Items.Size = new System.Drawing.Size(130, 40);
-            this.btn_Añadir_Items.TabIndex = 59;
-            this.btn_Añadir_Items.Text = "Añadir";
-            // 
-            // btn_aplicar_descuento_VentasFacturas
-            // 
-            this.btn_aplicar_descuento_VentasFacturas.Animated = true;
-            this.btn_aplicar_descuento_VentasFacturas.BackColor = System.Drawing.Color.Transparent;
-            this.btn_aplicar_descuento_VentasFacturas.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_aplicar_descuento_VentasFacturas.BorderRadius = 15;
-            this.btn_aplicar_descuento_VentasFacturas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_aplicar_descuento_VentasFacturas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_aplicar_descuento_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_aplicar_descuento_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_aplicar_descuento_VentasFacturas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btn_aplicar_descuento_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_aplicar_descuento_VentasFacturas.ForeColor = System.Drawing.Color.Black;
-            this.btn_aplicar_descuento_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_aplicar_descuento_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_aplicar_descuento_VentasFacturas.Image = ((System.Drawing.Image)(resources.GetObject("btn_aplicar_descuento_VentasFacturas.Image")));
-            this.btn_aplicar_descuento_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_aplicar_descuento_VentasFacturas.Location = new System.Drawing.Point(535, 529);
-            this.btn_aplicar_descuento_VentasFacturas.Name = "btn_aplicar_descuento_VentasFacturas";
-            this.btn_aplicar_descuento_VentasFacturas.Size = new System.Drawing.Size(187, 40);
-            this.btn_aplicar_descuento_VentasFacturas.TabIndex = 60;
-            this.btn_aplicar_descuento_VentasFacturas.Text = "Aplicar descuento";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 78);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 28);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 46;
-            this.guna2PictureBox1.TabStop = false;
+            this.guna2VScrollBar3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2VScrollBar3.BindingContainer = this.flowLayoutPanel_DetaleFactura;
+            this.guna2VScrollBar3.BorderRadius = 5;
+            this.guna2VScrollBar3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2VScrollBar3.InUpdate = false;
+            this.guna2VScrollBar3.LargeChange = 10;
+            this.guna2VScrollBar3.Location = new System.Drawing.Point(845, 95);
+            this.guna2VScrollBar3.Name = "guna2VScrollBar3";
+            this.guna2VScrollBar3.ScrollbarSize = 18;
+            this.guna2VScrollBar3.Size = new System.Drawing.Size(18, 736);
+            this.guna2VScrollBar3.TabIndex = 66;
             // 
             // Form_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1458, 855);
+            this.ClientSize = new System.Drawing.Size(1478, 855);
+            this.Controls.Add(this.guna2VScrollBar3);
+            this.Controls.Add(this.flowLayoutPanel_DetaleFactura);
             this.Controls.Add(this.guna2GradientPanel2);
-            this.Controls.Add(this.Panel_Detalle_Factura);
             this.Controls.Add(this.guna2GradientPanel8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Ventas";
@@ -1306,11 +1519,16 @@
             this.Panel_Detalle_Factura.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            this.guna2GradientPanel16.ResumeLayout(false);
+            this.guna2GradientPanel16.PerformLayout();
+            this.guna2GradientPanel15.ResumeLayout(false);
+            this.guna2GradientPanel15.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicios_Items)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel5.ResumeLayout(false);
@@ -1331,15 +1549,15 @@
             this.guna2GradientPanel6.PerformLayout();
             this.guna2GradientPanel11.ResumeLayout(false);
             this.guna2GradientPanel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.flowLayoutPanel_DetaleFactura.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Buscador_Items;
-        private System.Windows.Forms.Label lbl_Descripcion_Titulo;
+        private Guna.UI2.WinForms.Guna2TextBox txt_buscar_VentasFacturas;
+        private System.Windows.Forms.Label lbl_Codigo_VentasFacturas;
         private System.Windows.Forms.Label lbl_Titulo;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
         private Guna.UI2.WinForms.Guna2Button btn_EmitirFactura_View;
@@ -1349,18 +1567,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox Cmbox_TipoServicio;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_tipo_VentasFacturas;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_Servicios_Items;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Seleccion_Item;
+        private System.Windows.Forms.Label lbl_Seleccion_Item_VentasFacturas;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbox_descuento;
-        private System.Windows.Forms.Label lbl_Stock_selccionado;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_descuento_VentasFacturas;
+        private System.Windows.Forms.Label lbl_Stock_selccionado_VentasFacturas;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private System.Windows.Forms.Label label8;
@@ -1368,32 +1584,30 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_cedula_VentasFacturas;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txt_email_VentasFacturas;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txt_direccion_VentasFacturas;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txt_nombre_VentasFacturas;
+        private Guna.UI2.WinForms.Guna2TextBox txt_apellido_VentasFacturas;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel10;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lbl_Total_VentasFacturas;
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbl_IVA_VentasFacturas;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lbl_descuento_VentasFacturas;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbl_subtotal_VentasFacturas;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel11;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private Guna.UI2.WinForms.Guna2Button btn_Añadir_Items;
+        private Guna.UI2.WinForms.Guna2Button btn_añadir_VentasFacturas;
         private Guna.UI2.WinForms.Guna2Button btn_aplicar_descuento_VentasFacturas;
-        private Guna.UI2.WinForms.Guna2Button btn_Nueva_Factura_VentasFacturas;
-        private Guna.UI2.WinForms.Guna2Button btn_Guardar_Factura_VentasFacturas;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel14;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
@@ -1404,7 +1618,24 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private Guna.UI2.WinForms.Guna2TextBox txt_telefono_VentasFacturas;
-        private System.Windows.Forms.FlowLayoutPanel flpCatalogo1;
-        private System.Windows.Forms.FlowLayoutPanel flpCatalogo2;
+        private System.Windows.Forms.FlowLayoutPanel flowCatalog;
+        private System.Windows.Forms.FlowLayoutPanel flowDetalleItems;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel15;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_Servicios_Items;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_DetaleFactura;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel16;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar2;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar3;
+        private Guna.UI2.WinForms.Guna2Button btn_Nueva_Factura_VentasFacturas;
+        private Guna.UI2.WinForms.Guna2Button btn_Guardar_Factura_VentasFacturas;
     }
 }

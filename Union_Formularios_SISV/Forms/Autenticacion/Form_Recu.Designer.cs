@@ -49,7 +49,7 @@
             this.btn_Minus.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btn_Minus.FillColor = System.Drawing.Color.Transparent;
             this.btn_Minus.IconColor = System.Drawing.Color.Black;
-            this.btn_Minus.Location = new System.Drawing.Point(696, 12);
+            this.btn_Minus.Location = new System.Drawing.Point(627, 12);
             this.btn_Minus.Name = "btn_Minus";
             this.btn_Minus.Size = new System.Drawing.Size(43, 31);
             this.btn_Minus.TabIndex = 37;
@@ -60,7 +60,7 @@
             this.btn_Close.BackColor = System.Drawing.Color.Transparent;
             this.btn_Close.FillColor = System.Drawing.Color.Transparent;
             this.btn_Close.IconColor = System.Drawing.Color.Black;
-            this.btn_Close.Location = new System.Drawing.Point(745, 12);
+            this.btn_Close.Location = new System.Drawing.Point(676, 12);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(43, 31);
             this.btn_Close.TabIndex = 36;
@@ -74,16 +74,16 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(204, 33);
+            this.label5.Location = new System.Drawing.Point(16, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(365, 45);
+            this.label5.Size = new System.Drawing.Size(343, 45);
             this.label5.TabIndex = 44;
-            this.label5.Text = "Recuerar su contraseña";
+            this.label5.Text = "Recuperar contraseña";
             // 
             // txt_recuperar
             // 
             this.txt_recuperar.Animated = true;
-            this.txt_recuperar.BorderRadius = 14;
+            this.txt_recuperar.BorderRadius = 15;
             this.txt_recuperar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_recuperar.DefaultText = "";
             this.txt_recuperar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -97,7 +97,7 @@
             this.txt_recuperar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_recuperar.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.txt_recuperar.IconLeftSize = new System.Drawing.Size(28, 28);
-            this.txt_recuperar.Location = new System.Drawing.Point(193, 150);
+            this.txt_recuperar.Location = new System.Drawing.Point(24, 118);
             this.txt_recuperar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_recuperar.Name = "txt_recuperar";
             this.txt_recuperar.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -113,7 +113,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(46, 100);
+            this.label1.Location = new System.Drawing.Point(20, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(696, 20);
             this.label1.TabIndex = 46;
@@ -123,18 +123,18 @@
             // btn_recuperar
             // 
             this.btn_recuperar.Animated = true;
-            this.btn_recuperar.BorderRadius = 4;
+            this.btn_recuperar.BorderRadius = 15;
             this.btn_recuperar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_recuperar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_recuperar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_recuperar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_recuperar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_recuperar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(90)))));
-            this.btn_recuperar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_recuperar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_recuperar.ForeColor = System.Drawing.Color.White;
-            this.btn_recuperar.Location = new System.Drawing.Point(500, 208);
+            this.btn_recuperar.Location = new System.Drawing.Point(428, 118);
             this.btn_recuperar.Name = "btn_recuperar";
-            this.btn_recuperar.Size = new System.Drawing.Size(90, 29);
+            this.btn_recuperar.Size = new System.Drawing.Size(131, 51);
             this.btn_recuperar.TabIndex = 47;
             this.btn_recuperar.Text = "Enviar";
             this.btn_recuperar.Click += new System.EventHandler(this.btn_recuperar_Click);
@@ -143,7 +143,7 @@
             // 
             this.lbl_Resultado.AutoSize = true;
             this.lbl_Resultado.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_Resultado.Location = new System.Drawing.Point(46, 268);
+            this.lbl_Resultado.Location = new System.Drawing.Point(20, 201);
             this.lbl_Resultado.Name = "lbl_Resultado";
             this.lbl_Resultado.Size = new System.Drawing.Size(76, 20);
             this.lbl_Resultado.TabIndex = 48;
@@ -154,7 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 419);
+            this.ClientSize = new System.Drawing.Size(731, 338);
             this.Controls.Add(this.lbl_Resultado);
             this.Controls.Add(this.btn_recuperar);
             this.Controls.Add(this.label1);

@@ -92,6 +92,18 @@
     <Compile Include="AppContextSISV.cs" />
     <Compile Include="Controls\DesktopHost.cs" />
     <Compile Include="Controls\FormHost.cs" />
+    <Compile Include="Controls\Ventas\CatalogItemCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Ventas\CatalogItemCard.Designer.cs">
+      <DependentUpon>CatalogItemCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Ventas\FacturaItemCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Ventas\FacturaItemCard.Designer.cs">
+      <DependentUpon>FacturaItemCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administracion\Form_Config.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     </Compile>
     <Compile Include="Forms\Autenticacion\Form_CreatePK.Designer.cs">
       <DependentUpon>Form_CreatePK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Clientes\ClientTaskCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Clientes\ClientTaskCard.Designer.cs">
+      <DependentUpon>ClientTaskCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Clientes\Form_Clientes.cs">
       <SubType>Form</SubType>
@@ -152,11 +170,11 @@
     <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Recepcion.Designer.cs">
       <DependentUpon>Form_Ordenes_Servicio_Recepcion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Taller.cs">
+    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Notificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Taller.Designer.cs">
-      <DependentUpon>Form_Ordenes_Servicio_Taller.cs</DependentUpon>
+    <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Notificacion.Designer.cs">
+      <DependentUpon>Form_Ordenes_Servicio_Notificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Proveedores\Form_Proveedores.cs">
       <SubType>Form</SubType>
@@ -184,6 +202,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Ventas\CatalogItemCard.resx">
+      <DependentUpon>CatalogItemCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Ventas\FacturaItemCard.resx">
+      <DependentUpon>FacturaItemCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administracion\Form_Config.resx">
       <DependentUpon>Form_Config.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Autenticacion\Form_Recu.resx">
       <DependentUpon>Form_Recu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Clientes\ClientTaskCard.resx">
+      <DependentUpon>ClientTaskCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clientes\Form_Clientes.resx">
       <DependentUpon>Form_Clientes.cs</DependentUpon>
@@ -217,8 +244,8 @@
     <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Recepcion.resx">
       <DependentUpon>Form_Ordenes_Servicio_Recepcion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Taller.resx">
-      <DependentUpon>Form_Ordenes_Servicio_Taller.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio_Notificacion.resx">
+      <DependentUpon>Form_Ordenes_Servicio_Notificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Proveedores\Form_Proveedores.resx">
       <DependentUpon>Form_Proveedores.cs</DependentUpon>
@@ -279,7 +306,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModels\Ventas\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_search.png" />
   </ItemGroup>

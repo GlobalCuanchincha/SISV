@@ -59,6 +59,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\CatalogoItemVM.cs" />
+    <Compile Include="DTOs\ClienteDetalleVM.cs" />
+    <Compile Include="DTOs\FacturaItemVM.cs" />
     <Compile Include="DTOs\LoginRequest.cs" />
     <Compile Include="DTOs\LoginResponse.cs" />
     <Compile Include="Entities\Cliente.cs" />
