@@ -96,7 +96,6 @@ namespace Union_Formularios_SISV
         private void btn_Productos_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            _host.Open(new Form_Productos(), "Productos", "Gestión de inventario y productos");
         }
 
         private void btn_Usuarios_Click(object sender, EventArgs e)

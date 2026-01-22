@@ -90,8 +90,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContextSISV.cs" />
+    <Compile Include="Controls\Inventario\Control_Proveedores_UC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Inventario\Control_Proveedores_UC.Designer.cs">
+      <DependentUpon>Control_Proveedores_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Inventario\PnlProveedor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Inventario\PnlProveedor.Designer.cs">
+      <DependentUpon>PnlProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\DesktopHost.cs" />
     <Compile Include="Controls\FormHost.cs" />
+    <Compile Include="Controls\Inventario\ProductTaskCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Inventario\ProductTaskCard.Designer.cs">
+      <DependentUpon>ProductTaskCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Ventas\CatalogItemCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +220,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Inventario\Control_Proveedores_UC.resx">
+      <DependentUpon>Control_Proveedores_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Inventario\PnlProveedor.resx">
+      <DependentUpon>PnlProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Inventario\ProductTaskCard.resx">
+      <DependentUpon>ProductTaskCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Ventas\CatalogItemCard.resx">
       <DependentUpon>CatalogItemCard.cs</DependentUpon>
     </EmbeddedResource>

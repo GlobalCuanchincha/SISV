@@ -60,10 +60,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTOs\CatalogoItemVM.cs" />
+    <Compile Include="DTOs\CategoriaInventarioVM.cs" />
     <Compile Include="DTOs\ClienteDetalleVM.cs" />
     <Compile Include="DTOs\FacturaItemVM.cs" />
+    <Compile Include="DTOs\InventarioVMs.cs" />
     <Compile Include="DTOs\LoginRequest.cs" />
     <Compile Include="DTOs\LoginResponse.cs" />
+    <Compile Include="DTOs\ProductoCardVM.cs" />
+    <Compile Include="DTOs\ProveedorVM.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Equipo.cs" />
     <Compile Include="Entities\Factura.cs" />

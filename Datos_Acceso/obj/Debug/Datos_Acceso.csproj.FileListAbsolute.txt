@@ -1,3 +1,5 @@
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.csproj.AssemblyReference.cache
+C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.csproj.CoreCompileInputs.cache
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\Datos_Acceso.dll
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\Datos_Acceso.pdb
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\Capa_Corte_Transversal.dll
@@ -14,8 +16,6 @@ C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\LiveC
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\bin\Debug\System.Configuration.ConfigurationManager.xml
-C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.csproj.AssemblyReference.cache
-C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.csproj.CoreCompileInputs.cache
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Ac.51D9DE6E.Up2Date
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.dll
 C:\Users\Vodruk\source\repos\Union_Formularios_SISV\Datos_Acceso\obj\Debug\Datos_Acceso.pdb

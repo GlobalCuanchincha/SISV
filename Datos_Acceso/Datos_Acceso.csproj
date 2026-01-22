@@ -67,6 +67,8 @@
     <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\EquipoRepository.cs" />
     <Compile Include="Repositories\ProductoRepository.cs" />
+    <Compile Include="Repositories\ProveedorVM.cs" />
+    <Compile Include="Repositories\SISVInventarioRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
