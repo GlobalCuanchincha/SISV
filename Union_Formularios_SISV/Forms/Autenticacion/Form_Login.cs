@@ -214,8 +214,6 @@ namespace Union_Formularios_SISV
                     return;
                 }
 
-                SaveRememberMe(user.Username, password);
-
                 LoginSucceeded?.Invoke(this, new LoginSession
                 {
                     UsuarioId = user.UsuarioId,
@@ -223,11 +221,8 @@ namespace Union_Formularios_SISV
                     RoleId = user.RoleId
                 });
 
+                SaveRememberMe(user.Username, password);
                 MessageBox.Show("Login correcto", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Ejemplo:
-                // new Form_Panel_Principal().Show();
-                // this.Hide();
             }
             catch (Exception ex)
             {
