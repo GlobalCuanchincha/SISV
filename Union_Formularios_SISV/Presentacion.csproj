@@ -110,6 +110,12 @@
     <Compile Include="Controls\Inventario\ProductTaskCard.Designer.cs">
       <DependentUpon>ProductTaskCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Proveedor\ProveedorTaskCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Proveedor\ProveedorTaskCard.Designer.cs">
+      <DependentUpon>ProveedorTaskCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Ventas\CatalogItemCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,11 +164,11 @@
     <Compile Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio.Designer.cs">
       <DependentUpon>Form_Ordenes_Servicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Inventario\Form_Productos.cs">
+    <Compile Include="Forms\Inventario\Form_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Inventario\Form_Productos.Designer.cs">
-      <DependentUpon>Form_Productos.cs</DependentUpon>
+    <Compile Include="Forms\Inventario\Form_Inventario.Designer.cs">
+      <DependentUpon>Form_Inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Autenticacion\Form_Recu.cs">
       <SubType>Form</SubType>
@@ -200,11 +206,11 @@
     <Compile Include="Forms\Proveedores\Form_Proveedores.Designer.cs">
       <DependentUpon>Form_Proveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Ventas\Form_Ventas.cs">
+    <Compile Include="Forms\Facturacion\Form_Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Ventas\Form_Ventas.Designer.cs">
-      <DependentUpon>Form_Ventas.cs</DependentUpon>
+    <Compile Include="Forms\Facturacion\Form_Facturacion.Designer.cs">
+      <DependentUpon>Form_Facturacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Principal\Form_Panel_Principal.cs">
       <SubType>Form</SubType>
@@ -212,11 +218,11 @@
     <Compile Include="Forms\Principal\Form_Panel_Principal.Designer.cs">
       <DependentUpon>Form_Panel_Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Ventas\Form_Ventas_Consulta.cs">
+    <Compile Include="Forms\Facturacion\Form_Facturacion_Consulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Ventas\Form_Ventas_Consulta.Designer.cs">
-      <DependentUpon>Form_Ventas_Consulta.cs</DependentUpon>
+    <Compile Include="Forms\Facturacion\Form_Facturacion_Consulta.Designer.cs">
+      <DependentUpon>Form_Facturacion_Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Inventario\ProductTaskCard.resx">
       <DependentUpon>ProductTaskCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Proveedor\ProveedorTaskCard.resx">
+      <DependentUpon>ProveedorTaskCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Ventas\CatalogItemCard.resx">
       <DependentUpon>CatalogItemCard.cs</DependentUpon>
@@ -253,8 +262,8 @@
     <EmbeddedResource Include="Forms\Autenticacion\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventario\Form_Productos.resx">
-      <DependentUpon>Form_Productos.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Inventario\Form_Inventario.resx">
+      <DependentUpon>Form_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ordenes de Servicio\Form_Ordenes_Servicio.resx">
       <DependentUpon>Form_Ordenes_Servicio.cs</DependentUpon>
@@ -277,11 +286,11 @@
     <EmbeddedResource Include="Forms\Proveedores\Form_Proveedores.resx">
       <DependentUpon>Form_Proveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Ventas\Form_Ventas.resx">
-      <DependentUpon>Form_Ventas.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Facturacion\Form_Facturacion.resx">
+      <DependentUpon>Form_Facturacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Ventas\Form_Ventas_Consulta.resx">
-      <DependentUpon>Form_Ventas_Consulta.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Facturacion\Form_Facturacion_Consulta.resx">
+      <DependentUpon>Form_Facturacion_Consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

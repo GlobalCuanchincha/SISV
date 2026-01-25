@@ -65,6 +65,7 @@
     <Compile Include="Config\SmtpSettings.cs" />
     <Compile Include="Helpers\Guard.cs" />
     <Compile Include="Helpers\Result.cs" />
+    <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="Helpers\SmtpEmailSender.cs" />
     <Compile Include="Loggin\Session.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,7 +11,7 @@ using Union_Formularios_SISV.Controls.Ventas;
 
 namespace Union_Formularios_SISV.Forms.Ventas
 {
-    public partial class Form_Ventas : Form
+    public partial class Form_Facturacion : Form
     {
         private const decimal IVA_RATE = 0.15m;
 
@@ -27,7 +27,7 @@ namespace Union_Formularios_SISV.Forms.Ventas
         private readonly Dictionary<string, FacturaItemCard> _detalleByKey =
             new Dictionary<string, FacturaItemCard>(StringComparer.OrdinalIgnoreCase);
 
-        public Form_Ventas()
+        public Form_Facturacion()
         {
             InitializeComponent();
             Load += (s, e) => Ventas_RuntimeInit();
@@ -141,7 +141,7 @@ namespace Union_Formularios_SISV.Forms.Ventas
                 return;
             }
 
-            main.OpenChild(new Form_Ventas_Consulta(), "Ventas / Facturación", "Consultar / Anular");
+            main.OpenChild(new Form_Facturacion_Consulta(), "Ventas / Facturación", "Consultar / Anular");
         }
 
         // ------------------------

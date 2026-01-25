@@ -67,6 +67,7 @@
     <Compile Include="DTOs\LoginRequest.cs" />
     <Compile Include="DTOs\LoginResponse.cs" />
     <Compile Include="DTOs\ProductoCardVM.cs" />
+    <Compile Include="DTOs\ProveedorCardVM.cs" />
     <Compile Include="DTOs\ProveedorVM.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Equipo.cs" />

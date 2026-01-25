@@ -5,9 +5,9 @@ using Union_Formularios_SISV.Forms.Ventas;
 
 namespace Union_Formularios_SISV.Forms
 {
-    public partial class Form_Ventas_Consulta : Form
+    public partial class Form_Facturacion_Consulta : Form
     {
-        public Form_Ventas_Consulta()
+        public Form_Facturacion_Consulta()
         {
             InitializeComponent();
 
@@ -26,7 +26,7 @@ namespace Union_Formularios_SISV.Forms
                 return;
             }
 
-            var ventas = new Form_Ventas();
+            var ventas = new Form_Facturacion();
             ventas.Ventas_RuntimeInit();
 
             main.OpenChild(ventas, "Ventas / Facturación", "Emitir factura");

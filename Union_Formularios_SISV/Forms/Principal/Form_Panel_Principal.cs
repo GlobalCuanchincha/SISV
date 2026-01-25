@@ -61,9 +61,8 @@ namespace Union_Formularios_SISV
 
             try
             {
-                var ventas = new Form_Ventas();
+                var ventas = new Form_Facturacion();
 
-                // Si existe Ventas_RuntimeInit(), la llamamos (evita que no se enganche nada)
                 InvokeIfExists(ventas, "Ventas_RuntimeInit");
 
                 _host.Open(ventas, "Facturación", "Emitir factura");
@@ -89,8 +88,17 @@ namespace Union_Formularios_SISV
 
         private void btn_Proveedores_Click(object sender, EventArgs e)
         {
+            var role = _session?.RoleId ?? (byte)0;
+            if (role != 1 && role != 2)
+            {
+                MessageBox.Show("Acceso denegado. Solo Administrador puede ver Proveedores.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ActivateButton(sender, RGBColors.color5);
-            _host.Open(new Form_Proveedores(), "Proveedores", "Catálogo de proveedores (registrar, consultar, actualizar, desactivar)");
+            _host.Open(new Form_Proveedores(_session), "Proveedores",
+                "Catálogo de proveedores (registrar, consultar, actualizar, desactivar)");
         }
 
         private void btn_Productos_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace Union_Formularios_SISV.Forms
 {
-    partial class Form_Ventas_Consulta
+    partial class Form_Facturacion_Consulta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ventas_Consulta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Facturacion_Consulta));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_LimpiarFactura = new Guna.UI2.WinForms.Guna2Button();

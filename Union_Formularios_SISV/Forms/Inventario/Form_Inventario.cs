@@ -9,7 +9,7 @@ using Union_Formularios_SISV.Controls.Inventario;
 
 namespace Union_Formularios_SISV.Forms.Inventario
 {
-    public partial class Form_Productos : Form
+    public partial class Form_Inventario : Form
     {
         private readonly SISVInventarioRepository _repo;
         private readonly int _usuarioId;
@@ -27,7 +27,7 @@ namespace Union_Formularios_SISV.Forms.Inventario
             public override string ToString() => Text;
         }
 
-        public Form_Productos(int usuarioId = 1)
+        public Form_Inventario(int usuarioId = 1)
         {
             InitializeComponent();
 
