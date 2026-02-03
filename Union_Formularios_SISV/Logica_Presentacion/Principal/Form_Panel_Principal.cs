@@ -108,8 +108,16 @@ namespace Union_Formularios_SISV
 
         private void btn_Usuarios_Click(object sender, EventArgs e)
         {
+            var role = _session?.RoleId ?? (byte)0;
+            if (role != 1 && role != 2)
+            {
+                MessageBox.Show("Acceso denegado. Solo Administrador puede gestionar Usuarios.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ActivateButton(sender, RGBColors.color7);
-            _host.Open(new Form_Usuarios(), "Gestion de usuarios", "Crear • Actualizar • Desactivar");
+            _host.Open(new Form_Usuarios(_session), "Gestion de usuarios", "Crear • Actualizar • Desactivar");
         }
 
         private void btn_Configuracion_Click(object sender, EventArgs e)

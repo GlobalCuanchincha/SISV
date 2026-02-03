@@ -48,6 +48,7 @@
       <HintPath>..\packages\System.Configuration.ConfigurationManager.10.0.1\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,7 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\DbConnection.cs" />
+    <Compile Include="Config\AppSettings.cs" />
+    <Compile Include="Config\SmtpSettings.cs" />
     <Compile Include="Connection\SqlExecutor.cs" />
+    <Compile Include="Helpers\Guard.cs" />
+    <Compile Include="Helpers\Result.cs" />
+    <Compile Include="Helpers\SessionHelper.cs" />
+    <Compile Include="Helpers\SmtpEmailSender.cs" />
+    <Compile Include="Loggin\Session.cs" />
     <Compile Include="Mappers\SecurityDbBootstrapper.cs" />
     <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,12 +77,8 @@
     <Compile Include="Repositories\ProductoRepository.cs" />
     <Compile Include="Repositories\SISVInventarioRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Capa_Corte_Transversal\Capa_Corte_Transversal.csproj">
-      <Project>{b412f725-8db7-49d5-a300-10f2a0b81675}</Project>
-      <Name>Capa_Corte_Transversal</Name>
-    </ProjectReference>
+    <Compile Include="Security\Dpapi.cs" />
+    <Compile Include="Security\RememberMeStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

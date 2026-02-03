@@ -81,13 +81,9 @@
     <Compile Include="Services\PasswordRecoveryService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Capa_Corte_Transversal\Capa_Corte_Transversal.csproj">
-      <Project>{b412f725-8db7-49d5-a300-10f2a0b81675}</Project>
-      <Name>Capa_Corte_Transversal</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Datos_Acceso\Datos_Acceso.csproj">
+    <ProjectReference Include="..\Datos_Acceso\Base_De_Datos_SISV.csproj">
       <Project>{f8f7c0bf-54ef-4cac-9b4c-5658815a2b98}</Project>
-      <Name>Datos_Acceso</Name>
+      <Name>Base_De_Datos_SISV</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

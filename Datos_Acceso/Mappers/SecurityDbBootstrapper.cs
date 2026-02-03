@@ -10,7 +10,6 @@ namespace Union_Formularios_SISV
 {
     public static class SecurityDbBootstrapper
     {
-        // Cambia el nombre si tu connectionString tiene otro nombre en App.config
         private const string DefaultConnName1 = "SISV";
         private const string DefaultConnName2 = "SISVConnectionString";
 
@@ -35,14 +34,11 @@ namespace Union_Formularios_SISV
             if (AnyUserExists())
                 throw new InvalidOperationException("Ya existe al menos un usuario. Este formulario es solo para crear el primer usuario.");
 
-            // 1) Crear/obtener RoleID del rol SuperAdministrador
             int roleId = EnsureRoleAndGetId("SuperAdministrador");
 
-            // 2) Generar hash + salt (PBKDF2)
             byte[] salt;
             byte[] hash = HashPasswordPBKDF2(plainPassword, out salt);
 
-            // 3) Insertar usuario de forma dinámica (mapeando nombres de columnas reales)
             InsertUserDynamic(username, email, names, lastnames, roleId, hash, salt);
         }
 
