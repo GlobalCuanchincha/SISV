@@ -64,6 +64,7 @@
             this.lbl_Seleccion_Clientes = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -670,6 +671,7 @@
             this.guna2GradientPanel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel15.BorderRadius = 10;
             this.guna2GradientPanel15.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel15.Controls.Add(this.label2);
             this.guna2GradientPanel15.Controls.Add(this.label34);
             this.guna2GradientPanel15.Controls.Add(this.label32);
             this.guna2GradientPanel15.Controls.Add(this.label31);
@@ -682,7 +684,20 @@
             this.guna2GradientPanel15.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel15.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.guna2GradientPanel15.Size = new System.Drawing.Size(777, 50);
-            this.guna2GradientPanel15.TabIndex = 67;
+            this.guna2GradientPanel15.TabIndex = 69;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(677, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 18);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "Estado";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label34
             // 
@@ -690,11 +705,11 @@
             this.label34.BackColor = System.Drawing.Color.Transparent;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label34.Location = new System.Drawing.Point(613, 16);
+            this.label34.Location = new System.Drawing.Point(539, 16);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(55, 18);
+            this.label34.Size = new System.Drawing.Size(66, 18);
             this.label34.TabIndex = 67;
-            this.label34.Text = "Estado";
+            this.label34.Text = "Teléfono";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label32
@@ -703,11 +718,11 @@
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label32.Location = new System.Drawing.Point(480, 16);
+            this.label32.Location = new System.Drawing.Point(365, 16);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(47, 18);
+            this.label32.Size = new System.Drawing.Size(55, 18);
             this.label32.TabIndex = 66;
-            this.label32.Text = "Stock";
+            this.label32.Text = "Correo";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label31
@@ -716,11 +731,11 @@
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label31.Location = new System.Drawing.Point(377, 16);
+            this.label31.Location = new System.Drawing.Point(173, 16);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(51, 18);
+            this.label31.Size = new System.Drawing.Size(53, 18);
             this.label31.TabIndex = 65;
-            this.label31.Text = "Precio";
+            this.label31.Text = "Cliente";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label33
@@ -729,11 +744,11 @@
             this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label33.Location = new System.Drawing.Point(134, 16);
+            this.label33.Location = new System.Drawing.Point(30, 16);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(36, 18);
+            this.label33.Size = new System.Drawing.Size(54, 18);
             this.label33.TabIndex = 64;
-            this.label33.Text = "Ítem";
+            this.label33.Text = "Cédula";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form_Clientes
@@ -797,6 +812,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowClientCard;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel15;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;

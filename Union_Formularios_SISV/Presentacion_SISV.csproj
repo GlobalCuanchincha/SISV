@@ -110,6 +110,24 @@
     <Compile Include="Controls\Inventario\ProductTaskCard.Designer.cs">
       <DependentUpon>ProductTaskCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Equipos\EquiposTaskCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Equipos\EquiposTaskCard.Designer.cs">
+      <DependentUpon>EquiposTaskCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Equipos\Pnl_SeleccionClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Equipos\Pnl_SeleccionClientes.Designer.cs">
+      <DependentUpon>Pnl_SeleccionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Equipos\Seleccion_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Equipos\Seleccion_Cliente.Designer.cs">
+      <DependentUpon>Seleccion_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Proveedor\ProveedorTaskCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,6 +258,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Inventario\ProductTaskCard.resx">
       <DependentUpon>ProductTaskCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Ordenes_de_Servicio\Equipos\EquiposTaskCard.resx">
+      <DependentUpon>EquiposTaskCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Ordenes_de_Servicio\Equipos\Pnl_SeleccionClientes.resx">
+      <DependentUpon>Pnl_SeleccionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Ordenes_de_Servicio\Equipos\Seleccion_Cliente.resx">
+      <DependentUpon>Seleccion_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Proveedor\ProveedorTaskCard.resx">
       <DependentUpon>ProveedorTaskCard.cs</DependentUpon>

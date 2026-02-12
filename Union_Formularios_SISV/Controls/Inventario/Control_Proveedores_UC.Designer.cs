@@ -33,20 +33,20 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_BuscarProveedor_UCProveedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowControlProveedor = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_Proveedordisponibles_UCProveedor = new System.Windows.Forms.Label();
             this.lbllbl = new System.Windows.Forms.Label();
-            this.flowControlProveedor = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.lbl_ProveedorSeleccionado_UCProveedor = new System.Windows.Forms.Label();
-            this.lbl_ProveedorRUC_UCProveedor = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_ProveedorTelefono_UCProveedor = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btn_UseProveedor_UCProveedor = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_ProveedorCorreo_UCProveedor = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_UseProveedor_UCProveedor = new Guna.UI2.WinForms.Guna2Button();
+            this.lbl_ProveedorTelefono_UCProveedor = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_ProveedorRUC_UCProveedor = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_ProveedorSeleccionado_UCProveedor = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -96,11 +96,19 @@
             this.guna2Panel1.BorderRadius = 14;
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.flowControlProveedor);
+            this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(14, 127);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(576, 263);
+            this.guna2Panel1.Size = new System.Drawing.Size(932, 280);
             this.guna2Panel1.TabIndex = 57;
+            // 
+            // flowControlProveedor
+            // 
+            this.flowControlProveedor.Location = new System.Drawing.Point(0, 0);
+            this.flowControlProveedor.Name = "flowControlProveedor";
+            this.flowControlProveedor.Size = new System.Drawing.Size(576, 280);
+            this.flowControlProveedor.TabIndex = 0;
             // 
             // lbl_Proveedordisponibles_UCProveedor
             // 
@@ -124,16 +132,9 @@
             this.lbllbl.TabIndex = 55;
             this.lbllbl.Text = "Seleccionar proveedor";
             // 
-            // flowControlProveedor
-            // 
-            this.flowControlProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowControlProveedor.Location = new System.Drawing.Point(0, 0);
-            this.flowControlProveedor.Name = "flowControlProveedor";
-            this.flowControlProveedor.Size = new System.Drawing.Size(576, 263);
-            this.flowControlProveedor.TabIndex = 0;
-            // 
             // guna2Panel3
             // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.White;
             this.guna2Panel3.Controls.Add(this.btn_UseProveedor_UCProveedor);
             this.guna2Panel3.Controls.Add(this.lbl_ProveedorCorreo_UCProveedor);
             this.guna2Panel3.Controls.Add(this.label8);
@@ -143,96 +144,33 @@
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Controls.Add(this.lbl_ProveedorSeleccionado_UCProveedor);
             this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.Location = new System.Drawing.Point(596, 127);
+            this.guna2Panel3.Location = new System.Drawing.Point(579, 7);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(350, 263);
             this.guna2Panel3.TabIndex = 59;
             // 
-            // label1
+            // btn_UseProveedor_UCProveedor
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 21);
-            this.label1.TabIndex = 60;
-            this.label1.Text = "Proveedor seleccionado";
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(903, 8);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(43, 31);
-            this.guna2ControlBox2.TabIndex = 60;
-            // 
-            // lbl_ProveedorSeleccionado_UCProveedor
-            // 
-            this.lbl_ProveedorSeleccionado_UCProveedor.AutoSize = true;
-            this.lbl_ProveedorSeleccionado_UCProveedor.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ProveedorSeleccionado_UCProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ProveedorSeleccionado_UCProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_ProveedorSeleccionado_UCProveedor.Location = new System.Drawing.Point(18, 38);
-            this.lbl_ProveedorSeleccionado_UCProveedor.Name = "lbl_ProveedorSeleccionado_UCProveedor";
-            this.lbl_ProveedorSeleccionado_UCProveedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_ProveedorSeleccionado_UCProveedor.Size = new System.Drawing.Size(123, 25);
-            this.lbl_ProveedorSeleccionado_UCProveedor.TabIndex = 71;
-            this.lbl_ProveedorSeleccionado_UCProveedor.Text = "Proveedor X";
-            this.lbl_ProveedorSeleccionado_UCProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_ProveedorRUC_UCProveedor
-            // 
-            this.lbl_ProveedorRUC_UCProveedor.AutoSize = true;
-            this.lbl_ProveedorRUC_UCProveedor.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ProveedorRUC_UCProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ProveedorRUC_UCProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_ProveedorRUC_UCProveedor.Location = new System.Drawing.Point(17, 92);
-            this.lbl_ProveedorRUC_UCProveedor.Name = "lbl_ProveedorRUC_UCProveedor";
-            this.lbl_ProveedorRUC_UCProveedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_ProveedorRUC_UCProveedor.Size = new System.Drawing.Size(98, 25);
-            this.lbl_ProveedorRUC_UCProveedor.TabIndex = 73;
-            this.lbl_ProveedorRUC_UCProveedor.Text = "Categoria";
-            this.lbl_ProveedorRUC_UCProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 21);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "R.U.C";
-            // 
-            // lbl_ProveedorTelefono_UCProveedor
-            // 
-            this.lbl_ProveedorTelefono_UCProveedor.AutoSize = true;
-            this.lbl_ProveedorTelefono_UCProveedor.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ProveedorTelefono_UCProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ProveedorTelefono_UCProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_ProveedorTelefono_UCProveedor.Location = new System.Drawing.Point(214, 92);
-            this.lbl_ProveedorTelefono_UCProveedor.Name = "lbl_ProveedorTelefono_UCProveedor";
-            this.lbl_ProveedorTelefono_UCProveedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_ProveedorTelefono_UCProveedor.Size = new System.Drawing.Size(122, 25);
-            this.lbl_ProveedorTelefono_UCProveedor.TabIndex = 75;
-            this.lbl_ProveedorTelefono_UCProveedor.Text = "1234567890";
-            this.lbl_ProveedorTelefono_UCProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(213, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 21);
-            this.label5.TabIndex = 74;
-            this.label5.Text = "Teléfono";
+            this.btn_UseProveedor_UCProveedor.Animated = true;
+            this.btn_UseProveedor_UCProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.btn_UseProveedor_UCProveedor.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_UseProveedor_UCProveedor.BorderRadius = 15;
+            this.btn_UseProveedor_UCProveedor.BorderThickness = 1;
+            this.btn_UseProveedor_UCProveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_UseProveedor_UCProveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_UseProveedor_UCProveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_UseProveedor_UCProveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_UseProveedor_UCProveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(206)))), ((int)(((byte)(147)))));
+            this.btn_UseProveedor_UCProveedor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_UseProveedor_UCProveedor.ForeColor = System.Drawing.Color.White;
+            this.btn_UseProveedor_UCProveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_UseProveedor_UCProveedor.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_UseProveedor_UCProveedor.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_UseProveedor_UCProveedor.Location = new System.Drawing.Point(22, 200);
+            this.btn_UseProveedor_UCProveedor.Name = "btn_UseProveedor_UCProveedor";
+            this.btn_UseProveedor_UCProveedor.Size = new System.Drawing.Size(309, 44);
+            this.btn_UseProveedor_UCProveedor.TabIndex = 78;
+            this.btn_UseProveedor_UCProveedor.Text = "Seleccionar proveedor";
             // 
             // lbl_ProveedorCorreo_UCProveedor
             // 
@@ -259,37 +197,99 @@
             this.label8.TabIndex = 76;
             this.label8.Text = "Correo";
             // 
-            // btn_UseProveedor_UCProveedor
+            // lbl_ProveedorTelefono_UCProveedor
             // 
-            this.btn_UseProveedor_UCProveedor.Animated = true;
-            this.btn_UseProveedor_UCProveedor.BackColor = System.Drawing.Color.Transparent;
-            this.btn_UseProveedor_UCProveedor.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_UseProveedor_UCProveedor.BorderRadius = 15;
-            this.btn_UseProveedor_UCProveedor.BorderThickness = 1;
-            this.btn_UseProveedor_UCProveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_UseProveedor_UCProveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_UseProveedor_UCProveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_UseProveedor_UCProveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_UseProveedor_UCProveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(206)))), ((int)(((byte)(147)))));
-            this.btn_UseProveedor_UCProveedor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UseProveedor_UCProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_UseProveedor_UCProveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_UseProveedor_UCProveedor.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_UseProveedor_UCProveedor.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_UseProveedor_UCProveedor.Location = new System.Drawing.Point(22, 200);
-            this.btn_UseProveedor_UCProveedor.Name = "btn_UseProveedor_UCProveedor";
-            this.btn_UseProveedor_UCProveedor.Size = new System.Drawing.Size(309, 44);
-            this.btn_UseProveedor_UCProveedor.TabIndex = 78;
-            this.btn_UseProveedor_UCProveedor.Text = "Usar proveedor";
+            this.lbl_ProveedorTelefono_UCProveedor.AutoSize = true;
+            this.lbl_ProveedorTelefono_UCProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ProveedorTelefono_UCProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ProveedorTelefono_UCProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_ProveedorTelefono_UCProveedor.Location = new System.Drawing.Point(214, 92);
+            this.lbl_ProveedorTelefono_UCProveedor.Name = "lbl_ProveedorTelefono_UCProveedor";
+            this.lbl_ProveedorTelefono_UCProveedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_ProveedorTelefono_UCProveedor.Size = new System.Drawing.Size(122, 25);
+            this.lbl_ProveedorTelefono_UCProveedor.TabIndex = 75;
+            this.lbl_ProveedorTelefono_UCProveedor.Text = "1234567890";
+            this.lbl_ProveedorTelefono_UCProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(213, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 21);
+            this.label5.TabIndex = 74;
+            this.label5.Text = "Teléfono";
+            // 
+            // lbl_ProveedorRUC_UCProveedor
+            // 
+            this.lbl_ProveedorRUC_UCProveedor.AutoSize = true;
+            this.lbl_ProveedorRUC_UCProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ProveedorRUC_UCProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ProveedorRUC_UCProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_ProveedorRUC_UCProveedor.Location = new System.Drawing.Point(17, 92);
+            this.lbl_ProveedorRUC_UCProveedor.Name = "lbl_ProveedorRUC_UCProveedor";
+            this.lbl_ProveedorRUC_UCProveedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_ProveedorRUC_UCProveedor.Size = new System.Drawing.Size(98, 25);
+            this.lbl_ProveedorRUC_UCProveedor.TabIndex = 73;
+            this.lbl_ProveedorRUC_UCProveedor.Text = "Categoria";
+            this.lbl_ProveedorRUC_UCProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 21);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "R.U.C";
+            // 
+            // lbl_ProveedorSeleccionado_UCProveedor
+            // 
+            this.lbl_ProveedorSeleccionado_UCProveedor.AutoSize = true;
+            this.lbl_ProveedorSeleccionado_UCProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ProveedorSeleccionado_UCProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ProveedorSeleccionado_UCProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_ProveedorSeleccionado_UCProveedor.Location = new System.Drawing.Point(18, 38);
+            this.lbl_ProveedorSeleccionado_UCProveedor.Name = "lbl_ProveedorSeleccionado_UCProveedor";
+            this.lbl_ProveedorSeleccionado_UCProveedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_ProveedorSeleccionado_UCProveedor.Size = new System.Drawing.Size(123, 25);
+            this.lbl_ProveedorSeleccionado_UCProveedor.TabIndex = 71;
+            this.lbl_ProveedorSeleccionado_UCProveedor.Text = "Proveedor X";
+            this.lbl_ProveedorSeleccionado_UCProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 21);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Proveedor seleccionado";
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(909, 8);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(43, 31);
+            this.guna2ControlBox2.TabIndex = 60;
             // 
             // Control_Proveedores_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(958, 409);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(964, 419);
             this.Controls.Add(this.guna2ControlBox2);
-            this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.lbl_Proveedordisponibles_UCProveedor);

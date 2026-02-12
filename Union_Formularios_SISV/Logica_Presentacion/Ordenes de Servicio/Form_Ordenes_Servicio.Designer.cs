@@ -28,54 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ordenes_Servicio));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbl_numcedulacliente_Equipos = new System.Windows.Forms.Label();
+            this.btn_Guardar_Equipos = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_Observaciones = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Accesorios_Equipos = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbl_CodigoInterno_Equipos = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbox_Conectividad_Equipos = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Color_Equipos = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_NumSerie_Equipos = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Modelo_Equipos = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Cmbox_TipoServicio = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Cmbox_TipoEquipo_Equipos = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_LimpiarFactura = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Guardar_Factura = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_Marca_Equipos = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_Limpiar_Equipos = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Selecciona_Clientes_Equipo = new Guna.UI2.WinForms.Guna2Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_Cliente_Equipos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_Detalle_Factura = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label32 = new System.Windows.Forms.Label();
+            this.cmbox_Filtrarpor_Equipos = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.lbl_Contador_de_resultados_Equipos = new System.Windows.Forms.Label();
             this.lbl_Descripcion_Titulo = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.dgv_Servicios_Items = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Flow_OrdenServicio_Equipos = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txt_Buscador_Items = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Buscador_Items_Equipos = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Consultar_View = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Notificacion_Equipos = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Recepcion_Equipos = new Guna.UI2.WinForms.Guna2Button();
             this.btn_EmitirFactura_View = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
+            this.guna2GradientPanel15.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicios_Items)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel8.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +92,6 @@
             this.guna2GradientPanel2.BorderRadius = 10;
             this.guna2GradientPanel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel5);
-            this.guna2GradientPanel2.Controls.Add(this.label2);
             this.guna2GradientPanel2.Controls.Add(this.label1);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -107,28 +110,29 @@
             this.guna2GradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel5.Controls.Add(this.guna2Button2);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox6);
+            this.guna2GradientPanel5.Controls.Add(this.lbl_numcedulacliente_Equipos);
+            this.guna2GradientPanel5.Controls.Add(this.btn_Guardar_Equipos);
+            this.guna2GradientPanel5.Controls.Add(this.txt_Observaciones);
             this.guna2GradientPanel5.Controls.Add(this.label15);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox4);
+            this.guna2GradientPanel5.Controls.Add(this.txt_Accesorios_Equipos);
             this.guna2GradientPanel5.Controls.Add(this.label14);
-            this.guna2GradientPanel5.Controls.Add(this.label12);
+            this.guna2GradientPanel5.Controls.Add(this.lbl_CodigoInterno_Equipos);
             this.guna2GradientPanel5.Controls.Add(this.label11);
-            this.guna2GradientPanel5.Controls.Add(this.guna2ComboBox1);
+            this.guna2GradientPanel5.Controls.Add(this.cmbox_Conectividad_Equipos);
             this.guna2GradientPanel5.Controls.Add(this.label7);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox5);
+            this.guna2GradientPanel5.Controls.Add(this.txt_Color_Equipos);
             this.guna2GradientPanel5.Controls.Add(this.label10);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox3);
+            this.guna2GradientPanel5.Controls.Add(this.txt_NumSerie_Equipos);
             this.guna2GradientPanel5.Controls.Add(this.label6);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox1);
+            this.guna2GradientPanel5.Controls.Add(this.txt_Modelo_Equipos);
             this.guna2GradientPanel5.Controls.Add(this.label5);
-            this.guna2GradientPanel5.Controls.Add(this.Cmbox_TipoServicio);
+            this.guna2GradientPanel5.Controls.Add(this.Cmbox_TipoEquipo_Equipos);
             this.guna2GradientPanel5.Controls.Add(this.label4);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox2);
-            this.guna2GradientPanel5.Controls.Add(this.btn_LimpiarFactura);
-            this.guna2GradientPanel5.Controls.Add(this.btn_Guardar_Factura);
+            this.guna2GradientPanel5.Controls.Add(this.txt_Marca_Equipos);
+            this.guna2GradientPanel5.Controls.Add(this.btn_Limpiar_Equipos);
+            this.guna2GradientPanel5.Controls.Add(this.btn_Selecciona_Clientes_Equipo);
             this.guna2GradientPanel5.Controls.Add(this.label9);
-            this.guna2GradientPanel5.Controls.Add(this.label8);
+            this.guna2GradientPanel5.Controls.Add(this.lbl_Cliente_Equipos);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.White;
             this.guna2GradientPanel5.Location = new System.Drawing.Point(22, 55);
@@ -139,50 +143,62 @@
             this.guna2GradientPanel5.Size = new System.Drawing.Size(571, 670);
             this.guna2GradientPanel5.TabIndex = 64;
             // 
-            // guna2Button2
+            // lbl_numcedulacliente_Equipos
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button2.Location = new System.Drawing.Point(16, 607);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(255, 44);
-            this.guna2Button2.TabIndex = 94;
-            this.guna2Button2.Text = "Guardar equipo";
+            this.lbl_numcedulacliente_Equipos.AutoSize = true;
+            this.lbl_numcedulacliente_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_numcedulacliente_Equipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numcedulacliente_Equipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_numcedulacliente_Equipos.Location = new System.Drawing.Point(22, 17);
+            this.lbl_numcedulacliente_Equipos.Name = "lbl_numcedulacliente_Equipos";
+            this.lbl_numcedulacliente_Equipos.Size = new System.Drawing.Size(190, 18);
+            this.lbl_numcedulacliente_Equipos.TabIndex = 95;
+            this.lbl_numcedulacliente_Equipos.Text = "Cliente dueño (Seleccionar)";
+            this.lbl_numcedulacliente_Equipos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox6
+            // btn_Guardar_Equipos
             // 
-            this.guna2TextBox6.Animated = true;
-            this.guna2TextBox6.BorderRadius = 15;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.Enabled = false;
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(16, 488);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox6.Multiline = true;
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PlaceholderText = "HP / DELL / EPSON...";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(530, 76);
-            this.guna2TextBox6.TabIndex = 93;
+            this.btn_Guardar_Equipos.Animated = true;
+            this.btn_Guardar_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar_Equipos.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar_Equipos.BorderRadius = 15;
+            this.btn_Guardar_Equipos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Guardar_Equipos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Guardar_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Guardar_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Guardar_Equipos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_Guardar_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Guardar_Equipos.ForeColor = System.Drawing.Color.Black;
+            this.btn_Guardar_Equipos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Guardar_Equipos.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Guardar_Equipos.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Guardar_Equipos.Location = new System.Drawing.Point(16, 607);
+            this.btn_Guardar_Equipos.Name = "btn_Guardar_Equipos";
+            this.btn_Guardar_Equipos.Size = new System.Drawing.Size(255, 44);
+            this.btn_Guardar_Equipos.TabIndex = 94;
+            this.btn_Guardar_Equipos.Text = "Guardar equipo";
+            // 
+            // txt_Observaciones
+            // 
+            this.txt_Observaciones.Animated = true;
+            this.txt_Observaciones.BorderRadius = 15;
+            this.txt_Observaciones.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Observaciones.DefaultText = "El equipo tiene un daño en la visagra...";
+            this.txt_Observaciones.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Observaciones.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Observaciones.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Observaciones.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Observaciones.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Observaciones.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_Observaciones.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Observaciones.Location = new System.Drawing.Point(16, 488);
+            this.txt_Observaciones.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_Observaciones.Multiline = true;
+            this.txt_Observaciones.Name = "txt_Observaciones";
+            this.txt_Observaciones.PlaceholderText = "HP / DELL / EPSON...";
+            this.txt_Observaciones.SelectedText = "";
+            this.txt_Observaciones.Size = new System.Drawing.Size(530, 97);
+            this.txt_Observaciones.TabIndex = 93;
             // 
             // label15
             // 
@@ -197,28 +213,27 @@
             this.label15.Text = "Observaciones";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox4
+            // txt_Accesorios_Equipos
             // 
-            this.guna2TextBox4.Animated = true;
-            this.guna2TextBox4.BorderRadius = 15;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.Enabled = false;
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(16, 360);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox4.Multiline = true;
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PlaceholderText = "HP / DELL / EPSON...";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(530, 90);
-            this.guna2TextBox4.TabIndex = 91;
+            this.txt_Accesorios_Equipos.Animated = true;
+            this.txt_Accesorios_Equipos.BorderRadius = 15;
+            this.txt_Accesorios_Equipos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Accesorios_Equipos.DefaultText = "";
+            this.txt_Accesorios_Equipos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Accesorios_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Accesorios_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Accesorios_Equipos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Accesorios_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Accesorios_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_Accesorios_Equipos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Accesorios_Equipos.Location = new System.Drawing.Point(16, 360);
+            this.txt_Accesorios_Equipos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_Accesorios_Equipos.Multiline = true;
+            this.txt_Accesorios_Equipos.Name = "txt_Accesorios_Equipos";
+            this.txt_Accesorios_Equipos.PlaceholderText = "HP / DELL / EPSON...";
+            this.txt_Accesorios_Equipos.SelectedText = "";
+            this.txt_Accesorios_Equipos.Size = new System.Drawing.Size(530, 90);
+            this.txt_Accesorios_Equipos.TabIndex = 91;
             // 
             // label14
             // 
@@ -233,18 +248,18 @@
             this.label14.Text = "Accesorios recibidos";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label12
+            // lbl_CodigoInterno_Equipos
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(483, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 18);
-            this.label12.TabIndex = 87;
-            this.label12.Text = "EQ-0001";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_CodigoInterno_Equipos.AutoSize = true;
+            this.lbl_CodigoInterno_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_CodigoInterno_Equipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CodigoInterno_Equipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_CodigoInterno_Equipos.Location = new System.Drawing.Point(483, 18);
+            this.lbl_CodigoInterno_Equipos.Name = "lbl_CodigoInterno_Equipos";
+            this.lbl_CodigoInterno_Equipos.Size = new System.Drawing.Size(67, 18);
+            this.lbl_CodigoInterno_Equipos.TabIndex = 87;
+            this.lbl_CodigoInterno_Equipos.Text = "EQ-0001";
+            this.lbl_CodigoInterno_Equipos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
             // 
@@ -259,21 +274,21 @@
             this.label11.Text = "Codigo interno:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2ComboBox1
+            // cmbox_Conectividad_Equipos
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 40;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(291, 278);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(255, 46);
-            this.guna2ComboBox1.TabIndex = 86;
+            this.cmbox_Conectividad_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_Conectividad_Equipos.BorderRadius = 10;
+            this.cmbox_Conectividad_Equipos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_Conectividad_Equipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Conectividad_Equipos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Conectividad_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Conectividad_Equipos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbox_Conectividad_Equipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_Conectividad_Equipos.ItemHeight = 40;
+            this.cmbox_Conectividad_Equipos.Location = new System.Drawing.Point(291, 278);
+            this.cmbox_Conectividad_Equipos.Name = "cmbox_Conectividad_Equipos";
+            this.cmbox_Conectividad_Equipos.Size = new System.Drawing.Size(255, 46);
+            this.cmbox_Conectividad_Equipos.TabIndex = 86;
             // 
             // label7
             // 
@@ -288,27 +303,26 @@
             this.label7.Text = "Conectividad";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox5
+            // txt_Color_Equipos
             // 
-            this.guna2TextBox5.Animated = true;
-            this.guna2TextBox5.BorderRadius = 15;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.Enabled = false;
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(19, 278);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PlaceholderText = "Negro / Gris";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(256, 46);
-            this.guna2TextBox5.TabIndex = 83;
+            this.txt_Color_Equipos.Animated = true;
+            this.txt_Color_Equipos.BorderRadius = 15;
+            this.txt_Color_Equipos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Color_Equipos.DefaultText = "";
+            this.txt_Color_Equipos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Color_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Color_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Color_Equipos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Color_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Color_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_Color_Equipos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Color_Equipos.Location = new System.Drawing.Point(19, 278);
+            this.txt_Color_Equipos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_Color_Equipos.Name = "txt_Color_Equipos";
+            this.txt_Color_Equipos.PlaceholderText = "Negro / Gris";
+            this.txt_Color_Equipos.SelectedText = "";
+            this.txt_Color_Equipos.Size = new System.Drawing.Size(256, 46);
+            this.txt_Color_Equipos.TabIndex = 83;
             // 
             // label10
             // 
@@ -323,27 +337,26 @@
             this.label10.Text = "Color";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox3
+            // txt_NumSerie_Equipos
             // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.BorderRadius = 15;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.Enabled = false;
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(291, 200);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "SN-XXXX";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(256, 46);
-            this.guna2TextBox3.TabIndex = 81;
+            this.txt_NumSerie_Equipos.Animated = true;
+            this.txt_NumSerie_Equipos.BorderRadius = 15;
+            this.txt_NumSerie_Equipos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NumSerie_Equipos.DefaultText = "";
+            this.txt_NumSerie_Equipos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_NumSerie_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_NumSerie_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NumSerie_Equipos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NumSerie_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NumSerie_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_NumSerie_Equipos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NumSerie_Equipos.Location = new System.Drawing.Point(291, 200);
+            this.txt_NumSerie_Equipos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_NumSerie_Equipos.Name = "txt_NumSerie_Equipos";
+            this.txt_NumSerie_Equipos.PlaceholderText = "SN-XXXX";
+            this.txt_NumSerie_Equipos.SelectedText = "";
+            this.txt_NumSerie_Equipos.Size = new System.Drawing.Size(256, 46);
+            this.txt_NumSerie_Equipos.TabIndex = 81;
             // 
             // label6
             // 
@@ -358,27 +371,26 @@
             this.label6.Text = "N° Serie";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox1
+            // txt_Modelo_Equipos
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Enabled = false;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(19, 200);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "L3150 / Inspiron 15...";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(256, 46);
-            this.guna2TextBox1.TabIndex = 79;
+            this.txt_Modelo_Equipos.Animated = true;
+            this.txt_Modelo_Equipos.BorderRadius = 15;
+            this.txt_Modelo_Equipos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Modelo_Equipos.DefaultText = "";
+            this.txt_Modelo_Equipos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Modelo_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Modelo_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Modelo_Equipos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Modelo_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Modelo_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_Modelo_Equipos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Modelo_Equipos.Location = new System.Drawing.Point(19, 200);
+            this.txt_Modelo_Equipos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_Modelo_Equipos.Name = "txt_Modelo_Equipos";
+            this.txt_Modelo_Equipos.PlaceholderText = "L3150 / Inspiron 15...";
+            this.txt_Modelo_Equipos.SelectedText = "";
+            this.txt_Modelo_Equipos.Size = new System.Drawing.Size(256, 46);
+            this.txt_Modelo_Equipos.TabIndex = 79;
             // 
             // label5
             // 
@@ -393,21 +405,21 @@
             this.label5.Text = "Modelo";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Cmbox_TipoServicio
+            // Cmbox_TipoEquipo_Equipos
             // 
-            this.Cmbox_TipoServicio.BackColor = System.Drawing.Color.Transparent;
-            this.Cmbox_TipoServicio.BorderRadius = 10;
-            this.Cmbox_TipoServicio.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Cmbox_TipoServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cmbox_TipoServicio.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Cmbox_TipoServicio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Cmbox_TipoServicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmbox_TipoServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Cmbox_TipoServicio.ItemHeight = 40;
-            this.Cmbox_TipoServicio.Location = new System.Drawing.Point(19, 124);
-            this.Cmbox_TipoServicio.Name = "Cmbox_TipoServicio";
-            this.Cmbox_TipoServicio.Size = new System.Drawing.Size(255, 46);
-            this.Cmbox_TipoServicio.TabIndex = 77;
+            this.Cmbox_TipoEquipo_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.Cmbox_TipoEquipo_Equipos.BorderRadius = 10;
+            this.Cmbox_TipoEquipo_Equipos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Cmbox_TipoEquipo_Equipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmbox_TipoEquipo_Equipos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Cmbox_TipoEquipo_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Cmbox_TipoEquipo_Equipos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmbox_TipoEquipo_Equipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Cmbox_TipoEquipo_Equipos.ItemHeight = 40;
+            this.Cmbox_TipoEquipo_Equipos.Location = new System.Drawing.Point(19, 124);
+            this.Cmbox_TipoEquipo_Equipos.Name = "Cmbox_TipoEquipo_Equipos";
+            this.Cmbox_TipoEquipo_Equipos.Size = new System.Drawing.Size(255, 46);
+            this.Cmbox_TipoEquipo_Equipos.TabIndex = 77;
             // 
             // label4
             // 
@@ -422,71 +434,70 @@
             this.label4.Text = "Tipo de equipo";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox2
+            // txt_Marca_Equipos
             // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.BorderRadius = 15;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.Enabled = false;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(291, 124);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "HP / DELL / EPSON...";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(256, 46);
-            this.guna2TextBox2.TabIndex = 75;
+            this.txt_Marca_Equipos.Animated = true;
+            this.txt_Marca_Equipos.BorderRadius = 15;
+            this.txt_Marca_Equipos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Marca_Equipos.DefaultText = "";
+            this.txt_Marca_Equipos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Marca_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Marca_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Marca_Equipos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Marca_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Marca_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_Marca_Equipos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Marca_Equipos.Location = new System.Drawing.Point(291, 124);
+            this.txt_Marca_Equipos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_Marca_Equipos.Name = "txt_Marca_Equipos";
+            this.txt_Marca_Equipos.PlaceholderText = "HP / DELL / EPSON...";
+            this.txt_Marca_Equipos.SelectedText = "";
+            this.txt_Marca_Equipos.Size = new System.Drawing.Size(256, 46);
+            this.txt_Marca_Equipos.TabIndex = 75;
             // 
-            // btn_LimpiarFactura
+            // btn_Limpiar_Equipos
             // 
-            this.btn_LimpiarFactura.Animated = true;
-            this.btn_LimpiarFactura.BackColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarFactura.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarFactura.BorderRadius = 15;
-            this.btn_LimpiarFactura.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarFactura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarFactura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_LimpiarFactura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_LimpiarFactura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btn_LimpiarFactura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_LimpiarFactura.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarFactura.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_LimpiarFactura.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarFactura.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_LimpiarFactura.Location = new System.Drawing.Point(291, 607);
-            this.btn_LimpiarFactura.Name = "btn_LimpiarFactura";
-            this.btn_LimpiarFactura.Size = new System.Drawing.Size(255, 44);
-            this.btn_LimpiarFactura.TabIndex = 74;
-            this.btn_LimpiarFactura.Text = "Nuevo";
+            this.btn_Limpiar_Equipos.Animated = true;
+            this.btn_Limpiar_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Limpiar_Equipos.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Limpiar_Equipos.BorderRadius = 15;
+            this.btn_Limpiar_Equipos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpiar_Equipos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpiar_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Limpiar_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Limpiar_Equipos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_Limpiar_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Limpiar_Equipos.ForeColor = System.Drawing.Color.Black;
+            this.btn_Limpiar_Equipos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Limpiar_Equipos.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Limpiar_Equipos.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Limpiar_Equipos.Location = new System.Drawing.Point(291, 607);
+            this.btn_Limpiar_Equipos.Name = "btn_Limpiar_Equipos";
+            this.btn_Limpiar_Equipos.Size = new System.Drawing.Size(255, 44);
+            this.btn_Limpiar_Equipos.TabIndex = 74;
+            this.btn_Limpiar_Equipos.Text = "Nuevo";
             // 
-            // btn_Guardar_Factura
+            // btn_Selecciona_Clientes_Equipo
             // 
-            this.btn_Guardar_Factura.Animated = true;
-            this.btn_Guardar_Factura.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar_Factura.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar_Factura.BorderRadius = 15;
-            this.btn_Guardar_Factura.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Guardar_Factura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Guardar_Factura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Guardar_Factura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Guardar_Factura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btn_Guardar_Factura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Guardar_Factura.ForeColor = System.Drawing.Color.Black;
-            this.btn_Guardar_Factura.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Guardar_Factura.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Guardar_Factura.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Guardar_Factura.Location = new System.Drawing.Point(19, 41);
-            this.btn_Guardar_Factura.Name = "btn_Guardar_Factura";
-            this.btn_Guardar_Factura.Size = new System.Drawing.Size(255, 50);
-            this.btn_Guardar_Factura.TabIndex = 64;
-            this.btn_Guardar_Factura.Text = "Seleccionar cliente...";
+            this.btn_Selecciona_Clientes_Equipo.Animated = true;
+            this.btn_Selecciona_Clientes_Equipo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Selecciona_Clientes_Equipo.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Selecciona_Clientes_Equipo.BorderRadius = 15;
+            this.btn_Selecciona_Clientes_Equipo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Selecciona_Clientes_Equipo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Selecciona_Clientes_Equipo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Selecciona_Clientes_Equipo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Selecciona_Clientes_Equipo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_Selecciona_Clientes_Equipo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Selecciona_Clientes_Equipo.ForeColor = System.Drawing.Color.Black;
+            this.btn_Selecciona_Clientes_Equipo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Selecciona_Clientes_Equipo.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Selecciona_Clientes_Equipo.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Selecciona_Clientes_Equipo.Location = new System.Drawing.Point(19, 41);
+            this.btn_Selecciona_Clientes_Equipo.Name = "btn_Selecciona_Clientes_Equipo";
+            this.btn_Selecciona_Clientes_Equipo.Size = new System.Drawing.Size(255, 50);
+            this.btn_Selecciona_Clientes_Equipo.TabIndex = 64;
+            this.btn_Selecciona_Clientes_Equipo.Text = "Seleccionar cliente...";
             // 
             // label9
             // 
@@ -501,32 +512,18 @@
             this.label9.Text = "Marca";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label8
+            // lbl_Cliente_Equipos
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(16, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(190, 18);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "Cliente dueño (Seleccionar)";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(487, 18);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(96, 18);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Sin selección";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Cliente_Equipos.AutoSize = true;
+            this.lbl_Cliente_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Cliente_Equipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cliente_Equipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Cliente_Equipos.Location = new System.Drawing.Point(382, 55);
+            this.lbl_Cliente_Equipos.Name = "lbl_Cliente_Equipos";
+            this.lbl_Cliente_Equipos.Size = new System.Drawing.Size(153, 18);
+            this.lbl_Cliente_Equipos.TabIndex = 60;
+            this.lbl_Cliente_Equipos.Text = "-----------------------------";
+            this.lbl_Cliente_Equipos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -547,13 +544,16 @@
             this.Panel_Detalle_Factura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Panel_Detalle_Factura.BorderRadius = 10;
             this.Panel_Detalle_Factura.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.Panel_Detalle_Factura.Controls.Add(this.label32);
+            this.Panel_Detalle_Factura.Controls.Add(this.cmbox_Filtrarpor_Equipos);
+            this.Panel_Detalle_Factura.Controls.Add(this.label16);
+            this.Panel_Detalle_Factura.Controls.Add(this.guna2GradientPanel15);
+            this.Panel_Detalle_Factura.Controls.Add(this.lbl_Contador_de_resultados_Equipos);
             this.Panel_Detalle_Factura.Controls.Add(this.lbl_Descripcion_Titulo);
             this.Panel_Detalle_Factura.Controls.Add(this.guna2GradientPanel1);
             this.Panel_Detalle_Factura.Controls.Add(this.label3);
             this.Panel_Detalle_Factura.Controls.Add(this.lbl_Titulo);
             this.Panel_Detalle_Factura.Controls.Add(this.guna2PictureBox1);
-            this.Panel_Detalle_Factura.Controls.Add(this.txt_Buscador_Items);
+            this.Panel_Detalle_Factura.Controls.Add(this.txt_Buscador_Items_Equipos);
             this.Panel_Detalle_Factura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.Panel_Detalle_Factura.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.Panel_Detalle_Factura.Location = new System.Drawing.Point(18, 95);
@@ -564,19 +564,121 @@
             this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 522);
             this.Panel_Detalle_Factura.TabIndex = 65;
             // 
-            // label32
+            // cmbox_Filtrarpor_Equipos
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label32.Location = new System.Drawing.Point(693, 18);
-            this.label32.Name = "label32";
-            this.label32.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label32.Size = new System.Drawing.Size(16, 18);
-            this.label32.TabIndex = 63;
-            this.label32.Text = "0";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmbox_Filtrarpor_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_Filtrarpor_Equipos.BorderRadius = 10;
+            this.cmbox_Filtrarpor_Equipos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_Filtrarpor_Equipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Filtrarpor_Equipos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Filtrarpor_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Filtrarpor_Equipos.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_Filtrarpor_Equipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_Filtrarpor_Equipos.ItemHeight = 37;
+            this.cmbox_Filtrarpor_Equipos.Location = new System.Drawing.Point(22, 64);
+            this.cmbox_Filtrarpor_Equipos.Name = "cmbox_Filtrarpor_Equipos";
+            this.cmbox_Filtrarpor_Equipos.Size = new System.Drawing.Size(206, 43);
+            this.cmbox_Filtrarpor_Equipos.TabIndex = 73;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label16.Location = new System.Drawing.Point(19, 41);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 18);
+            this.label16.TabIndex = 72;
+            this.label16.Text = "Filtrar por";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // guna2GradientPanel15
+            // 
+            this.guna2GradientPanel15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2GradientPanel15.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2GradientPanel15.BorderRadius = 10;
+            this.guna2GradientPanel15.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel15.Controls.Add(this.label34);
+            this.guna2GradientPanel15.Controls.Add(this.label13);
+            this.guna2GradientPanel15.Controls.Add(this.label31);
+            this.guna2GradientPanel15.Controls.Add(this.label33);
+            this.guna2GradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel15.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel15.Location = new System.Drawing.Point(22, 124);
+            this.guna2GradientPanel15.Name = "guna2GradientPanel15";
+            this.guna2GradientPanel15.ShadowDecoration.BorderRadius = 14;
+            this.guna2GradientPanel15.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.guna2GradientPanel15.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.guna2GradientPanel15.Size = new System.Drawing.Size(761, 50);
+            this.guna2GradientPanel15.TabIndex = 69;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label34.Location = new System.Drawing.Point(637, 16);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(42, 18);
+            this.label34.TabIndex = 67;
+            this.label34.Text = "Serie";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(483, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 18);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "Cliente";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label31.Location = new System.Drawing.Point(243, 16);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(54, 18);
+            this.label31.TabIndex = 65;
+            this.label31.Text = "Equipo";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label33.Location = new System.Drawing.Point(40, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(56, 18);
+            this.label33.TabIndex = 64;
+            this.label33.Text = "Código";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_Contador_de_resultados_Equipos
+            // 
+            this.lbl_Contador_de_resultados_Equipos.AutoSize = true;
+            this.lbl_Contador_de_resultados_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Contador_de_resultados_Equipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Contador_de_resultados_Equipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Contador_de_resultados_Equipos.Location = new System.Drawing.Point(693, 18);
+            this.lbl_Contador_de_resultados_Equipos.Name = "lbl_Contador_de_resultados_Equipos";
+            this.lbl_Contador_de_resultados_Equipos.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_Contador_de_resultados_Equipos.Size = new System.Drawing.Size(16, 18);
+            this.lbl_Contador_de_resultados_Equipos.TabIndex = 63;
+            this.lbl_Contador_de_resultados_Equipos.Text = "0";
+            this.lbl_Contador_de_resultados_Equipos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Descripcion_Titulo
             // 
@@ -599,67 +701,24 @@
             this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel1.BorderRadius = 10;
             this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel1.Controls.Add(this.dgv_Servicios_Items);
+            this.guna2GradientPanel1.Controls.Add(this.Flow_OrdenServicio_Equipos);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 141);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 174);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(761, 364);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(761, 331);
             this.guna2GradientPanel1.TabIndex = 59;
             // 
-            // dgv_Servicios_Items
+            // Flow_OrdenServicio_Equipos
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Servicios_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Servicios_Items.ColumnHeadersHeight = 4;
-            this.dgv_Servicios_Items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Servicios_Items.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Servicios_Items.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Servicios_Items.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Servicios_Items.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Servicios_Items.Name = "dgv_Servicios_Items";
-            this.dgv_Servicios_Items.RowHeadersVisible = false;
-            this.dgv_Servicios_Items.Size = new System.Drawing.Size(761, 364);
-            this.dgv_Servicios_Items.TabIndex = 61;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_Servicios_Items.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_Servicios_Items.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_Servicios_Items.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_Servicios_Items.ThemeStyle.ReadOnly = false;
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Servicios_Items.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Flow_OrdenServicio_Equipos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Flow_OrdenServicio_Equipos.Location = new System.Drawing.Point(0, 0);
+            this.Flow_OrdenServicio_Equipos.Name = "Flow_OrdenServicio_Equipos";
+            this.Flow_OrdenServicio_Equipos.Size = new System.Drawing.Size(761, 331);
+            this.Flow_OrdenServicio_Equipos.TabIndex = 0;
             // 
             // label3
             // 
@@ -667,7 +726,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(22, 48);
+            this.label3.Location = new System.Drawing.Point(244, 41);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(103, 18);
@@ -691,34 +750,34 @@
             // 
             this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 78);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(263, 71);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(24, 28);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 46;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // txt_Buscador_Items
+            // txt_Buscador_Items_Equipos
             // 
-            this.txt_Buscador_Items.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Buscador_Items.BorderRadius = 15;
-            this.txt_Buscador_Items.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Buscador_Items.DefaultText = "";
-            this.txt_Buscador_Items.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Buscador_Items.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Buscador_Items.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Items.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Items.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Items.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_Buscador_Items.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Items.Location = new System.Drawing.Point(22, 71);
-            this.txt_Buscador_Items.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Buscador_Items.Name = "txt_Buscador_Items";
-            this.txt_Buscador_Items.PlaceholderText = "Tipo / Marca / Modelo / Serie / Cliente";
-            this.txt_Buscador_Items.SelectedText = "";
-            this.txt_Buscador_Items.Size = new System.Drawing.Size(761, 43);
-            this.txt_Buscador_Items.TabIndex = 45;
-            this.txt_Buscador_Items.TextOffset = new System.Drawing.Point(40, 0);
+            this.txt_Buscador_Items_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Buscador_Items_Equipos.BorderRadius = 15;
+            this.txt_Buscador_Items_Equipos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Buscador_Items_Equipos.DefaultText = "";
+            this.txt_Buscador_Items_Equipos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Buscador_Items_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Buscador_Items_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Buscador_Items_Equipos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Buscador_Items_Equipos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Buscador_Items_Equipos.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_Buscador_Items_Equipos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Buscador_Items_Equipos.Location = new System.Drawing.Point(244, 64);
+            this.txt_Buscador_Items_Equipos.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Buscador_Items_Equipos.Name = "txt_Buscador_Items_Equipos";
+            this.txt_Buscador_Items_Equipos.PlaceholderText = "Tipo / Marca / Modelo / Serie / Cliente";
+            this.txt_Buscador_Items_Equipos.SelectedText = "";
+            this.txt_Buscador_Items_Equipos.Size = new System.Drawing.Size(539, 43);
+            this.txt_Buscador_Items_Equipos.TabIndex = 45;
+            this.txt_Buscador_Items_Equipos.TextOffset = new System.Drawing.Point(40, 0);
             // 
             // guna2GradientPanel8
             // 
@@ -727,8 +786,8 @@
             this.guna2GradientPanel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel8.BorderRadius = 10;
             this.guna2GradientPanel8.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel8.Controls.Add(this.guna2Button1);
-            this.guna2GradientPanel8.Controls.Add(this.btn_Consultar_View);
+            this.guna2GradientPanel8.Controls.Add(this.btn_Notificacion_Equipos);
+            this.guna2GradientPanel8.Controls.Add(this.btn_Recepcion_Equipos);
             this.guna2GradientPanel8.Controls.Add(this.btn_EmitirFactura_View);
             this.guna2GradientPanel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -740,47 +799,47 @@
             this.guna2GradientPanel8.Size = new System.Drawing.Size(665, 64);
             this.guna2GradientPanel8.TabIndex = 64;
             // 
-            // guna2Button1
+            // btn_Notificacion_Equipos
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(450, 8);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button1.TabIndex = 59;
-            this.guna2Button1.Text = "Taller / Atención";
+            this.btn_Notificacion_Equipos.Animated = true;
+            this.btn_Notificacion_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Notificacion_Equipos.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Notificacion_Equipos.BorderRadius = 15;
+            this.btn_Notificacion_Equipos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Notificacion_Equipos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Notificacion_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Notificacion_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Notificacion_Equipos.FillColor = System.Drawing.Color.White;
+            this.btn_Notificacion_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Notificacion_Equipos.ForeColor = System.Drawing.Color.Black;
+            this.btn_Notificacion_Equipos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Notificacion_Equipos.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Notificacion_Equipos.Location = new System.Drawing.Point(450, 8);
+            this.btn_Notificacion_Equipos.Name = "btn_Notificacion_Equipos";
+            this.btn_Notificacion_Equipos.Size = new System.Drawing.Size(200, 45);
+            this.btn_Notificacion_Equipos.TabIndex = 59;
+            this.btn_Notificacion_Equipos.Text = "Taller / Atención";
             // 
-            // btn_Consultar_View
+            // btn_Recepcion_Equipos
             // 
-            this.btn_Consultar_View.Animated = true;
-            this.btn_Consultar_View.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Consultar_View.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Consultar_View.BorderRadius = 15;
-            this.btn_Consultar_View.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Consultar_View.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Consultar_View.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Consultar_View.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Consultar_View.FillColor = System.Drawing.Color.White;
-            this.btn_Consultar_View.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Consultar_View.ForeColor = System.Drawing.Color.Black;
-            this.btn_Consultar_View.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Consultar_View.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Consultar_View.Location = new System.Drawing.Point(229, 8);
-            this.btn_Consultar_View.Name = "btn_Consultar_View";
-            this.btn_Consultar_View.Size = new System.Drawing.Size(200, 45);
-            this.btn_Consultar_View.TabIndex = 58;
-            this.btn_Consultar_View.Text = "Recepción / Solicitud";
+            this.btn_Recepcion_Equipos.Animated = true;
+            this.btn_Recepcion_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Recepcion_Equipos.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Recepcion_Equipos.BorderRadius = 15;
+            this.btn_Recepcion_Equipos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Recepcion_Equipos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Recepcion_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Recepcion_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Recepcion_Equipos.FillColor = System.Drawing.Color.White;
+            this.btn_Recepcion_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Recepcion_Equipos.ForeColor = System.Drawing.Color.Black;
+            this.btn_Recepcion_Equipos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Recepcion_Equipos.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Recepcion_Equipos.Location = new System.Drawing.Point(229, 8);
+            this.btn_Recepcion_Equipos.Name = "btn_Recepcion_Equipos";
+            this.btn_Recepcion_Equipos.Size = new System.Drawing.Size(200, 45);
+            this.btn_Recepcion_Equipos.TabIndex = 58;
+            this.btn_Recepcion_Equipos.Text = "Recepción / Solicitud";
             // 
             // btn_EmitirFactura_View
             // 
@@ -819,8 +878,9 @@
             this.guna2GradientPanel5.PerformLayout();
             this.Panel_Detalle_Factura.ResumeLayout(false);
             this.Panel_Detalle_Factura.PerformLayout();
+            this.guna2GradientPanel15.ResumeLayout(false);
+            this.guna2GradientPanel15.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicios_Items)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel8.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -831,42 +891,49 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2Button btn_LimpiarFactura;
-        private Guna.UI2.WinForms.Guna2Button btn_Guardar_Factura;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Marca_Equipos;
+        private Guna.UI2.WinForms.Guna2Button btn_Limpiar_Equipos;
+        private Guna.UI2.WinForms.Guna2Button btn_Selecciona_Clientes_Equipo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_Cliente_Equipos;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GradientPanel Panel_Detalle_Factura;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_Servicios_Items;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_Titulo;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Buscador_Items;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Buscador_Items_Equipos;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
-        private Guna.UI2.WinForms.Guna2Button btn_Consultar_View;
+        private Guna.UI2.WinForms.Guna2Button btn_Recepcion_Equipos;
         private Guna.UI2.WinForms.Guna2Button btn_EmitirFactura_View;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lbl_Contador_de_resultados_Equipos;
         private System.Windows.Forms.Label lbl_Descripcion_Titulo;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_Notificacion_Equipos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Color_Equipos;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txt_NumSerie_Equipos;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Modelo_Equipos;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2ComboBox Cmbox_TipoServicio;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox Cmbox_TipoEquipo_Equipos;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_Conectividad_Equipos;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private System.Windows.Forms.Label lbl_CodigoInterno_Equipos;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Observaciones;
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Accesorios_Equipos;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btn_Guardar_Equipos;
+        private System.Windows.Forms.FlowLayoutPanel Flow_OrdenServicio_Equipos;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel15;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label lbl_numcedulacliente_Equipos;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_Filtrarpor_Equipos;
+        private System.Windows.Forms.Label label16;
     }
 }

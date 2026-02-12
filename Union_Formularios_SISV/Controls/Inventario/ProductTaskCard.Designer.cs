@@ -37,16 +37,17 @@
             this.Panel_Estado_Producto_USC = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_Point_USC = new System.Windows.Forms.Label();
             this.lbl_Estado_USC = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Panel_ProductTask = new Guna.UI2.WinForms.Guna2Panel();
             this.Panel_Estado_Producto_USC.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.Panel_ProductTask.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Codigo_Producto_USC
             // 
             this.lbl_Codigo_Producto_USC.AutoSize = true;
+            this.lbl_Codigo_Producto_USC.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Codigo_Producto_USC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lbl_Codigo_Producto_USC.Location = new System.Drawing.Point(27, 22);
+            this.lbl_Codigo_Producto_USC.Location = new System.Drawing.Point(20, 22);
             this.lbl_Codigo_Producto_USC.Name = "lbl_Codigo_Producto_USC";
             this.lbl_Codigo_Producto_USC.Size = new System.Drawing.Size(77, 18);
             this.lbl_Codigo_Producto_USC.TabIndex = 0;
@@ -58,7 +59,7 @@
             this.lbl_Proveedor_Producto_USC.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Proveedor_Producto_USC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Proveedor_Producto_USC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Proveedor_Producto_USC.Location = new System.Drawing.Point(136, 33);
+            this.lbl_Proveedor_Producto_USC.Location = new System.Drawing.Point(129, 33);
             this.lbl_Proveedor_Producto_USC.Name = "lbl_Proveedor_Producto_USC";
             this.lbl_Proveedor_Producto_USC.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_Proveedor_Producto_USC.Size = new System.Drawing.Size(77, 18);
@@ -69,8 +70,9 @@
             // lbl_Nom_Componente_Producto_USC
             // 
             this.lbl_Nom_Componente_Producto_USC.AutoSize = true;
+            this.lbl_Nom_Componente_Producto_USC.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Nom_Componente_Producto_USC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nom_Componente_Producto_USC.Location = new System.Drawing.Point(136, 10);
+            this.lbl_Nom_Componente_Producto_USC.Location = new System.Drawing.Point(129, 10);
             this.lbl_Nom_Componente_Producto_USC.Name = "lbl_Nom_Componente_Producto_USC";
             this.lbl_Nom_Componente_Producto_USC.Size = new System.Drawing.Size(154, 21);
             this.lbl_Nom_Componente_Producto_USC.TabIndex = 49;
@@ -82,7 +84,7 @@
             this.lbl_Categoria_Producto_USC.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Categoria_Producto_USC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Categoria_Producto_USC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Categoria_Producto_USC.Location = new System.Drawing.Point(373, 22);
+            this.lbl_Categoria_Producto_USC.Location = new System.Drawing.Point(366, 22);
             this.lbl_Categoria_Producto_USC.Name = "lbl_Categoria_Producto_USC";
             this.lbl_Categoria_Producto_USC.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_Categoria_Producto_USC.Size = new System.Drawing.Size(72, 18);
@@ -96,7 +98,7 @@
             this.lbl_Stock_Producto_USC.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Stock_Producto_USC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Stock_Producto_USC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Stock_Producto_USC.Location = new System.Drawing.Point(514, 22);
+            this.lbl_Stock_Producto_USC.Location = new System.Drawing.Point(507, 22);
             this.lbl_Stock_Producto_USC.Name = "lbl_Stock_Producto_USC";
             this.lbl_Stock_Producto_USC.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_Stock_Producto_USC.Size = new System.Drawing.Size(26, 18);
@@ -110,7 +112,7 @@
             this.lbl_Precio_Producto.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Precio_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Precio_Producto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Precio_Producto.Location = new System.Drawing.Point(604, 23);
+            this.lbl_Precio_Producto.Location = new System.Drawing.Point(597, 23);
             this.lbl_Precio_Producto.Name = "lbl_Precio_Producto";
             this.lbl_Precio_Producto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_Precio_Producto.Size = new System.Drawing.Size(44, 18);
@@ -131,7 +133,7 @@
             this.Panel_Estado_Producto_USC.Controls.Add(this.lbl_Estado_USC);
             this.Panel_Estado_Producto_USC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
             this.Panel_Estado_Producto_USC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
-            this.Panel_Estado_Producto_USC.Location = new System.Drawing.Point(707, 17);
+            this.Panel_Estado_Producto_USC.Location = new System.Drawing.Point(685, 17);
             this.Panel_Estado_Producto_USC.Name = "Panel_Estado_Producto_USC";
             this.Panel_Estado_Producto_USC.ShadowDecoration.BorderRadius = 20;
             this.Panel_Estado_Producto_USC.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -165,31 +167,31 @@
             this.lbl_Estado_USC.Text = "Activo";
             this.lbl_Estado_USC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2Panel1
+            // Panel_ProductTask
             // 
-            this.guna2Panel1.Controls.Add(this.Panel_Estado_Producto_USC);
-            this.guna2Panel1.Controls.Add(this.lbl_Precio_Producto);
-            this.guna2Panel1.Controls.Add(this.lbl_Codigo_Producto_USC);
-            this.guna2Panel1.Controls.Add(this.lbl_Stock_Producto_USC);
-            this.guna2Panel1.Controls.Add(this.lbl_Nom_Componente_Producto_USC);
-            this.guna2Panel1.Controls.Add(this.lbl_Categoria_Producto_USC);
-            this.guna2Panel1.Controls.Add(this.lbl_Proveedor_Producto_USC);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(812, 66);
-            this.guna2Panel1.TabIndex = 74;
+            this.Panel_ProductTask.Controls.Add(this.Panel_Estado_Producto_USC);
+            this.Panel_ProductTask.Controls.Add(this.lbl_Precio_Producto);
+            this.Panel_ProductTask.Controls.Add(this.lbl_Codigo_Producto_USC);
+            this.Panel_ProductTask.Controls.Add(this.lbl_Stock_Producto_USC);
+            this.Panel_ProductTask.Controls.Add(this.lbl_Nom_Componente_Producto_USC);
+            this.Panel_ProductTask.Controls.Add(this.lbl_Categoria_Producto_USC);
+            this.Panel_ProductTask.Controls.Add(this.lbl_Proveedor_Producto_USC);
+            this.Panel_ProductTask.Location = new System.Drawing.Point(0, 0);
+            this.Panel_ProductTask.Name = "Panel_ProductTask";
+            this.Panel_ProductTask.Size = new System.Drawing.Size(783, 66);
+            this.Panel_ProductTask.TabIndex = 74;
             // 
             // ProductTaskCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.Panel_ProductTask);
             this.Name = "ProductTaskCard";
             this.Size = new System.Drawing.Size(812, 66);
             this.Panel_Estado_Producto_USC.ResumeLayout(false);
             this.Panel_Estado_Producto_USC.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.Panel_ProductTask.ResumeLayout(false);
+            this.Panel_ProductTask.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -205,6 +207,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel Panel_Estado_Producto_USC;
         private System.Windows.Forms.Label lbl_Point_USC;
         private System.Windows.Forms.Label lbl_Estado_USC;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel Panel_ProductTask;
     }
 }

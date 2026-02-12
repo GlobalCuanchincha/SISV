@@ -1,60 +1,49 @@
-﻿using Dominio_SISV.DTOs;
-using System;
-using System.Drawing;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Union_Formularios_SISV.Controls.Clientes
 {
     public partial class PnlProveedor : UserControl
     {
-        public event Action<ProveedorPickVM> ProveedorSelected;
-
-        private ProveedorPickVM _vm;
-        public ProveedorPickVM VM
+        public class ProveedorSeleccionadoEventArgs : EventArgs
         {
-            get => _vm;
-            set
-            {
-                _vm = value;
-                Render();
-            }
+            public int ProveedorID { get; }
+            public ProveedorSeleccionadoEventArgs(int id) { ProveedorID = id; }
         }
+
+        public event EventHandler<ProveedorSeleccionadoEventArgs> ProveedorSeleccionado;
+
+        public int ProveedorID { get; private set; }
 
         public PnlProveedor()
         {
             InitializeComponent();
-
-            // Click en toda la tarjeta
-            Panel_DatProveedores.Click += (_, __) => RaiseSelected();
-            lbl_ProveedorMuestra_UC.Click += (_, __) => RaiseSelected();
-            lbl_DatosProveedor_UC.Click += (_, __) => RaiseSelected();
+            HookClickRecursive(this);
         }
 
-        private void Render()
+        private void HookClickRecursive(Control root)
         {
-            if (_vm == null)
-            {
-                lbl_ProveedorMuestra_UC.Text = "—";
-                lbl_DatosProveedor_UC.Text = "";
-                return;
-            }
+            if (root == null) return;
 
+            root.Cursor = Cursors.Hand;
+            root.Click += (s, e) => ProveedorSeleccionado?.Invoke(this, new ProveedorSeleccionadoEventArgs(ProveedorID));
 
-            var ruc = string.IsNullOrWhiteSpace(_vm.Ruc) ? "S/RUC" : _vm.Ruc;
-            var tel = string.IsNullOrWhiteSpace(_vm.Telefono) ? "S/Teléfono" : _vm.Telefono;
-            lbl_DatosProveedor_UC.Text = $"{ruc} | {tel}";
+            foreach (Control c in root.Controls)
+                HookClickRecursive(c);
         }
 
-        private void RaiseSelected()
+        public void Bind(int proveedorId, string nombre, string ruc, string telefono)
         {
-            if (_vm == null) return;
-            ProveedorSelected?.Invoke(_vm);
+            ProveedorID = proveedorId;
+
+            lbl_ProveedorMuestra_UC.Text = nombre ?? "";
+            lbl_DatosProveedor_UC.Text = $"RUC: {ruc ?? ""}  •  Tel: {telefono ?? ""}";
         }
 
-        // Este método lo pide el Designer (Paint event)
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        public void SetSelected(bool selected)
         {
-            // No necesitas nada aquí; solo evita el error de compilación.
+            // para un highlight simple sin depender de Guna
+            BackColor = selected ? System.Drawing.Color.FromArgb(240, 247, 255) : System.Drawing.Color.White;
         }
     }
 }

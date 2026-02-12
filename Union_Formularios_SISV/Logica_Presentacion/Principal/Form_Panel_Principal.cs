@@ -76,7 +76,8 @@ namespace Union_Formularios_SISV
         private void btn_Ordenes_Servicio_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            _host.Open(new Form_Ordenes_Servicio(), "Órdenes de servicio",
+
+            _host.Open(new Form_Ordenes_Servicio(_session), "Órdenes de servicio",
                 "Ingreso de equipo, seguimiento, estados y asignación de técnico");
         }
 
@@ -103,7 +104,17 @@ namespace Union_Formularios_SISV
 
         private void btn_Productos_Click(object sender, EventArgs e)
         {
+            var role = _session?.RoleId ?? (byte)0;
+            if (role != 1 && role != 2 && role != 4)
+            {
+                MessageBox.Show("Acceso denegado. Solo SuperAdministrador, Administrador y Técnico.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ActivateButton(sender, RGBColors.color6);
+            _host.Open(new Union_Formularios_SISV.Forms.Inventario.Form_Inventario(_session),
+                "Inventario", "Productos (registrar, consultar, actualizar)");
         }
 
         private void btn_Usuarios_Click(object sender, EventArgs e)
