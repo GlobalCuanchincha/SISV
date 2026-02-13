@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
+namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Recepcion
 {
-    public partial class r : Form
+    public partial class RecepcionTaskCard : UserControl
     {
-        public r()
+        public RecepcionTaskCard()
         {
             InitializeComponent();
         }

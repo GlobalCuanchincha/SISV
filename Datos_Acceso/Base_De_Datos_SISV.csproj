@@ -72,10 +72,6 @@
     <Compile Include="Mappers\SecurityDbBootstrapper.cs" />
     <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ClienteRepository.cs" />
-    <Compile Include="Repositories\EquipoRepository.cs" />
-    <Compile Include="Repositories\ProductoRepository.cs" />
-    <Compile Include="Repositories\SISVInventarioRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Security\Dpapi.cs" />
     <Compile Include="Security\RememberMeStore.cs" />

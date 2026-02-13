@@ -375,6 +375,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Logica_Presentacion\Configuracion\Maestro_Datos\" />
     <Folder Include="ViewModels\Ventas\" />
   </ItemGroup>
   <ItemGroup>
