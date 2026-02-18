@@ -1,6 +1,6 @@
 ﻿namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
 {
-    partial class Seleccion_Cliente
+    partial class Seleccion_Orden
     {
         /// <summary>
         /// Required designer variable.
@@ -289,7 +289,7 @@
             this.guna2Panel1.Size = new System.Drawing.Size(754, 281);
             this.guna2Panel1.TabIndex = 70;
             // 
-            // Seleccion_Cliente
+            // Seleccion_Orden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,7 +301,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2ControlBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Seleccion_Cliente";
+            this.Name = "Seleccion_Orden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccion_Cliente";
             this.guna2Panel2.ResumeLayout(false);

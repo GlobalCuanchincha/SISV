@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
 {
-    public partial class Seleccion_Cliente : Form
+    public partial class Seleccion_Orden : Form
     {
         private readonly object _session;
         private readonly int _usuarioId;
@@ -23,9 +23,9 @@ namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
         public int? SelectedClienteID => _clienteSeleccionadoId;
         public string SelectedClienteNombre => _clienteSeleccionadoNombre;
 
-        public Seleccion_Cliente() : this(null) { }
+        public Seleccion_Orden() : this(null) { }
 
-        public Seleccion_Cliente(object session)
+        public Seleccion_Orden(object session)
         {
             InitializeComponent();
 
