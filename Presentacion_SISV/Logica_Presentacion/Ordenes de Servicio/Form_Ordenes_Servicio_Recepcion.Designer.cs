@@ -1,6 +1,6 @@
 ﻿namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
 {
-    partial class r
+    partial class Form_Ordenes_Servicio_Recepcion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(r));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ordenes_Servicio_Recepcion));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_CrearOrden_Recepcion = new Guna.UI2.WinForms.Guna2Button();
@@ -50,6 +50,12 @@
             this.lbl_CodigoOrdenSolicitud_Recepcion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_Detalle_Factura = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowRecepcion = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_Resultados_Recepcion = new System.Windows.Forms.Label();
@@ -58,26 +64,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_Buscador_Recepcion = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_Taller_Recepcion = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Recepcion = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Equipos_Recepcion = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2GradientPanel15.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2GradientPanel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel2
@@ -255,7 +255,6 @@
             this.txt_AccesoriosRecibidos_Recepcion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_AccesoriosRecibidos_Recepcion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_AccesoriosRecibidos_Recepcion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_AccesoriosRecibidos_Recepcion.Enabled = false;
             this.txt_AccesoriosRecibidos_Recepcion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_AccesoriosRecibidos_Recepcion.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_AccesoriosRecibidos_Recepcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -290,7 +289,6 @@
             this.txt_Detalles_Recepcion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_Detalles_Recepcion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Detalles_Recepcion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Detalles_Recepcion.Enabled = false;
             this.txt_Detalles_Recepcion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Detalles_Recepcion.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_Detalles_Recepcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -451,6 +449,93 @@
             this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 516);
             this.Panel_Detalle_Factura.TabIndex = 62;
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2GradientPanel1.BorderRadius = 10;
+            this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel1.Controls.Add(this.label2);
+            this.guna2GradientPanel1.Controls.Add(this.label34);
+            this.guna2GradientPanel1.Controls.Add(this.label13);
+            this.guna2GradientPanel1.Controls.Add(this.label31);
+            this.guna2GradientPanel1.Controls.Add(this.label33);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 122);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
+            this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(754, 50);
+            this.guna2GradientPanel1.TabIndex = 70;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(506, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "Técnico";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label34.Location = new System.Drawing.Point(658, 16);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(55, 18);
+            this.label34.TabIndex = 67;
+            this.label34.Text = "Estado";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(150, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 18);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "Cliente";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label31.Location = new System.Drawing.Point(316, 16);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(54, 18);
+            this.label31.TabIndex = 65;
+            this.label31.Text = "Equipo";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label33.Location = new System.Drawing.Point(26, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(56, 18);
+            this.label33.TabIndex = 64;
+            this.label33.Text = "Código";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.flowRecepcion);
@@ -550,6 +635,17 @@
             this.lbl_Titulo.TabIndex = 48;
             this.lbl_Titulo.Text = "Consultar órdenes";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 78);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 28);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 46;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // txt_Buscador_Recepcion
             // 
             this.txt_Buscador_Recepcion.BackColor = System.Drawing.Color.Transparent;
@@ -580,7 +676,7 @@
             this.guna2GradientPanel15.BorderRadius = 10;
             this.guna2GradientPanel15.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel15.Controls.Add(this.btn_Taller_Recepcion);
-            this.guna2GradientPanel15.Controls.Add(this.guna2Button2);
+            this.guna2GradientPanel15.Controls.Add(this.btn_Recepcion);
             this.guna2GradientPanel15.Controls.Add(this.btn_Equipos_Recepcion);
             this.guna2GradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel15.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -613,26 +709,26 @@
             this.btn_Taller_Recepcion.TabIndex = 59;
             this.btn_Taller_Recepcion.Text = "Taller / Atención";
             // 
-            // guna2Button2
+            // btn_Recepcion
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(229, 8);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button2.TabIndex = 58;
-            this.guna2Button2.Text = "Recepción / Solicitud";
+            this.btn_Recepcion.Animated = true;
+            this.btn_Recepcion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Recepcion.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Recepcion.BorderRadius = 15;
+            this.btn_Recepcion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Recepcion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Recepcion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Recepcion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Recepcion.FillColor = System.Drawing.Color.White;
+            this.btn_Recepcion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Recepcion.ForeColor = System.Drawing.Color.Black;
+            this.btn_Recepcion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Recepcion.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Recepcion.Location = new System.Drawing.Point(229, 8);
+            this.btn_Recepcion.Name = "btn_Recepcion";
+            this.btn_Recepcion.Size = new System.Drawing.Size(200, 45);
+            this.btn_Recepcion.TabIndex = 58;
+            this.btn_Recepcion.Text = "Recepción / Solicitud";
             // 
             // btn_Equipos_Recepcion
             // 
@@ -654,105 +750,7 @@
             this.btn_Equipos_Recepcion.TabIndex = 57;
             this.btn_Equipos_Recepcion.Text = "Equipos";
             // 
-            // guna2GradientPanel1
-            // 
-            this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2GradientPanel1.BorderRadius = 10;
-            this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel1.Controls.Add(this.label2);
-            this.guna2GradientPanel1.Controls.Add(this.label34);
-            this.guna2GradientPanel1.Controls.Add(this.label13);
-            this.guna2GradientPanel1.Controls.Add(this.label31);
-            this.guna2GradientPanel1.Controls.Add(this.label33);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 122);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
-            this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
-            this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(754, 50);
-            this.guna2GradientPanel1.TabIndex = 70;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label34.Location = new System.Drawing.Point(658, 16);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(55, 18);
-            this.label34.TabIndex = 67;
-            this.label34.Text = "Estado";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(150, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 18);
-            this.label13.TabIndex = 66;
-            this.label13.Text = "Cliente";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label31.Location = new System.Drawing.Point(316, 16);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(54, 18);
-            this.label31.TabIndex = 65;
-            this.label31.Text = "Equipo";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label33.Location = new System.Drawing.Point(26, 16);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(56, 18);
-            this.label33.TabIndex = 64;
-            this.label33.Text = "Código";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(506, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 18);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "Técnico";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 78);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 28);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 46;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // r
+            // Form_Ordenes_Servicio_Recepcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -762,7 +760,7 @@
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.Panel_Detalle_Factura);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "r";
+            this.Name = "Form_Ordenes_Servicio_Recepcion";
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
@@ -771,11 +769,11 @@
             this.guna2GradientPanel5.PerformLayout();
             this.Panel_Detalle_Factura.ResumeLayout(false);
             this.Panel_Detalle_Factura.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2GradientPanel15.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2GradientPanel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -796,7 +794,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Buscador_Recepcion;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel15;
         private Guna.UI2.WinForms.Guna2Button btn_Taller_Recepcion;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btn_Recepcion;
         private Guna.UI2.WinForms.Guna2Button btn_Equipos_Recepcion;
         private System.Windows.Forms.Label lbl_Resultados_Recepcion;
         private System.Windows.Forms.Label lbl_Descripcion_Titulo;

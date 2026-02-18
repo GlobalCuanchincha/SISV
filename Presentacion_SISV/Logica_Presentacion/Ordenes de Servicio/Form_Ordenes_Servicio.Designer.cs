@@ -74,7 +74,7 @@
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_Notificacion_Equipos = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Recepcion_Equipos = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_EmitirFactura_View = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Equipos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
@@ -788,7 +788,7 @@
             this.guna2GradientPanel8.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel8.Controls.Add(this.btn_Notificacion_Equipos);
             this.guna2GradientPanel8.Controls.Add(this.btn_Recepcion_Equipos);
-            this.guna2GradientPanel8.Controls.Add(this.btn_EmitirFactura_View);
+            this.guna2GradientPanel8.Controls.Add(this.btn_Equipos);
             this.guna2GradientPanel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel8.Location = new System.Drawing.Point(18, 9);
@@ -841,25 +841,25 @@
             this.btn_Recepcion_Equipos.TabIndex = 58;
             this.btn_Recepcion_Equipos.Text = "Recepción / Solicitud";
             // 
-            // btn_EmitirFactura_View
+            // btn_Equipos
             // 
-            this.btn_EmitirFactura_View.Animated = true;
-            this.btn_EmitirFactura_View.BackColor = System.Drawing.Color.Transparent;
-            this.btn_EmitirFactura_View.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_EmitirFactura_View.BorderRadius = 15;
-            this.btn_EmitirFactura_View.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EmitirFactura_View.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EmitirFactura_View.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_EmitirFactura_View.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_EmitirFactura_View.FillColor = System.Drawing.Color.White;
-            this.btn_EmitirFactura_View.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_EmitirFactura_View.ForeColor = System.Drawing.Color.Black;
-            this.btn_EmitirFactura_View.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_EmitirFactura_View.Location = new System.Drawing.Point(13, 8);
-            this.btn_EmitirFactura_View.Name = "btn_EmitirFactura_View";
-            this.btn_EmitirFactura_View.Size = new System.Drawing.Size(200, 45);
-            this.btn_EmitirFactura_View.TabIndex = 57;
-            this.btn_EmitirFactura_View.Text = "Equipos";
+            this.btn_Equipos.Animated = true;
+            this.btn_Equipos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Equipos.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Equipos.BorderRadius = 15;
+            this.btn_Equipos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Equipos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Equipos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Equipos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Equipos.FillColor = System.Drawing.Color.White;
+            this.btn_Equipos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Equipos.ForeColor = System.Drawing.Color.Black;
+            this.btn_Equipos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Equipos.Location = new System.Drawing.Point(13, 8);
+            this.btn_Equipos.Name = "btn_Equipos";
+            this.btn_Equipos.Size = new System.Drawing.Size(200, 45);
+            this.btn_Equipos.TabIndex = 57;
+            this.btn_Equipos.Text = "Equipos";
             // 
             // Form_Ordenes_Servicio
             // 
@@ -905,7 +905,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Buscador_Items_Equipos;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
         private Guna.UI2.WinForms.Guna2Button btn_Recepcion_Equipos;
-        private Guna.UI2.WinForms.Guna2Button btn_EmitirFactura_View;
+        private Guna.UI2.WinForms.Guna2Button btn_Equipos;
         private System.Windows.Forms.Label lbl_Contador_de_resultados_Equipos;
         private System.Windows.Forms.Label lbl_Descripcion_Titulo;
         private Guna.UI2.WinForms.Guna2Button btn_Notificacion_Equipos;

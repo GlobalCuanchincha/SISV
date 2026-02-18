@@ -1,6 +1,8 @@
-﻿namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
+﻿using System.Windows.Forms;
+
+namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
 {
-    partial class Form_Ordenes_Servicio_Solicitud
+    partial class Form_Ordenes_Servicio_Notificacion : Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ordenes_Servicio_Solicitud));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ordenes_Servicio_Notificacion));
             this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();

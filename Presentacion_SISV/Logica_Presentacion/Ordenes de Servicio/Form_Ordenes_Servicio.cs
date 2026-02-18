@@ -1,8 +1,10 @@
 ﻿using Capa_Corte_Transversal.Helpers;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos;
@@ -17,13 +19,34 @@ namespace Union_Formularios_SISV.Forms
 
         private int _equipoSeleccionadoId = 0;
 
-        // cliente seleccionado (para registrar equipo)
         private int? _clienteIdSeleccionado = null;
         private string _clienteNombreSeleccionado = null;
 
-        // Debounce búsqueda
         private readonly Timer _debounceBuscar = new Timer { Interval = 350 };
         private bool _isLoading = false;
+
+        // =========================
+        // NAV UI (activo + animación)
+        // =========================
+        private Control _navBtnActivo;
+        private Panel _navIndicator;
+        private readonly Timer _navAnim = new Timer { Interval = 15 };
+        private int _navTargetTop;
+        private int _navTargetHeight;
+
+        private readonly Dictionary<Control, BtnStyle> _navStyles = new Dictionary<Control, BtnStyle>();
+
+        private readonly Color _navActiveColor = Color.FromArgb(28, 188, 135);      // Verde (como módulo órdenes)
+        private readonly Color _navActiveBg = Color.FromArgb(232, 250, 240);        // Verde claro
+        private readonly Color _navIdleFg = Color.FromArgb(60, 60, 60);
+        private readonly Color _navIdleBg = Color.Transparent;
+
+        private sealed class BtnStyle
+        {
+            public Color Back;
+            public Color Fore;
+            public Font Font;
+        }
 
         public Form_Ordenes_Servicio() : this(null) { }
 
@@ -35,17 +58,26 @@ namespace Union_Formularios_SISV.Forms
             _usuarioId = TryGetUsuarioSesionId();
             _rolId = TryGetRolSesionId();
 
+            // ✅ NAV: eventos aquí (no en Load)
+            btn_Recepcion_Equipos.Click += (s, e) => IrARecepcion();
+            btn_Notificacion_Equipos.Click += (s, e) => IrANotificacion();
+
+            // Anim timer
+            _navAnim.Tick += (s, e) => NavAnimTick();
+
             Load += async (s, e) => await Form_LoadAsync();
         }
 
         private async Task Form_LoadAsync()
         {
-            // Roles permitidos (según lo que vienes usando): 1 SuperAdmin, 2 Admin, 4 Técnico
+            // Roles permitidos: 1 SuperAdmin, 2 Admin, 4 Técnico
             if (_usuarioId <= 0)
             {
                 MessageBox.Show("No se pudo obtener UsuarioID de sesión.", "SISV",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Close();
+
+                // ✅ evita CreateHandle crash
+                BeginInvoke(new Action(() => Close()));
                 return;
             }
 
@@ -53,13 +85,14 @@ namespace Union_Formularios_SISV.Forms
             {
                 MessageBox.Show("Acceso denegado. Solo SuperAdministrador, Administrador y Técnico.", "SISV",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Close();
+
+                BeginInvoke(new Action(() => Close()));
                 return;
             }
 
             _isLoading = true;
 
-            // Events
+            // Events búsqueda
             _debounceBuscar.Tick += async (s, e) =>
             {
                 _debounceBuscar.Stop();
@@ -80,14 +113,8 @@ namespace Union_Formularios_SISV.Forms
             };
 
             btn_Selecciona_Clientes_Equipo.Click += async (s, e) => await ElegirClienteAsync();
-
             btn_Guardar_Equipos.Click += async (s, e) => await GuardarEquipoAsync();
-
             btn_Limpiar_Equipos.Click += async (s, e) => await LimpiarEquipoAsync();
-
-            // Navegación (si esos forms existen en tu proyecto)
-            btn_Recepcion_Equipos.Click += (s, e) => AbrirFormularioSiExiste("Union_Formularios_SISV.Forms.Form_Ordenes_Servicio_Recepcion");
-            btn_Notificacion_Equipos.Click += (s, e) => AbrirFormularioSiExiste("Union_Formularios_SISV.Forms.Form_Ordenes_Servicio_Notificacion");
 
             // Ajuste cards en resize
             Flow_OrdenServicio_Equipos.SizeChanged += (s, e) => AjustarAnchoCards();
@@ -99,6 +126,258 @@ namespace Union_Formularios_SISV.Forms
 
             await LimpiarEquipoAsync();
             await BuscarEquiposAsync();
+
+            // ✅ NAV: marca botón activo en esta pantalla (Equipos)
+            // Si existe un botón llamado "btn_Equipos" lo usa, si no, deja activo el botón de Equipos (fallback).
+            var btnEquipos = FindControlDeep("btn_Equipos");
+            if (btnEquipos != null)
+                ActivateNav(btnEquipos);
+            else
+                ActivateNav(btn_Recepcion_Equipos); // fallback si tu diseñador no tiene btn_Equipos
+        }
+
+        // ======================================================
+        // NAVEGACIÓN: abre en el panel del Form_Panel_Principal
+        // ======================================================
+        private void IrARecepcion()
+        {
+            try
+            {
+                ActivateNav(btn_Recepcion_Equipos);
+
+                // ✅ abre dentro del panel host (Form_Panel_Principal)
+                OpenInMainHost(
+                    CreateFormFromAnyCtor(new[]
+                    {
+                        "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Recepcion",
+                        "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Solicitud"
+                    }),
+                    "Recepción",
+                    "Recepción / Solicitud de orden"
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void IrANotificacion()
+        {
+            try
+            {
+                ActivateNav(btn_Notificacion_Equipos);
+
+                OpenInMainHost(
+                    CreateFormFromAnyCtor(new[]
+                    {
+                        "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Notificacion",
+                        "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Notificaciones",
+                        "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Solicitud"
+                    }),
+                    "Notificación",
+                    "Actualizar estado / notificaciones del servicio"
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void OpenInMainHost(Form child, string titulo, string descripcion)
+        {
+            if (child == null)
+            {
+                MessageBox.Show("No se encontró el formulario destino (revisa nombre de clase/namespace).", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Este form está dentro de Panel_Escritorio, así que el Form real es el principal:
+            var main = this.Parent?.FindForm() as Union_Formularios_SISV.Form_Panel_Principal;
+
+            if (main != null)
+            {
+                main.OpenChild(child, titulo, descripcion);
+                return;
+            }
+
+            // Fallback: si por alguna razón no está en el host
+            child.Show();
+        }
+
+        private Form CreateFormFromAnyCtor(string[] fullTypeNames)
+        {
+            Type t = null;
+            foreach (var name in fullTypeNames)
+            {
+                t = FindTypeInLoadedAssemblies(name);
+                if (t != null) break;
+            }
+            if (t == null) return null;
+
+            // Asegura que sea Form
+            if (!typeof(Form).IsAssignableFrom(t)) return null;
+
+            // 1) ctor(object session)
+            var ctorObj = t.GetConstructor(new[] { typeof(object) });
+            if (ctorObj != null)
+                return (Form)ctorObj.Invoke(new object[] { _session });
+
+            // 2) ctor(int usuarioId)
+            var ctorInt = t.GetConstructor(new[] { typeof(int) });
+            if (ctorInt != null)
+                return (Form)ctorInt.Invoke(new object[] { _usuarioId });
+
+            // 3) ctor() vacío
+            var ctorEmpty = t.GetConstructor(Type.EmptyTypes);
+            if (ctorEmpty != null)
+                return (Form)ctorEmpty.Invoke(null);
+
+            return null;
+        }
+
+        private static Type FindTypeInLoadedAssemblies(string fullName)
+        {
+            foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                var t = asm.GetType(fullName, false, true);
+                if (t != null) return t;
+            }
+            return null;
+        }
+
+        // ======================================================
+        // NAV UI (activo + animación)
+        // ======================================================
+        private void ActivateNav(Control btn)
+        {
+            if (btn == null) return;
+
+            // Guarda estilo original si no existe
+            if (!_navStyles.ContainsKey(btn))
+            {
+                _navStyles[btn] = new BtnStyle
+                {
+                    Back = btn.BackColor,
+                    Fore = btn.ForeColor,
+                    Font = btn.Font
+                };
+            }
+
+            // Restaura anterior
+            if (_navBtnActivo != null && _navBtnActivo != btn && _navStyles.ContainsKey(_navBtnActivo))
+            {
+                var st = _navStyles[_navBtnActivo];
+                SetFillOrBack(_navBtnActivo, _navIdleBg);
+                _navBtnActivo.ForeColor = _navIdleFg;
+                _navBtnActivo.Font = new Font(st.Font, FontStyle.Regular);
+
+                TrySetProp(_navBtnActivo, "BorderColor", Color.Transparent);
+                TrySetProp(_navBtnActivo, "BorderThickness", 0);
+            }
+
+            _navBtnActivo = btn;
+
+            // Activo
+            SetFillOrBack(btn, _navActiveBg);
+            btn.ForeColor = _navActiveColor;
+            btn.Font = new Font(btn.Font, FontStyle.Bold);
+
+            TrySetProp(btn, "BorderColor", _navActiveColor);
+            TrySetProp(btn, "BorderThickness", 1);
+
+            EnsureIndicator(btn);
+
+            // Target anim
+            _navTargetTop = btn.Top;
+            _navTargetHeight = btn.Height;
+
+            if (_navIndicator.Top == _navTargetTop && _navIndicator.Height == _navTargetHeight)
+                return;
+
+            _navAnim.Start();
+        }
+
+        private void EnsureIndicator(Control btn)
+        {
+            if (btn?.Parent == null) return;
+
+            if (_navIndicator == null || _navIndicator.Parent != btn.Parent)
+            {
+                _navIndicator?.Dispose();
+
+                _navIndicator = new Panel
+                {
+                    Width = 4,
+                    Height = btn.Height,
+                    Left = 0,
+                    Top = btn.Top,
+                    BackColor = _navActiveColor
+                };
+
+                btn.Parent.Controls.Add(_navIndicator);
+                _navIndicator.BringToFront();
+            }
+            else
+            {
+                _navIndicator.BackColor = _navActiveColor;
+                _navIndicator.BringToFront();
+            }
+        }
+
+        private void NavAnimTick()
+        {
+            if (_navIndicator == null || _navBtnActivo == null)
+            {
+                _navAnim.Stop();
+                return;
+            }
+
+            int speed = 10;
+
+            // Top
+            int dy = _navTargetTop - _navIndicator.Top;
+            if (Math.Abs(dy) <= speed) _navIndicator.Top = _navTargetTop;
+            else _navIndicator.Top += Math.Sign(dy) * speed;
+
+            // Height
+            int dh = _navTargetHeight - _navIndicator.Height;
+            if (Math.Abs(dh) <= 2) _navIndicator.Height = _navTargetHeight;
+            else _navIndicator.Height += Math.Sign(dh) * 2;
+
+            if (_navIndicator.Top == _navTargetTop && _navIndicator.Height == _navTargetHeight)
+                _navAnim.Stop();
+        }
+
+        private static void SetFillOrBack(Control c, Color color)
+        {
+            if (c == null) return;
+            c.BackColor = color;
+
+            // Para Guna2Button / controles con FillColor
+            TrySetProp(c, "FillColor", color);
+        }
+
+        private static void TrySetProp(Control c, string prop, object value)
+        {
+            try
+            {
+                var p = c.GetType().GetProperty(prop);
+                if (p != null && p.CanWrite) p.SetValue(c, value);
+            }
+            catch { }
+        }
+
+        private Control FindControlDeep(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name)) return null;
+
+            var found = this.Controls.Find(name, true);
+            if (found != null && found.Length > 0) return found[0];
+
+            return null;
         }
 
         // =========================
@@ -106,7 +385,6 @@ namespace Union_Formularios_SISV.Forms
         // =========================
         private async Task CargarCombosAsync()
         {
-            // Filtros de equipos
             var dtFiltros = await TryExecDataTableAsync(
                 new[] { "ops.usp_Equipo_Filtros_Listar", "dbo.usp_Equipo_Filtros_Listar" },
                 cmd => cmd.Parameters.AddWithValue("@UsuarioID", _usuarioId)
@@ -116,7 +394,6 @@ namespace Union_Formularios_SISV.Forms
             cmbox_Filtrarpor_Equipos.ValueMember = "Value";
             cmbox_Filtrarpor_Equipos.DataSource = dtFiltros;
 
-            // Tipos de equipo
             var dtTipo = await TryExecDataTableAsync(
                 new[] { "ops.usp_TipoEquipo_Listar", "dbo.usp_TipoEquipo_Listar" },
                 cmd => cmd.Parameters.AddWithValue("@UsuarioID", _usuarioId)
@@ -126,7 +403,6 @@ namespace Union_Formularios_SISV.Forms
             Cmbox_TipoEquipo_Equipos.ValueMember = "TipoEquipoID";
             Cmbox_TipoEquipo_Equipos.DataSource = dtTipo;
 
-            // Conectividad
             var dtCon = await TryExecDataTableAsync(
                 new[] { "ops.usp_Conectividad_Listar", "dbo.usp_Conectividad_Listar" },
                 cmd => cmd.Parameters.AddWithValue("@UsuarioID", _usuarioId)
@@ -155,7 +431,7 @@ namespace Union_Formularios_SISV.Forms
                         cmd.Parameters.AddWithValue("@ClienteID", (object)_clienteIdSeleccionado ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@FiltroPor", filtro);
                         cmd.Parameters.AddWithValue("@Buscar", string.IsNullOrWhiteSpace(buscar) ? (object)DBNull.Value : buscar);
-                        cmd.Parameters.AddWithValue("@SoloActivos", DBNull.Value); // el SP decide por rol
+                        cmd.Parameters.AddWithValue("@SoloActivos", DBNull.Value);
                         cmd.Parameters.AddWithValue("@Top", 200);
                     }
                 );
@@ -199,6 +475,34 @@ namespace Union_Formularios_SISV.Forms
 
             lbl_Contador_de_resultados_Equipos.Text = $"{count} resultados";
             Flow_OrdenServicio_Equipos.ResumeLayout();
+        }
+
+        private Form CrearForm(Type formType)
+        {
+            Form form;
+
+            // 1) Preferir ctor(object session)
+            var ctorSession = formType.GetConstructor(new[] { typeof(object) });
+            if (ctorSession != null)
+            {
+                form = (Form)ctorSession.Invoke(new object[] { _session });
+            }
+            else
+            {
+                // 2) ctor(int usuarioId, byte rolId)
+                var ctor = formType.GetConstructor(new[] { typeof(int), typeof(byte) });
+                if (ctor != null)
+                    form = (Form)ctor.Invoke(new object[] { _usuarioId, _rolId });
+                else
+                    form = (Form)Activator.CreateInstance(formType);
+            }
+
+            // Embebido
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            return form;
         }
 
         private void AjustarAnchoCards()
@@ -250,7 +554,6 @@ namespace Union_Formularios_SISV.Forms
                 txt_NumSerie_Equipos.Text = Convert.ToString(row["Serie"]) ?? "";
                 txt_Color_Equipos.Text = Convert.ToString(row["Color"]) ?? "";
 
-                // conectividad (Value = string)
                 var con = Convert.ToString(row["Conectividad"]) ?? "N/A";
                 SelectComboValue(cmbox_Conectividad_Equipos, con);
 
@@ -280,7 +583,6 @@ namespace Union_Formularios_SISV.Forms
 
                         lbl_Cliente_Equipos.Text = _clienteNombreSeleccionado;
 
-                        // al elegir cliente, refresca listado
                         await BuscarEquiposAsync();
                     }
                 }
@@ -304,7 +606,6 @@ namespace Union_Formularios_SISV.Forms
 
             btn_Guardar_Equipos.Text = "Guardar";
 
-            // Generar código interno sugerido
             try
             {
                 var dt = await TryExecDataTableAsync(
@@ -322,8 +623,6 @@ namespace Union_Formularios_SISV.Forms
                 lbl_CodigoInterno_Equipos.Text = "";
             }
 
-            // No reseteo el cliente global del filtro si tú quieres conservarlo,
-            // pero sí vacío los campos de equipo.
             txt_Marca_Equipos.Text = "";
             txt_Modelo_Equipos.Text = "";
             txt_NumSerie_Equipos.Text = "";
@@ -473,43 +772,6 @@ namespace Union_Formularios_SISV.Forms
                     return;
                 }
             }
-        }
-
-        private void AbrirFormularioSiExiste(string fullTypeName)
-        {
-            try
-            {
-                var t = FindTypeInLoadedAssemblies(fullTypeName);
-                if (t == null)
-                {
-                    MessageBox.Show($"No se encontró el formulario: {fullTypeName}", "SISV",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                Form f = null;
-
-                // intenta ctor(session)
-                var ctor1 = t.GetConstructor(new[] { typeof(object) });
-                if (ctor1 != null) f = (Form)ctor1.Invoke(new object[] { _session });
-                else f = (Form)Activator.CreateInstance(t);
-
-                f.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private static Type FindTypeInLoadedAssemblies(string fullName)
-        {
-            foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                var t = asm.GetType(fullName, false, true);
-                if (t != null) return t;
-            }
-            return null;
         }
 
         private static async Task<DataTable> TryExecDataTableAsync(string[] sps, Action<SqlCommand> fillParams)
