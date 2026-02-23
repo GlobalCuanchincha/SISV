@@ -1,4 +1,4 @@
-﻿namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
+﻿namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
 {
     partial class EquiposTaskCard
     {

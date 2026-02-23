@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos;
+using Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos;
 using Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Recepcion;
 
 namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio

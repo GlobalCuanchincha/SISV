@@ -3,8 +3,9 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,11 +15,9 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
     {
         private object _session;
         private int _usuarioId = 0;
-        private byte _rolId = 0;
 
         private int _ordenSeleccionadaId = 0;
-
-        private readonly Timer _debounceBuscar = new Timer { Interval = 300 };
+        private string _codigoOrdenSeleccionada = "";
 
         public Form_Ordenes_Servicio_Notificacion()
         {
@@ -38,414 +37,358 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             try
             {
                 if (_session == null) _session = GetSessionFromPrincipal();
+
                 _usuarioId = TryGetUsuarioSesionId(_session);
-                _rolId = TryGetRolSesionId(_session);
                 if (_usuarioId <= 0) _usuarioId = 1;
 
-                HookNavegacion();
-                SetHeaderActive("taller");
+                // Hooks
+                btn_Seleccionar_Orden_Diagnostico.Click += async (s, e) => await AbrirSeleccionOrdenAsync();
 
-                // Debounce buscar (ajusta nombres si difieren)
-                var txtBuscar = FindControl<TextBox>("txt_Buscador_Taller", "txt_Buscador_Notificacion", "txt_Buscador");
-                if (txtBuscar != null)
-                {
-                    _debounceBuscar.Tick += async (s, e) =>
-                    {
-                        _debounceBuscar.Stop();
-                        await BuscarOrdenesAsync();
-                    };
+                btn_GuardarDiagnostico_Diagnostico.Click += async (s, e) => await GuardarDiagnosticoAsync();
+                btn_GuardarEstado_Diagnostico.Click += async (s, e) => await GuardarEstadoAsync();
 
-                    txtBuscar.TextChanged += (s, e) =>
-                    {
-                        _debounceBuscar.Stop();
-                        _debounceBuscar.Start();
-                    };
-                }
+                btn_Previsualizar_Notificacion.Click += (s, e) => PrevisualizarNotificacion();
+                btn_Enviar_Notificacion.Click += async (s, e) => await EnviarNotificacionAsync();
 
-                var cmbFiltroEstado = FindControl<ComboBox>("Cmbox_EstadoFiltro_Taller", "Cmbox_EstadoFiltro_Notificacion", "cmb_EstadoFiltro");
-                if (cmbFiltroEstado != null)
-                    cmbFiltroEstado.SelectedIndexChanged += async (s, e) => await BuscarOrdenesAsync();
-
-                // Cargar estados (filtro + editor)
+                // Estados
                 await CargarEstadosAsync();
 
-                // Buscar
-                await BuscarOrdenesAsync();
-
-                // Hook guardar (diagnóstico/solución/estado)
-                var btnGuardar = FindControl<Button>("btn_Guardar_Taller", "btn_Actualizar_Taller", "btn_Guardar_Notificacion");
-                if (btnGuardar != null)
-                    btnGuardar.Click += async (s, e) => await GuardarTallerAsync();
-
-                // Hook registrar notificación
-                var btnNotif = FindControl<Button>("btn_EnviarNotificacion_Taller", "btn_Enviar_Notificacion");
-                if (btnNotif != null)
-                    btnNotif.Click += async (s, e) => await RegistrarNotificacionAsync();
+                // Estado UI inicial
+                LimpiarPantallaOrden();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "SISV - Taller", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "SISV - Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // =========================
-        // Navegación + botón activo
-        // =========================
-
-        private void HookNavegacion()
+        // =========================================================
+        // 1) Selección de orden
+        // =========================================================
+        private async Task AbrirSeleccionOrdenAsync()
         {
-            var btnEquipos = FindControl<Button>("btn_Equipos_Taller", "btn_Equipos_Notificacion");
-            if (btnEquipos != null) btnEquipos.Click += (s, e) => NavegarAEquipos();
+            try
+            {
+                using (var f = new Seleccion_Orden(_session))
+                {
+                    var dr = f.ShowDialog(this);
+                    if (dr != DialogResult.OK) return;
 
-            var btnRecepcion = FindControl<Button>("btn_Recepcion_Taller", "btn_Recepcion_Notificacion");
-            if (btnRecepcion != null) btnRecepcion.Click += (s, e) => NavegarARecepcion();
+                    _ordenSeleccionadaId = f.OrdenServicioIDSeleccionado;
+                    if (_ordenSeleccionadaId <= 0) return;
+
+                    await CargarDetalleOrdenAsync(_ordenSeleccionadaId);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISV - Selección de orden", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void NavegarAEquipos()
+        private async Task CargarDetalleOrdenAsync(int ordenServicioId)
         {
-            var principal = Application.OpenForms.OfType<Form_Panel_Principal>().FirstOrDefault();
-            var f = new Form_Ordenes_Servicio(_session);
+            var dt = await ExecDataTableAsync("ops.usp_OrdenServicio_GetDetalle_Notificacion", cmd =>
+            {
+                cmd.Parameters.AddWithValue("@OrdenServicioID", ordenServicioId);
+            });
 
-            if (principal != null) principal.OpenChild(f, "Órdenes de servicio", "Equipos");
-            else f.Show();
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("No se encontró la orden seleccionada.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LimpiarPantallaOrden();
+                return;
+            }
+
+            var r = dt.Rows[0];
+
+            _codigoOrdenSeleccionada = Convert.ToString(r["CodigoOrden"]);
+
+            txt_OrdenSeleccionada_Diagnostico.Text = _codigoOrdenSeleccionada;
+            txt_Cliente_Diagnostico.Text = Convert.ToString(r["Cliente"]);
+            txt_TipoEquipo_Diagnostico.Text = Convert.ToString(r["Equipo"]);
+            txt_Diagnostico_Diagnostico.Text = Convert.ToString(r["Diagnostico"]);
+
+            lbl_EstadoEquipo_Diagnostico.Text = Convert.ToString(r["EstadoNombre"]);
+
+            if (r["EstadoID"] != DBNull.Value)
+            {
+                var estadoId = Convert.ToInt16(r["EstadoID"]);
+                if (Cmbox_Estado_Diagnostico.DataSource != null)
+                    Cmbox_Estado_Diagnostico.SelectedValue = estadoId;
+            }
+
+            // Notificación: correo cliente
+            var correo = Convert.ToString(r["CorreoCliente"]);
+            txt_Correo_Notificacion.Text = correo;
+            lbl_CorreoCliente_Notificacion.Text = correo;
+
+            // Asunto por defecto (si está vacío)
+            if (string.IsNullOrWhiteSpace(txt_Asunto_Notificacion.Text))
+                txt_Asunto_Notificacion.Text = $"Actualización de orden {_codigoOrdenSeleccionada}";
+
+            // Reset labels de actualización (visualmente “cargado”)
+            SetUpdateLabelsDiagnostico(DateTime.Now);
+            SetUpdateLabelsNotificacion(DateTime.Now);
         }
 
-        private void NavegarARecepcion()
+        private void LimpiarPantallaOrden()
         {
-            var principal = Application.OpenForms.OfType<Form_Panel_Principal>().FirstOrDefault();
-            var f = new Form_Ordenes_Servicio_Recepcion(_session);
+            _ordenSeleccionadaId = 0;
+            _codigoOrdenSeleccionada = "";
 
-            if (principal != null) principal.OpenChild(f, "Órdenes de servicio", "Recepción / Solicitud");
-            else f.Show();
+            txt_OrdenSeleccionada_Diagnostico.Text = "";
+            txt_Cliente_Diagnostico.Text = "";
+            txt_TipoEquipo_Diagnostico.Text = "";
+            txt_Diagnostico_Diagnostico.Text = "";
+
+            lbl_EstadoEquipo_Diagnostico.Text = "";
+
+            txt_Correo_Notificacion.Text = "";
+            txt_Asunto_Notificacion.Text = "";
+            txt_Mensaje_Notificacion.Text = "";
+
+            lbl_CorreoCliente_Notificacion.Text = "";
+
+            lbl_HoraActualizacion_Diagnostico.Text = "";
+            lbl_diaActualizacion_Diagnostico.Text = "";
+
+            lbl_HoraActualizacion_Notificacion.Text = "";
+            lbl_diaActualizacion_Notificacion.Text = "";
         }
 
-        private void SetHeaderActive(string active)
-        {
-            var btnEquipos = FindControl<Control>("btn_Equipos_Taller", "btn_Equipos_Notificacion", "btn_Equipos");
-            var btnRecepcion = FindControl<Control>("btn_Recepcion_Taller", "btn_Recepcion_Notificacion", "btn_Recepcion");
-            var btnTaller = FindControl<Control>("btn_Taller_Taller", "btn_Taller_Notificacion", "btn_Taller");
-
-            ApplyTabStyle(btnEquipos, active == "equipos");
-            ApplyTabStyle(btnRecepcion, active == "recepcion");
-            ApplyTabStyle(btnTaller, active == "taller");
-        }
-
-        private void ApplyTabStyle(Control btn, bool active)
-        {
-            if (btn == null) return;
-
-            btn.BackColor = active ? Color.White : Color.FromArgb(245, 245, 245);
-            btn.ForeColor = active ? Color.Black : Color.FromArgb(90, 90, 90);
-
-            var pFill = btn.GetType().GetProperty("FillColor");
-            if (pFill != null) pFill.SetValue(btn, btn.BackColor, null);
-
-            var pBorder = btn.GetType().GetProperty("BorderColor");
-            if (pBorder != null) pBorder.SetValue(btn, active ? Color.FromArgb(30, 144, 255) : Color.Transparent, null);
-
-            var pBorderThickness = btn.GetType().GetProperty("BorderThickness");
-            if (pBorderThickness != null) pBorderThickness.SetValue(btn, active ? 2 : 0, null);
-        }
-
-        // =========================
-        // Estados
-        // =========================
-
+        // =========================================================
+        // 2) Estados
+        // =========================================================
         private async Task CargarEstadosAsync()
         {
             var dt = await ExecDataTableAsync("ops.usp_OrdenServicio_Estados_Listar", null);
 
-            var cmbFiltro = FindControl<ComboBox>("Cmbox_EstadoFiltro_Taller", "Cmbox_EstadoFiltro_Notificacion", "cmb_EstadoFiltro");
-            if (cmbFiltro != null)
-            {
-                cmbFiltro.DataSource = dt.Copy();
-                cmbFiltro.DisplayMember = "EstadoNombre";
-                cmbFiltro.ValueMember = "EstadoValor";
-                if (dt.Rows.Count > 0) cmbFiltro.SelectedIndex = 0;
-            }
+            // Editor: sin “Todos”
+            var view = new DataView(dt);
+            view.RowFilter = "EstadoValor <> -1";
 
-            var cmbEstado = FindControl<ComboBox>("cmbox_Estado_Taller", "cmbox_Estado_Notificacion", "cmb_Estado");
-            if (cmbEstado != null)
-            {
-                // En taller normalmente NO quieres "Todos" (-1) en el editor,
-                // por eso filtramos:
-                var view = new DataView(dt);
-                view.RowFilter = "EstadoValor <> -1";
-
-                cmbEstado.DataSource = view;
-                cmbEstado.DisplayMember = "EstadoNombre";
-                cmbEstado.ValueMember = "EstadoValor";
-                if (view.Count > 0) cmbEstado.SelectedIndex = 0;
-            }
+            Cmbox_Estado_Diagnostico.DataSource = view;
+            Cmbox_Estado_Diagnostico.DisplayMember = "EstadoNombre";
+            Cmbox_Estado_Diagnostico.ValueMember = "EstadoValor";
         }
 
-        // =========================
-        // Buscar / Render
-        // =========================
-
-        private async Task BuscarOrdenesAsync()
-        {
-            var txtBuscar = FindControl<TextBox>("txt_Buscador_Taller", "txt_Buscador_Notificacion", "txt_Buscador");
-            var cmbFiltro = FindControl<ComboBox>("Cmbox_EstadoFiltro_Taller", "Cmbox_EstadoFiltro_Notificacion", "cmb_EstadoFiltro");
-            var flow = FindControl<FlowLayoutPanel>("flowTaller", "flowNotificacion", "flowOrdenes");
-
-            if (flow == null) return;
-
-            string buscar = txtBuscar != null ? (txtBuscar.Text ?? "").Trim() : "";
-            short estadoValor = -1;
-            if (cmbFiltro != null && cmbFiltro.SelectedValue != null)
-                estadoValor = Convert.ToInt16(cmbFiltro.SelectedValue);
-
-            var dt = await ExecDataTableAsync("ops.usp_OrdenServicio_Buscar", cmd =>
-            {
-                cmd.Parameters.AddWithValue("@Buscar", string.IsNullOrWhiteSpace(buscar) ? (object)DBNull.Value : buscar);
-                cmd.Parameters.AddWithValue("@EstadoValor", estadoValor);
-                cmd.Parameters.AddWithValue("@Top", 200);
-            });
-
-            RenderFlow(flow, dt);
-
-            var lblResultados = FindControl<Label>("lbl_Resultados_Taller", "lbl_Resultados_Notificacion", "lbl_Resultados");
-            if (lblResultados != null) lblResultados.Text = "resultados " + dt.Rows.Count;
-        }
-
-        private void RenderFlow(FlowLayoutPanel flow, DataTable dt)
-        {
-            flow.SuspendLayout();
-            flow.Controls.Clear();
-
-            foreach (DataRow r in dt.Rows)
-            {
-                int ordenId = Convert.ToInt32(r["OrdenServicioID"]);
-                string codigo = Convert.ToString(r["CodigoOrden"]);
-                string cliente = Convert.ToString(r["ClienteNombre"]);
-                string equipo = Convert.ToString(r["EquipoNombre"]);
-                string tecnico = Convert.ToString(r["TecnicoNombre"]);
-                string estado = Convert.ToString(r["EstadoNombre"]);
-
-                // Card simple (sin depender de tu UserControl)
-                var p = new Panel();
-                p.Height = 56;
-                p.Width = Math.Max(250, flow.ClientSize.Width - 22);
-                p.BackColor = (ordenId == _ordenSeleccionadaId) ? Color.FromArgb(230, 242, 255) : Color.White;
-                p.BorderStyle = BorderStyle.FixedSingle;
-                p.Tag = ordenId;
-
-                var lbl = new Label();
-                lbl.AutoSize = false;
-                lbl.Dock = DockStyle.Fill;
-                lbl.TextAlign = ContentAlignment.MiddleLeft;
-                lbl.Padding = new Padding(12, 0, 12, 0);
-                lbl.Text = string.Format("{0}   |   {1}   |   {2}   |   {3}", codigo, cliente, equipo, estado);
-
-                p.Controls.Add(lbl);
-
-                p.Click += async (s, e) => await SeleccionarOrdenAsync(ordenId);
-                lbl.Click += async (s, e) => await SeleccionarOrdenAsync(ordenId);
-
-                flow.Controls.Add(p);
-            }
-
-            flow.ResumeLayout();
-        }
-
-        private async Task SeleccionarOrdenAsync(int ordenId)
-        {
-            _ordenSeleccionadaId = ordenId;
-
-            var flow = FindControl<FlowLayoutPanel>("flowTaller", "flowNotificacion", "flowOrdenes");
-            if (flow != null)
-            {
-                foreach (Control c in flow.Controls)
-                {
-                    var pnl = c as Panel;
-                    if (pnl != null)
-                    {
-                        int id = pnl.Tag != null ? Convert.ToInt32(pnl.Tag) : 0;
-                        pnl.BackColor = (id == _ordenSeleccionadaId) ? Color.FromArgb(230, 242, 255) : Color.White;
-                    }
-                }
-            }
-
-            var dt = await ExecDataTableAsync("ops.usp_OrdenServicio_GetById", cmd =>
-            {
-                cmd.Parameters.AddWithValue("@OrdenServicioID", ordenId);
-            });
-
-            if (dt.Rows.Count == 0) return;
-
-            var row = dt.Rows[0];
-
-            SetText("lbl_CodigoOrden_Taller", Convert.ToString(row["CodigoOrden"]));
-            SetText("lbl_Cliente_Taller", Convert.ToString(row["ClienteNombre"]));
-            SetText("lbl_Equipo_Taller", Convert.ToString(row["EquipoNombre"]));
-
-            var cmbEstado = FindControl<ComboBox>("cmbox_Estado_Taller", "cmbox_Estado_Notificacion", "cmb_Estado");
-            if (cmbEstado != null && row["EstadoID"] != DBNull.Value)
-                cmbEstado.SelectedValue = Convert.ToInt16(row["EstadoID"]);
-
-            SetTextBox("txt_Diagnostico_Taller", Convert.ToString(row["Diagnostico"]));
-            SetTextBox("txt_Solucion_Taller", Convert.ToString(row["Solucion"]));
-
-            // historial (si tienes flow para esto)
-            await CargarHistorialEstadoAsync();
-        }
-
-        private async Task CargarHistorialEstadoAsync()
-        {
-            var flowHist = FindControl<FlowLayoutPanel>("flowHistorial_Taller", "flowHistorialEstado");
-            if (flowHist == null) return;
-            if (_ordenSeleccionadaId <= 0) return;
-
-            var dt = await ExecDataTableAsync("ops.usp_OrdenEstadoHistorial_Listar", cmd =>
-            {
-                cmd.Parameters.AddWithValue("@OrdenServicioID", _ordenSeleccionadaId);
-            });
-
-            flowHist.SuspendLayout();
-            flowHist.Controls.Clear();
-
-            foreach (DataRow r in dt.Rows)
-            {
-                string estado = Convert.ToString(r["EstadoNombre"]);
-                string fecha = Convert.ToString(r["Fecha"]);
-
-                var item = new Label();
-                item.AutoSize = true;
-                item.Padding = new Padding(8);
-                item.Text = string.Format("{0} - {1}", fecha, estado);
-
-                flowHist.Controls.Add(item);
-            }
-
-            flowHist.ResumeLayout();
-        }
-
-        // =========================
-        // Guardar taller
-        // =========================
-
-        private async Task GuardarTallerAsync()
+        // =========================================================
+        // 3) Guardar diagnóstico
+        // =========================================================
+        private async Task GuardarDiagnosticoAsync()
         {
             try
             {
                 if (_ordenSeleccionadaId <= 0)
                 {
-                    MessageBox.Show("Seleccione una orden.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Primero seleccione una orden.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                var cmbEstado = FindControl<ComboBox>("cmbox_Estado_Taller", "cmbox_Estado_Notificacion", "cmb_Estado");
-                short? estadoId = null;
-                if (cmbEstado != null && cmbEstado.SelectedValue != null)
+                string diag = (txt_Diagnostico_Diagnostico.Text ?? "").Trim();
+                if (string.IsNullOrWhiteSpace(diag))
                 {
-                    short v = Convert.ToInt16(cmbEstado.SelectedValue);
-                    if (v > 0) estadoId = v;
+                    MessageBox.Show("Ingrese el diagnóstico.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
-                string diag = GetTextBox("txt_Diagnostico_Taller");
-                string sol = GetTextBox("txt_Solucion_Taller");
-
-                await ExecDataTableAsync("ops.usp_OrdenServicio_Taller_Guardar", cmd =>
+                await ExecNonQueryAsync("ops.usp_OrdenServicio_GuardarDiagnostico", cmd =>
                 {
-                    cmd.Parameters.AddWithValue("@UsuarioID_Actor", _usuarioId);
                     cmd.Parameters.AddWithValue("@OrdenServicioID", _ordenSeleccionadaId);
-                    cmd.Parameters.AddWithValue("@EstadoID", (object)estadoId ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Diagnostico", string.IsNullOrWhiteSpace(diag) ? (object)DBNull.Value : diag);
-                    cmd.Parameters.AddWithValue("@Solucion", string.IsNullOrWhiteSpace(sol) ? (object)DBNull.Value : sol);
-                    cmd.Parameters.AddWithValue("@Cerrar", 0);
-                });
-
-                MessageBox.Show("Actualizado correctamente.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                await BuscarOrdenesAsync();
-                await SeleccionarOrdenAsync(_ordenSeleccionadaId);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "SISV - Taller", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // =========================
-        // Registrar notificación
-        // =========================
-
-        private async Task RegistrarNotificacionAsync()
-        {
-            try
-            {
-                if (_ordenSeleccionadaId <= 0)
-                {
-                    MessageBox.Show("Seleccione una orden.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                string email = GetTextBox("txt_EmailDestino_Taller");
-                string msg = GetTextBox("txt_Mensaje_Taller");
-
-                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(msg))
-                {
-                    MessageBox.Show("Ingrese Email destino y Mensaje.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                await ExecDataTableAsync("ops.usp_OrdenNotificacion_Registrar", cmd =>
-                {
+                    cmd.Parameters.AddWithValue("@Diagnostico", diag);
                     cmd.Parameters.AddWithValue("@UsuarioID", _usuarioId);
-                    cmd.Parameters.AddWithValue("@OrdenServicioID", _ordenSeleccionadaId);
-                    cmd.Parameters.AddWithValue("@EmailDestino", email);
-                    cmd.Parameters.AddWithValue("@Mensaje", msg);
                 });
 
-                MessageBox.Show("Notificación registrada (pendiente de envío).", "SISV",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Diagnóstico guardado correctamente.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SetUpdateLabelsDiagnostico(DateTime.Now);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "SISV - Taller", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "SISV - Diagnóstico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // =========================
-        // UI helpers
-        // =========================
-
-        private T FindControl<T>(params string[] names) where T : class
+        // =========================================================
+        // 4) Guardar estado
+        // =========================================================
+        private async Task GuardarEstadoAsync()
         {
-            foreach (string n in names)
+            try
             {
-                var arr = this.Controls.Find(n, true);
-                if (arr != null && arr.Length > 0)
+                if (_ordenSeleccionadaId <= 0)
                 {
-                    var t = arr[0] as T;
-                    if (t != null) return t;
+                    MessageBox.Show("Primero seleccione una orden.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (Cmbox_Estado_Diagnostico.SelectedValue == null)
+                {
+                    MessageBox.Show("Seleccione un estado.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int nuevoEstadoId = Convert.ToInt32(Cmbox_Estado_Diagnostico.SelectedValue);
+
+                await ExecNonQueryAsync("ops.usp_OrdenServicio_ActualizarEstado", cmd =>
+                {
+                    cmd.Parameters.AddWithValue("@OrdenServicioID", _ordenSeleccionadaId);
+                    cmd.Parameters.AddWithValue("@NuevoEstadoID", nuevoEstadoId);
+                    cmd.Parameters.AddWithValue("@UsuarioID", _usuarioId);
+                });
+
+                lbl_EstadoEquipo_Diagnostico.Text = Convert.ToString(((DataRowView)Cmbox_Estado_Diagnostico.SelectedItem)["EstadoNombre"]);
+
+                MessageBox.Show("Estado actualizado correctamente.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SetUpdateLabelsDiagnostico(DateTime.Now);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISV - Estado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // =========================================================
+        // 5) Previsualizar / Enviar notificación
+        // =========================================================
+        private void PrevisualizarNotificacion()
+        {
+            if (_ordenSeleccionadaId <= 0)
+            {
+                MessageBox.Show("Primero seleccione una orden.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string correo = (txt_Correo_Notificacion.Text ?? "").Trim();
+            string asunto = (txt_Asunto_Notificacion.Text ?? "").Trim();
+            string mensaje = (txt_Mensaje_Notificacion.Text ?? "").Trim();
+
+            MessageBox.Show(
+                $"Para: {correo}\nAsunto: {asunto}\n\n{mensaje}",
+                "Previsualización",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        private async Task EnviarNotificacionAsync()
+        {
+            if (_ordenSeleccionadaId <= 0)
+            {
+                MessageBox.Show("Primero seleccione una orden.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string correo = (txt_Correo_Notificacion.Text ?? "").Trim();
+            string asunto = (txt_Asunto_Notificacion.Text ?? "").Trim();
+            string mensaje = (txt_Mensaje_Notificacion.Text ?? "").Trim();
+
+            if (string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(asunto) || string.IsNullOrWhiteSpace(mensaje))
+            {
+                MessageBox.Show("Complete Correo, Asunto y Mensaje.", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string estadoEnvio = "ENVIADO";
+            string errorDetalle = null;
+
+            try
+            {
+                await EnviarCorreoAsync(correo, asunto, mensaje);
+            }
+            catch (Exception ex)
+            {
+                estadoEnvio = "ERROR";
+                errorDetalle = ex.Message;
+            }
+
+            // Registrar en BD SIEMPRE (éxito o error)
+            int notifId = 0;
+            try
+            {
+                object o = await ExecScalarAsync("ops.usp_OrdenServicio_RegistrarNotificacion", cmd =>
+                {
+                    cmd.Parameters.AddWithValue("@OrdenServicioID", _ordenSeleccionadaId);
+                    cmd.Parameters.AddWithValue("@UsuarioID", _usuarioId);
+                    cmd.Parameters.AddWithValue("@Correo", correo);
+                    cmd.Parameters.AddWithValue("@Asunto", asunto);
+                    cmd.Parameters.AddWithValue("@Mensaje", mensaje);
+                    cmd.Parameters.AddWithValue("@EstadoEnvio", estadoEnvio);
+                    cmd.Parameters.AddWithValue("@ErrorDetalle", (object)errorDetalle ?? DBNull.Value);
+                });
+
+                if (o != null && o != DBNull.Value)
+                    notifId = Convert.ToInt32(o);
+            }
+            catch (Exception exDb)
+            {
+                MessageBox.Show(exDb.Message, "SISV - Registrar notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (estadoEnvio == "ENVIADO")
+            {
+                MessageBox.Show($"Notificación enviada y registrada. (ID: {notifId})", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(
+                    $"No se pudo enviar el correo.\n\nSe registró el intento (ID: {notifId}).\n\nDetalle: {errorDetalle}",
+                    "SISV",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+
+            SetUpdateLabelsNotificacion(DateTime.Now);
+        }
+
+        private static async Task EnviarCorreoAsync(string toEmail, string subject, string body)
+        {
+            string host = ConfigurationManager.AppSettings["Smtp.Host"];
+            int port = int.Parse(ConfigurationManager.AppSettings["Smtp.Port"]);
+            bool enableSsl = bool.Parse(ConfigurationManager.AppSettings["Smtp.EnableSsl"]);
+
+            string user = ConfigurationManager.AppSettings["Smtp.User"];
+            string pass = ConfigurationManager.AppSettings["Smtp.Pass"];
+            string fromEmail = ConfigurationManager.AppSettings["Smtp.FromEmail"];
+            string fromName = ConfigurationManager.AppSettings["Smtp.FromName"];
+
+            using (var msg = new MailMessage())
+            {
+                msg.From = new MailAddress(fromEmail, fromName);
+                msg.To.Add(toEmail);
+                msg.Subject = subject;
+                msg.Body = body;
+                msg.IsBodyHtml = false;
+
+                using (var smtp = new SmtpClient(host, port))
+                {
+                    smtp.EnableSsl = enableSsl;
+                    smtp.Credentials = new NetworkCredential(user, pass);
+                    await smtp.SendMailAsync(msg);
                 }
             }
-            return null;
         }
 
-        private void SetText(string labelName, string value)
+        // =========================================================
+        // UI: labels de actualización
+        // =========================================================
+        private void SetUpdateLabelsDiagnostico(DateTime dt)
         {
-            var lbl = FindControl<Label>(labelName);
-            if (lbl != null) lbl.Text = value ?? "";
+            lbl_HoraActualizacion_Diagnostico.Text = dt.ToString("HH:mm");
+            lbl_diaActualizacion_Diagnostico.Text = dt.ToString("dd/MM/yyyy");
         }
 
-        private void SetTextBox(string txtName, string value)
+        private void SetUpdateLabelsNotificacion(DateTime dt)
         {
-            var txt = FindControl<TextBox>(txtName);
-            if (txt != null) txt.Text = value ?? "";
+            lbl_HoraActualizacion_Notificacion.Text = dt.ToString("HH:mm");
+            lbl_diaActualizacion_Notificacion.Text = dt.ToString("dd/MM/yyyy");
         }
 
-        private string GetTextBox(string txtName)
-        {
-            var txt = FindControl<TextBox>(txtName);
-            return txt != null ? (txt.Text ?? "").Trim() : "";
-        }
-
-        // =========================
+        // =========================================================
         // Sesión helpers
-        // =========================
-
+        // =========================================================
         private object GetSessionFromPrincipal()
         {
             try
@@ -471,32 +414,14 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             catch { return 0; }
         }
 
-        private byte TryGetRolSesionId(object session)
-        {
-            try
-            {
-                if (session == null) return 0;
-                var t = session.GetType();
-                var p = t.GetProperty("RoleId") ?? t.GetProperty("RoleID") ?? t.GetProperty("RolId") ?? t.GetProperty("RolID");
-                if (p == null) return 0;
-                var v = p.GetValue(session, null);
-                if (v == null) return 0;
-                return Convert.ToByte(v);
-            }
-            catch { return 0; }
-        }
-
-        // =========================
-        // DB helper
-        // =========================
-
+        // =========================================================
+        // DB helpers (solo SP)
+        // =========================================================
         private static string GetConnString()
         {
-            var cs = ConfigurationManager.ConnectionStrings["SISV"] != null ? ConfigurationManager.ConnectionStrings["SISV"].ConnectionString : null;
-            if (string.IsNullOrWhiteSpace(cs) && ConfigurationManager.ConnectionStrings["SISV_BD"] != null)
-                cs = ConfigurationManager.ConnectionStrings["SISV_BD"].ConnectionString;
-            if (string.IsNullOrWhiteSpace(cs) && ConfigurationManager.ConnectionStrings["DefaultConnection"] != null)
-                cs = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            var cs = ConfigurationManager.ConnectionStrings["SISV"]?.ConnectionString
+                  ?? ConfigurationManager.ConnectionStrings["SISV_BD"]?.ConnectionString
+                  ?? ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
 
             if (!string.IsNullOrWhiteSpace(cs)) return cs;
 
@@ -514,14 +439,45 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             using (var cmd = new SqlCommand(sp, cn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                if (fill != null) fill(cmd);
+                fill?.Invoke(cmd);
 
                 await cn.OpenAsync();
+
                 using (var rd = await cmd.ExecuteReaderAsync())
-                    dt.Load(rd);
+                {
+                    // Evita crash si el SP no retorna resultset
+                    if (rd.FieldCount > 0)
+                        dt.Load(rd);
+                }
             }
 
             return dt;
+        }
+
+        private static async Task<int> ExecNonQueryAsync(string sp, Action<SqlCommand> fill)
+        {
+            using (var cn = new SqlConnection(GetConnString()))
+            using (var cmd = new SqlCommand(sp, cn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                fill?.Invoke(cmd);
+
+                await cn.OpenAsync();
+                return await cmd.ExecuteNonQueryAsync();
+            }
+        }
+
+        private static async Task<object> ExecScalarAsync(string sp, Action<SqlCommand> fill)
+        {
+            using (var cn = new SqlConnection(GetConnString()))
+            using (var cmd = new SqlCommand(sp, cn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                fill?.Invoke(cmd);
+
+                await cn.OpenAsync();
+                return await cmd.ExecuteScalarAsync();
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
+namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
 {
     public partial class EquiposTaskCard : UserControl
     {

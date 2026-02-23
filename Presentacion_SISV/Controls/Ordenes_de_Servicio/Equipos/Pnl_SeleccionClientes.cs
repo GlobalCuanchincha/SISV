@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
+namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
 {
     public partial class Pnl_SeleccionClientes : UserControl
     {
@@ -32,8 +32,6 @@ namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
             // Intenta encontrar un panel contenedor por nombre (si tu diseñador lo tiene).
             // Si no existe, usa el propio UserControl.
             _root = FindControlByName(this, "Pnl_SeleccionClientes")
-                 ?? FindControlByName(this, "panel1")
-                 ?? FindControlByName(this, "Panel_Principal")
                  ?? this;
 
             // Hook click a todo el root y sus hijos (para que cualquier click seleccione)

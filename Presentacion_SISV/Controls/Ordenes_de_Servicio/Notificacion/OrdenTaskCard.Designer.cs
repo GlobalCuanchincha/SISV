@@ -1,4 +1,4 @@
-﻿namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Notificacion
+﻿namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio
 {
     partial class OrdenTaskCard
     {
@@ -35,9 +35,9 @@
             this.lbl_Correo_Ordenes_UC = new System.Windows.Forms.Label();
             this.lbl_Nom_Ordenes_UC = new System.Windows.Forms.Label();
             this.lbl_Orden_Ordenes_UC = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Pnl_SeleccionOrdenes = new Guna.UI2.WinForms.Guna2Panel();
             this.Panel_Estado_Ordenes_UC.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.Pnl_SeleccionOrdenes.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Estado_Ordenes_UC
@@ -127,29 +127,29 @@
             this.lbl_Orden_Ordenes_UC.TabIndex = 74;
             this.lbl_Orden_Ordenes_UC.Text = "1209387251";
             // 
-            // guna2Panel1
+            // Pnl_SeleccionOrdenes
             // 
-            this.guna2Panel1.Controls.Add(this.lbl_Orden_Ordenes_UC);
-            this.guna2Panel1.Controls.Add(this.Panel_Estado_Ordenes_UC);
-            this.guna2Panel1.Controls.Add(this.lbl_Nom_Ordenes_UC);
-            this.guna2Panel1.Controls.Add(this.lbl_Equipo_Ordenes_UC);
-            this.guna2Panel1.Controls.Add(this.lbl_Correo_Ordenes_UC);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(729, 66);
-            this.guna2Panel1.TabIndex = 79;
+            this.Pnl_SeleccionOrdenes.Controls.Add(this.lbl_Orden_Ordenes_UC);
+            this.Pnl_SeleccionOrdenes.Controls.Add(this.Panel_Estado_Ordenes_UC);
+            this.Pnl_SeleccionOrdenes.Controls.Add(this.lbl_Nom_Ordenes_UC);
+            this.Pnl_SeleccionOrdenes.Controls.Add(this.lbl_Equipo_Ordenes_UC);
+            this.Pnl_SeleccionOrdenes.Controls.Add(this.lbl_Correo_Ordenes_UC);
+            this.Pnl_SeleccionOrdenes.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_SeleccionOrdenes.Name = "Pnl_SeleccionOrdenes";
+            this.Pnl_SeleccionOrdenes.Size = new System.Drawing.Size(729, 66);
+            this.Pnl_SeleccionOrdenes.TabIndex = 79;
             // 
             // OrdenTaskCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.Pnl_SeleccionOrdenes);
             this.Name = "OrdenTaskCard";
             this.Size = new System.Drawing.Size(729, 66);
             this.Panel_Estado_Ordenes_UC.ResumeLayout(false);
             this.Panel_Estado_Ordenes_UC.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.Pnl_SeleccionOrdenes.ResumeLayout(false);
+            this.Pnl_SeleccionOrdenes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -163,6 +163,6 @@
         private System.Windows.Forms.Label lbl_Correo_Ordenes_UC;
         private System.Windows.Forms.Label lbl_Nom_Ordenes_UC;
         private System.Windows.Forms.Label lbl_Orden_Ordenes_UC;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel Pnl_SeleccionOrdenes;
     }
 }

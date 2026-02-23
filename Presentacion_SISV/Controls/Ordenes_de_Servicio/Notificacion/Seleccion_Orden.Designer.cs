@@ -1,4 +1,4 @@
-﻿namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Notificacion
+﻿namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
 {
     partial class Seleccion_Orden
     {
@@ -44,9 +44,9 @@
             this.cmbox_Filtrarpor_Ordenes = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_Buscador_Items_Ordenes = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel15.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -243,6 +243,18 @@
             this.label3.Text = "Buscar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(247, 39);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 28);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 68;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // txt_Buscador_Items_Ordenes
             // 
             this.txt_Buscador_Items_Ordenes.BackColor = System.Drawing.Color.Transparent;
@@ -275,18 +287,6 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(43, 31);
             this.guna2ControlBox2.TabIndex = 71;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(247, 39);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 28);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 68;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // Seleccion_Orden
             // 

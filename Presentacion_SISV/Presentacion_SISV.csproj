@@ -128,6 +128,18 @@
     <Compile Include="Controls\Ordenes_de_Servicio\Equipos\Seleccion_Cliente.Designer.cs">
       <DependentUpon>Seleccion_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Notificacion\OrdenTaskCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Notificacion\OrdenTaskCard.Designer.cs">
+      <DependentUpon>OrdenTaskCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Notificacion\Seleccion_Orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Ordenes_de_Servicio\Notificacion\Seleccion_Orden.Designer.cs">
+      <DependentUpon>Seleccion_Orden.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Ordenes_de_Servicio\Recepcion\RecepcionTaskCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -273,6 +285,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Ordenes_de_Servicio\Equipos\Seleccion_Cliente.resx">
       <DependentUpon>Seleccion_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Ordenes_de_Servicio\Notificacion\OrdenTaskCard.resx">
+      <DependentUpon>OrdenTaskCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Ordenes_de_Servicio\Notificacion\Seleccion_Orden.resx">
+      <DependentUpon>Seleccion_Orden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Ordenes_de_Servicio\Recepcion\RecepcionTaskCard.resx">
       <DependentUpon>RecepcionTaskCard.cs</DependentUpon>

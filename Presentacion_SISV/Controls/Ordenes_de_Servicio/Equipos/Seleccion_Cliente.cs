@@ -6,9 +6,9 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
+namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
 {
-    public partial class Seleccion_Orden : Form
+    public partial class Seleccion_Cliente : Form
     {
         private readonly object _session;
         private readonly int _usuarioId;
@@ -23,9 +23,9 @@ namespace Union_Formularios_SISV.Controls.Ordenes_de_Servicio.Equipos
         public int? SelectedClienteID => _clienteSeleccionadoId;
         public string SelectedClienteNombre => _clienteSeleccionadoNombre;
 
-        public Seleccion_Orden() : this(null) { }
+        public Seleccion_Cliente() : this(null) { }
 
-        public Seleccion_Orden(object session)
+        public Seleccion_Cliente(object session)
         {
             InitializeComponent();
 

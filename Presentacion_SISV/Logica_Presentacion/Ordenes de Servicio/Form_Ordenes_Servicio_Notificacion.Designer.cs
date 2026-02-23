@@ -37,8 +37,10 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txt_Correo_Notificacion = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_CorreoCliente_Notificacion = new System.Windows.Forms.Label();
             this.lbl_diaActualizacion_Notificacion = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.btn_Enviar_Notificacion = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_HoraActualizacion_Notificacion = new System.Windows.Forms.Label();
             this.txt_Mensaje_Notificacion = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,11 +56,13 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_Detalle_Factura = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txt_OrdenSeleccionada_Diagnostico = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_Seleccionar_Orden_Diagnostico = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_diaActualizacion_Diagnostico = new System.Windows.Forms.Label();
             this.lbl_HoraActualizacion_Diagnostico = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.lbl_EstadoEquipo_Diagnostgico = new System.Windows.Forms.Label();
+            this.lbl_EstadoEquipo_Diagnostico = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -76,10 +80,6 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_Titulo = new System.Windows.Forms.Label();
-            this.btn_Seleccionar_Orden_Diagnostico = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_OrdenSeleccionada_Diagnostico = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Correo_Notificacion = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.guna2GradientPanel15.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
@@ -222,6 +222,29 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.guna2GradientPanel5.Size = new System.Drawing.Size(571, 530);
             this.guna2GradientPanel5.TabIndex = 64;
             // 
+            // txt_Correo_Notificacion
+            // 
+            this.txt_Correo_Notificacion.Animated = true;
+            this.txt_Correo_Notificacion.BorderRadius = 15;
+            this.txt_Correo_Notificacion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Correo_Notificacion.DefaultText = "";
+            this.txt_Correo_Notificacion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Correo_Notificacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Correo_Notificacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Correo_Notificacion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Correo_Notificacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Correo_Notificacion.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_Correo_Notificacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Correo_Notificacion.Location = new System.Drawing.Point(16, 37);
+            this.txt_Correo_Notificacion.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_Correo_Notificacion.MaxLength = 10;
+            this.txt_Correo_Notificacion.Name = "txt_Correo_Notificacion";
+            this.txt_Correo_Notificacion.PlaceholderText = "juanito@gmail.com";
+            this.txt_Correo_Notificacion.ReadOnly = true;
+            this.txt_Correo_Notificacion.SelectedText = "";
+            this.txt_Correo_Notificacion.Size = new System.Drawing.Size(541, 48);
+            this.txt_Correo_Notificacion.TabIndex = 112;
+            // 
             // lbl_CorreoCliente_Notificacion
             // 
             this.lbl_CorreoCliente_Notificacion.AutoSize = true;
@@ -247,6 +270,19 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.lbl_diaActualizacion_Notificacion.TabIndex = 109;
             this.lbl_diaActualizacion_Notificacion.Text = "dia";
             this.lbl_diaActualizacion_Notificacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label18.Location = new System.Drawing.Point(13, 12);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(101, 18);
+            this.label18.TabIndex = 111;
+            this.label18.Text = "Correo cliente";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn_Enviar_Notificacion
             // 
@@ -295,7 +331,6 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.txt_Mensaje_Notificacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_Mensaje_Notificacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Mensaje_Notificacion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Mensaje_Notificacion.Enabled = false;
             this.txt_Mensaje_Notificacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Mensaje_Notificacion.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_Mensaje_Notificacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -410,7 +445,6 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.txt_Asunto_Notificacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_Asunto_Notificacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Asunto_Notificacion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Asunto_Notificacion.Enabled = false;
             this.txt_Asunto_Notificacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Asunto_Notificacion.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_Asunto_Notificacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -494,6 +528,50 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 595);
             this.Panel_Detalle_Factura.TabIndex = 66;
             // 
+            // txt_OrdenSeleccionada_Diagnostico
+            // 
+            this.txt_OrdenSeleccionada_Diagnostico.Animated = true;
+            this.txt_OrdenSeleccionada_Diagnostico.BackColor = System.Drawing.Color.Transparent;
+            this.txt_OrdenSeleccionada_Diagnostico.BorderRadius = 15;
+            this.txt_OrdenSeleccionada_Diagnostico.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_OrdenSeleccionada_Diagnostico.DefaultText = "";
+            this.txt_OrdenSeleccionada_Diagnostico.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_OrdenSeleccionada_Diagnostico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_OrdenSeleccionada_Diagnostico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_OrdenSeleccionada_Diagnostico.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_OrdenSeleccionada_Diagnostico.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_OrdenSeleccionada_Diagnostico.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_OrdenSeleccionada_Diagnostico.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_OrdenSeleccionada_Diagnostico.Location = new System.Drawing.Point(22, 73);
+            this.txt_OrdenSeleccionada_Diagnostico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_OrdenSeleccionada_Diagnostico.Name = "txt_OrdenSeleccionada_Diagnostico";
+            this.txt_OrdenSeleccionada_Diagnostico.PlaceholderText = "OS-0000";
+            this.txt_OrdenSeleccionada_Diagnostico.SelectedText = "";
+            this.txt_OrdenSeleccionada_Diagnostico.Size = new System.Drawing.Size(180, 43);
+            this.txt_OrdenSeleccionada_Diagnostico.TabIndex = 102;
+            // 
+            // btn_Seleccionar_Orden_Diagnostico
+            // 
+            this.btn_Seleccionar_Orden_Diagnostico.Animated = true;
+            this.btn_Seleccionar_Orden_Diagnostico.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Seleccionar_Orden_Diagnostico.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Seleccionar_Orden_Diagnostico.BorderRadius = 15;
+            this.btn_Seleccionar_Orden_Diagnostico.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Seleccionar_Orden_Diagnostico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Seleccionar_Orden_Diagnostico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Seleccionar_Orden_Diagnostico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Seleccionar_Orden_Diagnostico.FillColor = System.Drawing.Color.White;
+            this.btn_Seleccionar_Orden_Diagnostico.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Seleccionar_Orden_Diagnostico.ForeColor = System.Drawing.Color.Black;
+            this.btn_Seleccionar_Orden_Diagnostico.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Seleccionar_Orden_Diagnostico.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Seleccionar_Orden_Diagnostico.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Seleccionar_Orden_Diagnostico.Location = new System.Drawing.Point(208, 73);
+            this.btn_Seleccionar_Orden_Diagnostico.Name = "btn_Seleccionar_Orden_Diagnostico";
+            this.btn_Seleccionar_Orden_Diagnostico.Size = new System.Drawing.Size(179, 40);
+            this.btn_Seleccionar_Orden_Diagnostico.TabIndex = 101;
+            this.btn_Seleccionar_Orden_Diagnostico.Text = "Seleccionar";
+            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -504,7 +582,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.guna2GradientPanel1.Controls.Add(this.lbl_diaActualizacion_Diagnostico);
             this.guna2GradientPanel1.Controls.Add(this.lbl_HoraActualizacion_Diagnostico);
             this.guna2GradientPanel1.Controls.Add(this.label34);
-            this.guna2GradientPanel1.Controls.Add(this.lbl_EstadoEquipo_Diagnostgico);
+            this.guna2GradientPanel1.Controls.Add(this.lbl_EstadoEquipo_Diagnostico);
             this.guna2GradientPanel1.Controls.Add(this.label31);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button6);
             this.guna2GradientPanel1.Controls.Add(this.label11);
@@ -558,18 +636,18 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.label34.TabIndex = 101;
             this.label34.Text = "Hora / Fecha";
             // 
-            // lbl_EstadoEquipo_Diagnostgico
+            // lbl_EstadoEquipo_Diagnostico
             // 
-            this.lbl_EstadoEquipo_Diagnostgico.AutoSize = true;
-            this.lbl_EstadoEquipo_Diagnostgico.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_EstadoEquipo_Diagnostgico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EstadoEquipo_Diagnostgico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_EstadoEquipo_Diagnostgico.Location = new System.Drawing.Point(13, 67);
-            this.lbl_EstadoEquipo_Diagnostgico.Name = "lbl_EstadoEquipo_Diagnostgico";
-            this.lbl_EstadoEquipo_Diagnostgico.Size = new System.Drawing.Size(126, 18);
-            this.lbl_EstadoEquipo_Diagnostgico.TabIndex = 75;
-            this.lbl_EstadoEquipo_Diagnostgico.Text = "Estado del equipo";
-            this.lbl_EstadoEquipo_Diagnostgico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_EstadoEquipo_Diagnostico.AutoSize = true;
+            this.lbl_EstadoEquipo_Diagnostico.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_EstadoEquipo_Diagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EstadoEquipo_Diagnostico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_EstadoEquipo_Diagnostico.Location = new System.Drawing.Point(13, 67);
+            this.lbl_EstadoEquipo_Diagnostico.Name = "lbl_EstadoEquipo_Diagnostico";
+            this.lbl_EstadoEquipo_Diagnostico.Size = new System.Drawing.Size(126, 18);
+            this.lbl_EstadoEquipo_Diagnostico.TabIndex = 75;
+            this.lbl_EstadoEquipo_Diagnostico.Text = "Estado del equipo";
+            this.lbl_EstadoEquipo_Diagnostico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label31
             // 
@@ -694,7 +772,6 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.txt_Diagnostico_Diagnostico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_Diagnostico_Diagnostico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Diagnostico_Diagnostico.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Diagnostico_Diagnostico.Enabled = false;
             this.txt_Diagnostico_Diagnostico.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Diagnostico_Diagnostico.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_Diagnostico_Diagnostico.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -867,86 +944,6 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.lbl_Titulo.TabIndex = 48;
             this.lbl_Titulo.Text = "Diagnóstico";
             // 
-            // btn_Seleccionar_Orden_Diagnostico
-            // 
-            this.btn_Seleccionar_Orden_Diagnostico.Animated = true;
-            this.btn_Seleccionar_Orden_Diagnostico.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Seleccionar_Orden_Diagnostico.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Seleccionar_Orden_Diagnostico.BorderRadius = 15;
-            this.btn_Seleccionar_Orden_Diagnostico.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Seleccionar_Orden_Diagnostico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Seleccionar_Orden_Diagnostico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Seleccionar_Orden_Diagnostico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Seleccionar_Orden_Diagnostico.FillColor = System.Drawing.Color.White;
-            this.btn_Seleccionar_Orden_Diagnostico.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Seleccionar_Orden_Diagnostico.ForeColor = System.Drawing.Color.Black;
-            this.btn_Seleccionar_Orden_Diagnostico.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Seleccionar_Orden_Diagnostico.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Seleccionar_Orden_Diagnostico.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Seleccionar_Orden_Diagnostico.Location = new System.Drawing.Point(208, 73);
-            this.btn_Seleccionar_Orden_Diagnostico.Name = "btn_Seleccionar_Orden_Diagnostico";
-            this.btn_Seleccionar_Orden_Diagnostico.Size = new System.Drawing.Size(179, 40);
-            this.btn_Seleccionar_Orden_Diagnostico.TabIndex = 101;
-            this.btn_Seleccionar_Orden_Diagnostico.Text = "Seleccionar";
-            // 
-            // txt_OrdenSeleccionada_Diagnostico
-            // 
-            this.txt_OrdenSeleccionada_Diagnostico.Animated = true;
-            this.txt_OrdenSeleccionada_Diagnostico.BackColor = System.Drawing.Color.Transparent;
-            this.txt_OrdenSeleccionada_Diagnostico.BorderRadius = 15;
-            this.txt_OrdenSeleccionada_Diagnostico.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_OrdenSeleccionada_Diagnostico.DefaultText = "";
-            this.txt_OrdenSeleccionada_Diagnostico.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_OrdenSeleccionada_Diagnostico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_OrdenSeleccionada_Diagnostico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_OrdenSeleccionada_Diagnostico.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_OrdenSeleccionada_Diagnostico.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_OrdenSeleccionada_Diagnostico.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txt_OrdenSeleccionada_Diagnostico.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_OrdenSeleccionada_Diagnostico.Location = new System.Drawing.Point(22, 73);
-            this.txt_OrdenSeleccionada_Diagnostico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_OrdenSeleccionada_Diagnostico.Name = "txt_OrdenSeleccionada_Diagnostico";
-            this.txt_OrdenSeleccionada_Diagnostico.PlaceholderText = "OS-0000";
-            this.txt_OrdenSeleccionada_Diagnostico.SelectedText = "";
-            this.txt_OrdenSeleccionada_Diagnostico.Size = new System.Drawing.Size(180, 43);
-            this.txt_OrdenSeleccionada_Diagnostico.TabIndex = 102;
-            // 
-            // txt_Correo_Notificacion
-            // 
-            this.txt_Correo_Notificacion.Animated = true;
-            this.txt_Correo_Notificacion.BorderRadius = 15;
-            this.txt_Correo_Notificacion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Correo_Notificacion.DefaultText = "";
-            this.txt_Correo_Notificacion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Correo_Notificacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Correo_Notificacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Correo_Notificacion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Correo_Notificacion.Enabled = false;
-            this.txt_Correo_Notificacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Correo_Notificacion.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txt_Correo_Notificacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Correo_Notificacion.Location = new System.Drawing.Point(16, 37);
-            this.txt_Correo_Notificacion.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_Correo_Notificacion.MaxLength = 10;
-            this.txt_Correo_Notificacion.Name = "txt_Correo_Notificacion";
-            this.txt_Correo_Notificacion.PlaceholderText = "juanito@gmail.com";
-            this.txt_Correo_Notificacion.SelectedText = "";
-            this.txt_Correo_Notificacion.Size = new System.Drawing.Size(541, 48);
-            this.txt_Correo_Notificacion.TabIndex = 112;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label18.Location = new System.Drawing.Point(13, 12);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(101, 18);
-            this.label18.TabIndex = 111;
-            this.label18.Text = "Correo cliente";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Form_Ordenes_Servicio_Notificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1004,7 +1001,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox10;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label lbl_EstadoEquipo_Diagnostgico;
+        private System.Windows.Forms.Label lbl_EstadoEquipo_Diagnostico;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label lbl_HoraActualizacion_Diagnostico;
         private System.Windows.Forms.Label lbl_diaActualizacion_Diagnostico;
