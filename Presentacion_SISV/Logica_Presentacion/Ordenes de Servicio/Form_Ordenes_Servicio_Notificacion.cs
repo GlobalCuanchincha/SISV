@@ -1,8 +1,10 @@
 ﻿using Capa_Corte_Transversal.Helpers;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -19,6 +21,25 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
         private int _ordenSeleccionadaId = 0;
         private string _codigoOrdenSeleccionada = "";
 
+        private Control _navBtnActivo;
+        private Panel _navIndicator;
+        private readonly Timer _navAnim = new Timer { Interval = 15 };
+        private int _navTargetTop;
+        private int _navTargetHeight;
+        private readonly Dictionary<Control, BtnStyle> _navStyles = new Dictionary<Control, BtnStyle>();
+
+        private readonly Color _navActiveColor = Color.FromArgb(28, 188, 135);      // Verde (como módulo órdenes)
+        private readonly Color _navActiveBg = Color.FromArgb(232, 250, 240);        // Verde claro
+        private readonly Color _navIdleFg = Color.FromArgb(60, 60, 60);
+        private readonly Color _navIdleBg = Color.Transparent;
+
+        private sealed class BtnStyle
+        {
+            public Color Back;
+            public Color Fore;
+            public Font Font;
+        }
+
         public Form_Ordenes_Servicio_Notificacion()
         {
             InitializeComponent();
@@ -30,6 +51,9 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             InitializeComponent();
             _session = session;
             Shown += async (s, e) => await InicializarAsync();
+
+            btn_Recepcion_Notificacion.Click += (s, e) => IrARecepcion();
+            btn_Equipos_Notificacion.Click += (s, e) => IrAEquipos();
         }
 
         private async Task InicializarAsync()
@@ -130,6 +154,241 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             // Reset labels de actualización (visualmente “cargado”)
             SetUpdateLabelsDiagnostico(DateTime.Now);
             SetUpdateLabelsNotificacion(DateTime.Now);
+        }
+
+        private void ActivateNav(Control btn)
+        {
+            if (btn == null) return;
+
+            // Guarda estilo original si no existe
+            if (!_navStyles.ContainsKey(btn))
+            {
+                _navStyles[btn] = new BtnStyle
+                {
+                    Back = btn.BackColor,
+                    Fore = btn.ForeColor,
+                    Font = btn.Font
+                };
+            }
+
+            // Restaura anterior
+            if (_navBtnActivo != null && _navBtnActivo != btn && _navStyles.ContainsKey(_navBtnActivo))
+            {
+                var st = _navStyles[_navBtnActivo];
+                SetFillOrBack(_navBtnActivo, _navIdleBg);
+                _navBtnActivo.ForeColor = _navIdleFg;
+                _navBtnActivo.Font = new Font(st.Font, FontStyle.Regular);
+
+                TrySetProp(_navBtnActivo, "BorderColor", Color.Transparent);
+                TrySetProp(_navBtnActivo, "BorderThickness", 0);
+            }
+
+            _navBtnActivo = btn;
+
+            // Activo
+            SetFillOrBack(btn, _navActiveBg);
+            btn.ForeColor = _navActiveColor;
+            btn.Font = new Font(btn.Font, FontStyle.Bold);
+
+            TrySetProp(btn, "BorderColor", _navActiveColor);
+            TrySetProp(btn, "BorderThickness", 1);
+
+            EnsureIndicator(btn);
+
+            // Target anim
+            _navTargetTop = btn.Top;
+            _navTargetHeight = btn.Height;
+
+            if (_navIndicator.Top == _navTargetTop && _navIndicator.Height == _navTargetHeight)
+                return;
+
+            _navAnim.Start();
+        }
+
+        private void EnsureIndicator(Control btn)
+        {
+            if (btn?.Parent == null) return;
+
+            if (_navIndicator == null || _navIndicator.Parent != btn.Parent)
+            {
+                _navIndicator?.Dispose();
+
+                _navIndicator = new Panel
+                {
+                    Width = 4,
+                    Height = btn.Height,
+                    Left = 0,
+                    Top = btn.Top,
+                    BackColor = _navActiveColor
+                };
+
+                btn.Parent.Controls.Add(_navIndicator);
+                _navIndicator.BringToFront();
+            }
+            else
+            {
+                _navIndicator.BackColor = _navActiveColor;
+                _navIndicator.BringToFront();
+            }
+        }
+
+
+        private void IrARecepcion()
+        {
+            try
+            {
+                ActivateNav(btn_Recepcion_Notificacion);
+
+                OpenInMainHost(
+                    CreateFormFromAnyCtor(new[]
+                    {
+                "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Recepcion",
+                "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Solicitud"
+                    }),
+                    "Recepción",
+                    "Recepción / Solicitud de orden"
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void IrAEquipos()
+        {
+            try
+            {
+                ActivateNav(btn_Equipos_Notificacion);
+
+                OpenInMainHost(
+                    CreateFormFromAnyCtor(new[]
+                    {
+                "Union_Formularios_SISV.Forms.Form_Ordenes_Servicio",
+                "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Solicitud"
+                    }),
+                    "Equipos",
+                    "Gestión de equipos / órdenes"
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void OpenInMainHost(Form child, string titulo, string descripcion)
+        {
+            if (child == null)
+            {
+                MessageBox.Show("No se encontró el formulario destino (revisa nombre de clase/namespace).", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Este form está dentro de Panel_Escritorio, así que el Form real es el principal:
+            var main = this.Parent?.FindForm() as Union_Formularios_SISV.Form_Panel_Principal;
+
+            if (main != null)
+            {
+                main.OpenChild(child, titulo, descripcion);
+                return;
+            }
+
+            // Fallback: si por alguna razón no está en el host
+            child.Show();
+        }
+
+        private Form CreateFormFromAnyCtor(string[] fullTypeNames)
+        {
+            Type t = null;
+            foreach (var name in fullTypeNames)
+            {
+                t = FindTypeInLoadedAssemblies(name);
+                if (t != null) break;
+            }
+            if (t == null) return null;
+
+            // Asegura que sea Form
+            if (!typeof(Form).IsAssignableFrom(t)) return null;
+
+            // 1) ctor(object session)
+            var ctorObj = t.GetConstructor(new[] { typeof(object) });
+            if (ctorObj != null)
+                return (Form)ctorObj.Invoke(new object[] { _session });
+
+            // 2) ctor(int usuarioId)
+            var ctorInt = t.GetConstructor(new[] { typeof(int) });
+            if (ctorInt != null)
+                return (Form)ctorInt.Invoke(new object[] { _usuarioId });
+
+            // 3) ctor() vacío
+            var ctorEmpty = t.GetConstructor(Type.EmptyTypes);
+            if (ctorEmpty != null)
+                return (Form)ctorEmpty.Invoke(null);
+
+            return null;
+        }
+        private static Type FindTypeInLoadedAssemblies(string fullName)
+        {
+            foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                var t = asm.GetType(fullName, false, true);
+                if (t != null) return t;
+            }
+            return null;
+        }
+
+
+        private void NavAnimTick()
+        {
+            if (_navIndicator == null || _navBtnActivo == null)
+            {
+                _navAnim.Stop();
+                return;
+            }
+
+            int speed = 10;
+
+            // Top
+            int dy = _navTargetTop - _navIndicator.Top;
+            if (Math.Abs(dy) <= speed) _navIndicator.Top = _navTargetTop;
+            else _navIndicator.Top += Math.Sign(dy) * speed;
+
+            // Height
+            int dh = _navTargetHeight - _navIndicator.Height;
+            if (Math.Abs(dh) <= 2) _navIndicator.Height = _navTargetHeight;
+            else _navIndicator.Height += Math.Sign(dh) * 2;
+
+            if (_navIndicator.Top == _navTargetTop && _navIndicator.Height == _navTargetHeight)
+                _navAnim.Stop();
+        }
+
+        private static void SetFillOrBack(Control c, Color color)
+        {
+            if (c == null) return;
+            c.BackColor = color;
+
+            // Para Guna2Button / controles con FillColor
+            TrySetProp(c, "FillColor", color);
+        }
+
+        private static void TrySetProp(Control c, string prop, object value)
+        {
+            try
+            {
+                var p = c.GetType().GetProperty(prop);
+                if (p != null && p.CanWrite) p.SetValue(c, value);
+            }
+            catch { }
+        }
+
+        private Control FindControlDeep(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name)) return null;
+
+            var found = this.Controls.Find(name, true);
+            if (found != null && found.Length > 0) return found[0];
+
+            return null;
         }
 
         private void LimpiarPantallaOrden()

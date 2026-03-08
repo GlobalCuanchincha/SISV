@@ -235,6 +235,7 @@
             this.txt_Telefono_Usuarios.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Telefono_Usuarios.Location = new System.Drawing.Point(283, 325);
             this.txt_Telefono_Usuarios.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_Telefono_Usuarios.MaxLength = 10;
             this.txt_Telefono_Usuarios.Name = "txt_Telefono_Usuarios";
             this.txt_Telefono_Usuarios.PlaceholderText = "0999999999";
             this.txt_Telefono_Usuarios.SelectedText = "";

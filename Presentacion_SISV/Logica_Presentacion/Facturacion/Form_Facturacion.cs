@@ -156,11 +156,11 @@ namespace Union_Formularios_SISV.Forms.Ventas
 
         private void txt_cedula_VentasFacturas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != (char)Keys.Enter) return;
-            e.Handled = true;
-            BuscarClientePorCedula_UI();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
-
         private void BuscarClientePorCedula_UI()
         {
             string ced = (txt_cedula_VentasFacturas.Text ?? "").Trim();

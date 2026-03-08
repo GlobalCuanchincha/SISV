@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel; 
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Union_Formularios_SISV.Forms.Clientes;
 
@@ -22,6 +25,8 @@ namespace Union_Formularios_SISV.Forms
         public Form_Clientes()
         {
             InitializeComponent();
+
+            txt_Telefono_Clientes.Validating += txt_Telefono_Clientes_Validating;
 
             _db = new ClienteDb(GetConnectionString());
 
@@ -676,6 +681,77 @@ namespace Union_Formularios_SISV.Forms
                     }
                 }
             }
+        }
+
+        private void txt_Nombre_Clientes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Cedula_Cliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
+        }
+
+        private void txt_Telefono_Clientes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            var txt = sender as Guna2TextBox;
+            if (txt == null) return;
+
+            if (!char.IsControl(e.KeyChar))
+            {
+                int selectionLength = txt.SelectionLength;
+                if (txt.Text.Length - selectionLength >= 10)
+                    e.Handled = true;
+            }
+        }
+        private void txt_Telefono_Clientes_Validating(object sender, CancelEventArgs e)
+        {
+            string tel = (txt_Telefono_Clientes.Text ?? "").Trim();
+
+            // Si quieres permitir vacío, descomenta estas 2 líneas:
+            // if (string.IsNullOrWhiteSpace(tel)) { txt_Telefono_Clientes.BackColor = Color.White; return; }
+
+            if (!EsTelefonoEcuador(tel, out string msg))
+            {
+                e.Cancel = true;
+                txt_Telefono_Clientes.BackColor = Color.MistyRose;
+                MessageBox.Show(msg, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_Telefono_Clientes.SelectAll();
+            }
+            else
+            {
+                txt_Telefono_Clientes.BackColor = Color.White;
+            }
+        }
+
+        private bool EsTelefonoEcuador(string tel, out string msg)
+        {
+            msg = null;
+
+            if (string.IsNullOrWhiteSpace(tel))
+            {
+                msg = "Ingrese un número de teléfono.";
+                return false;
+            }
+
+            if (Regex.IsMatch(tel, @"^09\d{8}$"))
+                return true;
+
+            if (Regex.IsMatch(tel, @"^0[2-7]\d{7}$"))
+                return true;
+
+            msg = "Teléfono inválido. Ecuador:\n- Celular: 09 + 8 dígitos (10 dígitos)\n- Fijo: 0 + (2 a 7) + 7 dígitos (9 dígitos)";
+            return false;
         }
     }
 }

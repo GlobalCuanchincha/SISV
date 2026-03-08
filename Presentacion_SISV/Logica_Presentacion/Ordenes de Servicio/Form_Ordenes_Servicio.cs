@@ -172,7 +172,6 @@ namespace Union_Formularios_SISV.Forms
                     CreateFormFromAnyCtor(new[]
                     {
                         "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Notificacion",
-                        "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Notificaciones",
                         "Union_Formularios_SISV.Forms.Ordenes_de_Servicio.Form_Ordenes_Servicio_Solicitud"
                     }),
                     "Notificación",

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Proveedores));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_Actualizar_Proveedor = new Guna.UI2.WinForms.Guna2Button();
             this.txt_Limpiar_Proveedor = new Guna.UI2.WinForms.Guna2Button();
             this.txt_UltimaAct_Proveedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,30 +52,29 @@
             this.lbl_Seleccion_Proveedor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_Detalle_Factura = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.cmbox_Filtro_Proveedor = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lbl_Resultados_Proveedor = new System.Windows.Forms.Label();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.cmbox_EstadoFiltro_Proveedor = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_Titulo = new System.Windows.Forms.Label();
-            this.lbl_Descripcion_Titulo = new System.Windows.Forms.Label();
-            this.txt_Buscador_Proveedor = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel16 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.cmbox_Filtro_Proveedor = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lbl_Resultados_Proveedor = new System.Windows.Forms.Label();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.flowProveedor = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_Actualizar_Proveedor = new Guna.UI2.WinForms.Guna2Button();
+            this.cmbox_EstadoFiltro_Proveedor = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.lbl_Descripcion_Titulo = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txt_Buscador_Proveedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
+            this.guna2GradientPanel16.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.guna2GradientPanel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel2
@@ -131,6 +131,29 @@
             this.guna2GradientPanel5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.guna2GradientPanel5.Size = new System.Drawing.Size(585, 541);
             this.guna2GradientPanel5.TabIndex = 64;
+            // 
+            // btn_Actualizar_Proveedor
+            // 
+            this.btn_Actualizar_Proveedor.Animated = true;
+            this.btn_Actualizar_Proveedor.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Actualizar_Proveedor.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Actualizar_Proveedor.BorderRadius = 15;
+            this.btn_Actualizar_Proveedor.BorderThickness = 1;
+            this.btn_Actualizar_Proveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Actualizar_Proveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Actualizar_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Actualizar_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Actualizar_Proveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_Actualizar_Proveedor.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Actualizar_Proveedor.ForeColor = System.Drawing.Color.Black;
+            this.btn_Actualizar_Proveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Actualizar_Proveedor.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Actualizar_Proveedor.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Actualizar_Proveedor.Location = new System.Drawing.Point(210, 470);
+            this.btn_Actualizar_Proveedor.Name = "btn_Actualizar_Proveedor";
+            this.btn_Actualizar_Proveedor.Size = new System.Drawing.Size(166, 44);
+            this.btn_Actualizar_Proveedor.TabIndex = 99;
+            this.btn_Actualizar_Proveedor.Text = "Actualizar";
             // 
             // txt_Limpiar_Proveedor
             // 
@@ -447,9 +470,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(17, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 25);
+            this.label1.Size = new System.Drawing.Size(191, 25);
             this.label1.TabIndex = 48;
-            this.label1.Text = "Consultar proveedor";
+            this.label1.Text = "Registrar proveedor";
             // 
             // Panel_Detalle_Factura
             // 
@@ -480,168 +503,6 @@
             this.Panel_Detalle_Factura.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 631);
             this.Panel_Detalle_Factura.TabIndex = 68;
-            // 
-            // cmbox_Filtro_Proveedor
-            // 
-            this.cmbox_Filtro_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.cmbox_Filtro_Proveedor.BorderRadius = 10;
-            this.cmbox_Filtro_Proveedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbox_Filtro_Proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_Filtro_Proveedor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_Filtro_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_Filtro_Proveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbox_Filtro_Proveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbox_Filtro_Proveedor.ItemHeight = 37;
-            this.cmbox_Filtro_Proveedor.Location = new System.Drawing.Point(22, 71);
-            this.cmbox_Filtro_Proveedor.Name = "cmbox_Filtro_Proveedor";
-            this.cmbox_Filtro_Proveedor.Size = new System.Drawing.Size(171, 43);
-            this.cmbox_Filtro_Proveedor.TabIndex = 64;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label16.Location = new System.Drawing.Point(19, 48);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 18);
-            this.label16.TabIndex = 63;
-            this.label16.Text = "Filtrar por";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_Resultados_Proveedor
-            // 
-            this.lbl_Resultados_Proveedor.AutoSize = true;
-            this.lbl_Resultados_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Resultados_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Resultados_Proveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Resultados_Proveedor.Location = new System.Drawing.Point(689, 20);
-            this.lbl_Resultados_Proveedor.Name = "lbl_Resultados_Proveedor";
-            this.lbl_Resultados_Proveedor.Size = new System.Drawing.Size(16, 18);
-            this.lbl_Resultados_Proveedor.TabIndex = 60;
-            this.lbl_Resultados_Proveedor.Text = "0";
-            this.lbl_Resultados_Proveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // guna2GradientPanel1
-            // 
-            this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2GradientPanel1.BorderRadius = 10;
-            this.guna2GradientPanel1.BorderThickness = 1;
-            this.guna2GradientPanel1.Controls.Add(this.flowProveedor);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 188);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
-            this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
-            this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(759, 428);
-            this.guna2GradientPanel1.TabIndex = 59;
-            // 
-            // cmbox_EstadoFiltro_Proveedor
-            // 
-            this.cmbox_EstadoFiltro_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.cmbox_EstadoFiltro_Proveedor.BorderRadius = 10;
-            this.cmbox_EstadoFiltro_Proveedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbox_EstadoFiltro_Proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_EstadoFiltro_Proveedor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_EstadoFiltro_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_EstadoFiltro_Proveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbox_EstadoFiltro_Proveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbox_EstadoFiltro_Proveedor.ItemHeight = 37;
-            this.cmbox_EstadoFiltro_Proveedor.Location = new System.Drawing.Point(604, 71);
-            this.cmbox_EstadoFiltro_Proveedor.Name = "cmbox_EstadoFiltro_Proveedor";
-            this.cmbox_EstadoFiltro_Proveedor.Size = new System.Drawing.Size(177, 43);
-            this.cmbox_EstadoFiltro_Proveedor.TabIndex = 54;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(601, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 18);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Estado";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(205, 48);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(55, 18);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Buscar";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_Titulo
-            // 
-            this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Titulo.Location = new System.Drawing.Point(17, 13);
-            this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(224, 25);
-            this.lbl_Titulo.TabIndex = 48;
-            this.lbl_Titulo.Text = "Gestión de proveedores";
-            // 
-            // lbl_Descripcion_Titulo
-            // 
-            this.lbl_Descripcion_Titulo.AutoSize = true;
-            this.lbl_Descripcion_Titulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Descripcion_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Descripcion_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Descripcion_Titulo.Location = new System.Drawing.Point(707, 20);
-            this.lbl_Descripcion_Titulo.Name = "lbl_Descripcion_Titulo";
-            this.lbl_Descripcion_Titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_Descripcion_Titulo.Size = new System.Drawing.Size(77, 18);
-            this.lbl_Descripcion_Titulo.TabIndex = 47;
-            this.lbl_Descripcion_Titulo.Text = "resultados";
-            this.lbl_Descripcion_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txt_Buscador_Proveedor
-            // 
-            this.txt_Buscador_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Buscador_Proveedor.BorderRadius = 15;
-            this.txt_Buscador_Proveedor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Buscador_Proveedor.DefaultText = "";
-            this.txt_Buscador_Proveedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Buscador_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Buscador_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Proveedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Proveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_Buscador_Proveedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Proveedor.Location = new System.Drawing.Point(205, 71);
-            this.txt_Buscador_Proveedor.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Buscador_Proveedor.Name = "txt_Buscador_Proveedor";
-            this.txt_Buscador_Proveedor.PlaceholderText = "Buscar por preveedor / RUC / Teléfono";
-            this.txt_Buscador_Proveedor.SelectedText = "";
-            this.txt_Buscador_Proveedor.Size = new System.Drawing.Size(391, 43);
-            this.txt_Buscador_Proveedor.TabIndex = 45;
-            this.txt_Buscador_Proveedor.TextOffset = new System.Drawing.Point(40, 0);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(224, 78);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 28);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 46;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2GradientPanel16
             // 
@@ -716,6 +577,66 @@
             this.label38.Text = "RUC";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // cmbox_Filtro_Proveedor
+            // 
+            this.cmbox_Filtro_Proveedor.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_Filtro_Proveedor.BorderRadius = 10;
+            this.cmbox_Filtro_Proveedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_Filtro_Proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Filtro_Proveedor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Filtro_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Filtro_Proveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_Filtro_Proveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_Filtro_Proveedor.ItemHeight = 37;
+            this.cmbox_Filtro_Proveedor.Location = new System.Drawing.Point(22, 71);
+            this.cmbox_Filtro_Proveedor.Name = "cmbox_Filtro_Proveedor";
+            this.cmbox_Filtro_Proveedor.Size = new System.Drawing.Size(171, 43);
+            this.cmbox_Filtro_Proveedor.TabIndex = 64;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label16.Location = new System.Drawing.Point(19, 48);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 18);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "Filtrar por";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_Resultados_Proveedor
+            // 
+            this.lbl_Resultados_Proveedor.AutoSize = true;
+            this.lbl_Resultados_Proveedor.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Resultados_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Resultados_Proveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Resultados_Proveedor.Location = new System.Drawing.Point(689, 20);
+            this.lbl_Resultados_Proveedor.Name = "lbl_Resultados_Proveedor";
+            this.lbl_Resultados_Proveedor.Size = new System.Drawing.Size(16, 18);
+            this.lbl_Resultados_Proveedor.TabIndex = 60;
+            this.lbl_Resultados_Proveedor.Text = "0";
+            this.lbl_Resultados_Proveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2GradientPanel1.BorderRadius = 10;
+            this.guna2GradientPanel1.BorderThickness = 1;
+            this.guna2GradientPanel1.Controls.Add(this.flowProveedor);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 188);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
+            this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(759, 428);
+            this.guna2GradientPanel1.TabIndex = 59;
+            // 
             // flowProveedor
             // 
             this.flowProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -724,28 +645,107 @@
             this.flowProveedor.Size = new System.Drawing.Size(759, 428);
             this.flowProveedor.TabIndex = 0;
             // 
-            // btn_Actualizar_Proveedor
+            // cmbox_EstadoFiltro_Proveedor
             // 
-            this.btn_Actualizar_Proveedor.Animated = true;
-            this.btn_Actualizar_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Actualizar_Proveedor.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Actualizar_Proveedor.BorderRadius = 15;
-            this.btn_Actualizar_Proveedor.BorderThickness = 1;
-            this.btn_Actualizar_Proveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Actualizar_Proveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Actualizar_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Actualizar_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Actualizar_Proveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btn_Actualizar_Proveedor.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Actualizar_Proveedor.ForeColor = System.Drawing.Color.Black;
-            this.btn_Actualizar_Proveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Actualizar_Proveedor.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Actualizar_Proveedor.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Actualizar_Proveedor.Location = new System.Drawing.Point(210, 470);
-            this.btn_Actualizar_Proveedor.Name = "btn_Actualizar_Proveedor";
-            this.btn_Actualizar_Proveedor.Size = new System.Drawing.Size(166, 44);
-            this.btn_Actualizar_Proveedor.TabIndex = 99;
-            this.btn_Actualizar_Proveedor.Text = "Actualizar";
+            this.cmbox_EstadoFiltro_Proveedor.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_EstadoFiltro_Proveedor.BorderRadius = 10;
+            this.cmbox_EstadoFiltro_Proveedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_EstadoFiltro_Proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_EstadoFiltro_Proveedor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_EstadoFiltro_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_EstadoFiltro_Proveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_EstadoFiltro_Proveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_EstadoFiltro_Proveedor.ItemHeight = 37;
+            this.cmbox_EstadoFiltro_Proveedor.Location = new System.Drawing.Point(604, 71);
+            this.cmbox_EstadoFiltro_Proveedor.Name = "cmbox_EstadoFiltro_Proveedor";
+            this.cmbox_EstadoFiltro_Proveedor.Size = new System.Drawing.Size(177, 43);
+            this.cmbox_EstadoFiltro_Proveedor.TabIndex = 54;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(601, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 18);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Estado";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(205, 48);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label3.Size = new System.Drawing.Size(55, 18);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Buscar";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Titulo.Location = new System.Drawing.Point(17, 13);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(242, 25);
+            this.lbl_Titulo.TabIndex = 48;
+            this.lbl_Titulo.Text = "Consultar de proveedores";
+            // 
+            // lbl_Descripcion_Titulo
+            // 
+            this.lbl_Descripcion_Titulo.AutoSize = true;
+            this.lbl_Descripcion_Titulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Descripcion_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Descripcion_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Descripcion_Titulo.Location = new System.Drawing.Point(707, 20);
+            this.lbl_Descripcion_Titulo.Name = "lbl_Descripcion_Titulo";
+            this.lbl_Descripcion_Titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_Descripcion_Titulo.Size = new System.Drawing.Size(77, 18);
+            this.lbl_Descripcion_Titulo.TabIndex = 47;
+            this.lbl_Descripcion_Titulo.Text = "resultados";
+            this.lbl_Descripcion_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Union_Formularios_SISV.Properties.Resources.icon_search;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(224, 78);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 28);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 46;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // txt_Buscador_Proveedor
+            // 
+            this.txt_Buscador_Proveedor.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Buscador_Proveedor.BorderRadius = 15;
+            this.txt_Buscador_Proveedor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Buscador_Proveedor.DefaultText = "";
+            this.txt_Buscador_Proveedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Buscador_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Buscador_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Buscador_Proveedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Buscador_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Buscador_Proveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_Buscador_Proveedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Buscador_Proveedor.Location = new System.Drawing.Point(205, 71);
+            this.txt_Buscador_Proveedor.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Buscador_Proveedor.Name = "txt_Buscador_Proveedor";
+            this.txt_Buscador_Proveedor.PlaceholderText = "Buscar por preveedor / RUC / Teléfono";
+            this.txt_Buscador_Proveedor.SelectedText = "";
+            this.txt_Buscador_Proveedor.Size = new System.Drawing.Size(391, 43);
+            this.txt_Buscador_Proveedor.TabIndex = 45;
+            this.txt_Buscador_Proveedor.TextOffset = new System.Drawing.Point(40, 0);
             // 
             // Form_Proveedores
             // 
@@ -763,10 +763,10 @@
             this.guna2GradientPanel5.PerformLayout();
             this.Panel_Detalle_Factura.ResumeLayout(false);
             this.Panel_Detalle_Factura.PerformLayout();
-            this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel16.ResumeLayout(false);
             this.guna2GradientPanel16.PerformLayout();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

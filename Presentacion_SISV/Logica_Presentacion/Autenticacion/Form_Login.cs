@@ -222,7 +222,6 @@ namespace Union_Formularios_SISV
                 });
 
                 SaveRememberMe(user.Username, password);
-                MessageBox.Show("Login correcto", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -307,7 +306,6 @@ namespace Union_Formularios_SISV
             }
             catch
             {
-                // no crash
             }
         }
 

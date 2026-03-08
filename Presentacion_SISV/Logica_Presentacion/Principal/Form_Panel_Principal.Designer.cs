@@ -33,6 +33,8 @@
             this.btn_Minus = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btn_Close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Panel_Dashboard = new System.Windows.Forms.Panel();
+            this.btn_CerrarSesion = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Reportes = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Proveedores = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Configuracion = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Usuarios = new Guna.UI2.WinForms.Guna2Button();
@@ -64,7 +66,6 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Panel_Escritorio = new System.Windows.Forms.Panel();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -105,6 +106,8 @@
             // Panel_Dashboard
             // 
             this.Panel_Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.Panel_Dashboard.Controls.Add(this.btn_CerrarSesion);
+            this.Panel_Dashboard.Controls.Add(this.btn_Reportes);
             this.Panel_Dashboard.Controls.Add(this.btn_Proveedores);
             this.Panel_Dashboard.Controls.Add(this.btn_Configuracion);
             this.Panel_Dashboard.Controls.Add(this.btn_Usuarios);
@@ -124,6 +127,57 @@
             this.Panel_Dashboard.Name = "Panel_Dashboard";
             this.Panel_Dashboard.Size = new System.Drawing.Size(274, 977);
             this.Panel_Dashboard.TabIndex = 38;
+            // 
+            // btn_CerrarSesion
+            // 
+            this.btn_CerrarSesion.Animated = true;
+            this.btn_CerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_CerrarSesion.BorderRadius = 15;
+            this.btn_CerrarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_CerrarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_CerrarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_CerrarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_CerrarSesion.FillColor = System.Drawing.Color.White;
+            this.btn_CerrarSesion.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_CerrarSesion.ForeColor = System.Drawing.Color.Black;
+            this.btn_CerrarSesion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(165)))), ((int)(((byte)(160)))));
+            this.btn_CerrarSesion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(65)))), ((int)(((byte)(54)))));
+            this.btn_CerrarSesion.Location = new System.Drawing.Point(15, 854);
+            this.btn_CerrarSesion.Name = "btn_CerrarSesion";
+            this.btn_CerrarSesion.ShadowDecoration.BorderRadius = 20;
+            this.btn_CerrarSesion.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(45)))), ((int)(((byte)(77)))));
+            this.btn_CerrarSesion.ShadowDecoration.Enabled = true;
+            this.btn_CerrarSesion.Size = new System.Drawing.Size(242, 45);
+            this.btn_CerrarSesion.TabIndex = 63;
+            this.btn_CerrarSesion.Text = "Cerrar sesion";
+            this.btn_CerrarSesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_CerrarSesion.TextOffset = new System.Drawing.Point(30, 0);
+            // 
+            // btn_Reportes
+            // 
+            this.btn_Reportes.Animated = true;
+            this.btn_Reportes.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Reportes.BorderRadius = 15;
+            this.btn_Reportes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Reportes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Reportes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Reportes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Reportes.FillColor = System.Drawing.Color.White;
+            this.btn_Reportes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_Reportes.ForeColor = System.Drawing.Color.Black;
+            this.btn_Reportes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            this.btn_Reportes.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
+            this.btn_Reportes.Location = new System.Drawing.Point(19, 711);
+            this.btn_Reportes.Name = "btn_Reportes";
+            this.btn_Reportes.ShadowDecoration.BorderRadius = 20;
+            this.btn_Reportes.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(201)))), ((int)(((byte)(209)))));
+            this.btn_Reportes.ShadowDecoration.Enabled = true;
+            this.btn_Reportes.Size = new System.Drawing.Size(238, 45);
+            this.btn_Reportes.TabIndex = 62;
+            this.btn_Reportes.Text = "Reportes";
+            this.btn_Reportes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Reportes.TextOffset = new System.Drawing.Point(30, 0);
+            this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_click);
             // 
             // btn_Proveedores
             // 
@@ -566,12 +620,6 @@
             this.guna2Elipse4.BorderRadius = 15;
             this.guna2Elipse4.TargetControl = this.panel_icon;
             // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this;
-            this.guna2DragControl1.TransparentWhileDrag = false;
-            // 
             // guna2DragControl2
             // 
             this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
@@ -670,7 +718,6 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button btn_Configuracion;
         private Guna.UI2.WinForms.Guna2Button btn_Usuarios;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
         private System.Windows.Forms.Panel Panel_Escritorio;
@@ -678,5 +725,7 @@
         private Guna.UI2.WinForms.Guna2NotificationPaint gn_Notificacion;
         private Guna.UI2.WinForms.Guna2NotificationPaint gn_Notificacion_Ordenes;
         private Guna.UI2.WinForms.Guna2Button btn_Proveedores;
+        private Guna.UI2.WinForms.Guna2Button btn_Reportes;
+        private Guna.UI2.WinForms.Guna2Button btn_CerrarSesion;
     }
 }

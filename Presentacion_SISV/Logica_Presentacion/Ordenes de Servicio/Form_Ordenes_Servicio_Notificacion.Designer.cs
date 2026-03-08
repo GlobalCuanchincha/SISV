@@ -33,8 +33,8 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ordenes_Servicio_Notificacion));
             this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Recepcion_Notificacion = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Equipos_Notificacion = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.txt_Correo_Notificacion = new Guna.UI2.WinForms.Guna2TextBox();
@@ -95,8 +95,8 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.guna2GradientPanel15.BorderRadius = 10;
             this.guna2GradientPanel15.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel15.Controls.Add(this.guna2Button1);
-            this.guna2GradientPanel15.Controls.Add(this.guna2Button2);
-            this.guna2GradientPanel15.Controls.Add(this.guna2Button3);
+            this.guna2GradientPanel15.Controls.Add(this.btn_Recepcion_Notificacion);
+            this.guna2GradientPanel15.Controls.Add(this.btn_Equipos_Notificacion);
             this.guna2GradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel15.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel15.Location = new System.Drawing.Point(18, 9);
@@ -128,46 +128,46 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.guna2Button1.TabIndex = 59;
             this.guna2Button1.Text = "Taller / Atención";
             // 
-            // guna2Button2
+            // btn_Recepcion_Notificacion
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(229, 8);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button2.TabIndex = 58;
-            this.guna2Button2.Text = "Recepción / Solicitud";
+            this.btn_Recepcion_Notificacion.Animated = true;
+            this.btn_Recepcion_Notificacion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Recepcion_Notificacion.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Recepcion_Notificacion.BorderRadius = 15;
+            this.btn_Recepcion_Notificacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Recepcion_Notificacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Recepcion_Notificacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Recepcion_Notificacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Recepcion_Notificacion.FillColor = System.Drawing.Color.White;
+            this.btn_Recepcion_Notificacion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Recepcion_Notificacion.ForeColor = System.Drawing.Color.Black;
+            this.btn_Recepcion_Notificacion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Recepcion_Notificacion.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Recepcion_Notificacion.Location = new System.Drawing.Point(229, 8);
+            this.btn_Recepcion_Notificacion.Name = "btn_Recepcion_Notificacion";
+            this.btn_Recepcion_Notificacion.Size = new System.Drawing.Size(200, 45);
+            this.btn_Recepcion_Notificacion.TabIndex = 58;
+            this.btn_Recepcion_Notificacion.Text = "Recepción / Solicitud";
             // 
-            // guna2Button3
+            // btn_Equipos_Notificacion
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 15;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button3.Location = new System.Drawing.Point(13, 8);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button3.TabIndex = 57;
-            this.guna2Button3.Text = "Equipos";
+            this.btn_Equipos_Notificacion.Animated = true;
+            this.btn_Equipos_Notificacion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Equipos_Notificacion.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Equipos_Notificacion.BorderRadius = 15;
+            this.btn_Equipos_Notificacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Equipos_Notificacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Equipos_Notificacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Equipos_Notificacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Equipos_Notificacion.FillColor = System.Drawing.Color.White;
+            this.btn_Equipos_Notificacion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Equipos_Notificacion.ForeColor = System.Drawing.Color.Black;
+            this.btn_Equipos_Notificacion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Equipos_Notificacion.Location = new System.Drawing.Point(13, 8);
+            this.btn_Equipos_Notificacion.Name = "btn_Equipos_Notificacion";
+            this.btn_Equipos_Notificacion.Size = new System.Drawing.Size(200, 45);
+            this.btn_Equipos_Notificacion.TabIndex = 57;
+            this.btn_Equipos_Notificacion.Text = "Equipos";
             // 
             // guna2GradientPanel2
             // 
@@ -546,6 +546,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.txt_OrdenSeleccionada_Diagnostico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_OrdenSeleccionada_Diagnostico.Name = "txt_OrdenSeleccionada_Diagnostico";
             this.txt_OrdenSeleccionada_Diagnostico.PlaceholderText = "OS-0000";
+            this.txt_OrdenSeleccionada_Diagnostico.ReadOnly = true;
             this.txt_OrdenSeleccionada_Diagnostico.SelectedText = "";
             this.txt_OrdenSeleccionada_Diagnostico.Size = new System.Drawing.Size(180, 43);
             this.txt_OrdenSeleccionada_Diagnostico.TabIndex = 102;
@@ -972,8 +973,8 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel15;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btn_Recepcion_Notificacion;
+        private Guna.UI2.WinForms.Guna2Button btn_Equipos_Notificacion;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private Guna.UI2.WinForms.Guna2Button btn_Previsualizar_Notificacion;

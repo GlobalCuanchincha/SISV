@@ -6,6 +6,7 @@ using Union_Formularios_SISV.Controls;
 using Union_Formularios_SISV.Forms;
 using Union_Formularios_SISV.Forms.Proveedores;
 using Union_Formularios_SISV.Forms.Ventas;
+using Union_Formularios_SISV.Logica_Presentacion.Reportes;
 
 namespace Union_Formularios_SISV
 {
@@ -135,6 +136,12 @@ namespace Union_Formularios_SISV
         {
             ActivateButton(sender, RGBColors.color8);
             _host.Open(new Form_Config(), "Configuracion", "Configuración de la aplicación");
+        }
+
+        private void btn_Reportes_click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            _host.Open(new Form_Reportes(), "Reportes", "Reportes de ventas, servicios e inventario");
         }
 
         private Control _btnActivo;
