@@ -8,6 +8,7 @@ namespace Union_Formularios_SISV.Forms.Clientes
 {
     public sealed class ClienteCardVM
     {
+        public int ClienteID { get; set; }
         public string Cedula { get; set; }
         public string Cliente { get; set; }
         public string Correo { get; set; }
@@ -22,6 +23,7 @@ namespace Union_Formularios_SISV.Forms.Clientes
 
     public sealed class ClienteDetalleVM
     {
+        public int ClienteID { get; set; }
         public string Cedula { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }

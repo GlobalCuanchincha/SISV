@@ -837,6 +837,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.txt_TipoEquipo_Diagnostico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_TipoEquipo_Diagnostico.Name = "txt_TipoEquipo_Diagnostico";
             this.txt_TipoEquipo_Diagnostico.PlaceholderText = "PC";
+            this.txt_TipoEquipo_Diagnostico.ReadOnly = true;
             this.txt_TipoEquipo_Diagnostico.SelectedText = "";
             this.txt_TipoEquipo_Diagnostico.Size = new System.Drawing.Size(369, 43);
             this.txt_TipoEquipo_Diagnostico.TabIndex = 79;
@@ -872,6 +873,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.txt_Cliente_Diagnostico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_Cliente_Diagnostico.Name = "txt_Cliente_Diagnostico";
             this.txt_Cliente_Diagnostico.PlaceholderText = "Juanito Alcachofa";
+            this.txt_Cliente_Diagnostico.ReadOnly = true;
             this.txt_Cliente_Diagnostico.SelectedText = "";
             this.txt_Cliente_Diagnostico.Size = new System.Drawing.Size(356, 43);
             this.txt_Cliente_Diagnostico.TabIndex = 77;

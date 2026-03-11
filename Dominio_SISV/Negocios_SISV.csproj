@@ -151,20 +151,31 @@
     <Compile Include="DTOs\CatalogoItemVM.cs" />
     <Compile Include="DTOs\CategoriaInventarioVM.cs" />
     <Compile Include="DTOs\ClienteDetalleVM.cs" />
+    <Compile Include="DTOs\Facturacion\ClienteFacturaDto.cs" />
+    <Compile Include="DTOs\Facturacion\CrearFacturaRequestDto.cs" />
+    <Compile Include="DTOs\Facturacion\CrearFacturaResultDto.cs" />
+    <Compile Include="DTOs\Facturacion\TipoPagoDto.cs" />
     <Compile Include="DTOs\FacturaItemVM.cs" />
     <Compile Include="DTOs\InventarioVMs.cs" />
     <Compile Include="DTOs\LoginResponse.cs" />
     <Compile Include="DTOs\ProductoCardVM.cs" />
     <Compile Include="DTOs\ProveedorCardVM.cs" />
     <Compile Include="DTOs\ProveedorVM.cs" />
-    <Compile Include="Entities\Cliente.cs" />
-    <Compile Include="Entities\Equipo.cs" />
-    <Compile Include="Entities\Factura.cs" />
-    <Compile Include="Entities\User.cs" />
+    <Compile Include="DTOs\Reportes\FiltroReporteClientesDto.cs" />
+    <Compile Include="DTOs\Reportes\FiltroReporteInventarioDto.cs" />
+    <Compile Include="DTOs\Reportes\FiltroReporteServicioDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\Facturacion\FacturacionService.cs" />
+    <Compile Include="Services\Facturacion\IFacturacionService.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
     <Compile Include="Services\PasswordRecoveryService.cs" />
+    <Compile Include="Services\Reportes\IReporteClientesService.cs" />
+    <Compile Include="Services\Reportes\IReporteInventarioService.cs" />
+    <Compile Include="Services\Reportes\IReporteServicioService.cs" />
+    <Compile Include="Services\Reportes\ReporteClientesService.cs" />
+    <Compile Include="Services\Reportes\ReporteInventarioService.cs" />
+    <Compile Include="Services\Reportes\ReporteServicioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos_Acceso\Base_De_Datos_SISV.csproj">

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_Grafica_Cliente = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Tabla_Cliente = new Guna.UI2.WinForms.Guna2Button();
@@ -52,14 +52,17 @@
             this.lbl_ContClientes = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pnl_dtgCliente = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgv_Clientes = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btn_Export_PDF_Cliente = new Guna.UI2.WinForms.Guna2Button();
             this.label18 = new System.Windows.Forms.Label();
             this.btn_Export_Excel_Cliente = new Guna.UI2.WinForms.Guna2Button();
             this.label17 = new System.Windows.Forms.Label();
             this.txt_BuscarResultaos_Cliente = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgv_Clientes = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.Panel_VentasH = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbox_FiltrarPor_Cliente = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.btn_LimpiarFiltros_Cliente = new Guna.UI2.WinForms.Guna2Button();
             this.btn_AplicarFiltros_Cliente = new Guna.UI2.WinForms.Guna2Button();
@@ -75,16 +78,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtp_Fechadesde_Cliente = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label = new System.Windows.Forms.Label();
-            this.pnl_dtgCliente = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel6.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            this.pnl_dtgCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.Panel_VentasH.SuspendLayout();
-            this.pnl_dtgCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel6
@@ -423,6 +425,69 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1082, 677);
             this.guna2GradientPanel1.TabIndex = 87;
             // 
+            // pnl_dtgCliente
+            // 
+            this.pnl_dtgCliente.Controls.Add(this.dgv_Clientes);
+            this.pnl_dtgCliente.Location = new System.Drawing.Point(22, 131);
+            this.pnl_dtgCliente.Name = "pnl_dtgCliente";
+            this.pnl_dtgCliente.Size = new System.Drawing.Size(1025, 534);
+            this.pnl_dtgCliente.TabIndex = 86;
+            // 
+            // dgv_Clientes
+            // 
+            this.dgv_Clientes.AllowUserToAddRows = false;
+            this.dgv_Clientes.AllowUserToDeleteRows = false;
+            this.dgv_Clientes.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Clientes.ColumnHeadersHeight = 22;
+            this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Clientes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Clientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Clientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Clientes.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Clientes.Name = "dgv_Clientes";
+            this.dgv_Clientes.ReadOnly = true;
+            this.dgv_Clientes.RowHeadersVisible = false;
+            this.dgv_Clientes.Size = new System.Drawing.Size(1025, 534);
+            this.dgv_Clientes.TabIndex = 67;
+            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_Clientes.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Clientes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Clientes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_Clientes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Clientes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Clientes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_Clientes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_Clientes.ThemeStyle.HeaderStyle.Height = 22;
+            this.dgv_Clientes.ThemeStyle.ReadOnly = true;
+            this.dgv_Clientes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Clientes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_Clientes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Clientes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_Clientes.ThemeStyle.RowsStyle.Height = 22;
+            this.dgv_Clientes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Clientes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // btn_Export_PDF_Cliente
             // 
             this.btn_Export_PDF_Cliente.Animated = true;
@@ -518,57 +583,6 @@
             this.txt_BuscarResultaos_Cliente.Size = new System.Drawing.Size(768, 43);
             this.txt_BuscarResultaos_Cliente.TabIndex = 75;
             // 
-            // dgv_Clientes
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_Clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_Clientes.ColumnHeadersHeight = 4;
-            this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Clientes.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_Clientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Clientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Clientes.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Clientes.Name = "dgv_Clientes";
-            this.dgv_Clientes.RowHeadersVisible = false;
-            this.dgv_Clientes.Size = new System.Drawing.Size(1025, 534);
-            this.dgv_Clientes.TabIndex = 67;
-            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_Clientes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_Clientes.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Clientes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Clientes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_Clientes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Clientes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_Clientes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_Clientes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_Clientes.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_Clientes.ThemeStyle.ReadOnly = false;
-            this.dgv_Clientes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Clientes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_Clientes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_Clientes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_Clientes.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_Clientes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Clientes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -589,6 +603,8 @@
             this.Panel_VentasH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
             this.Panel_VentasH.BorderRadius = 10;
             this.Panel_VentasH.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.Panel_VentasH.Controls.Add(this.label8);
+            this.Panel_VentasH.Controls.Add(this.cmbox_FiltrarPor_Cliente);
             this.Panel_VentasH.Controls.Add(this.label20);
             this.Panel_VentasH.Controls.Add(this.btn_LimpiarFiltros_Cliente);
             this.Panel_VentasH.Controls.Add(this.btn_AplicarFiltros_Cliente);
@@ -611,8 +627,37 @@
             this.Panel_VentasH.ShadowDecoration.BorderRadius = 14;
             this.Panel_VentasH.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.Panel_VentasH.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.Panel_VentasH.Size = new System.Drawing.Size(345, 603);
+            this.Panel_VentasH.Size = new System.Drawing.Size(345, 720);
             this.Panel_VentasH.TabIndex = 86;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(21, 291);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 18);
+            this.label8.TabIndex = 85;
+            this.label8.Text = "Filtrar por";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbox_FiltrarPor_Cliente
+            // 
+            this.cmbox_FiltrarPor_Cliente.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_FiltrarPor_Cliente.BorderRadius = 10;
+            this.cmbox_FiltrarPor_Cliente.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_FiltrarPor_Cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_FiltrarPor_Cliente.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_FiltrarPor_Cliente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_FiltrarPor_Cliente.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_FiltrarPor_Cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_FiltrarPor_Cliente.ItemHeight = 37;
+            this.cmbox_FiltrarPor_Cliente.Location = new System.Drawing.Point(23, 312);
+            this.cmbox_FiltrarPor_Cliente.Name = "cmbox_FiltrarPor_Cliente";
+            this.cmbox_FiltrarPor_Cliente.Size = new System.Drawing.Size(297, 43);
+            this.cmbox_FiltrarPor_Cliente.TabIndex = 84;
             // 
             // label20
             // 
@@ -620,7 +665,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(22, 443);
+            this.label20.Location = new System.Drawing.Point(21, 514);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(62, 18);
             this.label20.TabIndex = 83;
@@ -644,7 +689,7 @@
             this.btn_LimpiarFiltros_Cliente.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
             this.btn_LimpiarFiltros_Cliente.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_LimpiarFiltros_Cliente.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_LimpiarFiltros_Cliente.Location = new System.Drawing.Point(178, 537);
+            this.btn_LimpiarFiltros_Cliente.Location = new System.Drawing.Point(177, 608);
             this.btn_LimpiarFiltros_Cliente.Name = "btn_LimpiarFiltros_Cliente";
             this.btn_LimpiarFiltros_Cliente.Size = new System.Drawing.Size(151, 44);
             this.btn_LimpiarFiltros_Cliente.TabIndex = 82;
@@ -667,7 +712,7 @@
             this.btn_AplicarFiltros_Cliente.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
             this.btn_AplicarFiltros_Cliente.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_AplicarFiltros_Cliente.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_AplicarFiltros_Cliente.Location = new System.Drawing.Point(24, 537);
+            this.btn_AplicarFiltros_Cliente.Location = new System.Drawing.Point(23, 608);
             this.btn_AplicarFiltros_Cliente.Name = "btn_AplicarFiltros_Cliente";
             this.btn_AplicarFiltros_Cliente.Size = new System.Drawing.Size(148, 44);
             this.btn_AplicarFiltros_Cliente.TabIndex = 81;
@@ -684,7 +729,7 @@
             this.cmbox_Ordenar_Cliente.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbox_Ordenar_Cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbox_Ordenar_Cliente.ItemHeight = 37;
-            this.cmbox_Ordenar_Cliente.Location = new System.Drawing.Point(24, 464);
+            this.cmbox_Ordenar_Cliente.Location = new System.Drawing.Point(23, 535);
             this.cmbox_Ordenar_Cliente.Name = "cmbox_Ordenar_Cliente";
             this.cmbox_Ordenar_Cliente.Size = new System.Drawing.Size(297, 43);
             this.cmbox_Ordenar_Cliente.TabIndex = 80;
@@ -695,7 +740,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(22, 291);
+            this.label5.Location = new System.Drawing.Point(21, 362);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 79;
@@ -713,7 +758,7 @@
             this.cmbox_CFacturas_Cliente.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbox_CFacturas_Cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbox_CFacturas_Cliente.ItemHeight = 37;
-            this.cmbox_CFacturas_Cliente.Location = new System.Drawing.Point(24, 386);
+            this.cmbox_CFacturas_Cliente.Location = new System.Drawing.Point(23, 457);
             this.cmbox_CFacturas_Cliente.Name = "cmbox_CFacturas_Cliente";
             this.cmbox_CFacturas_Cliente.Size = new System.Drawing.Size(297, 43);
             this.cmbox_CFacturas_Cliente.TabIndex = 78;
@@ -724,7 +769,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(22, 365);
+            this.label2.Location = new System.Drawing.Point(21, 436);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 18);
             this.label2.TabIndex = 77;
@@ -742,7 +787,7 @@
             this.cmbox_EstadoFiltro_Cliente.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbox_EstadoFiltro_Cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbox_EstadoFiltro_Cliente.ItemHeight = 37;
-            this.cmbox_EstadoFiltro_Cliente.Location = new System.Drawing.Point(24, 312);
+            this.cmbox_EstadoFiltro_Cliente.Location = new System.Drawing.Point(23, 383);
             this.cmbox_EstadoFiltro_Cliente.Name = "cmbox_EstadoFiltro_Cliente";
             this.cmbox_EstadoFiltro_Cliente.Size = new System.Drawing.Size(297, 43);
             this.cmbox_EstadoFiltro_Cliente.TabIndex = 76;
@@ -848,14 +893,6 @@
             this.label.TabIndex = 66;
             this.label.Text = "Filtros";
             // 
-            // pnl_dtgCliente
-            // 
-            this.pnl_dtgCliente.Controls.Add(this.dgv_Clientes);
-            this.pnl_dtgCliente.Location = new System.Drawing.Point(22, 131);
-            this.pnl_dtgCliente.Name = "pnl_dtgCliente";
-            this.pnl_dtgCliente.Size = new System.Drawing.Size(1025, 534);
-            this.pnl_dtgCliente.TabIndex = 86;
-            // 
             // UC_Report_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -882,10 +919,10 @@
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            this.pnl_dtgCliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).EndInit();
             this.Panel_VentasH.ResumeLayout(false);
             this.Panel_VentasH.PerformLayout();
-            this.pnl_dtgCliente.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -937,5 +974,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_Fechadesde_Cliente;
         private System.Windows.Forms.Label label;
         private Guna.UI2.WinForms.Guna2Panel pnl_dtgCliente;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_FiltrarPor_Cliente;
     }
 }

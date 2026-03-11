@@ -107,13 +107,15 @@
             // Panel_Estado_Proveedor_UC
             // 
             this.Panel_Estado_Proveedor_UC.BackColor = System.Drawing.Color.Transparent;
-            this.Panel_Estado_Proveedor_UC.BorderThickness = 1;
+            this.Panel_Estado_Proveedor_UC.BorderColor = System.Drawing.Color.Silver;
+            this.Panel_Estado_Proveedor_UC.BorderRadius = 10;
+            this.Panel_Estado_Proveedor_UC.BorderThickness = 2;
             this.Panel_Estado_Proveedor_UC.Controls.Add(this.lbl_Point_Usuarios_UC);
             this.Panel_Estado_Proveedor_UC.Controls.Add(this.lbl_Estado_Usuarios_UC);
             this.Panel_Estado_Proveedor_UC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
-            this.Panel_Estado_Proveedor_UC.Location = new System.Drawing.Point(669, 21);
+            this.Panel_Estado_Proveedor_UC.Location = new System.Drawing.Point(667, 18);
             this.Panel_Estado_Proveedor_UC.Name = "Panel_Estado_Proveedor_UC";
-            this.Panel_Estado_Proveedor_UC.Size = new System.Drawing.Size(78, 30);
+            this.Panel_Estado_Proveedor_UC.Size = new System.Drawing.Size(87, 34);
             this.Panel_Estado_Proveedor_UC.TabIndex = 70;
             // 
             // lbl_Point_Usuarios_UC
@@ -122,7 +124,7 @@
             this.lbl_Point_Usuarios_UC.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Point_Usuarios_UC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Point_Usuarios_UC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
-            this.lbl_Point_Usuarios_UC.Location = new System.Drawing.Point(10, 5);
+            this.lbl_Point_Usuarios_UC.Location = new System.Drawing.Point(11, 6);
             this.lbl_Point_Usuarios_UC.Name = "lbl_Point_Usuarios_UC";
             this.lbl_Point_Usuarios_UC.Size = new System.Drawing.Size(17, 18);
             this.lbl_Point_Usuarios_UC.TabIndex = 66;
@@ -135,7 +137,7 @@
             this.lbl_Estado_Usuarios_UC.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Estado_Usuarios_UC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Estado_Usuarios_UC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
-            this.lbl_Estado_Usuarios_UC.Location = new System.Drawing.Point(28, 6);
+            this.lbl_Estado_Usuarios_UC.Location = new System.Drawing.Point(29, 7);
             this.lbl_Estado_Usuarios_UC.Name = "lbl_Estado_Usuarios_UC";
             this.lbl_Estado_Usuarios_UC.Size = new System.Drawing.Size(48, 18);
             this.lbl_Estado_Usuarios_UC.TabIndex = 65;

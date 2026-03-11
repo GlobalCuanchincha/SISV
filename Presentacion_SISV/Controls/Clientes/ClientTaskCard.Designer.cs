@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.Panel_Carta_UserControl = new Guna.UI2.WinForms.Guna2Panel();
-            this.Panel_Estado_UserControl = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lbl_Point_UserControl = new System.Windows.Forms.Label();
-            this.lbl_Estado_UserControl = new System.Windows.Forms.Label();
             this.lbl_Telefono_UserControl = new System.Windows.Forms.Label();
             this.lbl_Correo_UserControl = new System.Windows.Forms.Label();
             this.lbl_Nom_UserControl = new System.Windows.Forms.Label();
             this.lbl_Cedula_UserControl = new System.Windows.Forms.Label();
+            this.Panel_Estado_UserControl = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbl_Estado_UserControl = new System.Windows.Forms.Label();
+            this.lbl_Point_UserControl = new System.Windows.Forms.Label();
             this.Panel_Carta_UserControl.SuspendLayout();
             this.Panel_Estado_UserControl.SuspendLayout();
             this.SuspendLayout();
@@ -51,53 +51,6 @@
             this.Panel_Carta_UserControl.Name = "Panel_Carta_UserControl";
             this.Panel_Carta_UserControl.Size = new System.Drawing.Size(729, 66);
             this.Panel_Carta_UserControl.TabIndex = 0;
-            // 
-            // Panel_Estado_UserControl
-            // 
-            this.Panel_Estado_UserControl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel_Estado_UserControl.BackColor = System.Drawing.Color.Transparent;
-            this.Panel_Estado_UserControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Panel_Estado_UserControl.BorderColor = System.Drawing.Color.Silver;
-            this.Panel_Estado_UserControl.BorderRadius = 10;
-            this.Panel_Estado_UserControl.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.Panel_Estado_UserControl.BorderThickness = 1;
-            this.Panel_Estado_UserControl.Controls.Add(this.lbl_Point_UserControl);
-            this.Panel_Estado_UserControl.Controls.Add(this.lbl_Estado_UserControl);
-            this.Panel_Estado_UserControl.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
-            this.Panel_Estado_UserControl.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
-            this.Panel_Estado_UserControl.Location = new System.Drawing.Point(596, 17);
-            this.Panel_Estado_UserControl.Name = "Panel_Estado_UserControl";
-            this.Panel_Estado_UserControl.ShadowDecoration.BorderRadius = 20;
-            this.Panel_Estado_UserControl.ShadowDecoration.Color = System.Drawing.Color.Gray;
-            this.Panel_Estado_UserControl.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.Panel_Estado_UserControl.Size = new System.Drawing.Size(85, 30);
-            this.Panel_Estado_UserControl.TabIndex = 68;
-            // 
-            // lbl_Point_UserControl
-            // 
-            this.lbl_Point_UserControl.AutoSize = true;
-            this.lbl_Point_UserControl.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Point_UserControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Point_UserControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
-            this.lbl_Point_UserControl.Location = new System.Drawing.Point(8, 5);
-            this.lbl_Point_UserControl.Name = "lbl_Point_UserControl";
-            this.lbl_Point_UserControl.Size = new System.Drawing.Size(17, 18);
-            this.lbl_Point_UserControl.TabIndex = 66;
-            this.lbl_Point_UserControl.Text = "●";
-            this.lbl_Point_UserControl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_Estado_UserControl
-            // 
-            this.lbl_Estado_UserControl.AutoSize = true;
-            this.lbl_Estado_UserControl.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Estado_UserControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Estado_UserControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
-            this.lbl_Estado_UserControl.Location = new System.Drawing.Point(26, 6);
-            this.lbl_Estado_UserControl.Name = "lbl_Estado_UserControl";
-            this.lbl_Estado_UserControl.Size = new System.Drawing.Size(48, 18);
-            this.lbl_Estado_UserControl.TabIndex = 65;
-            this.lbl_Estado_UserControl.Text = "Activo";
-            this.lbl_Estado_UserControl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Telefono_UserControl
             // 
@@ -139,6 +92,46 @@
             this.lbl_Cedula_UserControl.TabIndex = 0;
             this.lbl_Cedula_UserControl.Text = "1209387251";
             // 
+            // Panel_Estado_UserControl
+            // 
+            this.Panel_Estado_UserControl.BackColor = System.Drawing.Color.Transparent;
+            this.Panel_Estado_UserControl.BorderColor = System.Drawing.Color.Silver;
+            this.Panel_Estado_UserControl.BorderRadius = 10;
+            this.Panel_Estado_UserControl.BorderThickness = 2;
+            this.Panel_Estado_UserControl.Controls.Add(this.lbl_Estado_UserControl);
+            this.Panel_Estado_UserControl.Controls.Add(this.lbl_Point_UserControl);
+            this.Panel_Estado_UserControl.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
+            this.Panel_Estado_UserControl.Location = new System.Drawing.Point(599, 13);
+            this.Panel_Estado_UserControl.Name = "Panel_Estado_UserControl";
+            this.Panel_Estado_UserControl.Size = new System.Drawing.Size(94, 35);
+            this.Panel_Estado_UserControl.TabIndex = 70;
+            // 
+            // lbl_Estado_UserControl
+            // 
+            this.lbl_Estado_UserControl.AutoSize = true;
+            this.lbl_Estado_UserControl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Estado_UserControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Estado_UserControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
+            this.lbl_Estado_UserControl.Location = new System.Drawing.Point(29, 8);
+            this.lbl_Estado_UserControl.Name = "lbl_Estado_UserControl";
+            this.lbl_Estado_UserControl.Size = new System.Drawing.Size(48, 18);
+            this.lbl_Estado_UserControl.TabIndex = 68;
+            this.lbl_Estado_UserControl.Text = "Activo";
+            this.lbl_Estado_UserControl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_Point_UserControl
+            // 
+            this.lbl_Point_UserControl.AutoSize = true;
+            this.lbl_Point_UserControl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Point_UserControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Point_UserControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
+            this.lbl_Point_UserControl.Location = new System.Drawing.Point(10, 7);
+            this.lbl_Point_UserControl.Name = "lbl_Point_UserControl";
+            this.lbl_Point_UserControl.Size = new System.Drawing.Size(17, 18);
+            this.lbl_Point_UserControl.TabIndex = 67;
+            this.lbl_Point_UserControl.Text = "●";
+            this.lbl_Point_UserControl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ClientTaskCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,8 +154,8 @@
         private System.Windows.Forms.Label lbl_Telefono_UserControl;
         private System.Windows.Forms.Label lbl_Correo_UserControl;
         private System.Windows.Forms.Label lbl_Nom_UserControl;
-        private Guna.UI2.WinForms.Guna2GradientPanel Panel_Estado_UserControl;
-        private System.Windows.Forms.Label lbl_Point_UserControl;
+        private Guna.UI2.WinForms.Guna2Panel Panel_Estado_UserControl;
         private System.Windows.Forms.Label lbl_Estado_UserControl;
+        private System.Windows.Forms.Label lbl_Point_UserControl;
     }
 }

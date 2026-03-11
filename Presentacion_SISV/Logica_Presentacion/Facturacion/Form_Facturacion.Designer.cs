@@ -114,6 +114,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_DetaleFactura = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2VScrollBar3 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbox_TipoPago_Factura = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel8.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -196,7 +198,7 @@
             this.guna2GradientPanel8.Controls.Add(this.btn_EmitirFactura_View);
             this.guna2GradientPanel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel8.Location = new System.Drawing.Point(12, 6);
+            this.guna2GradientPanel8.Location = new System.Drawing.Point(12, 43);
             this.guna2GradientPanel8.Name = "guna2GradientPanel8";
             this.guna2GradientPanel8.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel8.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -780,12 +782,12 @@
             this.guna2GradientPanel2.Controls.Add(this.label1);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(871, 73);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(871, 95);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.ShadowDecoration.BorderRadius = 20;
             this.guna2GradientPanel2.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(595, 737);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(595, 771);
             this.guna2GradientPanel2.TabIndex = 60;
             // 
             // guna2GradientPanel5
@@ -795,6 +797,8 @@
             this.guna2GradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel5.Controls.Add(this.cmbox_TipoPago_Factura);
+            this.guna2GradientPanel5.Controls.Add(this.label6);
             this.guna2GradientPanel5.Controls.Add(this.btn_Nueva_Factura_VentasFacturas);
             this.guna2GradientPanel5.Controls.Add(this.btn_Guardar_Factura_VentasFacturas);
             this.guna2GradientPanel5.Controls.Add(this.txt_telefono_VentasFacturas);
@@ -816,12 +820,12 @@
             this.guna2GradientPanel5.Controls.Add(this.label8);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(11, 48);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(8, 46);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
             this.guna2GradientPanel5.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel5.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(571, 670);
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(571, 715);
             this.guna2GradientPanel5.TabIndex = 64;
             // 
             // btn_Nueva_Factura_VentasFacturas
@@ -840,7 +844,7 @@
             this.btn_Nueva_Factura_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
             this.btn_Nueva_Factura_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_Nueva_Factura_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Nueva_Factura_VentasFacturas.Location = new System.Drawing.Point(305, 615);
+            this.btn_Nueva_Factura_VentasFacturas.Location = new System.Drawing.Point(296, 654);
             this.btn_Nueva_Factura_VentasFacturas.Name = "btn_Nueva_Factura_VentasFacturas";
             this.btn_Nueva_Factura_VentasFacturas.Size = new System.Drawing.Size(244, 44);
             this.btn_Nueva_Factura_VentasFacturas.TabIndex = 78;
@@ -863,7 +867,7 @@
             this.btn_Guardar_Factura_VentasFacturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
             this.btn_Guardar_Factura_VentasFacturas.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_Guardar_Factura_VentasFacturas.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Guardar_Factura_VentasFacturas.Location = new System.Drawing.Point(16, 615);
+            this.btn_Guardar_Factura_VentasFacturas.Location = new System.Drawing.Point(16, 654);
             this.btn_Guardar_Factura_VentasFacturas.Name = "btn_Guardar_Factura_VentasFacturas";
             this.btn_Guardar_Factura_VentasFacturas.Size = new System.Drawing.Size(269, 44);
             this.btn_Guardar_Factura_VentasFacturas.TabIndex = 77;
@@ -905,7 +909,7 @@
             this.guna2GradientPanel10.Controls.Add(this.label18);
             this.guna2GradientPanel10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel10.Location = new System.Drawing.Point(16, 551);
+            this.guna2GradientPanel10.Location = new System.Drawing.Point(16, 594);
             this.guna2GradientPanel10.Name = "guna2GradientPanel10";
             this.guna2GradientPanel10.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel10.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -996,7 +1000,7 @@
             this.guna2GradientPanel9.Controls.Add(this.label17);
             this.guna2GradientPanel9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel9.Location = new System.Drawing.Point(16, 493);
+            this.guna2GradientPanel9.Location = new System.Drawing.Point(16, 536);
             this.guna2GradientPanel9.Name = "guna2GradientPanel9";
             this.guna2GradientPanel9.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel9.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -1087,7 +1091,7 @@
             this.guna2GradientPanel7.Controls.Add(this.label16);
             this.guna2GradientPanel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel7.Location = new System.Drawing.Point(16, 435);
+            this.guna2GradientPanel7.Location = new System.Drawing.Point(16, 478);
             this.guna2GradientPanel7.Name = "guna2GradientPanel7";
             this.guna2GradientPanel7.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel7.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -1179,7 +1183,7 @@
             this.guna2GradientPanel6.Controls.Add(this.label15);
             this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel6.Location = new System.Drawing.Point(16, 377);
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(16, 420);
             this.guna2GradientPanel6.Name = "guna2GradientPanel6";
             this.guna2GradientPanel6.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel6.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -1260,7 +1264,7 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(3, 346);
+            this.guna2Separator1.Location = new System.Drawing.Point(3, 408);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(565, 10);
             this.guna2Separator1.TabIndex = 73;
@@ -1503,12 +1507,41 @@
             this.guna2VScrollBar3.Size = new System.Drawing.Size(18, 736);
             this.guna2VScrollBar3.TabIndex = 66;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(17, 339);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 18);
+            this.label6.TabIndex = 79;
+            this.label6.Text = "Tipo de pago";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbox_TipoPago_Factura
+            // 
+            this.cmbox_TipoPago_Factura.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_TipoPago_Factura.BorderRadius = 10;
+            this.cmbox_TipoPago_Factura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_TipoPago_Factura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_TipoPago_Factura.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_TipoPago_Factura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_TipoPago_Factura.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_TipoPago_Factura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_TipoPago_Factura.ItemHeight = 37;
+            this.cmbox_TipoPago_Factura.Location = new System.Drawing.Point(17, 360);
+            this.cmbox_TipoPago_Factura.Name = "cmbox_TipoPago_Factura";
+            this.cmbox_TipoPago_Factura.Size = new System.Drawing.Size(532, 43);
+            this.cmbox_TipoPago_Factura.TabIndex = 60;
+            // 
             // Form_Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1478, 855);
+            this.ClientSize = new System.Drawing.Size(1478, 928);
             this.Controls.Add(this.guna2VScrollBar3);
             this.Controls.Add(this.flowLayoutPanel_DetaleFactura);
             this.Controls.Add(this.guna2GradientPanel2);
@@ -1638,5 +1671,7 @@
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar3;
         private Guna.UI2.WinForms.Guna2Button btn_Nueva_Factura_VentasFacturas;
         private Guna.UI2.WinForms.Guna2Button btn_Guardar_Factura_VentasFacturas;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_TipoPago_Factura;
     }
 }

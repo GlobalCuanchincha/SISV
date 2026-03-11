@@ -32,78 +32,78 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Grafica_Inventario = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Tabla_Inventario = new Guna.UI2.WinForms.Guna2Button();
             this.label19 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_Total_Facturas = new System.Windows.Forms.Label();
-            this.lbl_VentasH = new System.Windows.Forms.Label();
+            this.lbl_Items = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.pnl_dgv_Inventario = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgv_Inventario = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btn_Export_PDF_Inventario = new Guna.UI2.WinForms.Guna2Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Export_Excel_Inventario = new Guna.UI2.WinForms.Guna2Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txt_BuscarResultados_Inventario = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.Panel_VentasH = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label30 = new System.Windows.Forms.Label();
-            this.guna2ComboBox7 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
-            this.guna2NumericUpDown3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label27 = new System.Windows.Forms.Label();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
-            this.nuc_Stock_Producto = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
-            this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.guna2ComboBox6 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txt_NombreProducto_Inventario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.cmbox_Ordenar_Inventario = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.nuc_Preciomax_Inventario = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
+            this.nuc_Preciomin_Inventario = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label27 = new System.Windows.Forms.Label();
+            this.nuc_Costomax_Inventario = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label26 = new System.Windows.Forms.Label();
+            this.nuc_Costomin_Inventario = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cmbox_Estado_Inventario = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cmbox_Stock_Inventario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbox_Proveedor_Inventario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.cmbox_Categoria_Inventario = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txt_SKU_Inventario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_LimpiarFiltros_Inventario = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_AplicarFiltros_Inventario = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbox_EstadoFiltro_Proveedor = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbox_FiltrarFecha_Inventario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_Buscador_Proveedor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_BuscadorFiltro_Inventario = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtp_FechaHasta_Inventario = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtp_Fechadesde_Inventario = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_StockTotal = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblStockCritico = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblValorStock = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2GradientPanel6.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            this.pnl_dgv_Inventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Inventario)).BeginInit();
             this.Panel_VentasH.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuc_Stock_Producto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuc_Preciomax_Inventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuc_Preciomin_Inventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuc_Costomax_Inventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuc_Costomin_Inventario)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
@@ -117,8 +117,8 @@
             this.guna2GradientPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(166)))), ((int)(((byte)(244)))));
             this.guna2GradientPanel6.BorderRadius = 10;
             this.guna2GradientPanel6.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel6.Controls.Add(this.guna2Button8);
-            this.guna2GradientPanel6.Controls.Add(this.guna2Button7);
+            this.guna2GradientPanel6.Controls.Add(this.btn_Grafica_Inventario);
+            this.guna2GradientPanel6.Controls.Add(this.btn_Tabla_Inventario);
             this.guna2GradientPanel6.Controls.Add(this.label19);
             this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
@@ -130,51 +130,51 @@
             this.guna2GradientPanel6.Size = new System.Drawing.Size(345, 63);
             this.guna2GradientPanel6.TabIndex = 103;
             // 
-            // guna2Button8
+            // btn_Grafica_Inventario
             // 
-            this.guna2Button8.Animated = true;
-            this.guna2Button8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(132)))), ((int)(((byte)(2)))));
-            this.guna2Button8.BorderRadius = 15;
-            this.guna2Button8.BorderThickness = 2;
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(238)))), ((int)(((byte)(222)))));
-            this.guna2Button8.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button8.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button8.Location = new System.Drawing.Point(177, 11);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(143, 44);
-            this.guna2Button8.TabIndex = 85;
-            this.guna2Button8.Text = "Graficos";
+            this.btn_Grafica_Inventario.Animated = true;
+            this.btn_Grafica_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Grafica_Inventario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(132)))), ((int)(((byte)(2)))));
+            this.btn_Grafica_Inventario.BorderRadius = 15;
+            this.btn_Grafica_Inventario.BorderThickness = 2;
+            this.btn_Grafica_Inventario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Grafica_Inventario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Grafica_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Grafica_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Grafica_Inventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
+            this.btn_Grafica_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Grafica_Inventario.ForeColor = System.Drawing.Color.White;
+            this.btn_Grafica_Inventario.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(238)))), ((int)(((byte)(222)))));
+            this.btn_Grafica_Inventario.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Grafica_Inventario.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Grafica_Inventario.Location = new System.Drawing.Point(177, 11);
+            this.btn_Grafica_Inventario.Name = "btn_Grafica_Inventario";
+            this.btn_Grafica_Inventario.Size = new System.Drawing.Size(143, 44);
+            this.btn_Grafica_Inventario.TabIndex = 85;
+            this.btn_Grafica_Inventario.Text = "Graficos";
             // 
-            // guna2Button7
+            // btn_Tabla_Inventario
             // 
-            this.guna2Button7.Animated = true;
-            this.guna2Button7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
-            this.guna2Button7.BorderRadius = 15;
-            this.guna2Button7.BorderThickness = 2;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
-            this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button7.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button7.Location = new System.Drawing.Point(23, 11);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(148, 44);
-            this.guna2Button7.TabIndex = 84;
-            this.guna2Button7.Text = "Tabla";
+            this.btn_Tabla_Inventario.Animated = true;
+            this.btn_Tabla_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Tabla_Inventario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
+            this.btn_Tabla_Inventario.BorderRadius = 15;
+            this.btn_Tabla_Inventario.BorderThickness = 2;
+            this.btn_Tabla_Inventario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Tabla_Inventario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Tabla_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Tabla_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Tabla_Inventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_Tabla_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Tabla_Inventario.ForeColor = System.Drawing.Color.White;
+            this.btn_Tabla_Inventario.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
+            this.btn_Tabla_Inventario.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Tabla_Inventario.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Tabla_Inventario.Location = new System.Drawing.Point(23, 11);
+            this.btn_Tabla_Inventario.Name = "btn_Tabla_Inventario";
+            this.btn_Tabla_Inventario.Size = new System.Drawing.Size(148, 44);
+            this.btn_Tabla_Inventario.TabIndex = 84;
+            this.btn_Tabla_Inventario.Text = "Tabla";
             // 
             // label19
             // 
@@ -197,7 +197,7 @@
             this.guna2GradientPanel2.BorderRadius = 10;
             this.guna2GradientPanel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel2.Controls.Add(this.lbl_Total_Facturas);
-            this.guna2GradientPanel2.Controls.Add(this.lbl_VentasH);
+            this.guna2GradientPanel2.Controls.Add(this.lbl_Items);
             this.guna2GradientPanel2.Controls.Add(this.label4);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
@@ -221,17 +221,17 @@
             this.lbl_Total_Facturas.TabIndex = 46;
             this.lbl_Total_Facturas.Text = "0";
             // 
-            // lbl_VentasH
+            // lbl_Items
             // 
-            this.lbl_VentasH.AutoSize = true;
-            this.lbl_VentasH.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_VentasH.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_VentasH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_VentasH.Location = new System.Drawing.Point(15, 41);
-            this.lbl_VentasH.Name = "lbl_VentasH";
-            this.lbl_VentasH.Size = new System.Drawing.Size(41, 40);
-            this.lbl_VentasH.TabIndex = 46;
-            this.lbl_VentasH.Text = "--";
+            this.lbl_Items.AutoSize = true;
+            this.lbl_Items.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Items.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Items.Location = new System.Drawing.Point(15, 41);
+            this.lbl_Items.Name = "lbl_Items";
+            this.lbl_Items.Size = new System.Drawing.Size(41, 40);
+            this.lbl_Items.TabIndex = 46;
+            this.lbl_Items.Text = "--";
             // 
             // label4
             // 
@@ -254,12 +254,12 @@
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel1.BorderRadius = 10;
             this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel1.Controls.Add(this.guna2Button6);
+            this.guna2GradientPanel1.Controls.Add(this.pnl_dgv_Inventario);
+            this.guna2GradientPanel1.Controls.Add(this.btn_Export_PDF_Inventario);
             this.guna2GradientPanel1.Controls.Add(this.label18);
-            this.guna2GradientPanel1.Controls.Add(this.guna2Button5);
+            this.guna2GradientPanel1.Controls.Add(this.btn_Export_Excel_Inventario);
             this.guna2GradientPanel1.Controls.Add(this.label17);
-            this.guna2GradientPanel1.Controls.Add(this.guna2TextBox1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2DataGridView1);
+            this.guna2GradientPanel1.Controls.Add(this.txt_BuscarResultados_Inventario);
             this.guna2GradientPanel1.Controls.Add(this.label13);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
@@ -271,28 +271,87 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1224, 746);
             this.guna2GradientPanel1.TabIndex = 101;
             // 
-            // guna2Button6
+            // pnl_dgv_Inventario
             // 
-            this.guna2Button6.Animated = true;
-            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.guna2Button6.BorderRadius = 15;
-            this.guna2Button6.BorderThickness = 2;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button6.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button6.Location = new System.Drawing.Point(1082, 72);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(122, 43);
-            this.guna2Button6.TabIndex = 85;
-            this.guna2Button6.Text = "PDF";
+            this.pnl_dgv_Inventario.Controls.Add(this.dgv_Inventario);
+            this.pnl_dgv_Inventario.Location = new System.Drawing.Point(22, 135);
+            this.pnl_dgv_Inventario.Name = "pnl_dgv_Inventario";
+            this.pnl_dgv_Inventario.Size = new System.Drawing.Size(1181, 608);
+            this.pnl_dgv_Inventario.TabIndex = 86;
+            // 
+            // dgv_Inventario
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Inventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Inventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Inventario.ColumnHeadersHeight = 22;
+            this.dgv_Inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Inventario.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Inventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Inventario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Inventario.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Inventario.Name = "dgv_Inventario";
+            this.dgv_Inventario.RowHeadersVisible = false;
+            this.dgv_Inventario.Size = new System.Drawing.Size(1181, 608);
+            this.dgv_Inventario.TabIndex = 67;
+            this.dgv_Inventario.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Inventario.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_Inventario.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_Inventario.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_Inventario.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_Inventario.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Inventario.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Inventario.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_Inventario.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Inventario.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Inventario.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_Inventario.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_Inventario.ThemeStyle.HeaderStyle.Height = 22;
+            this.dgv_Inventario.ThemeStyle.ReadOnly = false;
+            this.dgv_Inventario.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Inventario.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_Inventario.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Inventario.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_Inventario.ThemeStyle.RowsStyle.Height = 22;
+            this.dgv_Inventario.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Inventario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // btn_Export_PDF_Inventario
+            // 
+            this.btn_Export_PDF_Inventario.Animated = true;
+            this.btn_Export_PDF_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Export_PDF_Inventario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.btn_Export_PDF_Inventario.BorderRadius = 15;
+            this.btn_Export_PDF_Inventario.BorderThickness = 2;
+            this.btn_Export_PDF_Inventario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Export_PDF_Inventario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Export_PDF_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Export_PDF_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Export_PDF_Inventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
+            this.btn_Export_PDF_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Export_PDF_Inventario.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Export_PDF_Inventario.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Export_PDF_Inventario.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Export_PDF_Inventario.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Export_PDF_Inventario.Location = new System.Drawing.Point(1082, 72);
+            this.btn_Export_PDF_Inventario.Name = "btn_Export_PDF_Inventario";
+            this.btn_Export_PDF_Inventario.Size = new System.Drawing.Size(122, 43);
+            this.btn_Export_PDF_Inventario.TabIndex = 85;
+            this.btn_Export_PDF_Inventario.Text = "PDF";
             // 
             // label18
             // 
@@ -308,28 +367,28 @@
             this.label18.Text = "Exportar rapido";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2Button5
+            // btn_Export_Excel_Inventario
             // 
-            this.guna2Button5.Animated = true;
-            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(207)))), ((int)(((byte)(142)))));
-            this.guna2Button5.BorderRadius = 15;
-            this.guna2Button5.BorderThickness = 2;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(240)))), ((int)(((byte)(221)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button5.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button5.Location = new System.Drawing.Point(954, 72);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(122, 44);
-            this.guna2Button5.TabIndex = 83;
-            this.guna2Button5.Text = "Excel";
+            this.btn_Export_Excel_Inventario.Animated = true;
+            this.btn_Export_Excel_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Export_Excel_Inventario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(207)))), ((int)(((byte)(142)))));
+            this.btn_Export_Excel_Inventario.BorderRadius = 15;
+            this.btn_Export_Excel_Inventario.BorderThickness = 2;
+            this.btn_Export_Excel_Inventario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Export_Excel_Inventario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Export_Excel_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Export_Excel_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Export_Excel_Inventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(240)))), ((int)(((byte)(221)))));
+            this.btn_Export_Excel_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Export_Excel_Inventario.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_Export_Excel_Inventario.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Export_Excel_Inventario.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Export_Excel_Inventario.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Export_Excel_Inventario.Location = new System.Drawing.Point(954, 72);
+            this.btn_Export_Excel_Inventario.Name = "btn_Export_Excel_Inventario";
+            this.btn_Export_Excel_Inventario.Size = new System.Drawing.Size(122, 44);
+            this.btn_Export_Excel_Inventario.TabIndex = 83;
+            this.btn_Export_Excel_Inventario.Text = "Excel";
             // 
             // label17
             // 
@@ -345,76 +404,26 @@
             this.label17.Text = "Buscar dentro de los resultados";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TextBox1
+            // txt_BuscarResultados_Inventario
             // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(22, 72);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "Filtrar lo mostrado en la tabla";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(920, 43);
-            this.guna2TextBox1.TabIndex = 75;
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(24, 123);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1181, 608);
-            this.guna2DataGridView1.TabIndex = 67;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.txt_BuscarResultados_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.txt_BuscarResultados_Inventario.BorderRadius = 15;
+            this.txt_BuscarResultados_Inventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_BuscarResultados_Inventario.DefaultText = "";
+            this.txt_BuscarResultados_Inventario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_BuscarResultados_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_BuscarResultados_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_BuscarResultados_Inventario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_BuscarResultados_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_BuscarResultados_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_BuscarResultados_Inventario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_BuscarResultados_Inventario.Location = new System.Drawing.Point(22, 72);
+            this.txt_BuscarResultados_Inventario.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_BuscarResultados_Inventario.Name = "txt_BuscarResultados_Inventario";
+            this.txt_BuscarResultados_Inventario.PlaceholderText = "Filtrar lo mostrado en la tabla";
+            this.txt_BuscarResultados_Inventario.SelectedText = "";
+            this.txt_BuscarResultados_Inventario.Size = new System.Drawing.Size(920, 43);
+            this.txt_BuscarResultados_Inventario.TabIndex = 75;
             // 
             // label13
             // 
@@ -436,40 +445,38 @@
             this.Panel_VentasH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
             this.Panel_VentasH.BorderRadius = 10;
             this.Panel_VentasH.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.Panel_VentasH.Controls.Add(this.label30);
-            this.Panel_VentasH.Controls.Add(this.guna2ComboBox7);
-            this.Panel_VentasH.Controls.Add(this.label28);
-            this.Panel_VentasH.Controls.Add(this.guna2NumericUpDown2);
-            this.Panel_VentasH.Controls.Add(this.label29);
-            this.Panel_VentasH.Controls.Add(this.guna2NumericUpDown3);
-            this.Panel_VentasH.Controls.Add(this.label27);
-            this.Panel_VentasH.Controls.Add(this.guna2NumericUpDown1);
-            this.Panel_VentasH.Controls.Add(this.label26);
-            this.Panel_VentasH.Controls.Add(this.nuc_Stock_Producto);
-            this.Panel_VentasH.Controls.Add(this.label24);
-            this.Panel_VentasH.Controls.Add(this.guna2ComboBox5);
-            this.Panel_VentasH.Controls.Add(this.label25);
-            this.Panel_VentasH.Controls.Add(this.guna2ComboBox6);
             this.Panel_VentasH.Controls.Add(this.label20);
-            this.Panel_VentasH.Controls.Add(this.guna2ComboBox2);
-            this.Panel_VentasH.Controls.Add(this.label23);
-            this.Panel_VentasH.Controls.Add(this.guna2ComboBox4);
+            this.Panel_VentasH.Controls.Add(this.txt_NombreProducto_Inventario);
+            this.Panel_VentasH.Controls.Add(this.label30);
+            this.Panel_VentasH.Controls.Add(this.cmbox_Ordenar_Inventario);
+            this.Panel_VentasH.Controls.Add(this.label28);
+            this.Panel_VentasH.Controls.Add(this.nuc_Preciomax_Inventario);
+            this.Panel_VentasH.Controls.Add(this.label29);
+            this.Panel_VentasH.Controls.Add(this.nuc_Preciomin_Inventario);
+            this.Panel_VentasH.Controls.Add(this.label27);
+            this.Panel_VentasH.Controls.Add(this.nuc_Costomax_Inventario);
+            this.Panel_VentasH.Controls.Add(this.label26);
+            this.Panel_VentasH.Controls.Add(this.nuc_Costomin_Inventario);
+            this.Panel_VentasH.Controls.Add(this.label24);
+            this.Panel_VentasH.Controls.Add(this.cmbox_Estado_Inventario);
+            this.Panel_VentasH.Controls.Add(this.label25);
+            this.Panel_VentasH.Controls.Add(this.cmbox_Stock_Inventario);
             this.Panel_VentasH.Controls.Add(this.label22);
-            this.Panel_VentasH.Controls.Add(this.guna2ComboBox3);
+            this.Panel_VentasH.Controls.Add(this.cmbox_Proveedor_Inventario);
             this.Panel_VentasH.Controls.Add(this.label21);
-            this.Panel_VentasH.Controls.Add(this.guna2ComboBox1);
-            this.Panel_VentasH.Controls.Add(this.guna2TextBox2);
-            this.Panel_VentasH.Controls.Add(this.guna2Button3);
-            this.Panel_VentasH.Controls.Add(this.guna2Button4);
+            this.Panel_VentasH.Controls.Add(this.cmbox_Categoria_Inventario);
+            this.Panel_VentasH.Controls.Add(this.txt_SKU_Inventario);
+            this.Panel_VentasH.Controls.Add(this.btn_LimpiarFiltros_Inventario);
+            this.Panel_VentasH.Controls.Add(this.btn_AplicarFiltros_Inventario);
             this.Panel_VentasH.Controls.Add(this.label5);
             this.Panel_VentasH.Controls.Add(this.label2);
-            this.Panel_VentasH.Controls.Add(this.cmbox_EstadoFiltro_Proveedor);
+            this.Panel_VentasH.Controls.Add(this.cmbox_FiltrarFecha_Inventario);
             this.Panel_VentasH.Controls.Add(this.label3);
-            this.Panel_VentasH.Controls.Add(this.txt_Buscador_Proveedor);
+            this.Panel_VentasH.Controls.Add(this.txt_BuscadorFiltro_Inventario);
             this.Panel_VentasH.Controls.Add(this.label6);
-            this.Panel_VentasH.Controls.Add(this.guna2DateTimePicker2);
+            this.Panel_VentasH.Controls.Add(this.dtp_FechaHasta_Inventario);
             this.Panel_VentasH.Controls.Add(this.label1);
-            this.Panel_VentasH.Controls.Add(this.guna2DateTimePicker1);
+            this.Panel_VentasH.Controls.Add(this.dtp_Fechadesde_Inventario);
             this.Panel_VentasH.Controls.Add(this.label);
             this.Panel_VentasH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.Panel_VentasH.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
@@ -480,6 +487,41 @@
             this.Panel_VentasH.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.Panel_VentasH.Size = new System.Drawing.Size(551, 789);
             this.Panel_VentasH.TabIndex = 100;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label20.Location = new System.Drawing.Point(23, 338);
+            this.label20.Name = "label20";
+            this.label20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label20.Size = new System.Drawing.Size(62, 18);
+            this.label20.TabIndex = 108;
+            this.label20.Text = "Nombre";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_NombreProducto_Inventario
+            // 
+            this.txt_NombreProducto_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.txt_NombreProducto_Inventario.BorderRadius = 15;
+            this.txt_NombreProducto_Inventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NombreProducto_Inventario.DefaultText = "";
+            this.txt_NombreProducto_Inventario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_NombreProducto_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_NombreProducto_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NombreProducto_Inventario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NombreProducto_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NombreProducto_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_NombreProducto_Inventario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NombreProducto_Inventario.Location = new System.Drawing.Point(23, 361);
+            this.txt_NombreProducto_Inventario.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_NombreProducto_Inventario.Name = "txt_NombreProducto_Inventario";
+            this.txt_NombreProducto_Inventario.PlaceholderText = "Ej: Mouse, Memoria";
+            this.txt_NombreProducto_Inventario.SelectedText = "";
+            this.txt_NombreProducto_Inventario.Size = new System.Drawing.Size(508, 43);
+            this.txt_NombreProducto_Inventario.TabIndex = 107;
             // 
             // label30
             // 
@@ -494,21 +536,21 @@
             this.label30.Text = "Ordenar";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2ComboBox7
+            // cmbox_Ordenar_Inventario
             // 
-            this.guna2ComboBox7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox7.BorderRadius = 10;
-            this.guna2ComboBox7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox7.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2ComboBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox7.ItemHeight = 37;
-            this.guna2ComboBox7.Location = new System.Drawing.Point(24, 667);
-            this.guna2ComboBox7.Name = "guna2ComboBox7";
-            this.guna2ComboBox7.Size = new System.Drawing.Size(507, 43);
-            this.guna2ComboBox7.TabIndex = 105;
+            this.cmbox_Ordenar_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_Ordenar_Inventario.BorderRadius = 10;
+            this.cmbox_Ordenar_Inventario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_Ordenar_Inventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Ordenar_Inventario.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Ordenar_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Ordenar_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_Ordenar_Inventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_Ordenar_Inventario.ItemHeight = 37;
+            this.cmbox_Ordenar_Inventario.Location = new System.Drawing.Point(24, 667);
+            this.cmbox_Ordenar_Inventario.Name = "cmbox_Ordenar_Inventario";
+            this.cmbox_Ordenar_Inventario.Size = new System.Drawing.Size(507, 43);
+            this.cmbox_Ordenar_Inventario.TabIndex = 105;
             // 
             // label28
             // 
@@ -523,18 +565,18 @@
             this.label28.Text = "Precio venta (max)";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2NumericUpDown2
+            // nuc_Preciomax_Inventario
             // 
-            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown2.BorderRadius = 10;
-            this.guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2NumericUpDown2.Location = new System.Drawing.Point(288, 590);
-            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
-            this.guna2NumericUpDown2.Size = new System.Drawing.Size(243, 44);
-            this.guna2NumericUpDown2.TabIndex = 103;
-            this.guna2NumericUpDown2.TextOffset = new System.Drawing.Point(5, 0);
-            this.guna2NumericUpDown2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
+            this.nuc_Preciomax_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.nuc_Preciomax_Inventario.BorderRadius = 10;
+            this.nuc_Preciomax_Inventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nuc_Preciomax_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.nuc_Preciomax_Inventario.Location = new System.Drawing.Point(288, 590);
+            this.nuc_Preciomax_Inventario.Name = "nuc_Preciomax_Inventario";
+            this.nuc_Preciomax_Inventario.Size = new System.Drawing.Size(243, 44);
+            this.nuc_Preciomax_Inventario.TabIndex = 103;
+            this.nuc_Preciomax_Inventario.TextOffset = new System.Drawing.Point(5, 0);
+            this.nuc_Preciomax_Inventario.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
             // 
             // label29
             // 
@@ -549,18 +591,18 @@
             this.label29.Text = "Precio venta (min)";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2NumericUpDown3
+            // nuc_Preciomin_Inventario
             // 
-            this.guna2NumericUpDown3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown3.BorderRadius = 10;
-            this.guna2NumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2NumericUpDown3.Location = new System.Drawing.Point(25, 590);
-            this.guna2NumericUpDown3.Name = "guna2NumericUpDown3";
-            this.guna2NumericUpDown3.Size = new System.Drawing.Size(243, 44);
-            this.guna2NumericUpDown3.TabIndex = 101;
-            this.guna2NumericUpDown3.TextOffset = new System.Drawing.Point(5, 0);
-            this.guna2NumericUpDown3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
+            this.nuc_Preciomin_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.nuc_Preciomin_Inventario.BorderRadius = 10;
+            this.nuc_Preciomin_Inventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nuc_Preciomin_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.nuc_Preciomin_Inventario.Location = new System.Drawing.Point(25, 590);
+            this.nuc_Preciomin_Inventario.Name = "nuc_Preciomin_Inventario";
+            this.nuc_Preciomin_Inventario.Size = new System.Drawing.Size(243, 44);
+            this.nuc_Preciomin_Inventario.TabIndex = 101;
+            this.nuc_Preciomin_Inventario.TextOffset = new System.Drawing.Point(5, 0);
+            this.nuc_Preciomin_Inventario.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
             // 
             // label27
             // 
@@ -575,18 +617,18 @@
             this.label27.Text = "Costo (max)";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2NumericUpDown1
+            // nuc_Costomax_Inventario
             // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.BorderRadius = 10;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(286, 516);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(245, 44);
-            this.guna2NumericUpDown1.TabIndex = 99;
-            this.guna2NumericUpDown1.TextOffset = new System.Drawing.Point(5, 0);
-            this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
+            this.nuc_Costomax_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.nuc_Costomax_Inventario.BorderRadius = 10;
+            this.nuc_Costomax_Inventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nuc_Costomax_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.nuc_Costomax_Inventario.Location = new System.Drawing.Point(286, 516);
+            this.nuc_Costomax_Inventario.Name = "nuc_Costomax_Inventario";
+            this.nuc_Costomax_Inventario.Size = new System.Drawing.Size(245, 44);
+            this.nuc_Costomax_Inventario.TabIndex = 99;
+            this.nuc_Costomax_Inventario.TextOffset = new System.Drawing.Point(5, 0);
+            this.nuc_Costomax_Inventario.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
             // 
             // label26
             // 
@@ -601,18 +643,18 @@
             this.label26.Text = "Costo (min)";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // nuc_Stock_Producto
+            // nuc_Costomin_Inventario
             // 
-            this.nuc_Stock_Producto.BackColor = System.Drawing.Color.Transparent;
-            this.nuc_Stock_Producto.BorderRadius = 10;
-            this.nuc_Stock_Producto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nuc_Stock_Producto.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.nuc_Stock_Producto.Location = new System.Drawing.Point(25, 516);
-            this.nuc_Stock_Producto.Name = "nuc_Stock_Producto";
-            this.nuc_Stock_Producto.Size = new System.Drawing.Size(243, 44);
-            this.nuc_Stock_Producto.TabIndex = 97;
-            this.nuc_Stock_Producto.TextOffset = new System.Drawing.Point(5, 0);
-            this.nuc_Stock_Producto.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
+            this.nuc_Costomin_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.nuc_Costomin_Inventario.BorderRadius = 10;
+            this.nuc_Costomin_Inventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nuc_Costomin_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.nuc_Costomin_Inventario.Location = new System.Drawing.Point(25, 516);
+            this.nuc_Costomin_Inventario.Name = "nuc_Costomin_Inventario";
+            this.nuc_Costomin_Inventario.Size = new System.Drawing.Size(243, 44);
+            this.nuc_Costomin_Inventario.TabIndex = 97;
+            this.nuc_Costomin_Inventario.TextOffset = new System.Drawing.Point(5, 0);
+            this.nuc_Costomin_Inventario.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
             // 
             // label24
             // 
@@ -627,21 +669,21 @@
             this.label24.Text = "Activo";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2ComboBox5
+            // cmbox_Estado_Inventario
             // 
-            this.guna2ComboBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox5.BorderRadius = 10;
-            this.guna2ComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox5.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2ComboBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox5.ItemHeight = 37;
-            this.guna2ComboBox5.Location = new System.Drawing.Point(287, 440);
-            this.guna2ComboBox5.Name = "guna2ComboBox5";
-            this.guna2ComboBox5.Size = new System.Drawing.Size(244, 43);
-            this.guna2ComboBox5.TabIndex = 95;
+            this.cmbox_Estado_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_Estado_Inventario.BorderRadius = 10;
+            this.cmbox_Estado_Inventario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_Estado_Inventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Estado_Inventario.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Estado_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Estado_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_Estado_Inventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_Estado_Inventario.ItemHeight = 37;
+            this.cmbox_Estado_Inventario.Location = new System.Drawing.Point(287, 440);
+            this.cmbox_Estado_Inventario.Name = "cmbox_Estado_Inventario";
+            this.cmbox_Estado_Inventario.Size = new System.Drawing.Size(244, 43);
+            this.cmbox_Estado_Inventario.TabIndex = 95;
             // 
             // label25
             // 
@@ -656,79 +698,21 @@
             this.label25.Text = "Stock";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2ComboBox6
+            // cmbox_Stock_Inventario
             // 
-            this.guna2ComboBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox6.BorderRadius = 10;
-            this.guna2ComboBox6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox6.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2ComboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox6.ItemHeight = 37;
-            this.guna2ComboBox6.Location = new System.Drawing.Point(25, 440);
-            this.guna2ComboBox6.Name = "guna2ComboBox6";
-            this.guna2ComboBox6.Size = new System.Drawing.Size(243, 43);
-            this.guna2ComboBox6.TabIndex = 93;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(283, 344);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(58, 18);
-            this.label20.TabIndex = 92;
-            this.label20.Text = "Modelo";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 10;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 37;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(286, 365);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(245, 43);
-            this.guna2ComboBox2.TabIndex = 91;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label23.Location = new System.Drawing.Point(21, 344);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(50, 18);
-            this.label23.TabIndex = 90;
-            this.label23.Text = "Marca";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // guna2ComboBox4
-            // 
-            this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.BorderRadius = 10;
-            this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2ComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox4.ItemHeight = 37;
-            this.guna2ComboBox4.Location = new System.Drawing.Point(24, 365);
-            this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.Size = new System.Drawing.Size(244, 43);
-            this.guna2ComboBox4.TabIndex = 89;
+            this.cmbox_Stock_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_Stock_Inventario.BorderRadius = 10;
+            this.cmbox_Stock_Inventario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_Stock_Inventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Stock_Inventario.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Stock_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Stock_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_Stock_Inventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_Stock_Inventario.ItemHeight = 37;
+            this.cmbox_Stock_Inventario.Location = new System.Drawing.Point(25, 440);
+            this.cmbox_Stock_Inventario.Name = "cmbox_Stock_Inventario";
+            this.cmbox_Stock_Inventario.Size = new System.Drawing.Size(243, 43);
+            this.cmbox_Stock_Inventario.TabIndex = 93;
             // 
             // label22
             // 
@@ -743,21 +727,21 @@
             this.label22.Text = "Proveedor";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2ComboBox3
+            // cmbox_Proveedor_Inventario
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderRadius = 10;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.ItemHeight = 37;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(286, 288);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(245, 43);
-            this.guna2ComboBox3.TabIndex = 87;
+            this.cmbox_Proveedor_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_Proveedor_Inventario.BorderRadius = 10;
+            this.cmbox_Proveedor_Inventario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_Proveedor_Inventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Proveedor_Inventario.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Proveedor_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Proveedor_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_Proveedor_Inventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_Proveedor_Inventario.ItemHeight = 37;
+            this.cmbox_Proveedor_Inventario.Location = new System.Drawing.Point(286, 288);
+            this.cmbox_Proveedor_Inventario.Name = "cmbox_Proveedor_Inventario";
+            this.cmbox_Proveedor_Inventario.Size = new System.Drawing.Size(245, 43);
+            this.cmbox_Proveedor_Inventario.TabIndex = 87;
             // 
             // label21
             // 
@@ -772,88 +756,88 @@
             this.label21.Text = "Categoría";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2ComboBox1
+            // cmbox_Categoria_Inventario
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 37;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(24, 288);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(244, 43);
-            this.guna2ComboBox1.TabIndex = 85;
+            this.cmbox_Categoria_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_Categoria_Inventario.BorderRadius = 15;
+            this.cmbox_Categoria_Inventario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_Categoria_Inventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Categoria_Inventario.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Categoria_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_Categoria_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_Categoria_Inventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_Categoria_Inventario.ItemHeight = 37;
+            this.cmbox_Categoria_Inventario.Location = new System.Drawing.Point(24, 288);
+            this.cmbox_Categoria_Inventario.Name = "cmbox_Categoria_Inventario";
+            this.cmbox_Categoria_Inventario.Size = new System.Drawing.Size(244, 43);
+            this.cmbox_Categoria_Inventario.TabIndex = 85;
             // 
-            // guna2TextBox2
+            // txt_SKU_Inventario
             // 
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderRadius = 15;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(286, 215);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "Ej: PRD-0000";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(245, 43);
-            this.guna2TextBox2.TabIndex = 84;
+            this.txt_SKU_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.txt_SKU_Inventario.BorderRadius = 15;
+            this.txt_SKU_Inventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SKU_Inventario.DefaultText = "";
+            this.txt_SKU_Inventario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_SKU_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_SKU_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SKU_Inventario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SKU_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SKU_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_SKU_Inventario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SKU_Inventario.Location = new System.Drawing.Point(286, 215);
+            this.txt_SKU_Inventario.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_SKU_Inventario.Name = "txt_SKU_Inventario";
+            this.txt_SKU_Inventario.PlaceholderText = "Ej: PRD-0000";
+            this.txt_SKU_Inventario.SelectedText = "";
+            this.txt_SKU_Inventario.Size = new System.Drawing.Size(245, 43);
+            this.txt_SKU_Inventario.TabIndex = 84;
             // 
-            // guna2Button3
+            // btn_LimpiarFiltros_Inventario
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 15;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button3.Location = new System.Drawing.Point(287, 730);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(244, 44);
-            this.guna2Button3.TabIndex = 82;
-            this.guna2Button3.Text = "Limpiar";
+            this.btn_LimpiarFiltros_Inventario.Animated = true;
+            this.btn_LimpiarFiltros_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_LimpiarFiltros_Inventario.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_LimpiarFiltros_Inventario.BorderRadius = 15;
+            this.btn_LimpiarFiltros_Inventario.BorderThickness = 1;
+            this.btn_LimpiarFiltros_Inventario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LimpiarFiltros_Inventario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LimpiarFiltros_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_LimpiarFiltros_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_LimpiarFiltros_Inventario.FillColor = System.Drawing.Color.White;
+            this.btn_LimpiarFiltros_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_LimpiarFiltros_Inventario.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarFiltros_Inventario.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_LimpiarFiltros_Inventario.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarFiltros_Inventario.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_LimpiarFiltros_Inventario.Location = new System.Drawing.Point(287, 730);
+            this.btn_LimpiarFiltros_Inventario.Name = "btn_LimpiarFiltros_Inventario";
+            this.btn_LimpiarFiltros_Inventario.Size = new System.Drawing.Size(244, 44);
+            this.btn_LimpiarFiltros_Inventario.TabIndex = 82;
+            this.btn_LimpiarFiltros_Inventario.Text = "Limpiar";
             // 
-            // guna2Button4
+            // btn_AplicarFiltros_Inventario
             // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 15;
-            this.guna2Button4.BorderThickness = 1;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.White;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button4.Location = new System.Drawing.Point(23, 730);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(247, 44);
-            this.guna2Button4.TabIndex = 81;
-            this.guna2Button4.Text = "Aplicar";
+            this.btn_AplicarFiltros_Inventario.Animated = true;
+            this.btn_AplicarFiltros_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AplicarFiltros_Inventario.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_AplicarFiltros_Inventario.BorderRadius = 15;
+            this.btn_AplicarFiltros_Inventario.BorderThickness = 1;
+            this.btn_AplicarFiltros_Inventario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AplicarFiltros_Inventario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AplicarFiltros_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AplicarFiltros_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_AplicarFiltros_Inventario.FillColor = System.Drawing.Color.White;
+            this.btn_AplicarFiltros_Inventario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_AplicarFiltros_Inventario.ForeColor = System.Drawing.Color.Black;
+            this.btn_AplicarFiltros_Inventario.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_AplicarFiltros_Inventario.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_AplicarFiltros_Inventario.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_AplicarFiltros_Inventario.Location = new System.Drawing.Point(23, 730);
+            this.btn_AplicarFiltros_Inventario.Name = "btn_AplicarFiltros_Inventario";
+            this.btn_AplicarFiltros_Inventario.Size = new System.Drawing.Size(247, 44);
+            this.btn_AplicarFiltros_Inventario.TabIndex = 81;
+            this.btn_AplicarFiltros_Inventario.Text = "Aplicar";
             // 
             // label5
             // 
@@ -881,21 +865,21 @@
             this.label2.Text = "SKU/Código";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cmbox_EstadoFiltro_Proveedor
+            // cmbox_FiltrarFecha_Inventario
             // 
-            this.cmbox_EstadoFiltro_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.cmbox_EstadoFiltro_Proveedor.BorderRadius = 10;
-            this.cmbox_EstadoFiltro_Proveedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbox_EstadoFiltro_Proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_EstadoFiltro_Proveedor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_EstadoFiltro_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_EstadoFiltro_Proveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbox_EstadoFiltro_Proveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbox_EstadoFiltro_Proveedor.ItemHeight = 37;
-            this.cmbox_EstadoFiltro_Proveedor.Location = new System.Drawing.Point(23, 215);
-            this.cmbox_EstadoFiltro_Proveedor.Name = "cmbox_EstadoFiltro_Proveedor";
-            this.cmbox_EstadoFiltro_Proveedor.Size = new System.Drawing.Size(245, 43);
-            this.cmbox_EstadoFiltro_Proveedor.TabIndex = 76;
+            this.cmbox_FiltrarFecha_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_FiltrarFecha_Inventario.BorderRadius = 15;
+            this.cmbox_FiltrarFecha_Inventario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_FiltrarFecha_Inventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_FiltrarFecha_Inventario.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_FiltrarFecha_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_FiltrarFecha_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_FiltrarFecha_Inventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_FiltrarFecha_Inventario.ItemHeight = 37;
+            this.cmbox_FiltrarFecha_Inventario.Location = new System.Drawing.Point(23, 215);
+            this.cmbox_FiltrarFecha_Inventario.Name = "cmbox_FiltrarFecha_Inventario";
+            this.cmbox_FiltrarFecha_Inventario.Size = new System.Drawing.Size(245, 43);
+            this.cmbox_FiltrarFecha_Inventario.TabIndex = 76;
             // 
             // label3
             // 
@@ -911,26 +895,26 @@
             this.label3.Text = "Buscar inventario";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txt_Buscador_Proveedor
+            // txt_BuscadorFiltro_Inventario
             // 
-            this.txt_Buscador_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Buscador_Proveedor.BorderRadius = 15;
-            this.txt_Buscador_Proveedor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Buscador_Proveedor.DefaultText = "";
-            this.txt_Buscador_Proveedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Buscador_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Buscador_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Proveedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Proveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_Buscador_Proveedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Proveedor.Location = new System.Drawing.Point(23, 141);
-            this.txt_Buscador_Proveedor.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Buscador_Proveedor.Name = "txt_Buscador_Proveedor";
-            this.txt_Buscador_Proveedor.PlaceholderText = "Escribe para filtrar...";
-            this.txt_Buscador_Proveedor.SelectedText = "";
-            this.txt_Buscador_Proveedor.Size = new System.Drawing.Size(508, 43);
-            this.txt_Buscador_Proveedor.TabIndex = 73;
+            this.txt_BuscadorFiltro_Inventario.BackColor = System.Drawing.Color.Transparent;
+            this.txt_BuscadorFiltro_Inventario.BorderRadius = 15;
+            this.txt_BuscadorFiltro_Inventario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_BuscadorFiltro_Inventario.DefaultText = "";
+            this.txt_BuscadorFiltro_Inventario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_BuscadorFiltro_Inventario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_BuscadorFiltro_Inventario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_BuscadorFiltro_Inventario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_BuscadorFiltro_Inventario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_BuscadorFiltro_Inventario.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_BuscadorFiltro_Inventario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_BuscadorFiltro_Inventario.Location = new System.Drawing.Point(23, 141);
+            this.txt_BuscadorFiltro_Inventario.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_BuscadorFiltro_Inventario.Name = "txt_BuscadorFiltro_Inventario";
+            this.txt_BuscadorFiltro_Inventario.PlaceholderText = "Escribe para filtrar...";
+            this.txt_BuscadorFiltro_Inventario.SelectedText = "";
+            this.txt_BuscadorFiltro_Inventario.Size = new System.Drawing.Size(508, 43);
+            this.txt_BuscadorFiltro_Inventario.TabIndex = 73;
             // 
             // label6
             // 
@@ -945,19 +929,19 @@
             this.label6.Text = "Fecha hasta:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2DateTimePicker2
+            // dtp_FechaHasta_Inventario
             // 
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(286, 65);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(245, 38);
-            this.guna2DateTimePicker2.TabIndex = 69;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2025, 8, 21, 23, 30, 26, 774);
+            this.dtp_FechaHasta_Inventario.Checked = true;
+            this.dtp_FechaHasta_Inventario.FillColor = System.Drawing.Color.White;
+            this.dtp_FechaHasta_Inventario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_FechaHasta_Inventario.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_FechaHasta_Inventario.Location = new System.Drawing.Point(286, 65);
+            this.dtp_FechaHasta_Inventario.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_FechaHasta_Inventario.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_FechaHasta_Inventario.Name = "dtp_FechaHasta_Inventario";
+            this.dtp_FechaHasta_Inventario.Size = new System.Drawing.Size(245, 38);
+            this.dtp_FechaHasta_Inventario.TabIndex = 69;
+            this.dtp_FechaHasta_Inventario.Value = new System.DateTime(2025, 8, 21, 23, 30, 26, 774);
             // 
             // label1
             // 
@@ -972,19 +956,19 @@
             this.label1.Text = "Fecha desde:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2DateTimePicker1
+            // dtp_Fechadesde_Inventario
             // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(23, 65);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(245, 38);
-            this.guna2DateTimePicker1.TabIndex = 67;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 8, 21, 23, 30, 26, 774);
+            this.dtp_Fechadesde_Inventario.Checked = true;
+            this.dtp_Fechadesde_Inventario.FillColor = System.Drawing.Color.White;
+            this.dtp_Fechadesde_Inventario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_Fechadesde_Inventario.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_Fechadesde_Inventario.Location = new System.Drawing.Point(23, 65);
+            this.dtp_Fechadesde_Inventario.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_Fechadesde_Inventario.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_Fechadesde_Inventario.Name = "dtp_Fechadesde_Inventario";
+            this.dtp_Fechadesde_Inventario.Size = new System.Drawing.Size(245, 38);
+            this.dtp_Fechadesde_Inventario.TabIndex = 67;
+            this.dtp_Fechadesde_Inventario.Value = new System.DateTime(2025, 8, 21, 23, 30, 26, 774);
             // 
             // label
             // 
@@ -1007,7 +991,7 @@
             this.guna2GradientPanel3.BorderRadius = 10;
             this.guna2GradientPanel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel3.Controls.Add(this.label7);
-            this.guna2GradientPanel3.Controls.Add(this.label8);
+            this.guna2GradientPanel3.Controls.Add(this.lbl_StockTotal);
             this.guna2GradientPanel3.Controls.Add(this.label9);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
@@ -1031,17 +1015,17 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "0";
             // 
-            // label8
+            // lbl_StockTotal
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(15, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 40);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "--";
+            this.lbl_StockTotal.AutoSize = true;
+            this.lbl_StockTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_StockTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StockTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_StockTotal.Location = new System.Drawing.Point(15, 41);
+            this.lbl_StockTotal.Name = "lbl_StockTotal";
+            this.lbl_StockTotal.Size = new System.Drawing.Size(41, 40);
+            this.lbl_StockTotal.TabIndex = 46;
+            this.lbl_StockTotal.Text = "--";
             // 
             // label9
             // 
@@ -1065,7 +1049,7 @@
             this.guna2GradientPanel4.BorderRadius = 10;
             this.guna2GradientPanel4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel4.Controls.Add(this.label10);
-            this.guna2GradientPanel4.Controls.Add(this.label11);
+            this.guna2GradientPanel4.Controls.Add(this.lblStockCritico);
             this.guna2GradientPanel4.Controls.Add(this.label12);
             this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
@@ -1089,17 +1073,17 @@
             this.label10.TabIndex = 46;
             this.label10.Text = "0";
             // 
-            // label11
+            // lblStockCritico
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(15, 41);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 40);
-            this.label11.TabIndex = 46;
-            this.label11.Text = "--";
+            this.lblStockCritico.AutoSize = true;
+            this.lblStockCritico.BackColor = System.Drawing.Color.Transparent;
+            this.lblStockCritico.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockCritico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblStockCritico.Location = new System.Drawing.Point(15, 41);
+            this.lblStockCritico.Name = "lblStockCritico";
+            this.lblStockCritico.Size = new System.Drawing.Size(41, 40);
+            this.lblStockCritico.TabIndex = 46;
+            this.lblStockCritico.Text = "--";
             // 
             // label12
             // 
@@ -1123,7 +1107,7 @@
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel5.Controls.Add(this.label14);
-            this.guna2GradientPanel5.Controls.Add(this.label15);
+            this.guna2GradientPanel5.Controls.Add(this.lblValorStock);
             this.guna2GradientPanel5.Controls.Add(this.label16);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
@@ -1147,17 +1131,17 @@
             this.label14.TabIndex = 46;
             this.label14.Text = "0";
             // 
-            // label15
+            // lblValorStock
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(15, 41);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 40);
-            this.label15.TabIndex = 46;
-            this.label15.Text = "--";
+            this.lblValorStock.AutoSize = true;
+            this.lblValorStock.BackColor = System.Drawing.Color.Transparent;
+            this.lblValorStock.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblValorStock.Location = new System.Drawing.Point(15, 41);
+            this.lblValorStock.Name = "lblValorStock";
+            this.lblValorStock.Size = new System.Drawing.Size(41, 40);
+            this.lblValorStock.TabIndex = 46;
+            this.lblValorStock.Text = "--";
             // 
             // label16
             // 
@@ -1192,13 +1176,14 @@
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            this.pnl_dgv_Inventario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Inventario)).EndInit();
             this.Panel_VentasH.ResumeLayout(false);
             this.Panel_VentasH.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuc_Stock_Producto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuc_Preciomax_Inventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuc_Preciomin_Inventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuc_Costomax_Inventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuc_Costomin_Inventario)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
@@ -1212,68 +1197,67 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button btn_Grafica_Inventario;
+        private Guna.UI2.WinForms.Guna2Button btn_Tabla_Inventario;
         private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label lbl_Total_Facturas;
-        private System.Windows.Forms.Label lbl_VentasH;
+        private System.Windows.Forms.Label lbl_Items;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btn_Export_PDF_Inventario;
         private System.Windows.Forms.Label label18;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btn_Export_Excel_Inventario;
         private System.Windows.Forms.Label label17;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_BuscarResultados_Inventario;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_Inventario;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2GradientPanel Panel_VentasH;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btn_LimpiarFiltros_Inventario;
+        private Guna.UI2.WinForms.Guna2Button btn_AplicarFiltros_Inventario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbox_EstadoFiltro_Proveedor;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_FiltrarFecha_Inventario;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Buscador_Proveedor;
+        private Guna.UI2.WinForms.Guna2TextBox txt_BuscadorFiltro_Inventario;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_FechaHasta_Inventario;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_Fechadesde_Inventario;
         private System.Windows.Forms.Label label;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txt_SKU_Inventario;
         private System.Windows.Forms.Label label21;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private System.Windows.Forms.Label label20;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private System.Windows.Forms.Label label23;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_Categoria_Inventario;
         private System.Windows.Forms.Label label22;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_Proveedor_Inventario;
         private System.Windows.Forms.Label label24;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox5;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_Estado_Inventario;
         private System.Windows.Forms.Label label25;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox6;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_Stock_Inventario;
         private System.Windows.Forms.Label label26;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nuc_Stock_Producto;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nuc_Costomin_Inventario;
         private System.Windows.Forms.Label label27;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nuc_Costomax_Inventario;
         private System.Windows.Forms.Label label28;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nuc_Preciomax_Inventario;
         private System.Windows.Forms.Label label29;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown3;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nuc_Preciomin_Inventario;
         private System.Windows.Forms.Label label30;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox7;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_Ordenar_Inventario;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_StockTotal;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblStockCritico;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblValorStock;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label20;
+        private Guna.UI2.WinForms.Guna2TextBox txt_NombreProducto_Inventario;
+        private Guna.UI2.WinForms.Guna2Panel pnl_dgv_Inventario;
     }
 }

@@ -156,6 +156,9 @@
     <Compile Include="Loggin\Session.cs" />
     <Compile Include="Mappers\SecurityDbBootstrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Reportes\ReporteClientesServiceSql.cs" />
+    <Compile Include="Repositories\Reportes\ReporteInventarioRepository.cs" />
+    <Compile Include="Repositories\Reportes\ReporteServicioRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Security\Dpapi.cs" />
     <Compile Include="Security\RememberMeStore.cs" />

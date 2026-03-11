@@ -241,6 +241,12 @@
     <Compile Include="Controls\Proveedor\ProveedorTaskCard.Designer.cs">
       <DependentUpon>ProveedorTaskCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Reportes\Form_SeleccionarClienteTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Reportes\Form_SeleccionarClienteTecnico.Designer.cs">
+      <DependentUpon>Form_SeleccionarClienteTecnico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Reportes_Navegacion.cs" />
     <Compile Include="Controls\Usuarios\UsuariosTaskCard.cs">
       <SubType>UserControl</SubType>
@@ -356,6 +362,8 @@
     <Compile Include="Logica_Presentacion\Facturacion\Form_Facturacion_Consulta.Designer.cs">
       <DependentUpon>Form_Facturacion_Consulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica_Presentacion\Reportes\Helpers\ExcelExportHelper.cs" />
+    <Compile Include="Logica_Presentacion\Reportes\Helpers\PdfExportHelper.cs" />
     <Compile Include="Logica_Presentacion\Reportes\UC_Report_Cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -411,6 +419,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Proveedor\ProveedorTaskCard.resx">
       <DependentUpon>ProveedorTaskCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Reportes\Form_SeleccionarClienteTecnico.resx">
+      <DependentUpon>Form_SeleccionarClienteTecnico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Usuarios\UsuariosTaskCard.resx">
       <DependentUpon>UsuariosTaskCard.cs</DependentUpon>

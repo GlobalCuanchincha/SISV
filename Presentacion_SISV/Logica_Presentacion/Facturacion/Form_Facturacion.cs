@@ -1,9 +1,10 @@
-﻿using Dominio_SISV.DTOs;
+﻿using Capa_Corte_Transversal.Loggin;
+using Dominio_SISV.DTOs;
+using Dominio_SISV.DTOs.Facturacion;
+using Dominio_SISV.Services.Facturacion;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
@@ -22,15 +23,30 @@ namespace Union_Formularios_SISV.Forms.Ventas
         private List<CatalogItemVM> _catalogAll = new List<CatalogItemVM>();
 
         private int? _clienteIdActual = null;
-        private decimal _descuentoPct = 0m; // 0..100
+        private decimal _descuentoPct = 0m;
 
         private readonly Dictionary<string, FacturaItemCard> _detalleByKey =
             new Dictionary<string, FacturaItemCard>(StringComparer.OrdinalIgnoreCase);
 
-        public Form_Facturacion()
+        private IFacturacionService _facturacionService;
+
+        public Form_Facturacion() : this(null)
+        {
+        }
+
+        public Form_Facturacion(IFacturacionService facturacionService)
         {
             InitializeComponent();
+            _facturacionService = facturacionService;
             Load += (s, e) => Ventas_RuntimeInit();
+        }
+
+        private IFacturacionService GetFacturacionService()
+        {
+            if (_facturacionService == null)
+                _facturacionService = new FacturacionService(GetConnectionString());
+
+            return _facturacionService;
         }
 
         public void Ventas_RuntimeInit()
@@ -38,7 +54,6 @@ namespace Union_Formularios_SISV.Forms.Ventas
             if (_initDone) return;
             _initDone = true;
 
-            // Flows
             if (flowCatalog != null)
             {
                 flowCatalog.FlowDirection = FlowDirection.TopDown;
@@ -55,14 +70,12 @@ namespace Union_Formularios_SISV.Forms.Ventas
                 flowDetalleItems.SizeChanged += (s, e) => FixAllDetalleCardsWidth();
             }
 
-            // Navegación a consulta
             if (btn_Consultar_View != null)
             {
                 btn_Consultar_View.Click -= btn_Consultar_View_Click;
                 btn_Consultar_View.Click += btn_Consultar_View_Click;
             }
 
-            // Cédula Enter (KeyDown + KeyPress para asegurar)
             if (txt_cedula_VentasFacturas != null)
             {
                 txt_cedula_VentasFacturas.KeyDown -= txt_cedula_VentasFacturas_KeyDown;
@@ -72,7 +85,6 @@ namespace Union_Formularios_SISV.Forms.Ventas
                 txt_cedula_VentasFacturas.KeyPress += txt_cedula_VentasFacturas_KeyPress;
             }
 
-            // Buscar / Tipo filtros
             if (txt_buscar_VentasFacturas != null)
             {
                 txt_buscar_VentasFacturas.TextChanged -= filtros_Changed;
@@ -93,14 +105,17 @@ namespace Union_Formularios_SISV.Forms.Ventas
                 }
             }
 
-            // Botón añadir (valida stock <= 0)
+            if (cmbox_TipoPago_Factura != null)
+            {
+                cmbox_TipoPago_Factura.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+
             if (btn_añadir_VentasFacturas != null)
             {
                 btn_añadir_VentasFacturas.Click -= btn_añadir_VentasFacturas_Click;
                 btn_añadir_VentasFacturas.Click += btn_añadir_VentasFacturas_Click;
             }
 
-            // Descuento: valores [x%]
             InitComboDescuento_Brackets();
 
             if (btn_aplicar_descuento_VentasFacturas != null)
@@ -121,16 +136,11 @@ namespace Union_Formularios_SISV.Forms.Ventas
                 btn_Guardar_Factura_VentasFacturas.Click += btn_Guardar_Factura_VentasFacturas_Click;
             }
 
-            // Cargar catálogo desde procedures (con precio real)
             LoadCatalogFromProcedures();
-
-            // Nuevo estado inicial
+            LoadTiposPago();
             ResetFacturaNueva();
         }
 
-        // ------------------------
-        // NAVEGACIÓN
-        // ------------------------
         private void btn_Consultar_View_Click(object sender, EventArgs e)
         {
             var main = Application.OpenForms.OfType<Form_Panel_Principal>().FirstOrDefault();
@@ -144,9 +154,6 @@ namespace Union_Formularios_SISV.Forms.Ventas
             main.OpenChild(new Form_Facturacion_Consulta(), "Ventas / Facturación", "Consultar / Anular");
         }
 
-        // ------------------------
-        // CÉDULA + ENTER
-        // ------------------------
         private void txt_cedula_VentasFacturas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
@@ -157,10 +164,9 @@ namespace Union_Formularios_SISV.Forms.Ventas
         private void txt_cedula_VentasFacturas_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
                 e.Handled = true;
-            }
         }
+
         private void BuscarClientePorCedula_UI()
         {
             string ced = (txt_cedula_VentasFacturas.Text ?? "").Trim();
@@ -174,28 +180,11 @@ namespace Union_Formularios_SISV.Forms.Ventas
 
             try
             {
-                var cs = GetConnectionString();
-                var repo = new ClienteProcRepository(cs);
-
-                var cli = repo.GetByCedula(ced);
+                var cli = GetFacturacionService().BuscarClientePorCedula(ced);
 
                 if (cli == null)
                 {
-                    _clienteIdActual = cli.ClienteID;
-
-                    if (!_clienteIdActual.HasValue || _clienteIdActual.Value <= 0)
-                    {
-                        _clienteIdActual = null;
-                        MessageBox.Show(
-                            "Cliente encontrado, pero no se pudo resolver ClienteID.\n" +
-                            "Verifica que el SP crm.usp_Cliente_GetByCedula esté siendo usado y devuelva ClienteID.",
-                            "SISV",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning
-                        );
-                        return;
-                    }
-
+                    _clienteIdActual = null;
 
                     txt_telefono_VentasFacturas.Text = "";
                     txt_nombre_VentasFacturas.Text = "";
@@ -213,7 +202,18 @@ namespace Union_Formularios_SISV.Forms.Ventas
                     return;
                 }
 
-                _clienteIdActual = cli.ClienteID;
+                _clienteIdActual = cli.ClienteID > 0 ? (int?)cli.ClienteID : null;
+
+                if (!_clienteIdActual.HasValue)
+                {
+                    MessageBox.Show(
+                        "Cliente encontrado, pero no se pudo resolver ClienteID.",
+                        "SISV",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                    return;
+                }
 
                 txt_telefono_VentasFacturas.Text = cli.Telefono ?? "";
                 txt_nombre_VentasFacturas.Text = cli.Nombre ?? "";
@@ -228,30 +228,66 @@ namespace Union_Formularios_SISV.Forms.Ventas
             }
         }
 
-        // ------------------------
-        // CATÁLOGO (PROCEDURES)
-        // ------------------------
         private void LoadCatalogFromProcedures()
         {
             try
             {
-                var cs = GetConnectionString();
-                var repo = new CatalogoProcRepository(cs);
-
-                _catalogAll = repo.GetCatalogo();
+                _catalogAll = GetFacturacionService().ObtenerCatalogo() ?? new List<CatalogItemVM>();
                 RenderCatalogo(ApplyCatalogFilters(_catalogAll));
             }
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "No se pudo cargar el catálogo desde la base de datos.\n\n" +
-                    "Asegúrate de tener los Stored Procedures de catálogo.\n\n" +
-                    ex.Message,
+                    "No se pudo cargar el catálogo desde la base de datos.\n\n" + ex.Message,
                     "SISV",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
             }
+        }
+
+        private void LoadTiposPago()
+        {
+            if (cmbox_TipoPago_Factura == null) return;
+
+            try
+            {
+                var lista = new List<TipoPagoDto>
+                {
+                    new TipoPagoDto { TipoPagoID = 0, Nombre = "-- Seleccione --" }
+                };
+
+                var tipos = GetFacturacionService().ListarTiposPago();
+                if (tipos != null && tipos.Count > 0)
+                    lista.AddRange(tipos);
+
+                cmbox_TipoPago_Factura.DataSource = null;
+                cmbox_TipoPago_Factura.DisplayMember = "Nombre";
+                cmbox_TipoPago_Factura.ValueMember = "TipoPagoID";
+                cmbox_TipoPago_Factura.DataSource = lista;
+                cmbox_TipoPago_Factura.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "No se pudo cargar el tipo de pago.\n\n" + ex.Message,
+                    "SISV",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
+
+        private int GetTipoPagoSeleccionado()
+        {
+            if (cmbox_TipoPago_Factura == null || cmbox_TipoPago_Factura.SelectedValue == null)
+                return 0;
+
+            if (cmbox_TipoPago_Factura.SelectedValue is int id)
+                return id;
+
+            int.TryParse(cmbox_TipoPago_Factura.SelectedValue.ToString(), out id);
+            return id;
         }
 
         private void filtros_Changed(object sender, EventArgs e)
@@ -360,9 +396,6 @@ namespace Union_Formularios_SISV.Forms.Ventas
             card.Width = w;
         }
 
-        // ------------------------
-        // AÑADIR A DETALLE
-        // ------------------------
         private void btn_añadir_VentasFacturas_Click(object sender, EventArgs e)
         {
             AddSelectedCatalogToDetalle();
@@ -473,9 +506,6 @@ namespace Union_Formularios_SISV.Forms.Ventas
                 .ToList();
         }
 
-        // ------------------------
-        // DESCUENTO [x%]
-        // ------------------------
         private void InitComboDescuento_Brackets()
         {
             if (cmbox_descuento_VentasFacturas == null) return;
@@ -516,9 +546,6 @@ namespace Union_Formularios_SISV.Forms.Ventas
             UpdateTotales();
         }
 
-        // ------------------------
-        // TOTALES
-        // ------------------------
         private void UpdateTotales()
         {
             var items = GetDetalleFacturaItems();
@@ -558,29 +585,40 @@ namespace Union_Formularios_SISV.Forms.Ventas
             if (lbl_Stock_selccionado_VentasFacturas != null) lbl_Stock_selccionado_VentasFacturas.Text = "—";
 
             _descuentoPct = 0m;
+
             if (cmbox_descuento_VentasFacturas != null && cmbox_descuento_VentasFacturas.Items.Count > 0)
                 cmbox_descuento_VentasFacturas.SelectedIndex = 0;
+
+            if (cmbox_TipoPago_Factura != null && cmbox_TipoPago_Factura.Items.Count > 0)
+                cmbox_TipoPago_Factura.SelectedIndex = 0;
 
             UpdateTotales();
 
             try
             {
-                var cs = GetConnectionString();
-                var fact = new FacturaProcRepository(cs);
-                string codigo = fact.GetNextCodigoFactura();
-                if (!string.IsNullOrWhiteSpace(codigo) && lbl_Codigo_VentasFacturas != null)
-                    lbl_Codigo_VentasFacturas.Text = codigo;
+                string codigo = GetFacturacionService().ObtenerSiguienteCodigoFactura();
+
+                if (lbl_Codigo_VentasFacturas != null)
+                    lbl_Codigo_VentasFacturas.Text = string.IsNullOrWhiteSpace(codigo) ? "" : codigo.Trim();
             }
-            catch
+            catch (Exception ex)
             {
-                if (lbl_Codigo_VentasFacturas != null && string.IsNullOrWhiteSpace(lbl_Codigo_VentasFacturas.Text))
-                    lbl_Codigo_VentasFacturas.Text = "FAC-0001";
+                if (lbl_Codigo_VentasFacturas != null)
+                    lbl_Codigo_VentasFacturas.Text = "";
+
+                MessageBox.Show(
+                    "No se pudo generar el siguiente número de factura.\n\n" + ex.Message,
+                    "SISV",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
             }
         }
 
         private void btn_Guardar_Factura_VentasFacturas_Click(object sender, EventArgs e)
         {
             var items = GetDetalleFacturaItems();
+
             if (items.Count == 0)
             {
                 MessageBox.Show("No hay ítems en la factura. Añade productos/servicios antes de guardar.", "SISV",
@@ -595,6 +633,30 @@ namespace Union_Formularios_SISV.Forms.Ventas
                 return;
             }
 
+            int usuarioId = Session.UsuarioId;
+            if (usuarioId <= 0)
+            {
+                MessageBox.Show("No se pudo identificar el usuario de la sesión actual.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int tipoPagoId = GetTipoPagoSeleccionado();
+            if (tipoPagoId <= 0)
+            {
+                MessageBox.Show("Debes seleccionar un tipo de pago válido.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string codigo = GetCodigoFacturaActual();
+            if (string.IsNullOrWhiteSpace(codigo))
+            {
+                MessageBox.Show("No se pudo obtener un número de factura válido.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             decimal subtotal = items.Sum(i => i.Subtotal);
             decimal descuento = Math.Round(subtotal * (_descuentoPct / 100m), 2, MidpointRounding.AwayFromZero);
             if (descuento > subtotal) descuento = subtotal;
@@ -603,31 +665,39 @@ namespace Union_Formularios_SISV.Forms.Ventas
             decimal iva = Math.Round(baseImponible * IVA_RATE, 2, MidpointRounding.AwayFromZero);
             decimal total = Math.Round(baseImponible + iva, 2, MidpointRounding.AwayFromZero);
 
-            string codigo = null;
-
             try
             {
-                var cs = GetConnectionString();
-                var fact = new FacturaProcRepository(cs);
+                var request = new CrearFacturaRequestDto
+                {
+                    UsuarioID = usuarioId,
+                    ClienteID = _clienteIdActual.Value,
+                    NumeroFactura = codigo,
+                    Subtotal = subtotal,
+                    Descuento = descuento,
+                    IVA = iva,
+                    Total = total,
+                    TipoPagoID = tipoPagoId,
+                    Items = items
+                };
 
-                var res = fact.CrearFactura(_clienteIdActual.Value, codigo, subtotal, descuento, iva, total, items);
+                var res = GetFacturacionService().CrearFactura(request);
 
-                MessageBox.Show($"Factura guardada.\nCódigo: {res.NumeroFactura}\nID: {res.FacturaID}", "SISV",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    $"Factura guardada.\nCódigo: {res.NumeroFactura}\nID: {res.FacturaID}",
+                    "SISV",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
 
                 ResetFacturaNueva();
             }
             catch (Exception ex)
             {
-                // Mostrar TODO (incluye InnerException)
                 MessageBox.Show("No se pudo guardar la factura:\n\n" + ex.ToString(), "SISV",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // ------------------------
-        // CONEXIÓN
-        // ------------------------
         private static string GetConnectionString()
         {
             var cs = ConfigurationManager.ConnectionStrings["SISV"]?.ConnectionString;
@@ -639,433 +709,9 @@ namespace Union_Formularios_SISV.Forms.Ventas
 
             return cs;
         }
-
-        // =====================================================================
-        // REPOSITORIOS POR STORED PROCEDURES (SIN SQL EMBEBIDO)
-        // =====================================================================
-
-        private sealed class ClienteVM
+        private string GetCodigoFacturaActual()
         {
-            public int ClienteID { get; set; }
-            public string Cedula { get; set; }
-            public string Telefono { get; set; }
-            public string Nombre { get; set; }
-            public string Apellido { get; set; }
-            public string Direccion { get; set; }
-            public string Email { get; set; }
-        }
-
-        private sealed class ClienteProcRepository
-        {
-            private readonly string _cs;
-            public ClienteProcRepository(string cs) { _cs = cs; }
-
-            public ClienteVM GetByCedula(string cedula)
-            {
-                var procCandidates = new[]
-                {
-                    "crm.usp_Cliente_GetByCedula",
-                    "crm.usp_Clientes_GetByCedula",
-                    "crm.usp_Cliente_BuscarPorCedula",
-                    "crm.usp_Cliente_ObtenerPorCedula"
-                };
-
-                var paramCandidates = new[]
-                {
-                    "@Cedula",
-                    "@Cedula_Clientes",
-                    "@Identificacion",
-                    "@pCedula"
-                };
-
-                using (var con = new SqlConnection(_cs))
-                {
-                    con.Open();
-
-                    foreach (var proc in procCandidates)
-                    {
-                        foreach (var pName in paramCandidates)
-                        {
-                            try
-                            {
-                                using (var cmd = new SqlCommand(proc, con))
-                                {
-                                    cmd.CommandType = CommandType.StoredProcedure;
-                                    cmd.Parameters.AddWithValue(pName, cedula);
-
-                                    using (var rd = cmd.ExecuteReader())
-                                    {
-                                        if (!rd.Read()) continue;
-
-                                        return new ClienteVM
-                                        {
-                                            ClienteID = ReadInt(rd, "ClienteID", "ClienteID_Clientes", "Id", "ID"),
-                                            Cedula = ReadString(rd, "Cedula_Clientes", "Cedula", "Identificacion"),
-                                            Telefono = ReadString(rd, "Telefono_Clientes", "Telefono", "Telefono1"),
-                                            Nombre = ReadString(rd, "Nombre_Clientes", "Nombre"),
-                                            Apellido = ReadString(rd, "Apellido_Clientes", "Apellido"),
-                                            Direccion = ReadString(rd, "Direccion_Clientes", "Direccion"),
-                                            Email = ReadString(rd, "Email_Clientes", "Email")
-                                        };
-                                    }
-                                }
-                            }
-                            catch (SqlException)
-                            {
-                                // intenta siguiente combinación
-                            }
-                        }
-                    }
-                }
-
-                return null;
-            }
-        }
-
-        private sealed class CatalogoProcRepository
-        {
-            private readonly string _cs;
-            public CatalogoProcRepository(string cs) { _cs = cs; }
-
-            public List<CatalogItemVM> GetCatalogo()
-            {
-                var productos = GetProductos();
-                var servicios = GetServicios();
-
-                var all = new List<CatalogItemVM>();
-                if (productos != null) all.AddRange(productos);
-                if (servicios != null) all.AddRange(servicios);
-
-                return all;
-            }
-
-            private List<CatalogItemVM> GetProductos()
-            {
-                var procCandidates = new[]
-                {
-                    "inv.usp_ItemsInventario_Listar",
-                    "inv.usp_ItemsInventario_ListarActivos",
-                    "inv.usp_Productos_Listar",
-                    "inv.usp_Producto_Listar"
-                };
-
-                return ExecuteCatalogProc(procCandidates, "PRODUCTO");
-            }
-
-            private List<CatalogItemVM> GetServicios()
-            {
-                var procCandidates = new[]
-                {
-                    "ops.usp_Servicios_Listar",
-                    "ops.usp_Servicio_Listar",
-                    "ops.usp_Servicios_Obtener"
-                };
-
-                return ExecuteCatalogProc(procCandidates, "SERVICIO");
-            }
-
-            private List<CatalogItemVM> ExecuteCatalogProc(string[] procCandidates, string tipoForzado)
-            {
-                var list = new List<CatalogItemVM>();
-
-                using (var con = new SqlConnection(_cs))
-                {
-                    con.Open();
-
-                    foreach (var proc in procCandidates)
-                    {
-                        try
-                        {
-                            using (var cmd = new SqlCommand(proc, con))
-                            {
-                                cmd.CommandType = CommandType.StoredProcedure;
-
-                                using (var rd = cmd.ExecuteReader())
-                                {
-                                    while (rd.Read())
-                                    {
-                                        int id = ReadInt(rd,
-                                            "ItemInventarioID", "ItemInventarioID_ItemsInventario",
-                                            "ServicioID", "ServicioID_Servicios",
-                                            "ProductoID", "ID", "Id");
-
-                                        string codigo = ReadString(rd, "SKU", "Codigo", "CodigoItem", "CodigoServicio");
-                                        string nombre = ReadString(rd, "Nombre", "NombreItem", "NombreServicio", "Descripcion");
-                                        decimal precio = ReadDecimal(rd, "Precio", "PrecioVenta", "PrecioUnitario", "Precio_Servicios", "Precio_ItemsInventario");
-                                        int? stock = ReadNullableInt(rd, "Stock", "StockActual", "Stock_ItemsInventario", "Cantidad");
-
-                                        bool activo = ReadBool(rd, "Activo", "Estado", "IsActive");
-
-                                        if (string.IsNullOrWhiteSpace(codigo))
-                                            codigo = tipoForzado == "SERVICIO" ? $"S{id:0000}" : $"PRD-{id:0000}";
-                                        if (string.IsNullOrWhiteSpace(nombre))
-                                            nombre = tipoForzado == "SERVICIO" ? $"Servicio {id}" : $"Producto {id}";
-
-                                        list.Add(new CatalogItemVM
-                                        {
-                                            Id = id,
-                                            Codigo = codigo,
-                                            Nombre = nombre,
-                                            Tipo = tipoForzado,
-                                            Precio = precio,
-                                            Stock = tipoForzado == "SERVICIO" ? (int?)null : (stock ?? 0),
-                                            Activo = activo
-                                        });
-                                    }
-                                }
-                            }
-
-                            if (list.Count > 0) break; // este proc funcionó
-                        }
-                        catch (SqlException)
-                        {
-                            // prueba el siguiente proc
-                        }
-                    }
-                }
-
-                return list;
-            }
-        }
-
-        private sealed class FacturaProcRepository
-        {
-            private readonly string _cs;
-            public FacturaProcRepository(string cs) { _cs = cs; }
-
-            public string GetNextCodigoFactura()
-            {
-                var procCandidates = new[]
-                {
-                    "bill.usp_Factura_GetNextCodigo",
-                };
-
-                using (var con = new SqlConnection(_cs))
-                {
-                    con.Open();
-
-                    foreach (var proc in procCandidates)
-                    {
-                        try
-                        {
-                            using (var cmd = new SqlCommand(proc, con))
-                            {
-                                cmd.CommandType = CommandType.StoredProcedure;
-                                object v = cmd.ExecuteScalar();
-                                string s = v == null ? null : v.ToString();
-                                if (!string.IsNullOrWhiteSpace(s)) return s.Trim();
-                            }
-                        }
-                        catch (SqlException)
-                        {
-                            // intenta siguiente
-                        }
-                    }
-                }
-
-                throw new InvalidOperationException("No se encontró un SP para generar el código de factura.");
-            }
-
-            public (int FacturaID, string NumeroFactura) CrearFactura(
-                int clienteId,
-                string numeroFactura,
-                decimal subtotal,
-                decimal descuento,
-                decimal iva,
-                decimal total,
-                List<FacturaItemVM> items)
-            {
-                const string proc = "bill.usp_Factura_Crear";
-                const string tvpType = "bill.TVP_FacturaItem"; // ✅ ÚNICO y correcto
-
-                DataTable tvp = BuildFacturaItemsTvp(items);
-
-                using (var con = new SqlConnection(_cs))
-                {
-                    con.Open();
-
-                    // Validación rápida: confirma que el TYPE existe en esta BD
-                    using (var check = new SqlCommand(
-                        "SELECT 1 FROM sys.types WHERE is_table_type=1 AND SCHEMA_NAME(schema_id)=@s AND name=@n", con))
-                    {
-                        check.Parameters.AddWithValue("@s", "bill");
-                        check.Parameters.AddWithValue("@n", "TVP_FacturaItem");
-                        if (check.ExecuteScalar() == null)
-                            throw new InvalidOperationException("No existe el TYPE bill.TVP_FacturaItem. Revisa connectionString o crea el TYPE.");
-                    }
-
-                    try
-                    {
-                        using (var cmd = new SqlCommand(proc, con))
-                        {
-                            cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.CommandTimeout = 30;
-
-                            cmd.Parameters.AddWithValue("@ClienteID", clienteId);
-                            cmd.Parameters.AddWithValue("@NumeroFactura",
-                                string.IsNullOrWhiteSpace(numeroFactura) ? (object)DBNull.Value : numeroFactura);
-
-                            cmd.Parameters.AddWithValue("@Subtotal", subtotal);
-                            cmd.Parameters.AddWithValue("@Descuento", descuento);
-                            cmd.Parameters.AddWithValue("@IVA", iva);
-                            cmd.Parameters.AddWithValue("@Total", total);
-
-                            var pItems = cmd.Parameters.Add("@Items", SqlDbType.Structured);
-                            pItems.TypeName = tvpType;   // ✅ fijo
-                            pItems.Value = tvp;
-
-                            var pFacturaID = new SqlParameter("@FacturaID", SqlDbType.Int)
-                            {
-                                Direction = ParameterDirection.Output
-                            };
-                            cmd.Parameters.Add(pFacturaID);
-
-                            var pNumOut = new SqlParameter("@NumeroFacturaOut", SqlDbType.VarChar, 20)
-                            {
-                                Direction = ParameterDirection.Output
-                            };
-                            cmd.Parameters.Add(pNumOut);
-
-                            cmd.ExecuteNonQuery();
-
-                            int id = (pFacturaID.Value == DBNull.Value) ? 0 : Convert.ToInt32(pFacturaID.Value);
-                            string num = (pNumOut.Value == DBNull.Value) ? (numeroFactura ?? "") : pNumOut.Value.ToString();
-
-                            if (id <= 0)
-                                throw new InvalidOperationException("El SP ejecutó pero no devolvió @FacturaID (OUTPUT). Revisa bill.usp_Factura_Crear.");
-
-                            if (string.IsNullOrWhiteSpace(num))
-                                num = numeroFactura ?? "";
-
-                            return (id, num);
-                        }
-                    }
-                    catch (SqlException ex)
-                    {
-                        throw new InvalidOperationException(
-                            "No se pudo ejecutar bill.usp_Factura_Crear.\n" +
-                            $"Intento: SP={proc} | TVP={tvpType}\n\n" +
-                            "Detalle SQL:\n" + ex.Message,
-                            ex
-                        );
-                    }
-                }
-            }
-
-            private static DataTable BuildFacturaItemsTvp(List<FacturaItemVM> items)
-            {
-                // bill.TVP_FacturaItem:
-                // ItemInventarioID (int), ServicioID (int), Cantidad (int), PrecioUnitario (decimal), Subtotal (decimal)
-                var dt = new DataTable();
-                dt.Columns.Add("ItemInventarioID", typeof(int));
-                dt.Columns.Add("ServicioID", typeof(int));
-                dt.Columns.Add("Cantidad", typeof(int));
-                dt.Columns.Add("PrecioUnitario", typeof(decimal));
-                dt.Columns.Add("Subtotal", typeof(decimal));
-
-                foreach (var it in items)
-                {
-                    int? itemInv = it.ItemInventarioID;
-                    int? serv = it.ServicioID;
-
-                    var row = dt.NewRow();
-                    row["ItemInventarioID"] = itemInv.HasValue ? (object)itemInv.Value : DBNull.Value;
-                    row["ServicioID"] = serv.HasValue ? (object)serv.Value : DBNull.Value;
-                    row["Cantidad"] = it.Cantidad;
-                    row["PrecioUnitario"] = it.PrecioUnitario;
-                    row["Subtotal"] = it.Subtotal;
-                    dt.Rows.Add(row);
-                }
-
-                return dt;
-            }
-        }
-
-        // ------------------------
-        // LECTORES (sin SQL)
-        // ------------------------
-        private static bool Has(IDataRecord rd, string name)
-        {
-            for (int i = 0; i < rd.FieldCount; i++)
-                if (string.Equals(rd.GetName(i), name, StringComparison.OrdinalIgnoreCase))
-                    return true;
-            return false;
-        }
-
-        private static int ReadInt(IDataRecord rd, params string[] names)
-        {
-            foreach (var n in names)
-            {
-                if (!Has(rd, n)) continue;
-                object v = rd[n];
-                if (v == null || v == DBNull.Value) continue;
-                if (int.TryParse(v.ToString(), out int x)) return x;
-            }
-            return 0;
-        }
-
-        private static int? ReadNullableInt(IDataRecord rd, params string[] names)
-        {
-            foreach (var n in names)
-            {
-                if (!Has(rd, n)) continue;
-                object v = rd[n];
-                if (v == null || v == DBNull.Value) continue;
-                if (int.TryParse(v.ToString(), out int x)) return x;
-            }
-            return null;
-        }
-
-        private static decimal ReadDecimal(IDataRecord rd, params string[] names)
-        {
-            foreach (var n in names)
-            {
-                if (!Has(rd, n)) continue;
-                object v = rd[n];
-                if (v == null || v == DBNull.Value) continue;
-
-                if (v is decimal d) return d;
-
-                if (decimal.TryParse(v.ToString(), NumberStyles.Any, CultureInfo.CurrentCulture, out decimal x))
-                    return x;
-
-                if (decimal.TryParse(v.ToString(), NumberStyles.Any, CultureInfo.InvariantCulture, out x))
-                    return x;
-            }
-            return 0m;
-        }
-
-        private static string ReadString(IDataRecord rd, params string[] names)
-        {
-            foreach (var n in names)
-            {
-                if (!Has(rd, n)) continue;
-                object v = rd[n];
-                if (v == null || v == DBNull.Value) continue;
-                string s = v.ToString();
-                if (!string.IsNullOrWhiteSpace(s)) return s;
-            }
-            return "";
-        }
-
-        private static bool ReadBool(IDataRecord rd, params string[] names)
-        {
-            foreach (var n in names)
-            {
-                if (!Has(rd, n)) continue;
-                object v = rd[n];
-                if (v == null || v == DBNull.Value) continue;
-
-                if (v is bool b) return b;
-
-                if (int.TryParse(v.ToString(), out int i))
-                    return i != 0;
-
-                var s = (v.ToString() ?? "").Trim().ToUpperInvariant();
-                if (s == "ACTIVO" || s == "A" || s == "TRUE" || s == "SI" || s == "SÍ") return true;
-                if (s == "INACTIVO" || s == "I" || s == "FALSE" || s == "NO") return false;
-            }
-            return true;
+            return (lbl_Codigo_VentasFacturas?.Text ?? "").Trim();
         }
     }
 }
