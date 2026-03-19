@@ -397,6 +397,8 @@
     <Compile Include="Logica_Presentacion\Ordenes de Servicio\Form_Ordenes_Servicio_Notificacion.Designer.cs">
       <DependentUpon>Form_Ordenes_Servicio_Notificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica_Presentacion\Principal\IResumenView.cs" />
+    <Compile Include="Logica_Presentacion\Principal\ResumenPresenter.cs" />
     <Compile Include="Logica_Presentacion\Proveedores\Form_Proveedores.cs">
       <SubType>Form</SubType>
     </Compile>

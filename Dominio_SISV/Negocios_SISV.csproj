@@ -213,6 +213,8 @@
     <Compile Include="Services\Reportes\ReporteClientesService.cs" />
     <Compile Include="Services\Reportes\ReporteInventarioService.cs" />
     <Compile Include="Services\Reportes\ReporteServicioService.cs" />
+    <Compile Include="Services\Resumen\IResumenService.cs" />
+    <Compile Include="Services\Resumen\ResumenService.cs" />
     <Compile Include="Services\Servicios\IServicioService.cs" />
     <Compile Include="Services\Servicios\ServicioService.cs" />
     <Compile Include="Services\Usuarios\GuardarUsuarioRequest.cs" />

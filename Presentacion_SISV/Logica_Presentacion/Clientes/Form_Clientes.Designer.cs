@@ -103,7 +103,7 @@
             this.Panel_Detalle_Factura.ShadowDecoration.BorderRadius = 14;
             this.Panel_Detalle_Factura.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.Panel_Detalle_Factura.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 628);
+            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 788);
             this.Panel_Detalle_Factura.TabIndex = 64;
             // 
             // guna2GradientPanel15
@@ -245,12 +245,12 @@
             this.guna2GradientPanel1.Controls.Add(this.flowClientCard);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(14, 179);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(14, 178);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(777, 433);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(777, 582);
             this.guna2GradientPanel1.TabIndex = 59;
             // 
             // flowClientCard
@@ -259,7 +259,7 @@
             this.flowClientCard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowClientCard.Location = new System.Drawing.Point(0, 0);
             this.flowClientCard.Name = "flowClientCard";
-            this.flowClientCard.Size = new System.Drawing.Size(777, 433);
+            this.flowClientCard.Size = new System.Drawing.Size(777, 582);
             this.flowClientCard.TabIndex = 0;
             // 
             // cmbox_EstadoFiltro_Clientes
@@ -553,7 +553,7 @@
             this.txt_Direccion_Clientes.Location = new System.Drawing.Point(28, 282);
             this.txt_Direccion_Clientes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_Direccion_Clientes.Name = "txt_Direccion_Clientes";
-            this.txt_Direccion_Clientes.PlaceholderText = "cliente@servicio.com";
+            this.txt_Direccion_Clientes.PlaceholderText = "Av. Siempreviva";
             this.txt_Direccion_Clientes.SelectedText = "";
             this.txt_Direccion_Clientes.Size = new System.Drawing.Size(533, 48);
             this.txt_Direccion_Clientes.TabIndex = 72;
@@ -587,7 +587,7 @@
             this.txt_Correo_Clientes.Location = new System.Drawing.Point(28, 201);
             this.txt_Correo_Clientes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_Correo_Clientes.Name = "txt_Correo_Clientes";
-            this.txt_Correo_Clientes.PlaceholderText = "Av. Siempreviva";
+            this.txt_Correo_Clientes.PlaceholderText = "cliente@servicio.com";
             this.txt_Correo_Clientes.SelectedText = "";
             this.txt_Correo_Clientes.Size = new System.Drawing.Size(256, 48);
             this.txt_Correo_Clientes.TabIndex = 70;

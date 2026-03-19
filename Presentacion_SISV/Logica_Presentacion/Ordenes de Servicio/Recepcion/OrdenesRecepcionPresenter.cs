@@ -357,7 +357,7 @@ namespace Union_Formularios_SISV.Logica_Presentacion.Ordenes_de_Servicio.Recepci
         private void UpdateActionState()
         {
             bool puedeGuardar = _ordenSeleccionadaId > 0 ? _puedeEditar : _puedeCrear;
-            bool puedeAsignar = _ordenSeleccionadaId > 0 && _puedeAsignarTecnico;
+            bool puedeAsignar = _puedeAsignarTecnico;
 
             _view.SetPermisosAcciones(puedeGuardar, puedeAsignar);
         }

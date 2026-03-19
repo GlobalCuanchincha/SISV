@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using Union_Formularios_SISV.Controls.Ventas;
+using Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos;
 
 namespace Union_Formularios_SISV.Forms.Ventas
 {
@@ -30,12 +31,32 @@ namespace Union_Formularios_SISV.Forms.Ventas
             new Dictionary<string, FacturaItemCard>(StringComparer.OrdinalIgnoreCase);
 
         private IFacturacionService _facturacionService;
+
         private PermissionContext Perms
         {
             get
             {
                 return new PermissionContext(Session.Permisos ?? new HashSet<string>(StringComparer.OrdinalIgnoreCase));
             }
+        }
+
+        public Form_Facturacion() : this(null)
+        {
+        }
+
+        public Form_Facturacion(IFacturacionService facturacionService)
+        {
+            InitializeComponent();
+            _facturacionService = facturacionService;
+            Load += (s, e) => Ventas_RuntimeInit();
+        }
+
+        private IFacturacionService GetFacturacionService()
+        {
+            if (_facturacionService == null)
+                _facturacionService = new FacturacionService(GetConnectionString());
+
+            return _facturacionService;
         }
 
         private void ApplyPermisosFacturacionUI()
@@ -62,41 +83,23 @@ namespace Union_Formularios_SISV.Forms.Ventas
         {
             Control[] controls =
             {
-        txt_cedula_VentasFacturas,
-        txt_buscar_VentasFacturas,
-        cmbox_tipo_VentasFacturas,
-        flowCatalog,
-        btn_añadir_VentasFacturas,
-        flowDetalleItems,
-        cmbox_descuento_VentasFacturas,
-        btn_aplicar_descuento_VentasFacturas,
-        cmbox_TipoPago_Factura,
-        btn_Guardar_Factura_VentasFacturas,
-        btn_Nueva_Factura_VentasFacturas
-    };
+                txt_cedula_VentasFacturas,
+                btn_SeleccionarCliente,
+                txt_buscar_VentasFacturas,
+                cmbox_tipo_VentasFacturas,
+                flowCatalog,
+                btn_añadir_VentasFacturas,
+                flowDetalleItems,
+                cmbox_descuento_VentasFacturas,
+                btn_aplicar_descuento_VentasFacturas,
+                cmbox_TipoPago_Factura,
+                btn_Guardar_Factura_VentasFacturas,
+                btn_Nueva_Factura_VentasFacturas
+            };
 
             for (int i = 0; i < controls.Length; i++)
                 if (controls[i] != null)
                     controls[i].Enabled = enabled;
-        }
-
-        public Form_Facturacion() : this(null)
-        {
-        }
-
-        public Form_Facturacion(IFacturacionService facturacionService)
-        {
-            InitializeComponent();
-            _facturacionService = facturacionService;
-            Load += (s, e) => Ventas_RuntimeInit();
-        }
-
-        private IFacturacionService GetFacturacionService()
-        {
-            if (_facturacionService == null)
-                _facturacionService = new FacturacionService(GetConnectionString());
-
-            return _facturacionService;
         }
 
         public void Ventas_RuntimeInit()
@@ -124,6 +127,12 @@ namespace Union_Formularios_SISV.Forms.Ventas
             {
                 btn_Consultar_View.Click -= btn_Consultar_View_Click;
                 btn_Consultar_View.Click += btn_Consultar_View_Click;
+            }
+
+            if (btn_SeleccionarCliente != null)
+            {
+                btn_SeleccionarCliente.Click -= btn_SeleccionarCliente_Click;
+                btn_SeleccionarCliente.Click += btn_SeleccionarCliente_Click;
             }
 
             if (txt_cedula_VentasFacturas != null)
@@ -200,6 +209,7 @@ namespace Union_Formularios_SISV.Forms.Ventas
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             var main = Application.OpenForms.OfType<Form_Panel_Principal>().FirstOrDefault();
             if (main == null)
             {
@@ -209,6 +219,34 @@ namespace Union_Formularios_SISV.Forms.Ventas
             }
 
             main.OpenChild(new Form_Facturacion_Consulta(), "Ventas / Facturación", "Consultar / Anular");
+        }
+
+        private void btn_SeleccionarCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var f = new Seleccion_Cliente(null))
+                {
+                    var dr = f.ShowDialog(this);
+                    if (dr != DialogResult.OK)
+                        return;
+
+                    if (string.IsNullOrWhiteSpace(f.SelectedCedula))
+                    {
+                        MessageBox.Show("No se pudo obtener la cédula del cliente seleccionado.", "SISV",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    txt_cedula_VentasFacturas.Text = f.SelectedCedula.Trim();
+                    BuscarClientePorCedula_UI();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo seleccionar el cliente:\n\n" + ex.Message, "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txt_cedula_VentasFacturas_KeyDown(object sender, KeyEventArgs e)
@@ -241,13 +279,7 @@ namespace Union_Formularios_SISV.Forms.Ventas
 
                 if (cli == null)
                 {
-                    _clienteIdActual = null;
-
-                    txt_telefono_VentasFacturas.Text = "";
-                    txt_nombre_VentasFacturas.Text = "";
-                    if (txt_apellido_VentasFacturas != null) txt_apellido_VentasFacturas.Text = "";
-                    txt_direccion_VentasFacturas.Text = "";
-                    txt_email_VentasFacturas.Text = "";
+                    LimpiarClienteActual();
 
                     MessageBox.Show(
                         $"No existe un cliente registrado con la cédula {ced}.\n\n" +
@@ -283,6 +315,17 @@ namespace Union_Formularios_SISV.Forms.Ventas
                 MessageBox.Show("Error al buscar el cliente:\n\n" + ex.Message, "SISV",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void LimpiarClienteActual()
+        {
+            _clienteIdActual = null;
+
+            txt_telefono_VentasFacturas.Text = "";
+            txt_nombre_VentasFacturas.Text = "";
+            if (txt_apellido_VentasFacturas != null) txt_apellido_VentasFacturas.Text = "";
+            txt_direccion_VentasFacturas.Text = "";
+            txt_email_VentasFacturas.Text = "";
         }
 
         private void LoadCatalogFromProcedures()
@@ -649,6 +692,9 @@ namespace Union_Formularios_SISV.Forms.Ventas
             if (cmbox_TipoPago_Factura != null && cmbox_TipoPago_Factura.Items.Count > 0)
                 cmbox_TipoPago_Factura.SelectedIndex = 0;
 
+            txt_cedula_VentasFacturas.Text = "";
+            LimpiarClienteActual();
+
             UpdateTotales();
 
             try
@@ -692,7 +738,7 @@ namespace Union_Formularios_SISV.Forms.Ventas
 
             if (_clienteIdActual == null)
             {
-                MessageBox.Show("Debes cargar un cliente válido por cédula antes de guardar la factura.", "SISV",
+                MessageBox.Show("Debes cargar un cliente válido antes de guardar la factura.", "SISV",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -757,7 +803,7 @@ namespace Union_Formularios_SISV.Forms.Ventas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo guardar la factura:\n\n" + ex.ToString(), "SISV",
+                MessageBox.Show("No se pudo guardar la factura:\n\n" + ex, "SISV",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -773,6 +819,7 @@ namespace Union_Formularios_SISV.Forms.Ventas
 
             return cs;
         }
+
         private string GetCodigoFacturaActual()
         {
             return (lbl_Codigo_VentasFacturas?.Text ?? "").Trim();

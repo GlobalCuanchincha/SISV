@@ -53,12 +53,12 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Pnl_Error = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_OcultarPass = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_MostrarPass = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.Pnl_Error.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,7 +153,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(91, 19);
+            this.label16.Location = new System.Drawing.Point(86, 18);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(74, 37);
             this.label16.TabIndex = 21;
@@ -343,27 +343,70 @@
             this.guna2Elipse2.BorderRadius = 20;
             this.guna2Elipse2.TargetControl = this.Pnl_Error;
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::Union_Formularios_SISV.Properties.Resources.png_ojo_abierto;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(370, 352);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(44, 32);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 49;
-            this.guna2PictureBox3.TabStop = false;
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(38, 12);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(18, 3);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(47, 52);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(73, 70);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 33;
             this.guna2PictureBox2.TabStop = false;
+            // 
+            // btn_OcultarPass
+            // 
+            this.btn_OcultarPass.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OcultarPass.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_OcultarPass.BorderRadius = 15;
+            this.btn_OcultarPass.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btn_OcultarPass.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_OcultarPass.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
+            this.btn_OcultarPass.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_OcultarPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_OcultarPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_OcultarPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_OcultarPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_OcultarPass.FillColor = System.Drawing.Color.Transparent;
+            this.btn_OcultarPass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_OcultarPass.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_OcultarPass.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.btn_OcultarPass.HoverState.FillColor = System.Drawing.Color.White;
+            this.btn_OcultarPass.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_OcultarPass.ImageSize = new System.Drawing.Size(0, 0);
+            this.btn_OcultarPass.Location = new System.Drawing.Point(371, 340);
+            this.btn_OcultarPass.Name = "btn_OcultarPass";
+            this.btn_OcultarPass.PressedColor = System.Drawing.Color.Empty;
+            this.btn_OcultarPass.PressedDepth = 0;
+            this.btn_OcultarPass.Size = new System.Drawing.Size(45, 43);
+            this.btn_OcultarPass.TabIndex = 120;
+            // 
+            // btn_MostrarPass
+            // 
+            this.btn_MostrarPass.BackColor = System.Drawing.Color.Transparent;
+            this.btn_MostrarPass.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_MostrarPass.BorderRadius = 15;
+            this.btn_MostrarPass.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_MostrarPass.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_MostrarPass.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
+            this.btn_MostrarPass.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_MostrarPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_MostrarPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_MostrarPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_MostrarPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_MostrarPass.FillColor = System.Drawing.Color.Transparent;
+            this.btn_MostrarPass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_MostrarPass.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_MostrarPass.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.btn_MostrarPass.HoverState.FillColor = System.Drawing.Color.White;
+            this.btn_MostrarPass.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_MostrarPass.ImageSize = new System.Drawing.Size(0, 0);
+            this.btn_MostrarPass.Location = new System.Drawing.Point(371, 343);
+            this.btn_MostrarPass.Name = "btn_MostrarPass";
+            this.btn_MostrarPass.PressedColor = System.Drawing.Color.Empty;
+            this.btn_MostrarPass.PressedDepth = 0;
+            this.btn_MostrarPass.Size = new System.Drawing.Size(45, 43);
+            this.btn_MostrarPass.TabIndex = 122;
             // 
             // Form_Login
             // 
@@ -371,7 +414,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1087, 592);
-            this.Controls.Add(this.guna2PictureBox3);
+            this.Controls.Add(this.btn_MostrarPass);
+            this.Controls.Add(this.btn_OcultarPass);
             this.Controls.Add(this.Pnl_Error);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
@@ -396,7 +440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.Pnl_Error.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -429,6 +472,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel Pnl_Error;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2Button btn_OcultarPass;
+        private Guna.UI2.WinForms.Guna2Button btn_MostrarPass;
     }
 }

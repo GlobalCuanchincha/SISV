@@ -69,6 +69,7 @@
             this.chip_Estado.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(250)))), ((int)(((byte)(251)))));
             this.chip_Estado.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chip_Estado.ForeColor = System.Drawing.Color.DarkGray;
+            this.chip_Estado.IsClosable = false;
             this.chip_Estado.Location = new System.Drawing.Point(20, 6);
             this.chip_Estado.Name = "chip_Estado";
             this.chip_Estado.Size = new System.Drawing.Size(125, 31);

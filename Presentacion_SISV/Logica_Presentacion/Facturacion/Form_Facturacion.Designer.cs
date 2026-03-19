@@ -71,6 +71,8 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.cmbox_TipoPago_Factura = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btn_Nueva_Factura_VentasFacturas = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Guardar_Factura_VentasFacturas = new Guna.UI2.WinForms.Guna2Button();
             this.txt_telefono_VentasFacturas = new Guna.UI2.WinForms.Guna2TextBox();
@@ -114,8 +116,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_DetaleFactura = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2VScrollBar3 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbox_TipoPago_Factura = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btn_SeleccionarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel8.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -797,6 +798,7 @@
             this.guna2GradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel5.Controls.Add(this.btn_SeleccionarCliente);
             this.guna2GradientPanel5.Controls.Add(this.cmbox_TipoPago_Factura);
             this.guna2GradientPanel5.Controls.Add(this.label6);
             this.guna2GradientPanel5.Controls.Add(this.btn_Nueva_Factura_VentasFacturas);
@@ -827,6 +829,35 @@
             this.guna2GradientPanel5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.guna2GradientPanel5.Size = new System.Drawing.Size(571, 715);
             this.guna2GradientPanel5.TabIndex = 64;
+            // 
+            // cmbox_TipoPago_Factura
+            // 
+            this.cmbox_TipoPago_Factura.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_TipoPago_Factura.BorderRadius = 10;
+            this.cmbox_TipoPago_Factura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_TipoPago_Factura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_TipoPago_Factura.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_TipoPago_Factura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_TipoPago_Factura.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_TipoPago_Factura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_TipoPago_Factura.ItemHeight = 37;
+            this.cmbox_TipoPago_Factura.Location = new System.Drawing.Point(17, 360);
+            this.cmbox_TipoPago_Factura.Name = "cmbox_TipoPago_Factura";
+            this.cmbox_TipoPago_Factura.Size = new System.Drawing.Size(532, 43);
+            this.cmbox_TipoPago_Factura.TabIndex = 60;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(17, 339);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 18);
+            this.label6.TabIndex = 79;
+            this.label6.Text = "Tipo de pago";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn_Nueva_Factura_VentasFacturas
             // 
@@ -884,7 +915,6 @@
             this.txt_telefono_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_telefono_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_telefono_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_telefono_VentasFacturas.Enabled = false;
             this.txt_telefono_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_telefono_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_telefono_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -893,6 +923,7 @@
             this.txt_telefono_VentasFacturas.MaxLength = 10;
             this.txt_telefono_VentasFacturas.Name = "txt_telefono_VentasFacturas";
             this.txt_telefono_VentasFacturas.PlaceholderText = "0993453412";
+            this.txt_telefono_VentasFacturas.ReadOnly = true;
             this.txt_telefono_VentasFacturas.SelectedText = "";
             this.txt_telefono_VentasFacturas.Size = new System.Drawing.Size(256, 48);
             this.txt_telefono_VentasFacturas.TabIndex = 75;
@@ -1279,7 +1310,6 @@
             this.txt_email_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_email_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_email_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_email_VentasFacturas.Enabled = false;
             this.txt_email_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_email_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_email_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1287,6 +1317,7 @@
             this.txt_email_VentasFacturas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_email_VentasFacturas.Name = "txt_email_VentasFacturas";
             this.txt_email_VentasFacturas.PlaceholderText = "cliente@servicio.com";
+            this.txt_email_VentasFacturas.ReadOnly = true;
             this.txt_email_VentasFacturas.SelectedText = "";
             this.txt_email_VentasFacturas.Size = new System.Drawing.Size(533, 48);
             this.txt_email_VentasFacturas.TabIndex = 72;
@@ -1314,7 +1345,6 @@
             this.txt_direccion_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_direccion_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_direccion_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_direccion_VentasFacturas.Enabled = false;
             this.txt_direccion_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_direccion_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_direccion_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1322,6 +1352,7 @@
             this.txt_direccion_VentasFacturas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_direccion_VentasFacturas.Name = "txt_direccion_VentasFacturas";
             this.txt_direccion_VentasFacturas.PlaceholderText = "Av. Siempreviva";
+            this.txt_direccion_VentasFacturas.ReadOnly = true;
             this.txt_direccion_VentasFacturas.SelectedText = "";
             this.txt_direccion_VentasFacturas.Size = new System.Drawing.Size(533, 48);
             this.txt_direccion_VentasFacturas.TabIndex = 70;
@@ -1349,7 +1380,6 @@
             this.txt_nombre_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_nombre_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_nombre_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_nombre_VentasFacturas.Enabled = false;
             this.txt_nombre_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_nombre_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_nombre_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1357,6 +1387,7 @@
             this.txt_nombre_VentasFacturas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_nombre_VentasFacturas.Name = "txt_nombre_VentasFacturas";
             this.txt_nombre_VentasFacturas.PlaceholderText = "Pedrito";
+            this.txt_nombre_VentasFacturas.ReadOnly = true;
             this.txt_nombre_VentasFacturas.SelectedText = "";
             this.txt_nombre_VentasFacturas.Size = new System.Drawing.Size(256, 48);
             this.txt_nombre_VentasFacturas.TabIndex = 68;
@@ -1371,7 +1402,6 @@
             this.txt_apellido_VentasFacturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_apellido_VentasFacturas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_apellido_VentasFacturas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_apellido_VentasFacturas.Enabled = false;
             this.txt_apellido_VentasFacturas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_apellido_VentasFacturas.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_apellido_VentasFacturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1379,6 +1409,7 @@
             this.txt_apellido_VentasFacturas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_apellido_VentasFacturas.Name = "txt_apellido_VentasFacturas";
             this.txt_apellido_VentasFacturas.PlaceholderText = "Pérez";
+            this.txt_apellido_VentasFacturas.ReadOnly = true;
             this.txt_apellido_VentasFacturas.SelectedText = "";
             this.txt_apellido_VentasFacturas.Size = new System.Drawing.Size(256, 48);
             this.txt_apellido_VentasFacturas.TabIndex = 67;
@@ -1427,8 +1458,9 @@
             this.txt_cedula_VentasFacturas.MaxLength = 10;
             this.txt_cedula_VentasFacturas.Name = "txt_cedula_VentasFacturas";
             this.txt_cedula_VentasFacturas.PlaceholderText = "1203464578";
+            this.txt_cedula_VentasFacturas.ReadOnly = true;
             this.txt_cedula_VentasFacturas.SelectedText = "";
-            this.txt_cedula_VentasFacturas.Size = new System.Drawing.Size(256, 48);
+            this.txt_cedula_VentasFacturas.Size = new System.Drawing.Size(137, 48);
             this.txt_cedula_VentasFacturas.TabIndex = 64;
             this.txt_cedula_VentasFacturas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cedula_VentasFacturas_KeyPress);
             // 
@@ -1507,34 +1539,27 @@
             this.guna2VScrollBar3.Size = new System.Drawing.Size(18, 736);
             this.guna2VScrollBar3.TabIndex = 66;
             // 
-            // label6
+            // btn_SeleccionarCliente
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(17, 339);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 18);
-            this.label6.TabIndex = 79;
-            this.label6.Text = "Tipo de pago";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cmbox_TipoPago_Factura
-            // 
-            this.cmbox_TipoPago_Factura.BackColor = System.Drawing.Color.Transparent;
-            this.cmbox_TipoPago_Factura.BorderRadius = 10;
-            this.cmbox_TipoPago_Factura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbox_TipoPago_Factura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_TipoPago_Factura.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_TipoPago_Factura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbox_TipoPago_Factura.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbox_TipoPago_Factura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbox_TipoPago_Factura.ItemHeight = 37;
-            this.cmbox_TipoPago_Factura.Location = new System.Drawing.Point(17, 360);
-            this.cmbox_TipoPago_Factura.Name = "cmbox_TipoPago_Factura";
-            this.cmbox_TipoPago_Factura.Size = new System.Drawing.Size(532, 43);
-            this.cmbox_TipoPago_Factura.TabIndex = 60;
+            this.btn_SeleccionarCliente.Animated = true;
+            this.btn_SeleccionarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SeleccionarCliente.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_SeleccionarCliente.BorderRadius = 15;
+            this.btn_SeleccionarCliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_SeleccionarCliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_SeleccionarCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_SeleccionarCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_SeleccionarCliente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_SeleccionarCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_SeleccionarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btn_SeleccionarCliente.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_SeleccionarCliente.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_SeleccionarCliente.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_SeleccionarCliente.Location = new System.Drawing.Point(159, 45);
+            this.btn_SeleccionarCliente.Name = "btn_SeleccionarCliente";
+            this.btn_SeleccionarCliente.Size = new System.Drawing.Size(114, 44);
+            this.btn_SeleccionarCliente.TabIndex = 80;
+            this.btn_SeleccionarCliente.Text = "Seleccionar";
             // 
             // Form_Facturacion
             // 
@@ -1673,5 +1698,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_Guardar_Factura_VentasFacturas;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2ComboBox cmbox_TipoPago_Factura;
+        private Guna.UI2.WinForms.Guna2Button btn_SeleccionarCliente;
     }
 }

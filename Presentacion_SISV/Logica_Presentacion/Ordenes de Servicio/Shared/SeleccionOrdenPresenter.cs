@@ -63,9 +63,13 @@ namespace Union_Formularios_SISV.Logica_Presentacion.Ordenes_de_Servicio.Shared
         {
             try
             {
+                int usuarioId = _view.UsuarioId;
+                string filtro = _view.FiltroSeleccionado;
+                string textoBusqueda = _view.TextoBusqueda;
+
                 var dt = await Task.Run(() => _svc.ListarParaSeleccion(
-                    _view.FiltroSeleccionado,
-                    _view.TextoBusqueda));
+                    filtro,
+                    textoBusqueda));
 
                 _view.RenderOrdenes(dt, _ordenSeleccionadaId);
                 _view.SetResultados(dt?.Rows.Count ?? 0);
@@ -75,7 +79,6 @@ namespace Union_Formularios_SISV.Logica_Presentacion.Ordenes_de_Servicio.Shared
                 _view.ShowError("No se pudo cargar el listado de órdenes.", ex);
             }
         }
-
         public void SeleccionarOrden(int ordenServicioId)
         {
             _ordenSeleccionadaId = ordenServicioId;

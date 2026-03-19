@@ -446,7 +446,7 @@
             this.Panel_Detalle_Factura.ShadowDecoration.BorderRadius = 14;
             this.Panel_Detalle_Factura.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.Panel_Detalle_Factura.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 516);
+            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 700);
             this.Panel_Detalle_Factura.TabIndex = 62;
             // 
             // guna2GradientPanel1
@@ -463,7 +463,7 @@
             this.guna2GradientPanel1.Controls.Add(this.label33);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 122);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 132);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -539,17 +539,18 @@
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.flowRecepcion);
-            this.guna2Panel1.Location = new System.Drawing.Point(22, 173);
+            this.guna2Panel1.Location = new System.Drawing.Point(22, 183);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(754, 328);
+            this.guna2Panel1.Size = new System.Drawing.Size(754, 490);
             this.guna2Panel1.TabIndex = 0;
             // 
             // flowRecepcion
             // 
+            this.flowRecepcion.AutoScroll = true;
             this.flowRecepcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowRecepcion.Location = new System.Drawing.Point(0, 0);
             this.flowRecepcion.Name = "flowRecepcion";
-            this.flowRecepcion.Size = new System.Drawing.Size(754, 328);
+            this.flowRecepcion.Size = new System.Drawing.Size(754, 490);
             this.flowRecepcion.TabIndex = 0;
             // 
             // lbl_Resultados_Recepcion

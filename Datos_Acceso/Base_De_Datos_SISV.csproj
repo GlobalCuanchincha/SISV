@@ -186,6 +186,7 @@
     <Compile Include="Repositories\Reportes\ReporteClientesServiceSql.cs" />
     <Compile Include="Repositories\Reportes\ReporteInventarioRepository.cs" />
     <Compile Include="Repositories\Reportes\ReporteServicioRepository.cs" />
+    <Compile Include="Repositories\Resumen\ResumenRepository.cs" />
     <Compile Include="Repositories\Servicios\ServicioRepository.cs" />
     <Compile Include="Repositories\Autenticacion\UserRepository.cs" />
     <Compile Include="Repositories\Usuarios\UsuarioRepository.cs" />

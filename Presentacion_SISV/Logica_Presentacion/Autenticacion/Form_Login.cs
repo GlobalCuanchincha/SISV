@@ -29,7 +29,8 @@ namespace Union_Formularios_SISV
         public Form_Login()
         {
             InitializeComponent();
-            InitErrorUi(); 
+            InitErrorUi();
+            ConfigurarTogglePassword();
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
@@ -228,7 +229,35 @@ namespace Union_Formularios_SISV
                 ShowError(ex.Message);
             }
         }
+        private void ConfigurarTogglePassword()
+        {
+            txt_pass.UseSystemPasswordChar = true;
 
+            btn_MostrarPass.Visible = true;
+            btn_OcultarPass.Visible = false;
+
+            btn_MostrarPass.Click -= btn_MostrarPass_Click;
+            btn_MostrarPass.Click += btn_MostrarPass_Click;
+
+            btn_OcultarPass.Click -= btn_OcultarPass_Click;
+            btn_OcultarPass.Click += btn_OcultarPass_Click;
+        }
+
+        private void btn_MostrarPass_Click(object sender, EventArgs e)
+        {
+            txt_pass.UseSystemPasswordChar = false;
+
+            btn_MostrarPass.Visible = false;
+            btn_OcultarPass.Visible = true;
+        }
+
+        private void btn_OcultarPass_Click(object sender, EventArgs e)
+        {
+            txt_pass.UseSystemPasswordChar = true;
+
+            btn_OcultarPass.Visible = false;
+            btn_MostrarPass.Visible = true;
+        }
         private UsuarioLoginDto GetUserByUsername(string username)
         {
             string cs = ConfigurationManager.ConnectionStrings["SISV"]?.ConnectionString;

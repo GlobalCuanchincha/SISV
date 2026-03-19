@@ -1,4 +1,5 @@
 ﻿using Capa_Corte_Transversal.Helpers;
+using Capa_Corte_Transversal.Loggin;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -16,9 +17,11 @@ namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
 
         private int? _clienteSeleccionadoId;
         private string _clienteSeleccionadoNombre;
+        private string _clienteSeleccionadoCedula;
 
         public int? SelectedClienteID => _clienteSeleccionadoId;
         public string SelectedClienteNombre => _clienteSeleccionadoNombre;
+        public string SelectedCedula => _clienteSeleccionadoCedula;
 
         public Seleccion_Cliente() : this(null) { }
 
@@ -67,10 +70,22 @@ namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
             {
                 try
                 {
-                    if (_session == null) return 0;
-                    return SessionHelper.GetUsuarioID(_session);
+                    if (_session != null)
+                    {
+                        int id = SessionHelper.GetUsuarioID(_session);
+                        if (id > 0) return id;
+                    }
                 }
-                catch { return 0; }
+                catch { }
+
+                try
+                {
+                    return Session.UsuarioId;
+                }
+                catch
+                {
+                    return 0;
+                }
             }
         }
 
@@ -120,14 +135,28 @@ namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
                 pnl.Bind(id, cedula, nombre, correo, telefono, activo);
                 pnl.SetSelected(selectedClienteId.HasValue && selectedClienteId.Value == id);
 
-                pnl.ClienteSeleccionado += (s, args) =>
+                Action seleccionar = () =>
                 {
                     foreach (Control c in flowSeleccionClientes.Controls)
                         if (c is Pnl_SeleccionClientes it)
-                            it.SetSelected(it.ClienteID == args.ClienteID);
+                            it.SetSelected(it.ClienteID == id);
 
-                    _presenter.SeleccionarCliente(args.ClienteID, args.NombreCompleto);
+                    _clienteSeleccionadoId = id;
+                    _clienteSeleccionadoNombre = nombre ?? "";
+                    _clienteSeleccionadoCedula = cedula ?? "";
                 };
+
+                pnl.ClienteSeleccionado += (s, args) =>
+                {
+                    seleccionar();
+                };
+
+                HookDoubleClickDeep(pnl, () =>
+                {
+                    seleccionar();
+                    DialogResult = DialogResult.OK;
+                    Close();
+                });
 
                 flowSeleccionClientes.Controls.Add(pnl);
             }
@@ -173,6 +202,17 @@ namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
         }
 
         // ========= Helpers =========
+
+        private static void HookDoubleClickDeep(Control root, Action onDoubleClick)
+        {
+            if (root == null || onDoubleClick == null) return;
+
+            root.DoubleClick += (s, e) => onDoubleClick();
+            root.MouseDoubleClick += (s, e) => onDoubleClick();
+
+            foreach (Control child in root.Controls)
+                HookDoubleClickDeep(child, onDoubleClick);
+        }
 
         private static int ToInt(DataRow r, string col)
         {
