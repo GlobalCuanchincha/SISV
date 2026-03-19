@@ -32,7 +32,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ordenes_Servicio_Notificacion));
             this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Notificacion = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Recepcion_Notificacion = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Equipos_Notificacion = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -56,6 +56,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_Detalle_Factura = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_Limpiar_Diagnostico = new Guna.UI2.WinForms.Guna2Button();
             this.txt_OrdenSeleccionada_Diagnostico = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Seleccionar_Orden_Diagnostico = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -94,7 +95,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.guna2GradientPanel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel15.BorderRadius = 10;
             this.guna2GradientPanel15.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel15.Controls.Add(this.guna2Button1);
+            this.guna2GradientPanel15.Controls.Add(this.btn_Notificacion);
             this.guna2GradientPanel15.Controls.Add(this.btn_Recepcion_Notificacion);
             this.guna2GradientPanel15.Controls.Add(this.btn_Equipos_Notificacion);
             this.guna2GradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -107,26 +108,26 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.guna2GradientPanel15.Size = new System.Drawing.Size(665, 64);
             this.guna2GradientPanel15.TabIndex = 68;
             // 
-            // guna2Button1
+            // btn_Notificacion
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(450, 8);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button1.TabIndex = 59;
-            this.guna2Button1.Text = "Taller / Atención";
+            this.btn_Notificacion.Animated = true;
+            this.btn_Notificacion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Notificacion.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Notificacion.BorderRadius = 15;
+            this.btn_Notificacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Notificacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Notificacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Notificacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Notificacion.FillColor = System.Drawing.Color.White;
+            this.btn_Notificacion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Notificacion.ForeColor = System.Drawing.Color.Black;
+            this.btn_Notificacion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Notificacion.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Notificacion.Location = new System.Drawing.Point(450, 8);
+            this.btn_Notificacion.Name = "btn_Notificacion";
+            this.btn_Notificacion.Size = new System.Drawing.Size(200, 45);
+            this.btn_Notificacion.TabIndex = 59;
+            this.btn_Notificacion.Text = "Taller / Atención";
             // 
             // btn_Recepcion_Notificacion
             // 
@@ -503,6 +504,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.Panel_Detalle_Factura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Panel_Detalle_Factura.BorderRadius = 10;
             this.Panel_Detalle_Factura.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.Panel_Detalle_Factura.Controls.Add(this.btn_Limpiar_Diagnostico);
             this.Panel_Detalle_Factura.Controls.Add(this.txt_OrdenSeleccionada_Diagnostico);
             this.Panel_Detalle_Factura.Controls.Add(this.btn_Seleccionar_Orden_Diagnostico);
             this.Panel_Detalle_Factura.Controls.Add(this.guna2GradientPanel1);
@@ -527,6 +529,27 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.Panel_Detalle_Factura.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 595);
             this.Panel_Detalle_Factura.TabIndex = 66;
+            // 
+            // btn_Limpiar_Diagnostico
+            // 
+            this.btn_Limpiar_Diagnostico.Animated = true;
+            this.btn_Limpiar_Diagnostico.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Limpiar_Diagnostico.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Limpiar_Diagnostico.BorderRadius = 15;
+            this.btn_Limpiar_Diagnostico.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpiar_Diagnostico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpiar_Diagnostico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Limpiar_Diagnostico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Limpiar_Diagnostico.FillColor = System.Drawing.Color.White;
+            this.btn_Limpiar_Diagnostico.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Limpiar_Diagnostico.ForeColor = System.Drawing.Color.Black;
+            this.btn_Limpiar_Diagnostico.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Limpiar_Diagnostico.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Limpiar_Diagnostico.Location = new System.Drawing.Point(279, 324);
+            this.btn_Limpiar_Diagnostico.Name = "btn_Limpiar_Diagnostico";
+            this.btn_Limpiar_Diagnostico.Size = new System.Drawing.Size(209, 45);
+            this.btn_Limpiar_Diagnostico.TabIndex = 103;
+            this.btn_Limpiar_Diagnostico.Text = "Limpiar diagnóstico";
             // 
             // txt_OrdenSeleccionada_Diagnostico
             // 
@@ -756,9 +779,9 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.btn_GuardarEstado_Diagnostico.ForeColor = System.Drawing.Color.Black;
             this.btn_GuardarEstado_Diagnostico.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
             this.btn_GuardarEstado_Diagnostico.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_GuardarEstado_Diagnostico.Location = new System.Drawing.Point(384, 324);
+            this.btn_GuardarEstado_Diagnostico.Location = new System.Drawing.Point(511, 324);
             this.btn_GuardarEstado_Diagnostico.Name = "btn_GuardarEstado_Diagnostico";
-            this.btn_GuardarEstado_Diagnostico.Size = new System.Drawing.Size(392, 45);
+            this.btn_GuardarEstado_Diagnostico.Size = new System.Drawing.Size(265, 45);
             this.btn_GuardarEstado_Diagnostico.TabIndex = 98;
             this.btn_GuardarEstado_Diagnostico.Text = "Guardar estado";
             // 
@@ -802,7 +825,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             this.btn_GuardarDiagnostico_Diagnostico.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_GuardarDiagnostico_Diagnostico.Location = new System.Drawing.Point(19, 324);
             this.btn_GuardarDiagnostico_Diagnostico.Name = "btn_GuardarDiagnostico_Diagnostico";
-            this.btn_GuardarDiagnostico_Diagnostico.Size = new System.Drawing.Size(359, 45);
+            this.btn_GuardarDiagnostico_Diagnostico.Size = new System.Drawing.Size(242, 45);
             this.btn_GuardarDiagnostico_Diagnostico.TabIndex = 60;
             this.btn_GuardarDiagnostico_Diagnostico.Text = "Guardar diagnóstico";
             // 
@@ -974,7 +997,7 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel15;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_Notificacion;
         private Guna.UI2.WinForms.Guna2Button btn_Recepcion_Notificacion;
         private Guna.UI2.WinForms.Guna2Button btn_Equipos_Notificacion;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
@@ -1022,5 +1045,6 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
         private Guna.UI2.WinForms.Guna2TextBox txt_OrdenSeleccionada_Diagnostico;
         private Guna.UI2.WinForms.Guna2TextBox txt_Correo_Notificacion;
         private Label label18;
+        private Guna.UI2.WinForms.Guna2Button btn_Limpiar_Diagnostico;
     }
 }

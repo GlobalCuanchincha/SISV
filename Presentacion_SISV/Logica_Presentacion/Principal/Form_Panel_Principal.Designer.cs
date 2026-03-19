@@ -36,7 +36,7 @@
             this.btn_CerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Reportes = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Proveedores = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Configuracion = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Servicios = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Usuarios = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_Productos = new Guna.UI2.WinForms.Guna2Button();
@@ -71,6 +71,7 @@
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gn_Notificacion = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.gn_Notificacion_Ordenes = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.Panel_Dashboard.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -106,10 +107,11 @@
             // Panel_Dashboard
             // 
             this.Panel_Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.Panel_Dashboard.Controls.Add(this.label1);
             this.Panel_Dashboard.Controls.Add(this.btn_CerrarSesion);
             this.Panel_Dashboard.Controls.Add(this.btn_Reportes);
             this.Panel_Dashboard.Controls.Add(this.btn_Proveedores);
-            this.Panel_Dashboard.Controls.Add(this.btn_Configuracion);
+            this.Panel_Dashboard.Controls.Add(this.btn_Servicios);
             this.Panel_Dashboard.Controls.Add(this.btn_Usuarios);
             this.Panel_Dashboard.Controls.Add(this.label7);
             this.Panel_Dashboard.Controls.Add(this.btn_Productos);
@@ -142,12 +144,12 @@
             this.btn_CerrarSesion.ForeColor = System.Drawing.Color.Black;
             this.btn_CerrarSesion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(165)))), ((int)(((byte)(160)))));
             this.btn_CerrarSesion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(65)))), ((int)(((byte)(54)))));
-            this.btn_CerrarSesion.Location = new System.Drawing.Point(15, 854);
+            this.btn_CerrarSesion.Location = new System.Drawing.Point(17, 854);
             this.btn_CerrarSesion.Name = "btn_CerrarSesion";
             this.btn_CerrarSesion.ShadowDecoration.BorderRadius = 20;
             this.btn_CerrarSesion.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(45)))), ((int)(((byte)(77)))));
             this.btn_CerrarSesion.ShadowDecoration.Enabled = true;
-            this.btn_CerrarSesion.Size = new System.Drawing.Size(242, 45);
+            this.btn_CerrarSesion.Size = new System.Drawing.Size(238, 45);
             this.btn_CerrarSesion.TabIndex = 63;
             this.btn_CerrarSesion.Text = "Cerrar sesion";
             this.btn_CerrarSesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -167,12 +169,12 @@
             this.btn_Reportes.ForeColor = System.Drawing.Color.Black;
             this.btn_Reportes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
             this.btn_Reportes.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
-            this.btn_Reportes.Location = new System.Drawing.Point(19, 711);
+            this.btn_Reportes.Location = new System.Drawing.Point(14, 696);
             this.btn_Reportes.Name = "btn_Reportes";
             this.btn_Reportes.ShadowDecoration.BorderRadius = 20;
             this.btn_Reportes.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(201)))), ((int)(((byte)(209)))));
             this.btn_Reportes.ShadowDecoration.Enabled = true;
-            this.btn_Reportes.Size = new System.Drawing.Size(238, 45);
+            this.btn_Reportes.Size = new System.Drawing.Size(241, 45);
             this.btn_Reportes.TabIndex = 62;
             this.btn_Reportes.Text = "Reportes";
             this.btn_Reportes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -193,7 +195,7 @@
             this.btn_Proveedores.ForeColor = System.Drawing.Color.Black;
             this.btn_Proveedores.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(191)))), ((int)(((byte)(168)))));
             this.btn_Proveedores.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(97)))), ((int)(((byte)(55)))));
-            this.btn_Proveedores.Location = new System.Drawing.Point(15, 483);
+            this.btn_Proveedores.Location = new System.Drawing.Point(17, 485);
             this.btn_Proveedores.Name = "btn_Proveedores";
             this.btn_Proveedores.ShadowDecoration.BorderRadius = 20;
             this.btn_Proveedores.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(191)))), ((int)(((byte)(168)))));
@@ -205,31 +207,31 @@
             this.btn_Proveedores.TextOffset = new System.Drawing.Point(30, 0);
             this.btn_Proveedores.Click += new System.EventHandler(this.btn_Proveedores_Click);
             // 
-            // btn_Configuracion
+            // btn_Servicios
             // 
-            this.btn_Configuracion.Animated = true;
-            this.btn_Configuracion.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Configuracion.BorderRadius = 15;
-            this.btn_Configuracion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Configuracion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Configuracion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Configuracion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Configuracion.FillColor = System.Drawing.Color.White;
-            this.btn_Configuracion.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Configuracion.ForeColor = System.Drawing.Color.Black;
-            this.btn_Configuracion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            this.btn_Configuracion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(57)))), ((int)(((byte)(174)))));
-            this.btn_Configuracion.Location = new System.Drawing.Point(17, 650);
-            this.btn_Configuracion.Name = "btn_Configuracion";
-            this.btn_Configuracion.ShadowDecoration.BorderRadius = 20;
-            this.btn_Configuracion.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(132)))), ((int)(((byte)(215)))));
-            this.btn_Configuracion.ShadowDecoration.Enabled = true;
-            this.btn_Configuracion.Size = new System.Drawing.Size(238, 45);
-            this.btn_Configuracion.TabIndex = 60;
-            this.btn_Configuracion.Text = "Configuración";
-            this.btn_Configuracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Configuracion.TextOffset = new System.Drawing.Point(30, 0);
-            this.btn_Configuracion.Click += new System.EventHandler(this.btn_Configuracion_Click);
+            this.btn_Servicios.Animated = true;
+            this.btn_Servicios.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Servicios.BorderRadius = 15;
+            this.btn_Servicios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Servicios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Servicios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Servicios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Servicios.FillColor = System.Drawing.Color.White;
+            this.btn_Servicios.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_Servicios.ForeColor = System.Drawing.Color.Black;
+            this.btn_Servicios.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            this.btn_Servicios.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(57)))), ((int)(((byte)(174)))));
+            this.btn_Servicios.Location = new System.Drawing.Point(17, 428);
+            this.btn_Servicios.Name = "btn_Servicios";
+            this.btn_Servicios.ShadowDecoration.BorderRadius = 20;
+            this.btn_Servicios.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(132)))), ((int)(((byte)(215)))));
+            this.btn_Servicios.ShadowDecoration.Enabled = true;
+            this.btn_Servicios.Size = new System.Drawing.Size(238, 45);
+            this.btn_Servicios.TabIndex = 60;
+            this.btn_Servicios.Text = "Servicios";
+            this.btn_Servicios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Servicios.TextOffset = new System.Drawing.Point(30, 0);
+            this.btn_Servicios.Click += new System.EventHandler(this.btn_Configuracion_Click);
             // 
             // btn_Usuarios
             // 
@@ -245,12 +247,12 @@
             this.btn_Usuarios.ForeColor = System.Drawing.Color.Black;
             this.btn_Usuarios.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
             this.btn_Usuarios.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(150)))), ((int)(((byte)(223)))));
-            this.btn_Usuarios.Location = new System.Drawing.Point(17, 587);
+            this.btn_Usuarios.Location = new System.Drawing.Point(14, 581);
             this.btn_Usuarios.Name = "btn_Usuarios";
             this.btn_Usuarios.ShadowDecoration.BorderRadius = 20;
             this.btn_Usuarios.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(188)))), ((int)(((byte)(236)))));
             this.btn_Usuarios.ShadowDecoration.Enabled = true;
-            this.btn_Usuarios.Size = new System.Drawing.Size(238, 45);
+            this.btn_Usuarios.Size = new System.Drawing.Size(241, 45);
             this.btn_Usuarios.TabIndex = 59;
             this.btn_Usuarios.Text = "Usuarios";
             this.btn_Usuarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -262,7 +264,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(11, 549);
+            this.label7.Location = new System.Drawing.Point(15, 548);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 21);
             this.label7.TabIndex = 57;
@@ -282,7 +284,7 @@
             this.btn_Productos.ForeColor = System.Drawing.Color.Black;
             this.btn_Productos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(186)))), ((int)(((byte)(196)))));
             this.btn_Productos.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(45)))), ((int)(((byte)(77)))));
-            this.btn_Productos.Location = new System.Drawing.Point(17, 425);
+            this.btn_Productos.Location = new System.Drawing.Point(17, 368);
             this.btn_Productos.Name = "btn_Productos";
             this.btn_Productos.ShadowDecoration.BorderRadius = 20;
             this.btn_Productos.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(141)))), ((int)(((byte)(158)))));
@@ -299,7 +301,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(13, 387);
+            this.label6.Location = new System.Drawing.Point(15, 335);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 21);
             this.label6.TabIndex = 55;
@@ -319,12 +321,12 @@
             this.btn_Clientes.ForeColor = System.Drawing.Color.Black;
             this.btn_Clientes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(223)))), ((int)(((byte)(187)))));
             this.btn_Clientes.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(140)))), ((int)(((byte)(16)))));
-            this.btn_Clientes.Location = new System.Drawing.Point(19, 326);
+            this.btn_Clientes.Location = new System.Drawing.Point(14, 638);
             this.btn_Clientes.Name = "btn_Clientes";
             this.btn_Clientes.ShadowDecoration.BorderRadius = 20;
             this.btn_Clientes.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(100)))));
             this.btn_Clientes.ShadowDecoration.Enabled = true;
-            this.btn_Clientes.Size = new System.Drawing.Size(238, 45);
+            this.btn_Clientes.Size = new System.Drawing.Size(241, 45);
             this.btn_Clientes.TabIndex = 54;
             this.btn_Clientes.Text = "Clientes";
             this.btn_Clientes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -345,12 +347,12 @@
             this.btn_Ordenes_Servicio.ForeColor = System.Drawing.Color.Black;
             this.btn_Ordenes_Servicio.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
             this.btn_Ordenes_Servicio.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(188)))), ((int)(((byte)(135)))));
-            this.btn_Ordenes_Servicio.Location = new System.Drawing.Point(19, 265);
+            this.btn_Ordenes_Servicio.Location = new System.Drawing.Point(14, 272);
             this.btn_Ordenes_Servicio.Name = "btn_Ordenes_Servicio";
             this.btn_Ordenes_Servicio.ShadowDecoration.BorderRadius = 20;
             this.btn_Ordenes_Servicio.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(206)))), ((int)(((byte)(167)))));
             this.btn_Ordenes_Servicio.ShadowDecoration.Enabled = true;
-            this.btn_Ordenes_Servicio.Size = new System.Drawing.Size(238, 45);
+            this.btn_Ordenes_Servicio.Size = new System.Drawing.Size(241, 45);
             this.btn_Ordenes_Servicio.TabIndex = 53;
             this.btn_Ordenes_Servicio.Text = "Órdenes de servicio";
             this.btn_Ordenes_Servicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -371,12 +373,12 @@
             this.btn_Ventas.ForeColor = System.Drawing.Color.Black;
             this.btn_Ventas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(248)))), ((int)(((byte)(254)))));
             this.btn_Ventas.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(174)))), ((int)(((byte)(231)))));
-            this.btn_Ventas.Location = new System.Drawing.Point(19, 204);
+            this.btn_Ventas.Location = new System.Drawing.Point(14, 211);
             this.btn_Ventas.Name = "btn_Ventas";
             this.btn_Ventas.ShadowDecoration.BorderRadius = 20;
             this.btn_Ventas.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(221)))), ((int)(((byte)(249)))));
             this.btn_Ventas.ShadowDecoration.Enabled = true;
-            this.btn_Ventas.Size = new System.Drawing.Size(238, 45);
+            this.btn_Ventas.Size = new System.Drawing.Size(241, 45);
             this.btn_Ventas.TabIndex = 52;
             this.btn_Ventas.Text = "Facturación";
             this.btn_Ventas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -388,7 +390,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(15, 171);
+            this.label5.Location = new System.Drawing.Point(15, 178);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 21);
             this.label5.TabIndex = 51;
@@ -655,6 +657,17 @@
             this.gn_Notificacion_Ordenes.Location = new System.Drawing.Point(210, 13);
             this.gn_Notificacion_Ordenes.TargetControl = this.btn_Ordenes_Servicio;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(15, 821);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 21);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Salida ";
+            // 
             // Form_Panel_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -716,7 +729,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_Productos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2Button btn_Configuracion;
+        private Guna.UI2.WinForms.Guna2Button btn_Servicios;
         private Guna.UI2.WinForms.Guna2Button btn_Usuarios;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
@@ -727,5 +740,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_Proveedores;
         private Guna.UI2.WinForms.Guna2Button btn_Reportes;
         private Guna.UI2.WinForms.Guna2Button btn_CerrarSesion;
+        private System.Windows.Forms.Label label1;
     }
 }

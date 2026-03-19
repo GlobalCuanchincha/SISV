@@ -1,13 +1,12 @@
 ﻿using Capa_Corte_Transversal.Loggin;
 using Dominio_SISV.Services.Reportes;
+using Dominio_SISV.DTOs.Clientes;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Windows.Forms;
+using Union_Formularios_SISV.Forms.Clientes;
 using Union_Formularios_SISV.Controls.Ordenes_de_Servicio;
 using Union_Formularios_SISV.Controls.Usuarios;
-using Union_Formularios_SISV.Forms.Clientes;
 
 namespace Union_Formularios_SISV.Controls.Reportes
 {

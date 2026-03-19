@@ -31,34 +31,45 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Facturacion_Consulta));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btn_LimpiarFactura = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Guardar_Factura = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_VerDetalle_CFactura = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Anular_Factura_CFactura = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_MotivoAnulacion_CFactura = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_FacturaSeleccionada_CFactura = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_Detalle_Factura = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_Añadir_Items = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.Cmbox_TipoServicio = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.pnl_flowConsultaFactrura = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowConsultaFactura = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbl_Resultados_CFactura = new System.Windows.Forms.Label();
+            this.cmbox_EstadoFiltrar_CFactura = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.lbl_Descripcion_Titulo = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txt_Buscador_Items = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Buscador_Items_CFactura = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_Consultar_View = new Guna.UI2.WinForms.Guna2Button();
             this.btn_EmitirFactura_View = new Guna.UI2.WinForms.Guna2Button();
+            this.pnl_DetalleFact_CFactura = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_Volver_CFactura = new Guna.UI2.WinForms.Guna2Button();
+            this.ggggg = new Guna.UI2.WinForms.Guna2Panel();
+            this.Report_DetalleFactura_CFactura = new Microsoft.Reporting.WinForms.ReportViewer();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
-            this.guna2GradientPanel6.SuspendLayout();
             this.Panel_Detalle_Factura.SuspendLayout();
+            this.guna2GradientPanel15.SuspendLayout();
+            this.pnl_flowConsultaFactrura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel8.SuspendLayout();
+            this.pnl_DetalleFact_CFactura.SuspendLayout();
+            this.ggggg.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel2
@@ -69,7 +80,7 @@
             this.guna2GradientPanel2.BorderRadius = 10;
             this.guna2GradientPanel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel5);
-            this.guna2GradientPanel2.Controls.Add(this.label2);
+            this.guna2GradientPanel2.Controls.Add(this.lbl_FacturaSeleccionada_CFactura);
             this.guna2GradientPanel2.Controls.Add(this.label1);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -78,7 +89,7 @@
             this.guna2GradientPanel2.ShadowDecoration.BorderRadius = 20;
             this.guna2GradientPanel2.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(615, 379);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(615, 345);
             this.guna2GradientPanel2.TabIndex = 63;
             // 
             // guna2GradientPanel5
@@ -88,120 +99,87 @@
             this.guna2GradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel5.Controls.Add(this.btn_LimpiarFactura);
-            this.guna2GradientPanel5.Controls.Add(this.btn_Guardar_Factura);
-            this.guna2GradientPanel5.Controls.Add(this.guna2GradientPanel6);
-            this.guna2GradientPanel5.Controls.Add(this.guna2TextBox6);
+            this.guna2GradientPanel5.Controls.Add(this.btn_VerDetalle_CFactura);
+            this.guna2GradientPanel5.Controls.Add(this.btn_Anular_Factura_CFactura);
+            this.guna2GradientPanel5.Controls.Add(this.txt_MotivoAnulacion_CFactura);
             this.guna2GradientPanel5.Controls.Add(this.label8);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(22, 48);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(22, 53);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
             this.guna2GradientPanel5.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel5.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(571, 313);
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(571, 269);
             this.guna2GradientPanel5.TabIndex = 64;
             // 
-            // btn_LimpiarFactura
+            // btn_VerDetalle_CFactura
             // 
-            this.btn_LimpiarFactura.Animated = true;
-            this.btn_LimpiarFactura.BackColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarFactura.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarFactura.BorderRadius = 15;
-            this.btn_LimpiarFactura.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarFactura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarFactura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_LimpiarFactura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_LimpiarFactura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btn_LimpiarFactura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_LimpiarFactura.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarFactura.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btn_LimpiarFactura.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarFactura.Image = ((System.Drawing.Image)(resources.GetObject("btn_LimpiarFactura.Image")));
-            this.btn_LimpiarFactura.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_LimpiarFactura.Location = new System.Drawing.Point(293, 196);
-            this.btn_LimpiarFactura.Name = "btn_LimpiarFactura";
-            this.btn_LimpiarFactura.Size = new System.Drawing.Size(257, 44);
-            this.btn_LimpiarFactura.TabIndex = 74;
-            this.btn_LimpiarFactura.Text = "Ver detalle";
+            this.btn_VerDetalle_CFactura.Animated = true;
+            this.btn_VerDetalle_CFactura.BackColor = System.Drawing.Color.Transparent;
+            this.btn_VerDetalle_CFactura.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_VerDetalle_CFactura.BorderRadius = 15;
+            this.btn_VerDetalle_CFactura.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_VerDetalle_CFactura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_VerDetalle_CFactura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_VerDetalle_CFactura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_VerDetalle_CFactura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_VerDetalle_CFactura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_VerDetalle_CFactura.ForeColor = System.Drawing.Color.Black;
+            this.btn_VerDetalle_CFactura.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btn_VerDetalle_CFactura.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_VerDetalle_CFactura.Image = ((System.Drawing.Image)(resources.GetObject("btn_VerDetalle_CFactura.Image")));
+            this.btn_VerDetalle_CFactura.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_VerDetalle_CFactura.Location = new System.Drawing.Point(293, 196);
+            this.btn_VerDetalle_CFactura.Name = "btn_VerDetalle_CFactura";
+            this.btn_VerDetalle_CFactura.Size = new System.Drawing.Size(257, 44);
+            this.btn_VerDetalle_CFactura.TabIndex = 74;
+            this.btn_VerDetalle_CFactura.Text = "Ver detalle";
             // 
-            // btn_Guardar_Factura
+            // btn_Anular_Factura_CFactura
             // 
-            this.btn_Guardar_Factura.Animated = true;
-            this.btn_Guardar_Factura.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar_Factura.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Guardar_Factura.BorderRadius = 15;
-            this.btn_Guardar_Factura.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Guardar_Factura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Guardar_Factura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Guardar_Factura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Guardar_Factura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.btn_Guardar_Factura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Guardar_Factura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.btn_Guardar_Factura.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btn_Guardar_Factura.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.btn_Guardar_Factura.Image = ((System.Drawing.Image)(resources.GetObject("btn_Guardar_Factura.Image")));
-            this.btn_Guardar_Factura.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Guardar_Factura.Location = new System.Drawing.Point(19, 196);
-            this.btn_Guardar_Factura.Name = "btn_Guardar_Factura";
-            this.btn_Guardar_Factura.Size = new System.Drawing.Size(268, 44);
-            this.btn_Guardar_Factura.TabIndex = 64;
-            this.btn_Guardar_Factura.Text = "Anular factura";
+            this.btn_Anular_Factura_CFactura.Animated = true;
+            this.btn_Anular_Factura_CFactura.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Anular_Factura_CFactura.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Anular_Factura_CFactura.BorderRadius = 15;
+            this.btn_Anular_Factura_CFactura.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Anular_Factura_CFactura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Anular_Factura_CFactura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Anular_Factura_CFactura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Anular_Factura_CFactura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.btn_Anular_Factura_CFactura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Anular_Factura_CFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.btn_Anular_Factura_CFactura.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btn_Anular_Factura_CFactura.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.btn_Anular_Factura_CFactura.Image = ((System.Drawing.Image)(resources.GetObject("btn_Anular_Factura_CFactura.Image")));
+            this.btn_Anular_Factura_CFactura.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Anular_Factura_CFactura.Location = new System.Drawing.Point(19, 196);
+            this.btn_Anular_Factura_CFactura.Name = "btn_Anular_Factura_CFactura";
+            this.btn_Anular_Factura_CFactura.Size = new System.Drawing.Size(268, 44);
+            this.btn_Anular_Factura_CFactura.TabIndex = 64;
+            this.btn_Anular_Factura_CFactura.Text = "Anular factura";
             // 
-            // guna2GradientPanel6
+            // txt_MotivoAnulacion_CFactura
             // 
-            this.guna2GradientPanel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2GradientPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2GradientPanel6.BorderRadius = 10;
-            this.guna2GradientPanel6.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel6.Controls.Add(this.label15);
-            this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel6.Location = new System.Drawing.Point(19, 246);
-            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
-            this.guna2GradientPanel6.ShadowDecoration.BorderRadius = 14;
-            this.guna2GradientPanel6.ShadowDecoration.Color = System.Drawing.Color.Gray;
-            this.guna2GradientPanel6.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel6.Size = new System.Drawing.Size(533, 52);
-            this.guna2GradientPanel6.TabIndex = 59;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(19, 17);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(280, 18);
-            this.label15.TabIndex = 74;
-            this.label15.Text = "Seleccione una factura para ver el detalle.";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // guna2TextBox6
-            // 
-            this.guna2TextBox6.Animated = true;
-            this.guna2TextBox6.BorderRadius = 15;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.Enabled = false;
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(17, 41);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBox6.Multiline = true;
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PlaceholderText = "Ej: error de cobro / duplicada...";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(533, 131);
-            this.guna2TextBox6.TabIndex = 72;
+            this.txt_MotivoAnulacion_CFactura.Animated = true;
+            this.txt_MotivoAnulacion_CFactura.BorderRadius = 15;
+            this.txt_MotivoAnulacion_CFactura.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MotivoAnulacion_CFactura.DefaultText = "";
+            this.txt_MotivoAnulacion_CFactura.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_MotivoAnulacion_CFactura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_MotivoAnulacion_CFactura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MotivoAnulacion_CFactura.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MotivoAnulacion_CFactura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MotivoAnulacion_CFactura.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_MotivoAnulacion_CFactura.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MotivoAnulacion_CFactura.Location = new System.Drawing.Point(17, 41);
+            this.txt_MotivoAnulacion_CFactura.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_MotivoAnulacion_CFactura.Multiline = true;
+            this.txt_MotivoAnulacion_CFactura.Name = "txt_MotivoAnulacion_CFactura";
+            this.txt_MotivoAnulacion_CFactura.PlaceholderText = "Ej: error de cobro / duplicada...";
+            this.txt_MotivoAnulacion_CFactura.SelectedText = "";
+            this.txt_MotivoAnulacion_CFactura.Size = new System.Drawing.Size(533, 131);
+            this.txt_MotivoAnulacion_CFactura.TabIndex = 72;
             // 
             // label8
             // 
@@ -216,19 +194,19 @@
             this.label8.Text = "Motivo de anulación";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lbl_FacturaSeleccionada_CFactura
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(487, 18);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(96, 18);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Sin selección";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_FacturaSeleccionada_CFactura.AutoSize = true;
+            this.lbl_FacturaSeleccionada_CFactura.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_FacturaSeleccionada_CFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FacturaSeleccionada_CFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_FacturaSeleccionada_CFactura.Location = new System.Drawing.Point(487, 18);
+            this.lbl_FacturaSeleccionada_CFactura.Name = "lbl_FacturaSeleccionada_CFactura";
+            this.lbl_FacturaSeleccionada_CFactura.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_FacturaSeleccionada_CFactura.Size = new System.Drawing.Size(96, 18);
+            this.lbl_FacturaSeleccionada_CFactura.TabIndex = 49;
+            this.lbl_FacturaSeleccionada_CFactura.Text = "Sin selección";
+            this.lbl_FacturaSeleccionada_CFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -249,16 +227,16 @@
             this.Panel_Detalle_Factura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Panel_Detalle_Factura.BorderRadius = 10;
             this.Panel_Detalle_Factura.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.Panel_Detalle_Factura.Controls.Add(this.label5);
-            this.Panel_Detalle_Factura.Controls.Add(this.btn_Añadir_Items);
-            this.Panel_Detalle_Factura.Controls.Add(this.guna2GradientPanel1);
-            this.Panel_Detalle_Factura.Controls.Add(this.Cmbox_TipoServicio);
+            this.Panel_Detalle_Factura.Controls.Add(this.guna2GradientPanel15);
+            this.Panel_Detalle_Factura.Controls.Add(this.pnl_flowConsultaFactrura);
+            this.Panel_Detalle_Factura.Controls.Add(this.lbl_Resultados_CFactura);
+            this.Panel_Detalle_Factura.Controls.Add(this.cmbox_EstadoFiltrar_CFactura);
             this.Panel_Detalle_Factura.Controls.Add(this.label4);
             this.Panel_Detalle_Factura.Controls.Add(this.label3);
             this.Panel_Detalle_Factura.Controls.Add(this.lbl_Titulo);
             this.Panel_Detalle_Factura.Controls.Add(this.lbl_Descripcion_Titulo);
             this.Panel_Detalle_Factura.Controls.Add(this.guna2PictureBox1);
-            this.Panel_Detalle_Factura.Controls.Add(this.txt_Buscador_Items);
+            this.Panel_Detalle_Factura.Controls.Add(this.txt_Buscador_Items_CFactura);
             this.Panel_Detalle_Factura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.Panel_Detalle_Factura.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.Panel_Detalle_Factura.Location = new System.Drawing.Point(12, 92);
@@ -266,8 +244,30 @@
             this.Panel_Detalle_Factura.ShadowDecoration.BorderRadius = 14;
             this.Panel_Detalle_Factura.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.Panel_Detalle_Factura.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 484);
+            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(802, 720);
             this.Panel_Detalle_Factura.TabIndex = 62;
+            // 
+            // guna2GradientPanel15
+            // 
+            this.guna2GradientPanel15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2GradientPanel15.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2GradientPanel15.BorderRadius = 10;
+            this.guna2GradientPanel15.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel15.Controls.Add(this.label5);
+            this.guna2GradientPanel15.Controls.Add(this.label34);
+            this.guna2GradientPanel15.Controls.Add(this.label32);
+            this.guna2GradientPanel15.Controls.Add(this.label31);
+            this.guna2GradientPanel15.Controls.Add(this.label33);
+            this.guna2GradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel15.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.guna2GradientPanel15.Location = new System.Drawing.Point(22, 143);
+            this.guna2GradientPanel15.Name = "guna2GradientPanel15";
+            this.guna2GradientPanel15.ShadowDecoration.BorderRadius = 14;
+            this.guna2GradientPanel15.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.guna2GradientPanel15.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.guna2GradientPanel15.Size = new System.Drawing.Size(760, 50);
+            this.guna2GradientPanel15.TabIndex = 66;
             // 
             // label5
             // 
@@ -275,70 +275,110 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(693, 18);
+            this.label5.Location = new System.Drawing.Point(659, 16);
             this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(16, 18);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "0";
+            this.label5.Size = new System.Drawing.Size(55, 18);
+            this.label5.TabIndex = 68;
+            this.label5.Text = "Estado";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btn_Añadir_Items
+            // label34
             // 
-            this.btn_Añadir_Items.Animated = true;
-            this.btn_Añadir_Items.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Añadir_Items.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Añadir_Items.BorderRadius = 15;
-            this.btn_Añadir_Items.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Añadir_Items.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Añadir_Items.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Añadir_Items.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Añadir_Items.FillColor = System.Drawing.Color.White;
-            this.btn_Añadir_Items.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Añadir_Items.ForeColor = System.Drawing.Color.Black;
-            this.btn_Añadir_Items.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Añadir_Items.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Añadir_Items.Image = ((System.Drawing.Image)(resources.GetObject("btn_Añadir_Items.Image")));
-            this.btn_Añadir_Items.ImageOffset = new System.Drawing.Point(0, -1);
-            this.btn_Añadir_Items.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_Añadir_Items.Location = new System.Drawing.Point(656, 71);
-            this.btn_Añadir_Items.Name = "btn_Añadir_Items";
-            this.btn_Añadir_Items.Size = new System.Drawing.Size(130, 43);
-            this.btn_Añadir_Items.TabIndex = 59;
-            this.btn_Añadir_Items.Text = "Consultar";
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label34.Location = new System.Drawing.Point(527, 16);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(41, 18);
+            this.label34.TabIndex = 67;
+            this.label34.Text = "Total";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2GradientPanel1
+            // label32
             // 
-            this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2GradientPanel1.BorderRadius = 10;
-            this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 130);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
-            this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
-            this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(764, 336);
-            this.guna2GradientPanel1.TabIndex = 59;
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label32.Location = new System.Drawing.Point(384, 16);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(49, 18);
+            this.label32.TabIndex = 66;
+            this.label32.Text = "Fecha";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Cmbox_TipoServicio
+            // label31
             // 
-            this.Cmbox_TipoServicio.BackColor = System.Drawing.Color.Transparent;
-            this.Cmbox_TipoServicio.BorderRadius = 10;
-            this.Cmbox_TipoServicio.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Cmbox_TipoServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cmbox_TipoServicio.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Cmbox_TipoServicio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Cmbox_TipoServicio.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Cmbox_TipoServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Cmbox_TipoServicio.ItemHeight = 37;
-            this.Cmbox_TipoServicio.Location = new System.Drawing.Point(406, 71);
-            this.Cmbox_TipoServicio.Name = "Cmbox_TipoServicio";
-            this.Cmbox_TipoServicio.Size = new System.Drawing.Size(231, 43);
-            this.Cmbox_TipoServicio.TabIndex = 54;
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label31.Location = new System.Drawing.Point(179, 16);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(53, 18);
+            this.label31.TabIndex = 65;
+            this.label31.Text = "Cliente";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label33.Location = new System.Drawing.Point(23, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(56, 18);
+            this.label33.TabIndex = 64;
+            this.label33.Text = "Código";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnl_flowConsultaFactrura
+            // 
+            this.pnl_flowConsultaFactrura.Controls.Add(this.flowConsultaFactura);
+            this.pnl_flowConsultaFactrura.Location = new System.Drawing.Point(22, 193);
+            this.pnl_flowConsultaFactrura.Name = "pnl_flowConsultaFactrura";
+            this.pnl_flowConsultaFactrura.Size = new System.Drawing.Size(760, 506);
+            this.pnl_flowConsultaFactrura.TabIndex = 61;
+            // 
+            // flowConsultaFactura
+            // 
+            this.flowConsultaFactura.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowConsultaFactura.Location = new System.Drawing.Point(0, 0);
+            this.flowConsultaFactura.Name = "flowConsultaFactura";
+            this.flowConsultaFactura.Size = new System.Drawing.Size(760, 506);
+            this.flowConsultaFactura.TabIndex = 0;
+            // 
+            // lbl_Resultados_CFactura
+            // 
+            this.lbl_Resultados_CFactura.AutoSize = true;
+            this.lbl_Resultados_CFactura.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Resultados_CFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Resultados_CFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Resultados_CFactura.Location = new System.Drawing.Point(693, 18);
+            this.lbl_Resultados_CFactura.Name = "lbl_Resultados_CFactura";
+            this.lbl_Resultados_CFactura.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_Resultados_CFactura.Size = new System.Drawing.Size(16, 18);
+            this.lbl_Resultados_CFactura.TabIndex = 60;
+            this.lbl_Resultados_CFactura.Text = "0";
+            this.lbl_Resultados_CFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbox_EstadoFiltrar_CFactura
+            // 
+            this.cmbox_EstadoFiltrar_CFactura.BackColor = System.Drawing.Color.Transparent;
+            this.cmbox_EstadoFiltrar_CFactura.BorderRadius = 15;
+            this.cmbox_EstadoFiltrar_CFactura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbox_EstadoFiltrar_CFactura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_EstadoFiltrar_CFactura.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_EstadoFiltrar_CFactura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbox_EstadoFiltrar_CFactura.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbox_EstadoFiltrar_CFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbox_EstadoFiltrar_CFactura.ItemHeight = 37;
+            this.cmbox_EstadoFiltrar_CFactura.Location = new System.Drawing.Point(551, 71);
+            this.cmbox_EstadoFiltrar_CFactura.Name = "cmbox_EstadoFiltrar_CFactura";
+            this.cmbox_EstadoFiltrar_CFactura.Size = new System.Drawing.Size(231, 43);
+            this.cmbox_EstadoFiltrar_CFactura.TabIndex = 54;
             // 
             // label4
             // 
@@ -346,7 +386,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(404, 48);
+            this.label4.Location = new System.Drawing.Point(549, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 18);
             this.label4.TabIndex = 53;
@@ -404,27 +444,27 @@
             this.guna2PictureBox1.TabIndex = 46;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // txt_Buscador_Items
+            // txt_Buscador_Items_CFactura
             // 
-            this.txt_Buscador_Items.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Buscador_Items.BorderRadius = 15;
-            this.txt_Buscador_Items.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Buscador_Items.DefaultText = "";
-            this.txt_Buscador_Items.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Buscador_Items.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Buscador_Items.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Items.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Buscador_Items.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Items.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_Buscador_Items.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Buscador_Items.Location = new System.Drawing.Point(22, 71);
-            this.txt_Buscador_Items.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Buscador_Items.Name = "txt_Buscador_Items";
-            this.txt_Buscador_Items.PlaceholderText = "FAC-0001 / Cliente / Fecha...";
-            this.txt_Buscador_Items.SelectedText = "";
-            this.txt_Buscador_Items.Size = new System.Drawing.Size(376, 43);
-            this.txt_Buscador_Items.TabIndex = 45;
-            this.txt_Buscador_Items.TextOffset = new System.Drawing.Point(40, 0);
+            this.txt_Buscador_Items_CFactura.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Buscador_Items_CFactura.BorderRadius = 15;
+            this.txt_Buscador_Items_CFactura.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Buscador_Items_CFactura.DefaultText = "";
+            this.txt_Buscador_Items_CFactura.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Buscador_Items_CFactura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Buscador_Items_CFactura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Buscador_Items_CFactura.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Buscador_Items_CFactura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Buscador_Items_CFactura.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_Buscador_Items_CFactura.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Buscador_Items_CFactura.Location = new System.Drawing.Point(22, 71);
+            this.txt_Buscador_Items_CFactura.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Buscador_Items_CFactura.Name = "txt_Buscador_Items_CFactura";
+            this.txt_Buscador_Items_CFactura.PlaceholderText = "FAC-0001 / Cliente / Fecha...";
+            this.txt_Buscador_Items_CFactura.SelectedText = "";
+            this.txt_Buscador_Items_CFactura.Size = new System.Drawing.Size(521, 43);
+            this.txt_Buscador_Items_CFactura.TabIndex = 45;
+            this.txt_Buscador_Items_CFactura.TextOffset = new System.Drawing.Point(40, 0);
             // 
             // guna2GradientPanel8
             // 
@@ -486,27 +526,94 @@
             this.btn_EmitirFactura_View.TabIndex = 57;
             this.btn_EmitirFactura_View.Text = "Emitir factura";
             // 
-            // Form_Ventas_Consulta
+            // pnl_DetalleFact_CFactura
+            // 
+            this.pnl_DetalleFact_CFactura.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnl_DetalleFact_CFactura.BackColor = System.Drawing.Color.White;
+            this.pnl_DetalleFact_CFactura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnl_DetalleFact_CFactura.BorderRadius = 10;
+            this.pnl_DetalleFact_CFactura.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.pnl_DetalleFact_CFactura.Controls.Add(this.btn_Volver_CFactura);
+            this.pnl_DetalleFact_CFactura.Controls.Add(this.ggggg);
+            this.pnl_DetalleFact_CFactura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.pnl_DetalleFact_CFactura.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.pnl_DetalleFact_CFactura.Location = new System.Drawing.Point(820, 92);
+            this.pnl_DetalleFact_CFactura.Name = "pnl_DetalleFact_CFactura";
+            this.pnl_DetalleFact_CFactura.ShadowDecoration.BorderRadius = 20;
+            this.pnl_DetalleFact_CFactura.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.pnl_DetalleFact_CFactura.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.pnl_DetalleFact_CFactura.Size = new System.Drawing.Size(615, 720);
+            this.pnl_DetalleFact_CFactura.TabIndex = 65;
+            this.pnl_DetalleFact_CFactura.Visible = false;
+            // 
+            // btn_Volver_CFactura
+            // 
+            this.btn_Volver_CFactura.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Volver_CFactura.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Volver_CFactura.BorderRadius = 15;
+            this.btn_Volver_CFactura.BorderThickness = 1;
+            this.btn_Volver_CFactura.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_Volver_CFactura.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Volver_CFactura.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
+            this.btn_Volver_CFactura.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_Volver_CFactura.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Volver_CFactura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Volver_CFactura.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Volver_CFactura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Volver_CFactura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_Volver_CFactura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Volver_CFactura.ForeColor = System.Drawing.Color.Black;
+            this.btn_Volver_CFactura.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Volver_CFactura.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Volver_CFactura.ImageSize = new System.Drawing.Size(0, 0);
+            this.btn_Volver_CFactura.Location = new System.Drawing.Point(22, 13);
+            this.btn_Volver_CFactura.Name = "btn_Volver_CFactura";
+            this.btn_Volver_CFactura.Size = new System.Drawing.Size(45, 43);
+            this.btn_Volver_CFactura.TabIndex = 120;
+            // 
+            // ggggg
+            // 
+            this.ggggg.Controls.Add(this.Report_DetalleFactura_CFactura);
+            this.ggggg.Location = new System.Drawing.Point(22, 71);
+            this.ggggg.Name = "ggggg";
+            this.ggggg.Size = new System.Drawing.Size(571, 628);
+            this.ggggg.TabIndex = 61;
+            // 
+            // Report_DetalleFactura_CFactura
+            // 
+            this.Report_DetalleFactura_CFactura.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Report_DetalleFactura_CFactura.Location = new System.Drawing.Point(0, 0);
+            this.Report_DetalleFactura_CFactura.Name = "Report_DetalleFactura_CFactura";
+            this.Report_DetalleFactura_CFactura.ServerReport.BearerToken = null;
+            this.Report_DetalleFactura_CFactura.Size = new System.Drawing.Size(571, 628);
+            this.Report_DetalleFactura_CFactura.TabIndex = 0;
+            // 
+            // Form_Facturacion_Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1458, 855);
+            this.Controls.Add(this.pnl_DetalleFact_CFactura);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.Panel_Detalle_Factura);
             this.Controls.Add(this.guna2GradientPanel8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_Ventas_Consulta";
+            this.Name = "Form_Facturacion_Consulta";
+            this.Load += new System.EventHandler(this.Form_Facturacion_Consulta_Load);
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel5.PerformLayout();
-            this.guna2GradientPanel6.ResumeLayout(false);
-            this.guna2GradientPanel6.PerformLayout();
             this.Panel_Detalle_Factura.ResumeLayout(false);
             this.Panel_Detalle_Factura.PerformLayout();
+            this.guna2GradientPanel15.ResumeLayout(false);
+            this.guna2GradientPanel15.PerformLayout();
+            this.pnl_flowConsultaFactrura.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel8.ResumeLayout(false);
+            this.pnl_DetalleFact_CFactura.ResumeLayout(false);
+            this.ggggg.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -515,27 +622,35 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
-        private Guna.UI2.WinForms.Guna2Button btn_LimpiarFactura;
-        private Guna.UI2.WinForms.Guna2Button btn_Guardar_Factura;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
-        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2Button btn_VerDetalle_CFactura;
+        private Guna.UI2.WinForms.Guna2Button btn_Anular_Factura_CFactura;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_FacturaSeleccionada_CFactura;
         private Guna.UI2.WinForms.Guna2GradientPanel Panel_Detalle_Factura;
-        private Guna.UI2.WinForms.Guna2Button btn_Añadir_Items;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2ComboBox Cmbox_TipoServicio;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbox_EstadoFiltrar_CFactura;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.Label lbl_Descripcion_Titulo;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Buscador_Items;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Buscador_Items_CFactura;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
         private Guna.UI2.WinForms.Guna2Button btn_Consultar_View;
         private Guna.UI2.WinForms.Guna2Button btn_EmitirFactura_View;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txt_MotivoAnulacion_CFactura;
+        private System.Windows.Forms.Label lbl_Resultados_CFactura;
+        private Guna.UI2.WinForms.Guna2Panel pnl_flowConsultaFactrura;
+        private System.Windows.Forms.FlowLayoutPanel flowConsultaFactura;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnl_DetalleFact_CFactura;
+        private Guna.UI2.WinForms.Guna2Panel ggggg;
+        private Microsoft.Reporting.WinForms.ReportViewer Report_DetalleFactura_CFactura;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel15;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button btn_Volver_CFactura;
     }
 }

@@ -46,7 +46,7 @@ namespace Union_Formularios_SISV.Controls.Proveedor
             this.Cursor = Cursors.Hand;
         }
 
-        public void Bind(int id, ProveedorCardVM vm)
+        public void Bind(int id, ProveedorDetalleVM vm)
         {
             if (vm == null) return;
             Bind(id > 0 ? id : vm.ProveedorId, vm.Ruc, vm.Nombre, vm.Telefono, vm.Activo, vm.EstadoTexto);

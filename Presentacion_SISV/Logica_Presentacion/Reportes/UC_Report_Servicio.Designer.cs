@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Report_Servicio));
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label14 = new System.Windows.Forms.Label();
@@ -83,6 +83,9 @@
             this.btn_SelectTecnico_Servicio = new Guna.UI2.WinForms.Guna2Button();
             this.txt_Tecnico_Servicio = new Guna.UI2.WinForms.Guna2TextBox();
             this.Panel_VentasH = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_LimpiarOrden = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_LimpiarTecnico = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_LimpiarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.btn_OS_Servicio = new Guna.UI2.WinForms.Guna2Button();
             this.txt_OS_Servicio = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -90,9 +93,6 @@
             this.nuc_Totalmax_Servicio = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label29 = new System.Windows.Forms.Label();
             this.nuc_Totalmin_Servicio = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.btn_LimpiarCliente = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_LimpiarTecnico = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_LimpiarOrden = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -452,26 +452,26 @@
             // 
             // dgv_Servicio
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_Servicio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Servicio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            this.dgv_Servicio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Servicio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgv_Servicio.ColumnHeadersHeight = 22;
             this.dgv_Servicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Servicio.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Servicio.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgv_Servicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Servicio.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Servicio.Location = new System.Drawing.Point(0, 0);
@@ -1007,6 +1007,84 @@
             this.Panel_VentasH.Size = new System.Drawing.Size(551, 734);
             this.Panel_VentasH.TabIndex = 104;
             // 
+            // btn_LimpiarOrden
+            // 
+            this.btn_LimpiarOrden.Animated = true;
+            this.btn_LimpiarOrden.BackColor = System.Drawing.Color.Transparent;
+            this.btn_LimpiarOrden.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_LimpiarOrden.BorderRadius = 15;
+            this.btn_LimpiarOrden.BorderThickness = 1;
+            this.btn_LimpiarOrden.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_LimpiarOrden.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_LimpiarOrden.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
+            this.btn_LimpiarOrden.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_LimpiarOrden.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LimpiarOrden.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LimpiarOrden.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_LimpiarOrden.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_LimpiarOrden.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(139)))));
+            this.btn_LimpiarOrden.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_LimpiarOrden.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarOrden.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_LimpiarOrden.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarOrden.ImageSize = new System.Drawing.Size(0, 0);
+            this.btn_LimpiarOrden.Location = new System.Drawing.Point(487, 527);
+            this.btn_LimpiarOrden.Name = "btn_LimpiarOrden";
+            this.btn_LimpiarOrden.Size = new System.Drawing.Size(45, 43);
+            this.btn_LimpiarOrden.TabIndex = 121;
+            // 
+            // btn_LimpiarTecnico
+            // 
+            this.btn_LimpiarTecnico.Animated = true;
+            this.btn_LimpiarTecnico.BackColor = System.Drawing.Color.Transparent;
+            this.btn_LimpiarTecnico.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_LimpiarTecnico.BorderRadius = 15;
+            this.btn_LimpiarTecnico.BorderThickness = 1;
+            this.btn_LimpiarTecnico.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btn_LimpiarTecnico.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_LimpiarTecnico.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
+            this.btn_LimpiarTecnico.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_LimpiarTecnico.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LimpiarTecnico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LimpiarTecnico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_LimpiarTecnico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_LimpiarTecnico.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(139)))));
+            this.btn_LimpiarTecnico.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_LimpiarTecnico.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarTecnico.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_LimpiarTecnico.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarTecnico.ImageSize = new System.Drawing.Size(0, 0);
+            this.btn_LimpiarTecnico.Location = new System.Drawing.Point(487, 451);
+            this.btn_LimpiarTecnico.Name = "btn_LimpiarTecnico";
+            this.btn_LimpiarTecnico.Size = new System.Drawing.Size(45, 43);
+            this.btn_LimpiarTecnico.TabIndex = 120;
+            // 
+            // btn_LimpiarCliente
+            // 
+            this.btn_LimpiarCliente.Animated = true;
+            this.btn_LimpiarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btn_LimpiarCliente.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_LimpiarCliente.BorderRadius = 15;
+            this.btn_LimpiarCliente.BorderThickness = 1;
+            this.btn_LimpiarCliente.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btn_LimpiarCliente.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_LimpiarCliente.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
+            this.btn_LimpiarCliente.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_LimpiarCliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LimpiarCliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LimpiarCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_LimpiarCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_LimpiarCliente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(139)))));
+            this.btn_LimpiarCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_LimpiarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarCliente.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_LimpiarCliente.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarCliente.ImageSize = new System.Drawing.Size(0, 0);
+            this.btn_LimpiarCliente.Location = new System.Drawing.Point(487, 380);
+            this.btn_LimpiarCliente.Name = "btn_LimpiarCliente";
+            this.btn_LimpiarCliente.Size = new System.Drawing.Size(45, 43);
+            this.btn_LimpiarCliente.TabIndex = 119;
+            // 
             // btn_OS_Servicio
             // 
             this.btn_OS_Servicio.Animated = true;
@@ -1117,84 +1195,6 @@
             this.nuc_Totalmin_Servicio.TextOffset = new System.Drawing.Point(5, 0);
             this.nuc_Totalmin_Servicio.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(228)))));
             // 
-            // btn_LimpiarCliente
-            // 
-            this.btn_LimpiarCliente.Animated = true;
-            this.btn_LimpiarCliente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarCliente.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarCliente.BorderRadius = 15;
-            this.btn_LimpiarCliente.BorderThickness = 1;
-            this.btn_LimpiarCliente.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            this.btn_LimpiarCliente.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_LimpiarCliente.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
-            this.btn_LimpiarCliente.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_LimpiarCliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarCliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_LimpiarCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_LimpiarCliente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(139)))));
-            this.btn_LimpiarCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_LimpiarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarCliente.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_LimpiarCliente.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarCliente.ImageSize = new System.Drawing.Size(0, 0);
-            this.btn_LimpiarCliente.Location = new System.Drawing.Point(487, 380);
-            this.btn_LimpiarCliente.Name = "btn_LimpiarCliente";
-            this.btn_LimpiarCliente.Size = new System.Drawing.Size(45, 43);
-            this.btn_LimpiarCliente.TabIndex = 119;
-            // 
-            // btn_LimpiarTecnico
-            // 
-            this.btn_LimpiarTecnico.Animated = true;
-            this.btn_LimpiarTecnico.BackColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarTecnico.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarTecnico.BorderRadius = 15;
-            this.btn_LimpiarTecnico.BorderThickness = 1;
-            this.btn_LimpiarTecnico.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btn_LimpiarTecnico.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_LimpiarTecnico.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
-            this.btn_LimpiarTecnico.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_LimpiarTecnico.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarTecnico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarTecnico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_LimpiarTecnico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_LimpiarTecnico.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(139)))));
-            this.btn_LimpiarTecnico.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_LimpiarTecnico.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarTecnico.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_LimpiarTecnico.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarTecnico.ImageSize = new System.Drawing.Size(0, 0);
-            this.btn_LimpiarTecnico.Location = new System.Drawing.Point(487, 451);
-            this.btn_LimpiarTecnico.Name = "btn_LimpiarTecnico";
-            this.btn_LimpiarTecnico.Size = new System.Drawing.Size(45, 43);
-            this.btn_LimpiarTecnico.TabIndex = 120;
-            // 
-            // btn_LimpiarOrden
-            // 
-            this.btn_LimpiarOrden.Animated = true;
-            this.btn_LimpiarOrden.BackColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarOrden.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_LimpiarOrden.BorderRadius = 15;
-            this.btn_LimpiarOrden.BorderThickness = 1;
-            this.btn_LimpiarOrden.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btn_LimpiarOrden.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_LimpiarOrden.CustomImages.ImageOffset = new System.Drawing.Point(0, -18);
-            this.btn_LimpiarOrden.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_LimpiarOrden.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarOrden.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_LimpiarOrden.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_LimpiarOrden.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_LimpiarOrden.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(139)))));
-            this.btn_LimpiarOrden.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_LimpiarOrden.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarOrden.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_LimpiarOrden.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarOrden.ImageSize = new System.Drawing.Size(0, 0);
-            this.btn_LimpiarOrden.Location = new System.Drawing.Point(487, 527);
-            this.btn_LimpiarOrden.Name = "btn_LimpiarOrden";
-            this.btn_LimpiarOrden.Size = new System.Drawing.Size(45, 43);
-            this.btn_LimpiarOrden.TabIndex = 121;
-            // 
             // UC_Report_Servicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1208,7 +1208,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.Panel_VentasH);
             this.Name = "UC_Report_Servicio";
-            this.Size = new System.Drawing.Size(1894, 835);
+            this.Size = new System.Drawing.Size(1806, 835);
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel5.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);

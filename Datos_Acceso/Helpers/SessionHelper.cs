@@ -14,11 +14,7 @@ namespace Capa_Corte_Transversal.Helpers
 
             string[] candidatos =
             {
-                "UsuarioID", "UsuarioId",
-                "UserId", "UserID",
-                "IdUsuario", "IDUsuario",
-                "UsuarioID_Usuarios", "UsuarioID_Usuario",
-                "Id"
+                "UsuarioID_Usuarios", "UsuarioID"
             };
 
             var props = t.GetProperties(BindingFlags.Public | BindingFlags.Instance);

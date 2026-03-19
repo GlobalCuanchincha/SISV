@@ -1,24 +1,21 @@
 ﻿using Capa_Corte_Transversal.Helpers;
 using System;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio_SISV.Services.OrdenesServicio;
+using Union_Formularios_SISV.Logica_Presentacion.Ordenes_de_Servicio.Shared;
 
 namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
 {
-    public partial class Seleccion_Cliente : Form
+    public partial class Seleccion_Cliente : Form, ISeleccionClienteView
     {
         private readonly object _session;
-        private readonly int _usuarioId;
-        private readonly byte _rolId;
-
-        private int? _clienteSeleccionadoId = null;
-        private string _clienteSeleccionadoNombre = null;
-
         private readonly Timer _debounce = new Timer { Interval = 350 };
-        private bool _isLoading = false;
+        private readonly SeleccionClientePresenter _presenter;
+        private bool _isLoading;
+
+        private int? _clienteSeleccionadoId;
+        private string _clienteSeleccionadoNombre;
 
         public int? SelectedClienteID => _clienteSeleccionadoId;
         public string SelectedClienteNombre => _clienteSeleccionadoNombre;
@@ -30,36 +27,19 @@ namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
             InitializeComponent();
 
             _session = session;
-            _usuarioId = TryGetUsuarioSesionId();
-            _rolId = TryGetRolSesionId();
+            _presenter = new SeleccionClientePresenter(this, new OrdenesRecepcionService());
 
             Load += async (s, e) => await Form_LoadAsync();
         }
 
-        private async Task Form_LoadAsync()
+        private async System.Threading.Tasks.Task Form_LoadAsync()
         {
-            if (_usuarioId <= 0)
-            {
-                MessageBox.Show("No se pudo obtener UsuarioID de sesión.", "SISV",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Close();
-                return;
-            }
-
-            if (_rolId != 1 && _rolId != 2 && _rolId != 4)
-            {
-                MessageBox.Show("Acceso denegado.", "SISV",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Close();
-                return;
-            }
-
             _isLoading = true;
 
             _debounce.Tick += async (s, e) =>
             {
                 _debounce.Stop();
-                await BuscarClientesAsync();
+                await _presenter.BuscarAsync();
             };
 
             txt_Buscador_Items_EquiposCliente.TextChanged += (s, e) =>
@@ -72,82 +52,81 @@ namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
             cmbox_Filtrarpor_EquiposClientes.SelectedIndexChanged += async (s, e) =>
             {
                 if (_isLoading) return;
-                await BuscarClientesAsync();
+                await _presenter.BuscarAsync();
             };
 
-            // cargar filtros
-            var dtFiltros = await TryExecDataTableAsync(
-                new[] { "ops.usp_Cliente_Filtros_Listar", "dbo.usp_Cliente_Filtros_Listar" },
-                cmd => cmd.Parameters.AddWithValue("@UsuarioID", _usuarioId)
-            );
+            _isLoading = false;
+            await _presenter.InitializeAsync();
+        }
+
+        // ========= ISeleccionClienteView =========
+
+        public int UsuarioId
+        {
+            get
+            {
+                try
+                {
+                    if (_session == null) return 0;
+                    return SessionHelper.GetUsuarioID(_session);
+                }
+                catch { return 0; }
+            }
+        }
+
+        public string TextoBusqueda => (txt_Buscador_Items_EquiposCliente.Text ?? "").Trim();
+
+        public string FiltroSeleccionado
+        {
+            get
+            {
+                string v = Convert.ToString(cmbox_Filtrarpor_EquiposClientes.SelectedValue);
+                return string.IsNullOrWhiteSpace(v) ? "todos" : v;
+            }
+        }
+
+        public void BindFiltros(DataTable dt)
+        {
+            if (dt == null) dt = new DataTable();
 
             cmbox_Filtrarpor_EquiposClientes.DisplayMember = "Text";
             cmbox_Filtrarpor_EquiposClientes.ValueMember = "Value";
-            cmbox_Filtrarpor_EquiposClientes.DataSource = dtFiltros;
-
-            _isLoading = false;
-
-            await BuscarClientesAsync();
+            cmbox_Filtrarpor_EquiposClientes.DataSource = dt;
         }
 
-        private async Task BuscarClientesAsync()
+        public void RenderClientes(DataTable dt, int? selectedClienteId)
         {
-            try
-            {
-                string buscar = (txt_Buscador_Items_EquiposCliente.Text ?? "").Trim();
-                string filtro = Convert.ToString(cmbox_Filtrarpor_EquiposClientes.SelectedValue) ?? "todos";
+            if (dt == null) dt = new DataTable();
 
-                var dt = await TryExecDataTableAsync(
-                    new[] { "ops.usp_Cliente_Activo_Buscar", "dbo.usp_Cliente_Activo_Buscar" },
-                    cmd =>
-                    {
-                        cmd.Parameters.AddWithValue("@UsuarioID", _usuarioId);
-                        cmd.Parameters.AddWithValue("@FiltroPor", filtro);
-                        cmd.Parameters.AddWithValue("@Buscar", string.IsNullOrWhiteSpace(buscar) ? (object)DBNull.Value : buscar);
-                        cmd.Parameters.AddWithValue("@Top", 200);
-                    }
-                );
-
-                RenderFlow(dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "SISV - Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void RenderFlow(DataTable dt)
-        {
             flowSeleccionClientes.SuspendLayout();
             flowSeleccionClientes.Controls.Clear();
 
             foreach (DataRow r in dt.Rows)
             {
-                int id = Convert.ToInt32(r["ClienteID"]);
-                string cedula = Convert.ToString(r["Cedula"]);
-                string nombre = Convert.ToString(r["NombreCompleto"]);
-                string correo = Convert.ToString(r["Correo"]);
-                string tel = Convert.ToString(r["Telefono"]);
-                bool activo = Convert.ToBoolean(r["Activo"]);
+                int id = ToInt(r, "ClienteID");
+                if (id <= 0) continue;
 
-                var pnl = new Pnl_SeleccionClientes();
-                pnl.Width = flowSeleccionClientes.ClientSize.Width - 22;
-                pnl.Bind(id, cedula, nombre, correo, tel, activo);
-                pnl.SetSelected(_clienteSeleccionadoId.HasValue && _clienteSeleccionadoId.Value == id);
+                string cedula = ToStr(r, "Cedula");
+                string nombre = ToStr(r, "NombreCompleto");
+                string correo = ToStr(r, "Correo");
+                string telefono = ToStr(r, "Telefono");
+                bool activo = ToBool(r, "Activo");
+
+                var pnl = new Pnl_SeleccionClientes
+                {
+                    Width = Math.Max(200, flowSeleccionClientes.ClientSize.Width - 22)
+                };
+
+                pnl.Bind(id, cedula, nombre, correo, telefono, activo);
+                pnl.SetSelected(selectedClienteId.HasValue && selectedClienteId.Value == id);
 
                 pnl.ClienteSeleccionado += (s, args) =>
                 {
-                    _clienteSeleccionadoId = args.ClienteID;
-                    _clienteSeleccionadoNombre = args.NombreCompleto;
-
-                    // marcar visual
                     foreach (Control c in flowSeleccionClientes.Controls)
                         if (c is Pnl_SeleccionClientes it)
-                            it.SetSelected(it.ClienteID == _clienteSeleccionadoId);
+                            it.SetSelected(it.ClienteID == args.ClienteID);
 
-                    // aceptar al 1 click (si prefieres, cambia a doble click)
-                    DialogResult = DialogResult.OK;
-                    Close();
+                    _presenter.SeleccionarCliente(args.ClienteID, args.NombreCompleto);
                 };
 
                 flowSeleccionClientes.Controls.Add(pnl);
@@ -156,74 +135,64 @@ namespace Presentacion_SISV.Controls.Ordenes_de_Servicio.Equipos
             flowSeleccionClientes.ResumeLayout();
         }
 
-        // ===== Helpers sesión / DB =====
-        private int TryGetUsuarioSesionId()
+        public void SetResultados(int total)
         {
-            try
-            {
-                if (_session == null) return 0;
-                return SessionHelper.GetUsuarioID(_session);
-            }
-            catch { return 0; }
+            if (lbl_Clientesdisponibles_EquiposCliente != null)
+                lbl_Clientesdisponibles_EquiposCliente.Text = $"Clientes disponibles: {total}";
         }
 
-        private byte TryGetRolSesionId()
+        public void SetClienteSeleccionado(int clienteId, string nombreCompleto)
         {
-            try
-            {
-                if (_session == null) return 0;
-
-                var t = _session.GetType();
-                var p = t.GetProperty("RoleId") ?? t.GetProperty("RoleID") ?? t.GetProperty("RolId") ?? t.GetProperty("RolID");
-                if (p == null) return 0;
-
-                var v = p.GetValue(_session, null);
-                if (v == null) return 0;
-
-                return Convert.ToByte(v);
-            }
-            catch { return 0; }
+            _clienteSeleccionadoId = clienteId;
+            _clienteSeleccionadoNombre = nombreCompleto ?? "";
         }
 
-        private static async Task<DataTable> TryExecDataTableAsync(string[] sps, Action<SqlCommand> fillParams)
+        public void CloseWithOk()
         {
-            Exception last = null;
-            foreach (var sp in sps)
-            {
-                try { return await ExecDataTableAsync(sp, fillParams); }
-                catch (SqlException ex) { last = ex; }
-            }
-            throw last ?? new Exception("No se pudo ejecutar el procedimiento almacenado.");
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
-        private static string GetConnString()
+        public void CloseView()
         {
-            var cs = ConfigurationManager.ConnectionStrings["SISV"]?.ConnectionString
-                  ?? ConfigurationManager.ConnectionStrings["SISV_BD"]?.ConnectionString
-                  ?? ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
-
-            if (!string.IsNullOrWhiteSpace(cs)) return cs;
-
-            if (ConfigurationManager.ConnectionStrings.Count > 0)
-                return ConfigurationManager.ConnectionStrings[0].ConnectionString;
-
-            throw new Exception("No se encontró ConnectionString en App.config.");
+            BeginInvoke(new Action(() => Close()));
         }
 
-        private static async Task<DataTable> ExecDataTableAsync(string sp, Action<SqlCommand> fillParams)
+        public void ShowWarning(string msg)
         {
-            var dt = new DataTable();
-            using (var cn = new SqlConnection(GetConnString()))
-            using (var cmd = new SqlCommand(sp, cn))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                fillParams?.Invoke(cmd);
+            MessageBox.Show(msg, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
 
-                await cn.OpenAsync();
-                using (var rd = await cmd.ExecuteReaderAsync())
-                    dt.Load(rd);
-            }
-            return dt;
+        public void ShowError(string msg, Exception ex = null)
+        {
+            MessageBox.Show(
+                string.IsNullOrWhiteSpace(msg) ? "Ocurrió un error al procesar la operación." : msg,
+                "SISV",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
+        }
+
+        // ========= Helpers =========
+
+        private static int ToInt(DataRow r, string col)
+        {
+            return r.Table.Columns.Contains(col) && r[col] != DBNull.Value
+                ? Convert.ToInt32(r[col])
+                : 0;
+        }
+
+        private static string ToStr(DataRow r, string col)
+        {
+            return r.Table.Columns.Contains(col) && r[col] != DBNull.Value
+                ? Convert.ToString(r[col])
+                : "";
+        }
+
+        private static bool ToBool(DataRow r, string col)
+        {
+            return r.Table.Columns.Contains(col) &&
+                   r[col] != DBNull.Value &&
+                   Convert.ToBoolean(r[col]);
         }
     }
 }

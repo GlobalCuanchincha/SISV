@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Usuarios));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btn_GestionarPermisos_Usuarios = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Limpiar_Usuarios = new Guna.UI2.WinForms.Guna2Button();
             this.cmbox_Estado_Usuarios = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_Pass_Usuarios = new Guna.UI2.WinForms.Guna2TextBox();
@@ -78,6 +80,7 @@
             this.lbl_Descripcion_Titulo = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_Buscador_Usuarios = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pnlPermisosOverlay = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -106,7 +109,7 @@
             this.guna2GradientPanel2.ShadowDecoration.BorderRadius = 20;
             this.guna2GradientPanel2.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(579, 649);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(579, 725);
             this.guna2GradientPanel2.TabIndex = 67;
             // 
             // guna2GradientPanel5
@@ -116,6 +119,8 @@
             this.guna2GradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2GradientPanel5.Controls.Add(this.label10);
+            this.guna2GradientPanel5.Controls.Add(this.btn_GestionarPermisos_Usuarios);
             this.guna2GradientPanel5.Controls.Add(this.btn_Limpiar_Usuarios);
             this.guna2GradientPanel5.Controls.Add(this.cmbox_Estado_Usuarios);
             this.guna2GradientPanel5.Controls.Add(this.txt_Pass_Usuarios);
@@ -137,13 +142,49 @@
             this.guna2GradientPanel5.Controls.Add(this.label8);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(22, 60);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(22, 57);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
             this.guna2GradientPanel5.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel5.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(535, 554);
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(535, 647);
             this.guna2GradientPanel5.TabIndex = 64;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(283, 478);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 18);
+            this.label10.TabIndex = 100;
+            this.label10.Text = "Permisos";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btn_GestionarPermisos_Usuarios
+            // 
+            this.btn_GestionarPermisos_Usuarios.Animated = true;
+            this.btn_GestionarPermisos_Usuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btn_GestionarPermisos_Usuarios.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_GestionarPermisos_Usuarios.BorderRadius = 15;
+            this.btn_GestionarPermisos_Usuarios.BorderThickness = 1;
+            this.btn_GestionarPermisos_Usuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_GestionarPermisos_Usuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_GestionarPermisos_Usuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_GestionarPermisos_Usuarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_GestionarPermisos_Usuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_GestionarPermisos_Usuarios.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_GestionarPermisos_Usuarios.ForeColor = System.Drawing.Color.Black;
+            this.btn_GestionarPermisos_Usuarios.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_GestionarPermisos_Usuarios.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_GestionarPermisos_Usuarios.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_GestionarPermisos_Usuarios.Location = new System.Drawing.Point(283, 501);
+            this.btn_GestionarPermisos_Usuarios.Name = "btn_GestionarPermisos_Usuarios";
+            this.btn_GestionarPermisos_Usuarios.Size = new System.Drawing.Size(232, 48);
+            this.btn_GestionarPermisos_Usuarios.TabIndex = 99;
+            this.btn_GestionarPermisos_Usuarios.Text = "Gestionar permisos";
             // 
             // btn_Limpiar_Usuarios
             // 
@@ -162,7 +203,7 @@
             this.btn_Limpiar_Usuarios.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
             this.btn_Limpiar_Usuarios.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_Limpiar_Usuarios.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Limpiar_Usuarios.Location = new System.Drawing.Point(283, 485);
+            this.btn_Limpiar_Usuarios.Location = new System.Drawing.Point(283, 577);
             this.btn_Limpiar_Usuarios.Name = "btn_Limpiar_Usuarios";
             this.btn_Limpiar_Usuarios.Size = new System.Drawing.Size(232, 44);
             this.btn_Limpiar_Usuarios.TabIndex = 98;
@@ -171,7 +212,7 @@
             // cmbox_Estado_Usuarios
             // 
             this.cmbox_Estado_Usuarios.BackColor = System.Drawing.Color.Transparent;
-            this.cmbox_Estado_Usuarios.BorderRadius = 10;
+            this.cmbox_Estado_Usuarios.BorderRadius = 15;
             this.cmbox_Estado_Usuarios.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbox_Estado_Usuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbox_Estado_Usuarios.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -179,7 +220,7 @@
             this.cmbox_Estado_Usuarios.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbox_Estado_Usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbox_Estado_Usuarios.ItemHeight = 42;
-            this.cmbox_Estado_Usuarios.Location = new System.Drawing.Point(283, 416);
+            this.cmbox_Estado_Usuarios.Location = new System.Drawing.Point(24, 501);
             this.cmbox_Estado_Usuarios.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cmbox_Estado_Usuarios.Name = "cmbox_Estado_Usuarios";
             this.cmbox_Estado_Usuarios.Size = new System.Drawing.Size(232, 48);
@@ -233,7 +274,7 @@
             this.txt_Telefono_Usuarios.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Telefono_Usuarios.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_Telefono_Usuarios.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Telefono_Usuarios.Location = new System.Drawing.Point(283, 325);
+            this.txt_Telefono_Usuarios.Location = new System.Drawing.Point(283, 416);
             this.txt_Telefono_Usuarios.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_Telefono_Usuarios.MaxLength = 10;
             this.txt_Telefono_Usuarios.Name = "txt_Telefono_Usuarios";
@@ -248,7 +289,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(283, 302);
+            this.label15.Location = new System.Drawing.Point(283, 391);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(66, 18);
             this.label15.TabIndex = 93;
@@ -268,12 +309,12 @@
             this.txt_Correo_Usuarios.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Correo_Usuarios.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_Correo_Usuarios.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Correo_Usuarios.Location = new System.Drawing.Point(21, 325);
+            this.txt_Correo_Usuarios.Location = new System.Drawing.Point(24, 325);
             this.txt_Correo_Usuarios.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_Correo_Usuarios.Name = "txt_Correo_Usuarios";
             this.txt_Correo_Usuarios.PlaceholderText = "usuario@correo.com";
             this.txt_Correo_Usuarios.SelectedText = "";
-            this.txt_Correo_Usuarios.Size = new System.Drawing.Size(235, 48);
+            this.txt_Correo_Usuarios.Size = new System.Drawing.Size(491, 48);
             this.txt_Correo_Usuarios.TabIndex = 92;
             // 
             // label17
@@ -336,7 +377,7 @@
             this.guna2GradientPanel3.Controls.Add(this.guna2GradientPanel4);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(24, 16);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(21, 13);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel3.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -426,7 +467,7 @@
             // cmbox_Rol_Usuarios
             // 
             this.cmbox_Rol_Usuarios.BackColor = System.Drawing.Color.Transparent;
-            this.cmbox_Rol_Usuarios.BorderRadius = 10;
+            this.cmbox_Rol_Usuarios.BorderRadius = 15;
             this.cmbox_Rol_Usuarios.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbox_Rol_Usuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbox_Rol_Usuarios.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -446,7 +487,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(283, 391);
+            this.label6.Location = new System.Drawing.Point(21, 478);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 18);
             this.label6.TabIndex = 61;
@@ -470,7 +511,7 @@
             this.btn_Registrar_Usuarios.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
             this.btn_Registrar_Usuarios.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_Registrar_Usuarios.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Registrar_Usuarios.Location = new System.Drawing.Point(24, 485);
+            this.btn_Registrar_Usuarios.Location = new System.Drawing.Point(24, 577);
             this.btn_Registrar_Usuarios.Name = "btn_Registrar_Usuarios";
             this.btn_Registrar_Usuarios.Size = new System.Drawing.Size(232, 44);
             this.btn_Registrar_Usuarios.TabIndex = 64;
@@ -489,12 +530,12 @@
             this.txt_Nombre_Usuarios.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Nombre_Usuarios.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_Nombre_Usuarios.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Nombre_Usuarios.Location = new System.Drawing.Point(21, 240);
+            this.txt_Nombre_Usuarios.Location = new System.Drawing.Point(24, 240);
             this.txt_Nombre_Usuarios.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_Nombre_Usuarios.Name = "txt_Nombre_Usuarios";
             this.txt_Nombre_Usuarios.PlaceholderText = "Juan";
             this.txt_Nombre_Usuarios.SelectedText = "";
-            this.txt_Nombre_Usuarios.Size = new System.Drawing.Size(235, 48);
+            this.txt_Nombre_Usuarios.Size = new System.Drawing.Size(232, 48);
             this.txt_Nombre_Usuarios.TabIndex = 68;
             // 
             // label12
@@ -523,13 +564,13 @@
             this.txt_LoginName_Usuarios.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_LoginName_Usuarios.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_LoginName_Usuarios.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_LoginName_Usuarios.Location = new System.Drawing.Point(21, 157);
+            this.txt_LoginName_Usuarios.Location = new System.Drawing.Point(24, 157);
             this.txt_LoginName_Usuarios.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_LoginName_Usuarios.MaxLength = 10;
             this.txt_LoginName_Usuarios.Name = "txt_LoginName_Usuarios";
             this.txt_LoginName_Usuarios.PlaceholderText = "Usuario";
             this.txt_LoginName_Usuarios.SelectedText = "";
-            this.txt_LoginName_Usuarios.Size = new System.Drawing.Size(235, 48);
+            this.txt_LoginName_Usuarios.Size = new System.Drawing.Size(232, 48);
             this.txt_LoginName_Usuarios.TabIndex = 64;
             // 
             // label9
@@ -612,7 +653,7 @@
             this.Panel_Detalle_Factura.ShadowDecoration.BorderRadius = 14;
             this.Panel_Detalle_Factura.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.Panel_Detalle_Factura.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(849, 600);
+            this.Panel_Detalle_Factura.Size = new System.Drawing.Size(849, 725);
             this.Panel_Detalle_Factura.TabIndex = 68;
             // 
             // guna2GradientPanel15
@@ -630,7 +671,7 @@
             this.guna2GradientPanel15.Controls.Add(this.label33);
             this.guna2GradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel15.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.guna2GradientPanel15.Location = new System.Drawing.Point(13, 128);
+            this.guna2GradientPanel15.Location = new System.Drawing.Point(13, 138);
             this.guna2GradientPanel15.Name = "guna2GradientPanel15";
             this.guna2GradientPanel15.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel15.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -813,12 +854,12 @@
             this.guna2GradientPanel1.Controls.Add(this.flowUsuarios);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(13, 179);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(13, 189);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.BorderRadius = 14;
             this.guna2GradientPanel1.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(821, 393);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(821, 515);
             this.guna2GradientPanel1.TabIndex = 59;
             // 
             // flowUsuarios
@@ -826,7 +867,7 @@
             this.flowUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowUsuarios.Location = new System.Drawing.Point(0, 0);
             this.flowUsuarios.Name = "flowUsuarios";
-            this.flowUsuarios.Size = new System.Drawing.Size(821, 393);
+            this.flowUsuarios.Size = new System.Drawing.Size(821, 515);
             this.flowUsuarios.TabIndex = 0;
             // 
             // label3
@@ -903,12 +944,23 @@
             this.txt_Buscador_Usuarios.TabIndex = 45;
             this.txt_Buscador_Usuarios.TextOffset = new System.Drawing.Point(40, 0);
             // 
+            // pnlPermisosOverlay
+            // 
+            this.pnlPermisosOverlay.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPermisosOverlay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPermisosOverlay.Location = new System.Drawing.Point(0, 0);
+            this.pnlPermisosOverlay.Name = "pnlPermisosOverlay";
+            this.pnlPermisosOverlay.Size = new System.Drawing.Size(1458, 855);
+            this.pnlPermisosOverlay.TabIndex = 69;
+            this.pnlPermisosOverlay.Visible = false;
+            // 
             // Form_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1458, 855);
+            this.Controls.Add(this.pnlPermisosOverlay);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.Panel_Detalle_Factura);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -982,5 +1034,8 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button btn_GestionarPermisos_Usuarios;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2Panel pnlPermisosOverlay;
     }
 }

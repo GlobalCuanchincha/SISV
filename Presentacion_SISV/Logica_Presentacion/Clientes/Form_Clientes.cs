@@ -1,161 +1,129 @@
-﻿using Guna.UI2.WinForms;
+﻿using Capa_Corte_Transversal.Loggin;
+using Dominio_SISV.DTOs.Clientes;
+using Dominio_SISV.Services.Clientes;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel; 
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Union_Formularios_SISV.Controls.Usuarios.Permisos;
 using Union_Formularios_SISV.Forms.Clientes;
+using Union_Formularios_SISV.Logica_Presentacion.Clientes;
 
 namespace Union_Formularios_SISV.Forms
 {
-    public partial class Form_Clientes : Form
+    public partial class Form_Clientes : Form, IClientesView
     {
-        private readonly ClienteDb _db;
+        private const string P_ACCESO = "CRM_CLIENTES_ACCESO";
+        private const string P_REG = "CRM_CLIENTES_REGISTRAR";
+        private const string P_UPD = "CRM_CLIENTES_ACTUALIZAR";
+
         private readonly Timer _searchDebounce;
+        private readonly IClienteService _service;
+        private readonly ClientesPresenter _presenter;
+
+        private PermissionContext _perm;
 
         private string _selectedCedula = null;
-
-        private List<ClientTaskCard> _renderedCards = new List<ClientTaskCard>();
+        private readonly List<ClientTaskCard> _renderedCards = new List<ClientTaskCard>();
 
         public Form_Clientes()
         {
             InitializeComponent();
 
-            txt_Telefono_Clientes.Validating += txt_Telefono_Clientes_Validating;
+            _perm = new PermissionContext(Session.Permisos ?? new HashSet<string>(StringComparer.OrdinalIgnoreCase));
+            if (_perm == null) _perm = new PermissionContext(new HashSet<string>(StringComparer.OrdinalIgnoreCase));
 
-            _db = new ClienteDb(GetConnectionString());
+            _service = new ClienteService();
+            _presenter = new ClientesPresenter(this, _service, _perm);
 
-            _searchDebounce = new Timer { Interval = 350 };
-            _searchDebounce.Tick += (_, __) =>
+            _searchDebounce = new Timer();
+            _searchDebounce.Interval = 350;
+            _searchDebounce.Tick += delegate
             {
                 _searchDebounce.Stop();
-                LoadClientes();
+                _presenter.Search();
             };
 
-            // Eventos UI
-            this.Load += Form_Clientes_Load;
+            Load += Form_Clientes_Load;
 
-            txt_Buscador_Items_Clientes.TextChanged += (_, __) => DebounceSearch();
-            cmbox_Filtrarpor_Clientes.SelectedIndexChanged += (_, __) => LoadClientes();
-            cmbox_EstadoFiltro_Clientes.SelectedIndexChanged += (_, __) => LoadClientes();
+            txt_Buscador_Items_Clientes.TextChanged += delegate { DebounceSearch(); };
+            cmbox_Filtrarpor_Clientes.SelectedIndexChanged += delegate { _presenter.Search(); };
+            cmbox_EstadoFiltro_Clientes.SelectedIndexChanged += delegate { _presenter.Search(); };
 
-            btn_Registrar_Clientes.Click += Btn_Registrar_Clientes_Click;
-            btn_Actualizar_Clientes.Click += Btn_Actualizar_Clientes_Click;
-            btn_Limpiar_Clientes.Click += (_, __) => ClearSelectionAndForm();
+            btn_Registrar_Clientes.Click += delegate { _presenter.Registrar(); };
+            btn_Actualizar_Clientes.Click += delegate { _presenter.Actualizar(); };
+            btn_Limpiar_Clientes.Click += delegate { _presenter.Limpiar(); };
 
             txt_Buscador_Items_Clientes.KeyDown += Txt_Buscador_Items_Clientes_KeyDown;
 
+            txt_Cedula_Cliente.KeyPress += txt_Cedula_Cliente_KeyPress;
+            txt_Telefono_Clientes.KeyPress += txt_Telefono_Clientes_KeyPress;
+            txt_Telefono_Clientes.Validating += txt_Telefono_Clientes_Validating;
 
-
-
-        }
-        private void SetInputsEnabled(bool enabled)
-        {
-            // Fuerza habilitados (evita que queden gris/disabled)
-            txt_Cedula_Cliente.Enabled = enabled;
-            txt_Telefono_Clientes.Enabled = enabled;
-            txt_Nombre_Clientes.Enabled = enabled;
-            txt_Apellido_Clientes.Enabled = enabled;
-            txt_Correo_Clientes.Enabled = enabled;
-            txt_Direccion_Clientes.Enabled = enabled;
-
-            cmbox_Estado_Clientes.Enabled = enabled;
-        }
-
-        private void SetCedulaReadOnly(bool readOnly)
-        {
-            // En vez de Enabled=false (que se ve gris), usamos ReadOnly
-            // Sirve para TextBox normal y también para Guna2TextBox.
-            txt_Cedula_Cliente.ReadOnly = readOnly;
-
-            // Si tu control NO tiene ReadOnly, comenta la línea y deja Enabled=true.
-        }
-
-
-
-        private static string GetConnectionString()
-        {
-            var cs = ConfigurationManager.ConnectionStrings["SISV"]?.ConnectionString;
-            if (!string.IsNullOrWhiteSpace(cs)) return cs;
-
-            if (ConfigurationManager.ConnectionStrings.Count > 0)
-                return ConfigurationManager.ConnectionStrings[0].ConnectionString;
-
-            throw new InvalidOperationException("No se encontró ConnectionString. Agrega uno en App.config (name=\"SISV\").");
+            if (flowClientCard != null)
+                flowClientCard.SizeChanged += delegate { FixAllCardsWidth(); };
         }
 
         private void Form_Clientes_Load(object sender, EventArgs e)
         {
-            SetInputsEnabled(true);
-            SetCedulaReadOnly(false);
-
-
-            try
+            if (!_perm.TryEnsure(P_ACCESO, "Acceso denegado: no tiene permiso para Clientes."))
             {
-                ConfigureCombos();
-                LoadEstados();
-                ClearSelectionAndForm();
-                LoadClientes();
+                Close();
+                return;
             }
-            catch (Exception ex)
+
+            ApplyPermissionsToUI();
+            _presenter.Initialize();
+        }
+
+        private void ApplyPermissionsToUI()
+        {
+            bool canReg = _perm.Has(P_REG);
+            bool canUpd = _perm.Has(P_UPD);
+
+            if (btn_Registrar_Clientes != null) btn_Registrar_Clientes.Enabled = canReg;
+            if (btn_Actualizar_Clientes != null) btn_Actualizar_Clientes.Enabled = false; // lo habilita el presenter + permiso
+
+            bool canEdit = canReg || canUpd;
+            SetFormEditable(canEdit);
+
+            if (!canEdit)
+                SetActualizarEnabled(false);
+        }
+
+        private void SetFormEditable(bool editable)
+        {
+            // En modo solo lectura, dejamos el formulario visible, pero no editable.
+            SetTextReadOnly(txt_Cedula_Cliente, !editable);
+            SetTextReadOnly(txt_Telefono_Clientes, !editable);
+            SetTextReadOnly(txt_Nombre_Clientes, !editable);
+            SetTextReadOnly(txt_Apellido_Clientes, !editable);
+            SetTextReadOnly(txt_Correo_Clientes, !editable);
+            SetTextReadOnly(txt_Direccion_Clientes, !editable);
+
+            if (cmbox_Estado_Clientes != null) cmbox_Estado_Clientes.Enabled = editable;
+        }
+
+        private static void SetTextReadOnly(Control c, bool readOnly)
+        {
+            if (c == null) return;
+
+            // Guna2TextBox y TextBox tienen ReadOnly
+            var p = c.GetType().GetProperty("ReadOnly");
+            if (p != null && p.CanWrite)
             {
-                ShowError("Error al inicializar formulario de clientes.", ex);
+                p.SetValue(c, readOnly, null);
+                return;
             }
+
+            // fallback
+            c.Enabled = !readOnly;
         }
 
-        // =========================
-        // Combos
-        // =========================
-        private void ConfigureCombos()
-        {
-            // Filtrar por
-            var filtros = new List<FiltroItem>
-            {
-                new FiltroItem("nombre",    "Nombre (nombres+apellidos)"),
-                new FiltroItem("cedula",    "Cédula"),
-                new FiltroItem("email",     "Email"),
-                new FiltroItem("telefono",  "Teléfono"),
-                new FiltroItem("direccion", "Dirección"),
-                new FiltroItem("apellidos", "Apellidos"),
-            };
-
-            cmbox_Filtrarpor_Clientes.DisplayMember = nameof(FiltroItem.Texto);
-            cmbox_Filtrarpor_Clientes.ValueMember = nameof(FiltroItem.Key);
-            cmbox_Filtrarpor_Clientes.DataSource = filtros;
-            cmbox_Filtrarpor_Clientes.SelectedValue = "nombre";
-        }
-
-        private void LoadEstados()
-        {
-            var estados = _db.ListarEstados(); // EstadoKey, EstadoNombre, EsActivo
-
-            // Para el combo del formulario (estado del cliente)
-            cmbox_Estado_Clientes.DisplayMember = nameof(EstadoItem.EstadoNombre);
-            cmbox_Estado_Clientes.ValueMember = nameof(EstadoItem.EstadoKey);
-            cmbox_Estado_Clientes.DataSource = estados.ToList();
-
-            // Para el filtro (incluye "Todos")
-            var filtroEstados = new List<EstadoItem> { new EstadoItem(null, "Todos", null) };
-            filtroEstados.AddRange(estados);
-
-            cmbox_EstadoFiltro_Clientes.DisplayMember = nameof(EstadoItem.EstadoNombre);
-            cmbox_EstadoFiltro_Clientes.ValueMember = nameof(EstadoItem.EstadoKey);
-            cmbox_EstadoFiltro_Clientes.DataSource = filtroEstados;
-            cmbox_EstadoFiltro_Clientes.SelectedIndex = 0;
-
-            // Default en formulario: Activo si existe
-            var activo = estados.FirstOrDefault(x => x.EstadoNombre?.ToLower().Contains("activo") == true && x.EstadoNombre?.ToLower().Contains("inactivo") == false);
-            if (activo != null) cmbox_Estado_Clientes.SelectedValue = activo.EstadoKey;
-        }
-
-        // =========================
-        // Buscar / Render cards
-        // =========================
         private void DebounceSearch()
         {
             _searchDebounce.Stop();
@@ -169,64 +137,108 @@ namespace Union_Formularios_SISV.Forms
             e.Handled = true;
             e.SuppressKeyPress = true;
 
-            // Búsqueda inmediata al Enter
             _searchDebounce.Stop();
-            LoadClientes();
+            _presenter.EnterPressed();
+        }
 
-            // Si filtro=cedula y no hay resultados => mensaje "no existe"
-            var filtroKey = GetFiltroKey();
-            if (filtroKey == "cedula")
+        private void FixAllCardsWidth()
+        {
+            if (flowClientCard == null) return;
+            int w = flowClientCard.ClientSize.Width - 28;
+            if (w < 200) w = 200;
+
+            foreach (var c in _renderedCards)
+                c.Width = w;
+        }
+
+        // =======================
+        // IClientesView (lecturas)
+        // =======================
+        public string BuscarTexto
+        {
+            get { return (txt_Buscador_Items_Clientes.Text ?? "").Trim(); }
+        }
+
+        public string FiltroPorKey
+        {
+            get
             {
-                var count = ParseCount(lbl_Cantidad_Resultados_Clientes.Text);
-                if (count == 0)
-                    ShowWarn("El usuario no existe.");
+                var val = cmbox_Filtrarpor_Clientes.SelectedValue;
+                return val != null ? Convert.ToString(val) : "nombre";
             }
         }
 
-        private void LoadClientes()
+        public int? EstadoFiltroKey
         {
-            try
+            get
             {
-                var filtro = GetFiltroKey();
-                var buscar = (txt_Buscador_Items_Clientes.Text ?? "").Trim();
-                int? estadoKey = GetEstadoFiltroKey();
+                if (cmbox_EstadoFiltro_Clientes.SelectedValue == null) return null;
 
-                var list = _db.Buscar(filtro, buscar, estadoKey, top: 200);
+                int n;
+                if (int.TryParse(Convert.ToString(cmbox_EstadoFiltro_Clientes.SelectedValue), out n))
+                    return n;
 
-                lbl_Cantidad_Resultados_Clientes.Text = $"{list.Count} resultados";
-
-                RenderCards(list);
-
-                // Si el seleccionado ya no está, limpiar selección
-                if (!string.IsNullOrWhiteSpace(_selectedCedula))
-                {
-                    var stillExists = list.Any(x => string.Equals(x.Cedula, _selectedCedula, StringComparison.OrdinalIgnoreCase));
-                    if (!stillExists) ClearSelectionOnly();
-                }
-            }
-            catch (Exception ex)
-            {
-                ShowError("Error al consultar clientes.", ex);
+                return null;
             }
         }
 
-        private void RenderCards(List<ClienteCardVM> list)
+        // =======================
+        // IClientesView (binds)
+        // =======================
+        public void BindFiltroPor(List<KeyValuePair<string, string>> opciones, string defaultKey)
         {
+            cmbox_Filtrarpor_Clientes.DataSource = null;
+            cmbox_Filtrarpor_Clientes.DisplayMember = "Value";
+            cmbox_Filtrarpor_Clientes.ValueMember = "Key";
+            cmbox_Filtrarpor_Clientes.DataSource = opciones;
+            cmbox_Filtrarpor_Clientes.SelectedValue = defaultKey;
+        }
+
+        public void BindEstados(List<ClienteEstadoVM> estados, int? defaultEstadoKey)
+        {
+            cmbox_Estado_Clientes.DataSource = null;
+            cmbox_Estado_Clientes.DisplayMember = "EstadoNombre";
+            cmbox_Estado_Clientes.ValueMember = "EstadoKey";
+            cmbox_Estado_Clientes.DataSource = estados;
+
+            if (defaultEstadoKey.HasValue)
+                cmbox_Estado_Clientes.SelectedValue = defaultEstadoKey.Value;
+        }
+
+        public void BindEstadosFiltro(List<ClienteEstadoVM> estadosFiltro)
+        {
+            cmbox_EstadoFiltro_Clientes.DataSource = null;
+            cmbox_EstadoFiltro_Clientes.DisplayMember = "EstadoNombre";
+            cmbox_EstadoFiltro_Clientes.ValueMember = "EstadoKey";
+            cmbox_EstadoFiltro_Clientes.DataSource = estadosFiltro;
+            cmbox_EstadoFiltro_Clientes.SelectedIndex = 0;
+        }
+
+        // =======================
+        // IClientesView (render)
+        // =======================
+        public void ShowClientes(List<ClienteCardVM> clientes, string selectedCedula)
+        {
+            _selectedCedula = selectedCedula;
+
             flowClientCard.SuspendLayout();
             flowClientCard.Controls.Clear();
             _renderedCards.Clear();
 
-            foreach (var vm in list)
+            int w = flowClientCard.ClientSize.Width - 28;
+            if (w < 200) w = 200;
+
+            foreach (var vm in clientes)
             {
-                var card = new ClientTaskCard
-                {
-                    Margin = new Padding(6),
-                    Width = flowClientCard.ClientSize.Width - 28, // ajusta si quieres
-                    Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
-                };
+                var card = new ClientTaskCard();
+                card.Margin = new Padding(6);
+                card.Width = w;
+                card.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
 
                 card.Bind(vm);
-                card.SetSelected(!string.IsNullOrWhiteSpace(_selectedCedula) && _selectedCedula == vm.Cedula);
+                card.SetSelected(!string.IsNullOrWhiteSpace(_selectedCedula) &&
+                                 string.Equals(_selectedCedula, vm.Cedula, StringComparison.OrdinalIgnoreCase));
+
                 card.ClientSelected += Card_ClientSelected;
 
                 _renderedCards.Add(card);
@@ -238,171 +250,58 @@ namespace Union_Formularios_SISV.Forms
 
         private void Card_ClientSelected(object sender, ClienteCardSelectedEventArgs e)
         {
-            if (e?.Cliente == null) return;
-
+            if (e == null || e.Cliente == null) return;
             _selectedCedula = e.Cliente.Cedula;
 
-            // Marcar visualmente
             foreach (var c in _renderedCards)
-                c.SetSelected(c.Cedula == _selectedCedula);
+                c.SetSelected(string.Equals(c.Cedula, _selectedCedula, StringComparison.OrdinalIgnoreCase));
 
-            // Cargar detalle y llenar form
-            LoadClienteDetalle(_selectedCedula);
+            _presenter.SelectFromCard(_selectedCedula);
         }
 
-        private void LoadClienteDetalle(string cedula)
+        public void SetResultados(int count)
         {
-            try
-            {
-                var det = _db.GetByCedula(cedula);
-                if (det == null)
-                {
-                    ShowWarn("El usuario no existe.");
-                    ClearSelectionAndForm();
-                    return;
-                }
-
-                SetInputsEnabled(true);
-
-                lbl_Seleccion_Clientes.Text = $"Seleccionado: {det.Cedula}";
-                txt_Cedula_Cliente.Text = det.Cedula ?? "";
-                txt_Nombre_Clientes.Text = det.Nombres ?? "";
-                txt_Apellido_Clientes.Text = det.Apellidos ?? "";
-                txt_Correo_Clientes.Text = det.Correo ?? "";
-                txt_Telefono_Clientes.Text = det.Telefono ?? "";
-                txt_Direccion_Clientes.Text = det.Direccion ?? "";
-
-                if (det.EstadoKey != null)
-                    cmbox_Estado_Clientes.SelectedValue = det.EstadoKey;
-                else
-                {
-                    if (det.EsActivo == true) TrySelectEstadoPorTexto("activo");
-                    else if (det.EsActivo == false) TrySelectEstadoPorTexto("inactivo");
-                }
-
-                SetCedulaReadOnly(true);
-
-                btn_Actualizar_Clientes.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                ShowError("Error al cargar detalle del cliente.", ex);
-            }
+            lbl_Cantidad_Resultados_Clientes.Text = count.ToString() + " resultados";
         }
 
-        private void Btn_Registrar_Clientes_Click(object sender, EventArgs e)
+        public ClienteDetalleVM ReadForm()
         {
-            try
+            return new ClienteDetalleVM
             {
-                var cedula = (txt_Cedula_Cliente.Text ?? "").Trim();
-                var nombres = (txt_Nombre_Clientes.Text ?? "").Trim();
-                var apellidos = (txt_Apellido_Clientes.Text ?? "").Trim();
-
-                if (string.IsNullOrWhiteSpace(cedula))
-                {
-                    ShowWarn("Error: Ingrese la cédula.");
-                    return;
-                }
-                if (string.IsNullOrWhiteSpace(nombres) || string.IsNullOrWhiteSpace(apellidos))
-                {
-                    ShowWarn("Error: Campos incompletos (nombres/apellidos).");
-                    return;
-                }
-
-                int? estadoKey = GetEstadoFormKey();
-
-                var det = _db.Crear(
-                    cedula: cedula,
-                    nombres: nombres,
-                    apellidos: apellidos,
-                    correo: (txt_Correo_Clientes.Text ?? "").Trim(),
-                    telefono: (txt_Telefono_Clientes.Text ?? "").Trim(),
-                    direccion: (txt_Direccion_Clientes.Text ?? "").Trim(),
-                    estadoKey: estadoKey
-                );
-
-                ShowOk("Guardado correctamente.");
-
-                // refrescar y seleccionar
-                _selectedCedula = det?.Cedula ?? cedula;
-                txt_Buscador_Items_Clientes.Text = _selectedCedula; // opcional
-                cmbox_Filtrarpor_Clientes.SelectedValue = "cedula";
-                LoadClientes();
-                LoadClienteDetalle(_selectedCedula);
-            }
-            catch (SqlException ex)
-            {
-                // Mensajes de tus THROW: "La cédula ya existe.", etc.
-                ShowWarn(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                ShowError("Error al registrar cliente.", ex);
-            }
+                Cedula = (txt_Cedula_Cliente.Text ?? "").Trim(),
+                Nombres = (txt_Nombre_Clientes.Text ?? "").Trim(),
+                Apellidos = (txt_Apellido_Clientes.Text ?? "").Trim(),
+                Correo = (txt_Correo_Clientes.Text ?? "").Trim(),
+                Telefono = (txt_Telefono_Clientes.Text ?? "").Trim(),
+                Direccion = (txt_Direccion_Clientes.Text ?? "").Trim(),
+                EstadoKey = GetEstadoFormKey()
+            };
         }
 
-        private void Btn_Actualizar_Clientes_Click(object sender, EventArgs e)
+        public void ShowDetalle(ClienteDetalleVM det)
         {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(_selectedCedula))
-                {
-                    ShowWarn("Seleccione un cliente para actualizar.");
-                    return;
-                }
+            if (det == null) return;
 
-                var nombres = (txt_Nombre_Clientes.Text ?? "").Trim();
-                var apellidos = (txt_Apellido_Clientes.Text ?? "").Trim();
+            lbl_Seleccion_Clientes.Text = "Seleccionado: " + (det.Cedula ?? "");
 
-                if (string.IsNullOrWhiteSpace(nombres) || string.IsNullOrWhiteSpace(apellidos))
-                {
-                    ShowWarn("Campos incompletos.");
-                    return;
-                }
+            txt_Cedula_Cliente.Text = det.Cedula ?? "";
+            txt_Nombre_Clientes.Text = det.Nombres ?? "";
+            txt_Apellido_Clientes.Text = det.Apellidos ?? "";
+            txt_Correo_Clientes.Text = det.Correo ?? "";
+            txt_Telefono_Clientes.Text = det.Telefono ?? "";
+            txt_Direccion_Clientes.Text = det.Direccion ?? "";
 
-                int? estadoKey = GetEstadoFormKey();
-
-                var det = _db.Actualizar(
-                    cedula: _selectedCedula,
-                    nombres: nombres,
-                    apellidos: apellidos,
-                    correo: (txt_Correo_Clientes.Text ?? "").Trim(),
-                    telefono: (txt_Telefono_Clientes.Text ?? "").Trim(),
-                    direccion: (txt_Direccion_Clientes.Text ?? "").Trim(),
-                    estadoKey: estadoKey
-                );
-
-                ShowOk("Actualizado correctamente.");
-
-                LoadClientes();
-                LoadClienteDetalle(_selectedCedula);
-            }
-            catch (SqlException ex)
-            {
-                ShowWarn(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                ShowError("Error al actualizar cliente.", ex);
-            }
+            if (det.EstadoKey.HasValue)
+                cmbox_Estado_Clientes.SelectedValue = det.EstadoKey.Value;
         }
 
-        private void ClearSelectionOnly()
+        public void ClearSelectionAndForm()
         {
             _selectedCedula = null;
+
             lbl_Seleccion_Clientes.Text = "Sin seleccionar";
-            btn_Actualizar_Clientes.Enabled = false;
-
-            foreach (var c in _renderedCards)
-                c.SetSelected(false);
-        }
-
-        private void ClearSelectionAndForm()
-        {
-            ClearSelectionOnly();
-
-            SetInputsEnabled(true);
             SetCedulaReadOnly(false);
+            SetActualizarEnabled(false);
 
             txt_Cedula_Cliente.Text = "";
             txt_Telefono_Clientes.Text = "";
@@ -411,289 +310,87 @@ namespace Union_Formularios_SISV.Forms
             txt_Correo_Clientes.Text = "";
             txt_Direccion_Clientes.Text = "";
 
-            TrySelectEstadoPorTexto("activo");
+            TrySelectEstadoActivo();
         }
 
-        // =========================
-        // Helpers UI
-        // =========================
-        private string GetFiltroKey()
+        public void SetCedulaReadOnly(bool readOnly)
         {
-            if (cmbox_Filtrarpor_Clientes.SelectedValue is string s && !string.IsNullOrWhiteSpace(s))
-                return s;
-
-            if (cmbox_Filtrarpor_Clientes.SelectedItem is FiltroItem fi)
-                return fi.Key;
-
-            return "nombre";
+            if (txt_Cedula_Cliente != null)
+                txt_Cedula_Cliente.ReadOnly = readOnly;
         }
 
-        private int? GetEstadoFiltroKey()
+        public void SetActualizarEnabled(bool enabled)
         {
-            if (cmbox_EstadoFiltro_Clientes.SelectedValue == null) return null;
-
-            if (cmbox_EstadoFiltro_Clientes.SelectedValue is int i) return i;
-
-            // si viene como string
-            if (int.TryParse(cmbox_EstadoFiltro_Clientes.SelectedValue.ToString(), out var val))
-                return val;
-
-            return null;
+            // Solo habilita si además tiene permiso
+            bool can = enabled && _perm.Has(P_UPD);
+            btn_Actualizar_Clientes.Enabled = can;
         }
 
+        public void SetSelectedLabel(string text)
+        {
+            lbl_Seleccion_Clientes.Text = text ?? "Sin seleccionar";
+        }
+
+        public void SetBusqueda(string filtroKey, string texto)
+        {
+            try { cmbox_Filtrarpor_Clientes.SelectedValue = filtroKey; } catch { }
+            txt_Buscador_Items_Clientes.Text = texto ?? "";
+        }
+
+        public void ShowInfo(string msg)
+        {
+            MessageBox.Show(msg, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void ShowWarning(string msg)
+        {
+            MessageBox.Show(msg, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public void ShowError(string title, Exception ex)
+        {
+            MessageBox.Show(title + "\n\n" + (ex != null ? ex.Message : ""), "SISV",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        // =======================
+        // helpers
+        // =======================
         private int? GetEstadoFormKey()
         {
             if (cmbox_Estado_Clientes.SelectedValue == null) return null;
-            if (cmbox_Estado_Clientes.SelectedValue is int i) return i;
-            if (int.TryParse(cmbox_Estado_Clientes.SelectedValue.ToString(), out var val)) return val;
+
+            int n;
+            if (int.TryParse(Convert.ToString(cmbox_Estado_Clientes.SelectedValue), out n))
+                return n;
+
             return null;
         }
 
-        private void TrySelectEstadoPorTexto(string containsLower)
+        private void TrySelectEstadoActivo()
         {
-            // intenta seleccionar "Activo" / "Inactivo" en cmbox_Estado_Clientes
-            if (cmbox_Estado_Clientes.DataSource is IEnumerable<EstadoItem> src)
+            try
             {
-                var match = src.FirstOrDefault(x => (x.EstadoNombre ?? "").ToLower().Contains(containsLower));
-                if (match != null) cmbox_Estado_Clientes.SelectedValue = match.EstadoKey;
+                var items = cmbox_Estado_Clientes.DataSource as IEnumerable<ClienteEstadoVM>;
+                if (items == null) return;
+
+                var activo = items.FirstOrDefault(x =>
+                    (x.EstadoNombre ?? "").ToLower().Contains("activo") &&
+                    !(x.EstadoNombre ?? "").ToLower().Contains("inactivo"));
+
+                if (activo != null && activo.EstadoKey.HasValue)
+                    cmbox_Estado_Clientes.SelectedValue = activo.EstadoKey.Value;
             }
+            catch { }
         }
 
-        private void ShowOk(string msg)
-            => MessageBox.Show(msg, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        private void ShowWarn(string msg)
-            => MessageBox.Show(msg, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-        private void ShowError(string title, Exception ex)
-            => MessageBox.Show($"{title}\n\n{ex.Message}", "SISV", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        private static int ParseCount(string text)
-        {
-            // espera formato: "X resultados"
-            if (string.IsNullOrWhiteSpace(text)) return 0;
-            var parts = text.Split(' ');
-            if (parts.Length == 0) return 0;
-            return int.TryParse(parts[0], out var n) ? n : 0;
-        }
-
-        // =========================
-        // Clases auxiliares
-        // =========================
-        private sealed class FiltroItem
-        {
-            public FiltroItem(string key, string texto) { Key = key; Texto = texto; }
-            public string Key { get; }
-            public string Texto { get; }
-        }
-
-        private sealed class EstadoItem
-        {
-            public EstadoItem(int? estadoKey, string estadoNombre, bool? esActivo)
-            { EstadoKey = estadoKey; EstadoNombre = estadoNombre; EsActivo = esActivo; }
-
-            public int? EstadoKey { get; }
-            public string EstadoNombre { get; }
-            public bool? EsActivo { get; }
-        }
-
-        // =========================
-        // Data Access (solo Stored Procedures)
-        // =========================
-        private sealed class ClienteDb
-        {
-            private readonly string _cs;
-            public ClienteDb(string connectionString) => _cs = connectionString;
-
-            public List<EstadoItem> ListarEstados()
-            {
-                var list = new List<EstadoItem>();
-
-                using (var cn = new SqlConnection(_cs))
-                using (var cmd = new SqlCommand("crm.usp_Cliente_Estados_Listar", cn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cn.Open();
-
-                    using (var rd = cmd.ExecuteReader())
-                    {
-                        while (rd.Read())
-                        {
-                            int? key = rd["EstadoKey"] == DBNull.Value ? (int?)null : Convert.ToInt32(rd["EstadoKey"]);
-                            var nombre = rd["EstadoNombre"] == DBNull.Value ? null : Convert.ToString(rd["EstadoNombre"]);
-                            bool? activo = rd["EsActivo"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(rd["EsActivo"]);
-
-                            list.Add(new EstadoItem(key, nombre, activo));
-                        }
-                    }
-                }
-
-                return list;
-            }
-
-            public List<ClienteCardVM> Buscar(string filtroPor, string buscar, int? estadoKey, int top)
-            {
-                var list = new List<ClienteCardVM>();
-
-                using (var cn = new SqlConnection(_cs))
-                using (var cmd = new SqlCommand("crm.usp_Cliente_Buscar", cn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.Add(new SqlParameter("@FiltroPor", SqlDbType.NVarChar, 30) { Value = (object)(filtroPor ?? "nombre") });
-                    cmd.Parameters.Add(new SqlParameter("@Buscar", SqlDbType.NVarChar, 200) { Value = (object)(string.IsNullOrWhiteSpace(buscar) ? DBNull.Value : (object)buscar) });
-                    cmd.Parameters.Add(new SqlParameter("@EstadoKey", SqlDbType.Int) { Value = (object)(estadoKey ?? (int?)null) ?? DBNull.Value });
-                    cmd.Parameters.Add(new SqlParameter("@Top", SqlDbType.Int) { Value = top });
-
-                    cn.Open();
-
-                    using (var rd = cmd.ExecuteReader())
-                    {
-                        while (rd.Read())
-                        {
-                            var vm = new ClienteCardVM
-                            {
-                                Cedula = rd["Cedula"] == DBNull.Value ? "" : Convert.ToString(rd["Cedula"]),
-                                Cliente = rd["Cliente"] == DBNull.Value ? "" : Convert.ToString(rd["Cliente"]),
-                                Correo = rd["Correo"] == DBNull.Value ? "" : Convert.ToString(rd["Correo"]),
-                                Telefono = rd["Telefono"] == DBNull.Value ? "" : Convert.ToString(rd["Telefono"]),
-                                EstadoKey = rd["EstadoKey"] == DBNull.Value ? (int?)null : Convert.ToInt32(rd["EstadoKey"]),
-                                EstadoNombre = rd["EstadoNombre"] == DBNull.Value ? "" : Convert.ToString(rd["EstadoNombre"]),
-                                EsActivo = rd["EsActivo"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(rd["EsActivo"]),
-                                TotalCoincidencias = rd["TotalCoincidencias"] == DBNull.Value ? 0 : Convert.ToInt32(rd["TotalCoincidencias"])
-                            };
-                            list.Add(vm);
-                        }
-                    }
-                }
-
-                return list;
-            }
-
-            public ClienteDetalleVM GetByCedula(string cedula)
-            {
-                using (var cn = new SqlConnection(_cs))
-                using (var cmd = new SqlCommand("crm.usp_Cliente_GetByCedula", cn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.NVarChar, 30) { Value = cedula });
-
-                    cn.Open();
-
-                    using (var rd = cmd.ExecuteReader())
-                    {
-                        if (!rd.Read()) return null;
-
-                        return new ClienteDetalleVM
-                        {
-                            Cedula = rd["Cedula"] == DBNull.Value ? "" : Convert.ToString(rd["Cedula"]),
-                            Nombres = rd["Nombres"] == DBNull.Value ? "" : Convert.ToString(rd["Nombres"]),
-                            Apellidos = rd["Apellidos"] == DBNull.Value ? "" : Convert.ToString(rd["Apellidos"]),
-                            Cliente = rd["Cliente"] == DBNull.Value ? "" : Convert.ToString(rd["Cliente"]),
-                            Correo = rd["Correo"] == DBNull.Value ? "" : Convert.ToString(rd["Correo"]),
-                            Telefono = rd["Telefono"] == DBNull.Value ? "" : Convert.ToString(rd["Telefono"]),
-                            Direccion = rd["Direccion"] == DBNull.Value ? "" : Convert.ToString(rd["Direccion"]),
-                            EstadoKey = rd["EstadoKey"] == DBNull.Value ? (int?)null : Convert.ToInt32(rd["EstadoKey"]),
-                            EstadoNombre = rd["EstadoNombre"] == DBNull.Value ? "" : Convert.ToString(rd["EstadoNombre"]),
-                            EsActivo = rd["EsActivo"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(rd["EsActivo"]),
-                        };
-                    }
-                }
-            }
-
-            public ClienteDetalleVM Crear(string cedula, string nombres, string apellidos, string correo, string telefono, string direccion, int? estadoKey)
-            {
-                using (var cn = new SqlConnection(_cs))
-                using (var cmd = new SqlCommand("crm.usp_Cliente_Crear", cn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.NVarChar, 30) { Value = cedula });
-                    cmd.Parameters.Add(new SqlParameter("@Nombres", SqlDbType.NVarChar, 120) { Value = nombres });
-                    cmd.Parameters.Add(new SqlParameter("@Apellidos", SqlDbType.NVarChar, 120) { Value = apellidos });
-                    cmd.Parameters.Add(new SqlParameter("@Correo", SqlDbType.NVarChar, 220) { Value = (object)(string.IsNullOrWhiteSpace(correo) ? DBNull.Value : (object)correo) });
-                    cmd.Parameters.Add(new SqlParameter("@Telefono", SqlDbType.NVarChar, 30) { Value = (object)(string.IsNullOrWhiteSpace(telefono) ? DBNull.Value : (object)telefono) });
-                    cmd.Parameters.Add(new SqlParameter("@Direccion", SqlDbType.NVarChar, 220) { Value = (object)(string.IsNullOrWhiteSpace(direccion) ? DBNull.Value : (object)direccion) });
-                    cmd.Parameters.Add(new SqlParameter("@EstadoKey", SqlDbType.Int) { Value = (object)(estadoKey ?? (int?)null) ?? DBNull.Value });
-
-                    var pOut = new SqlParameter("@ClienteIDOut", SqlDbType.Int) { Direction = ParameterDirection.Output };
-                    cmd.Parameters.Add(pOut);
-
-                    cn.Open();
-
-                    // este SP retorna el detalle (usp_Cliente_GetByCedula)
-                    using (var rd = cmd.ExecuteReader())
-                    {
-                        if (!rd.Read()) return null;
-
-                        return new ClienteDetalleVM
-                        {
-                            Cedula = rd["Cedula"] == DBNull.Value ? "" : Convert.ToString(rd["Cedula"]),
-                            Nombres = rd["Nombres"] == DBNull.Value ? "" : Convert.ToString(rd["Nombres"]),
-                            Apellidos = rd["Apellidos"] == DBNull.Value ? "" : Convert.ToString(rd["Apellidos"]),
-                            Cliente = rd["Cliente"] == DBNull.Value ? "" : Convert.ToString(rd["Cliente"]),
-                            Correo = rd["Correo"] == DBNull.Value ? "" : Convert.ToString(rd["Correo"]),
-                            Telefono = rd["Telefono"] == DBNull.Value ? "" : Convert.ToString(rd["Telefono"]),
-                            Direccion = rd["Direccion"] == DBNull.Value ? "" : Convert.ToString(rd["Direccion"]),
-                            EstadoKey = rd["EstadoKey"] == DBNull.Value ? (int?)null : Convert.ToInt32(rd["EstadoKey"]),
-                            EstadoNombre = rd["EstadoNombre"] == DBNull.Value ? "" : Convert.ToString(rd["EstadoNombre"]),
-                            EsActivo = rd["EsActivo"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(rd["EsActivo"]),
-                        };
-                    }
-                }
-            }
-
-
-            public ClienteDetalleVM Actualizar(string cedula, string nombres, string apellidos, string correo, string telefono, string direccion, int? estadoKey)
-            {
-                using (var cn = new SqlConnection(_cs))
-                using (var cmd = new SqlCommand("crm.usp_Cliente_Actualizar", cn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.NVarChar, 30) { Value = cedula });
-                    cmd.Parameters.Add(new SqlParameter("@Nombres", SqlDbType.NVarChar, 120) { Value = (object)(string.IsNullOrWhiteSpace(nombres) ? DBNull.Value : (object)nombres) });
-                    cmd.Parameters.Add(new SqlParameter("@Apellidos", SqlDbType.NVarChar, 120) { Value = (object)(string.IsNullOrWhiteSpace(apellidos) ? DBNull.Value : (object)apellidos) });
-                    cmd.Parameters.Add(new SqlParameter("@Correo", SqlDbType.NVarChar, 220) { Value = (object)(string.IsNullOrWhiteSpace(correo) ? DBNull.Value : (object)correo) });
-                    cmd.Parameters.Add(new SqlParameter("@Telefono", SqlDbType.NVarChar, 30) { Value = (object)(string.IsNullOrWhiteSpace(telefono) ? DBNull.Value : (object)telefono) });
-                    cmd.Parameters.Add(new SqlParameter("@Direccion", SqlDbType.NVarChar, 220) { Value = (object)(string.IsNullOrWhiteSpace(direccion) ? DBNull.Value : (object)direccion) });
-                    cmd.Parameters.Add(new SqlParameter("@EstadoKey", SqlDbType.Int) { Value = (object)(estadoKey ?? (int?)null) ?? DBNull.Value });
-
-                    cn.Open();
-
-                    using (var rd = cmd.ExecuteReader())
-                    {
-                        if (!rd.Read()) return null;
-
-                        return new ClienteDetalleVM
-                        {
-                            Cedula = rd["Cedula"] == DBNull.Value ? "" : Convert.ToString(rd["Cedula"]),
-                            Nombres = rd["Nombres"] == DBNull.Value ? "" : Convert.ToString(rd["Nombres"]),
-                            Apellidos = rd["Apellidos"] == DBNull.Value ? "" : Convert.ToString(rd["Apellidos"]),
-                            Cliente = rd["Cliente"] == DBNull.Value ? "" : Convert.ToString(rd["Cliente"]),
-                            Correo = rd["Correo"] == DBNull.Value ? "" : Convert.ToString(rd["Correo"]),
-                            Telefono = rd["Telefono"] == DBNull.Value ? "" : Convert.ToString(rd["Telefono"]),
-                            Direccion = rd["Direccion"] == DBNull.Value ? "" : Convert.ToString(rd["Direccion"]),
-                            EstadoKey = rd["EstadoKey"] == DBNull.Value ? (int?)null : Convert.ToInt32(rd["EstadoKey"]),
-                            EstadoNombre = rd["EstadoNombre"] == DBNull.Value ? "" : Convert.ToString(rd["EstadoNombre"]),
-                            EsActivo = rd["EsActivo"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(rd["EsActivo"]),
-                        };
-                    }
-                }
-            }
-        }
-
-        private void txt_Nombre_Clientes_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // =======================
+        // Validaciones (mantengo las tuyas)
+        // =======================
         private void txt_Cedula_Cliente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true; 
-            }
+                e.Handled = true;
         }
 
         private void txt_Telefono_Clientes_KeyPress(object sender, KeyPressEventArgs e)
@@ -714,12 +411,10 @@ namespace Union_Formularios_SISV.Forms
                     e.Handled = true;
             }
         }
+
         private void txt_Telefono_Clientes_Validating(object sender, CancelEventArgs e)
         {
             string tel = (txt_Telefono_Clientes.Text ?? "").Trim();
-
-            // Si quieres permitir vacío, descomenta estas 2 líneas:
-            // if (string.IsNullOrWhiteSpace(tel)) { txt_Telefono_Clientes.BackColor = Color.White; return; }
 
             if (!EsTelefonoEcuador(tel, out string msg))
             {

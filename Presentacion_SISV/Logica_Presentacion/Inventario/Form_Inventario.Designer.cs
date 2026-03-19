@@ -56,7 +56,6 @@
             this.txt_Codigo_Producto = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lbl_Cod_Producto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_Detalle_Factura = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel15 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -97,7 +96,6 @@
             this.guna2GradientPanel2.BorderRadius = 10;
             this.guna2GradientPanel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel5);
-            this.guna2GradientPanel2.Controls.Add(this.lbl_Cod_Producto);
             this.guna2GradientPanel2.Controls.Add(this.label1);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -555,20 +553,6 @@
             this.label8.Text = "Código";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbl_Cod_Producto
-            // 
-            this.lbl_Cod_Producto.AutoSize = true;
-            this.lbl_Cod_Producto.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Cod_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cod_Producto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Cod_Producto.Location = new System.Drawing.Point(533, 18);
-            this.lbl_Cod_Producto.Name = "lbl_Cod_Producto";
-            this.lbl_Cod_Producto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_Cod_Producto.Size = new System.Drawing.Size(77, 18);
-            this.lbl_Cod_Producto.TabIndex = 49;
-            this.lbl_Cod_Producto.Text = "PRD-0001";
-            this.lbl_Cod_Producto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -909,7 +893,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Codigo_Producto;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lbl_Cod_Producto;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GradientPanel Panel_Detalle_Factura;
         private System.Windows.Forms.Label lbl_Num_Resultados_Productos;
@@ -945,5 +928,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2Button btn_Limpiar_Productos;
+
+
     }
 }

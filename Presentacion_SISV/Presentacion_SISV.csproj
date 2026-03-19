@@ -90,6 +90,24 @@
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.8.0.3\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MigraDoc.DocumentObjectModel, Version=6.2.4.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>..\packages\PDFsharp-MigraDoc-GDI.6.2.4\lib\net462\MigraDoc.DocumentObjectModel.dll</HintPath>
     </Reference>
@@ -179,6 +197,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContextSISV.cs" />
+    <Compile Include="Controls\Clientes\ClienteCardSelectedEventArgs.cs" />
+    <Compile Include="Controls\Consulta_Facturas\ConsultaFacTaskCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Consulta_Facturas\ConsultaFacTaskCard.Designer.cs">
+      <DependentUpon>ConsultaFacTaskCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Consulta_Facturas\FacturaSelectedEventArgs.cs" />
+    <Compile Include="Controls\Consulta_Facturas\Factura_ReportViewer\dsFacturas.cs">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Consulta_Facturas\Factura_ReportViewer\dsFacturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Inventario\Control_Proveedores_UC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,7 +281,20 @@
     <Compile Include="Controls\Reportes\Form_SeleccionarClienteTecnico.Designer.cs">
       <DependentUpon>Form_SeleccionarClienteTecnico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Reportes_Navegacion.cs" />
+    <Compile Include="Controls\Reportes\Reportes_Navegacion.cs" />
+    <Compile Include="Controls\Servicios\ServicioTaskCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Servicios\ServicioTaskCard.Designer.cs">
+      <DependentUpon>ServicioTaskCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Usuarios\Permisos\PermissionContext.cs" />
+    <Compile Include="Controls\Usuarios\Permisos\UC_GestionPermisos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Usuarios\Permisos\UC_GestionPermisos.Designer.cs">
+      <DependentUpon>UC_GestionPermisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Usuarios\UsuariosTaskCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -266,12 +313,8 @@
     <Compile Include="Controls\Ventas\FacturaItemCard.Designer.cs">
       <DependentUpon>FacturaItemCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logica_Presentacion\Administracion\Form_Config.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Logica_Presentacion\Administracion\Form_Config.Designer.cs">
-      <DependentUpon>Form_Config.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Logica_Presentacion\Administracion\IUsuariosView.cs" />
+    <Compile Include="Logica_Presentacion\Administracion\UsuariosPresenter.cs" />
     <Compile Include="Logica_Presentacion\Autenticacion\Form_CreatePK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +327,7 @@
     <Compile Include="Controls\Clientes\ClientTaskCard.Designer.cs">
       <DependentUpon>ClientTaskCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica_Presentacion\Clientes\ClientesPresenter.cs" />
     <Compile Include="Logica_Presentacion\Clientes\Form_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +340,13 @@
     <Compile Include="Logica_Presentacion\Autenticacion\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica_Presentacion\Clientes\IClientesView.cs" />
+    <Compile Include="Logica_Presentacion\Facturacion\Consulta\FacturaConsultaPresenter.cs" />
+    <Compile Include="Logica_Presentacion\Facturacion\Consulta\IFacturaConsultaView.cs" />
+    <Compile Include="Logica_Presentacion\Inventario\IInventarioView.cs" />
+    <Compile Include="Logica_Presentacion\Inventario\InventarioPresenter.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Equipos\IOrdenesEquiposView.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Equipos\OrdenesEquiposPresenter.cs" />
     <Compile Include="Logica_Presentacion\Ordenes de Servicio\Form_Ordenes_Servicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +365,14 @@
     <Compile Include="Logica_Presentacion\Autenticacion\Form_Recu.Designer.cs">
       <DependentUpon>Form_Recu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Notificacion\IOrdenesNotificacionView.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Notificacion\OrdenesNotificacionPresenter.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Recepcion\IOrdenesRecepcionView.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Recepcion\OrdenesRecepcionPresenter.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Shared\ISeleccionClienteView.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Shared\ISeleccionOrdenView.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Shared\SeleccionClientePresenter.cs" />
+    <Compile Include="Logica_Presentacion\Ordenes de Servicio\Shared\SeleccionOrdenPresenter.cs" />
     <Compile Include="Logica_Presentacion\Principal\Form_Resumen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -362,6 +421,8 @@
     <Compile Include="Logica_Presentacion\Facturacion\Form_Facturacion_Consulta.Designer.cs">
       <DependentUpon>Form_Facturacion_Consulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica_Presentacion\Proveedores\IProveedoresView.cs" />
+    <Compile Include="Logica_Presentacion\Proveedores\ProveedoresPresenter.cs" />
     <Compile Include="Logica_Presentacion\Reportes\Helpers\ExcelExportHelper.cs" />
     <Compile Include="Logica_Presentacion\Reportes\Helpers\PdfExportHelper.cs" />
     <Compile Include="Logica_Presentacion\Reportes\UC_Report_Cliente.cs">
@@ -388,8 +449,21 @@
     <Compile Include="Logica_Presentacion\Reportes\Form_Reportes.Designer.cs">
       <DependentUpon>Form_Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica_Presentacion\Servicio\Form_Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logica_Presentacion\Servicio\Form_Servicio.Designer.cs">
+      <DependentUpon>Form_Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logica_Presentacion\Servicio\IServicioView.cs" />
+    <Compile Include="Logica_Presentacion\Servicio\ServicioPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Controls\Consulta_Facturas\ConsultaFacTaskCard.resx">
+      <DependentUpon>ConsultaFacTaskCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Consulta_Facturas\Factura_ReportViewer\FacturaReport.rdlc" />
     <EmbeddedResource Include="Controls\Inventario\Control_Proveedores_UC.resx">
       <DependentUpon>Control_Proveedores_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +497,12 @@
     <EmbeddedResource Include="Controls\Reportes\Form_SeleccionarClienteTecnico.resx">
       <DependentUpon>Form_SeleccionarClienteTecnico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Servicios\ServicioTaskCard.resx">
+      <DependentUpon>ServicioTaskCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Usuarios\Permisos\UC_GestionPermisos.resx">
+      <DependentUpon>UC_GestionPermisos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Usuarios\UsuariosTaskCard.resx">
       <DependentUpon>UsuariosTaskCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,9 +511,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Ventas\FacturaItemCard.resx">
       <DependentUpon>FacturaItemCard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Logica_Presentacion\Administracion\Form_Config.resx">
-      <DependentUpon>Form_Config.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logica_Presentacion\Autenticacion\Form_CreatePK.resx">
       <DependentUpon>Form_CreatePK.cs</DependentUpon>
@@ -492,6 +569,9 @@
     <EmbeddedResource Include="Logica_Presentacion\Reportes\UC_Report_Servicio.resx">
       <DependentUpon>UC_Report_Servicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Logica_Presentacion\Servicio\Form_Servicio.resx">
+      <DependentUpon>Form_Servicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -502,6 +582,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Controls\Consulta_Facturas\Factura_ReportViewer\dsFacturas.xsc">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="Controls\Consulta_Facturas\Factura_ReportViewer\dsFacturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFacturas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Controls\Consulta_Facturas\Factura_ReportViewer\dsFacturas.xss">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -538,11 +629,24 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logica_Presentacion\Configuracion\Maestro_Datos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icon_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

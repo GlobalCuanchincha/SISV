@@ -1,112 +1,138 @@
 ﻿using Capa_Corte_Transversal.Helpers;
+using Dominio_SISV.Services.OrdenesServicio;
 using System;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Union_Formularios_SISV.Controls.Ordenes_de_Servicio;
+using Union_Formularios_SISV.Logica_Presentacion.Ordenes_de_Servicio.Shared;
 
 namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
 {
-    public partial class Seleccion_Orden : Form
+    public partial class Seleccion_Orden : Form, ISeleccionOrdenView
     {
-        private object _session;
-        private int _usuarioId = 0;
+        private readonly object _session;
+        private readonly Timer _debounce = new Timer { Interval = 250 };
+        private readonly SeleccionOrdenPresenter _presenter;
+        private bool _isLoading;
 
         public int OrdenServicioIDSeleccionado { get; private set; } = 0;
 
-        private readonly Timer _debounce = new Timer { Interval = 250 };
-
-        public Seleccion_Orden()
-        {
-            InitializeComponent();
-            Shown += async (s, e) => await InicializarAsync();
-        }
+        public Seleccion_Orden() : this(null) { }
 
         public Seleccion_Orden(object session)
         {
             InitializeComponent();
+
             _session = session;
+            _presenter = new SeleccionOrdenPresenter(this, new OrdenesNotificacionService());
+
             Shown += async (s, e) => await InicializarAsync();
         }
 
-        private async Task InicializarAsync()
+        private async System.Threading.Tasks.Task InicializarAsync()
         {
-            if (_session == null) _session = GetSessionFromPrincipal();
-            _usuarioId = TryGetUsuarioSesionId(_session);
-            if (_usuarioId <= 0) _usuarioId = 1;
+            _isLoading = true;
 
-            // Combo filtro
-            var dtFiltro = new DataTable();
-            dtFiltro.Columns.Add("Value", typeof(string));
-            dtFiltro.Columns.Add("Text", typeof(string));
-
-            dtFiltro.Rows.Add("ORDEN", "Orden");
-            dtFiltro.Rows.Add("CLIENTE", "Cliente");
-            dtFiltro.Rows.Add("CORREO", "Correo");
-            dtFiltro.Rows.Add("EQUIPO", "Equipo");
-            dtFiltro.Rows.Add("ESTADO", "Estado");
-
-            cmbox_Filtrarpor_Ordenes.DataSource = dtFiltro;
-            cmbox_Filtrarpor_Ordenes.ValueMember = "Value";
-            cmbox_Filtrarpor_Ordenes.DisplayMember = "Text";
-            cmbox_Filtrarpor_Ordenes.SelectedIndex = 0;
-
-            // Debounce buscador
             _debounce.Tick += async (s, e) =>
             {
                 _debounce.Stop();
-                await CargarOrdenesAsync();
+                await _presenter.BuscarAsync();
             };
 
             txt_Buscador_Items_Ordenes.TextChanged += (s, e) =>
             {
+                if (_isLoading) return;
                 _debounce.Stop();
                 _debounce.Start();
             };
 
-            cmbox_Filtrarpor_Ordenes.SelectedIndexChanged += async (s, e) => await CargarOrdenesAsync();
+            cmbox_Filtrarpor_Ordenes.SelectedIndexChanged += async (s, e) =>
+            {
+                if (_isLoading) return;
+                await _presenter.BuscarAsync();
+            };
 
-            await CargarOrdenesAsync();
+            _isLoading = false;
+            await _presenter.InitializeAsync();
         }
 
-        private async Task CargarOrdenesAsync()
+        // ========= ISeleccionOrdenView =========
+
+        public int UsuarioId
         {
-            string filtro = cmbox_Filtrarpor_Ordenes.SelectedValue?.ToString();
-            string busqueda = (txt_Buscador_Items_Ordenes.Text ?? "").Trim();
-
-            var dt = await ExecDataTableAsync("ops.usp_OrdenServicio_Listar_Notificacion", cmd =>
+            get
             {
-                cmd.Parameters.AddWithValue("@Filtro", string.IsNullOrWhiteSpace(filtro) ? (object)DBNull.Value : filtro);
-                cmd.Parameters.AddWithValue("@Busqueda", string.IsNullOrWhiteSpace(busqueda) ? (object)DBNull.Value : busqueda);
-            });
+                try
+                {
+                    if (_session == null) return 0;
+                    return SessionHelper.GetUsuarioID(_session);
+                }
+                catch { return 0; }
+            }
+        }
 
-            lbl_OrdenesDisponibles_Ordenes.Text = $"Órdenes disponibles: {dt.Rows.Count}";
+        public string TextoBusqueda => (txt_Buscador_Items_Ordenes.Text ?? "").Trim();
+
+        public string FiltroSeleccionado
+        {
+            get
+            {
+                string v = Convert.ToString(cmbox_Filtrarpor_Ordenes.SelectedValue);
+                return string.IsNullOrWhiteSpace(v) ? "ORDEN" : v;
+            }
+        }
+
+        public void BindFiltros(DataTable dt)
+        {
+            if (dt == null) dt = new DataTable();
+
+            cmbox_Filtrarpor_Ordenes.DataSource = dt;
+            cmbox_Filtrarpor_Ordenes.ValueMember = "Value";
+            cmbox_Filtrarpor_Ordenes.DisplayMember = "Text";
+
+            if (cmbox_Filtrarpor_Ordenes.Items.Count > 0)
+                cmbox_Filtrarpor_Ordenes.SelectedIndex = 0;
+        }
+
+        public void RenderOrdenes(DataTable dt, int? selectedOrdenId)
+        {
+            if (dt == null) dt = new DataTable();
 
             flowSeleccionOrdenes.SuspendLayout();
             flowSeleccionOrdenes.Controls.Clear();
+
             foreach (DataRow r in dt.Rows)
             {
-                int ordenId = Convert.ToInt32(r["OrdenServicioID"]);
+                int ordenId = ToInt(r, "OrdenServicioID");
+                if (ordenId <= 0) continue;
 
-                var card = new OrdenTaskCard();
+                var card = new OrdenTaskCard
+                {
+                    Width = Math.Max(200, flowSeleccionOrdenes.ClientSize.Width - 22)
+                };
 
                 card.Bind(
                     ordenServicioId: ordenId,
-                    codigo: Convert.ToString(r["CodigoOrden"]),
-                    cliente: Convert.ToString(r["Cliente"]),
-                    correo: Convert.ToString(r["Correo"]),
-                    equipo: Convert.ToString(r["Equipo"]),
-                    estado: Convert.ToString(r["Estado"])
+                    codigo: ToStr(r, "CodigoOrden"),
+                    cliente: ToStr(r, "Cliente"),
+                    correo: ToStr(r, "Correo"),
+                    equipo: ToStr(r, "Equipo"),
+                    estado: ToStr(r, "Estado")
                 );
+
+                if (card.GetType().GetMethod("SetSelected") != null)
+                {
+                    try
+                    {
+                        card.GetType().GetMethod("SetSelected")
+                            ?.Invoke(card, new object[] { selectedOrdenId.HasValue && selectedOrdenId.Value == ordenId });
+                    }
+                    catch { }
+                }
 
                 card.CardClicked += (s, e) =>
                 {
-                    OrdenServicioIDSeleccionado = ordenId;
-                    DialogResult = DialogResult.OK;
-                    Close();
+                    _presenter.SeleccionarOrden(ordenId);
                 };
 
                 flowSeleccionOrdenes.Controls.Add(card);
@@ -115,70 +141,55 @@ namespace Union_Formularios_SISV.Forms.Ordenes_de_Servicio
             flowSeleccionOrdenes.ResumeLayout();
         }
 
-        // =========================
-        // Sesión helpers
-        // =========================
-        private object GetSessionFromPrincipal()
+        public void SetResultados(int total)
         {
-            try
-            {
-                var principal = Application.OpenForms.OfType<Form_Panel_Principal>().FirstOrDefault();
-                if (principal == null) return null;
-
-                var field = principal.GetType().GetField("_session",
-                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-
-                return field != null ? field.GetValue(principal) : null;
-            }
-            catch { return null; }
+            lbl_OrdenesDisponibles_Ordenes.Text = $"Órdenes disponibles: {total}";
         }
 
-        private int TryGetUsuarioSesionId(object session)
+        public void SetOrdenSeleccionada(int ordenServicioId)
         {
-            try
-            {
-                if (session == null) return 0;
-                return SessionHelper.GetUsuarioID(session);
-            }
-            catch { return 0; }
+            OrdenServicioIDSeleccionado = ordenServicioId;
         }
 
-        // =========================
-        // DB helper
-        // =========================
-        private static string GetConnString()
+        public void CloseWithOk()
         {
-            var cs = ConfigurationManager.ConnectionStrings["SISV"]?.ConnectionString
-                  ?? ConfigurationManager.ConnectionStrings["SISV_BD"]?.ConnectionString
-                  ?? ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
-
-            if (!string.IsNullOrWhiteSpace(cs)) return cs;
-
-            if (ConfigurationManager.ConnectionStrings.Count > 0)
-                return ConfigurationManager.ConnectionStrings[0].ConnectionString;
-
-            throw new Exception("No se encontró ConnectionString en App.config.");
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
-        private static async Task<DataTable> ExecDataTableAsync(string sp, Action<SqlCommand> fill)
+        public void CloseView()
         {
-            var dt = new DataTable();
+            BeginInvoke(new Action(() => Close()));
+        }
 
-            using (var cn = new SqlConnection(GetConnString()))
-            using (var cmd = new SqlCommand(sp, cn))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                fill?.Invoke(cmd);
+        public void ShowWarning(string msg)
+        {
+            MessageBox.Show(msg, "SISV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
 
-                await cn.OpenAsync();
-                using (var rd = await cmd.ExecuteReaderAsync())
-                {
-                    if (rd.FieldCount > 0)
-                        dt.Load(rd);
-                }
-            }
+        public void ShowError(string msg, Exception ex = null)
+        {
+            MessageBox.Show(
+                string.IsNullOrWhiteSpace(msg) ? "Ocurrió un error al procesar la operación." : msg,
+                "SISV",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
+        }
 
-            return dt;
+        // ========= Helpers =========
+
+        private static int ToInt(DataRow r, string col)
+        {
+            return r.Table.Columns.Contains(col) && r[col] != DBNull.Value
+                ? Convert.ToInt32(r[col])
+                : 0;
+        }
+
+        private static string ToStr(DataRow r, string col)
+        {
+            return r.Table.Columns.Contains(col) && r[col] != DBNull.Value
+                ? Convert.ToString(r[col])
+                : "";
         }
     }
 }

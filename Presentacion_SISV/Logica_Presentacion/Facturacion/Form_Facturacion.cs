@@ -1,4 +1,5 @@
 ﻿using Capa_Corte_Transversal.Loggin;
+using Union_Formularios_SISV.Controls.Usuarios.Permisos;
 using Dominio_SISV.DTOs;
 using Dominio_SISV.DTOs.Facturacion;
 using Dominio_SISV.Services.Facturacion;
@@ -29,6 +30,55 @@ namespace Union_Formularios_SISV.Forms.Ventas
             new Dictionary<string, FacturaItemCard>(StringComparer.OrdinalIgnoreCase);
 
         private IFacturacionService _facturacionService;
+        private PermissionContext Perms
+        {
+            get
+            {
+                return new PermissionContext(Session.Permisos ?? new HashSet<string>(StringComparer.OrdinalIgnoreCase));
+            }
+        }
+
+        private void ApplyPermisosFacturacionUI()
+        {
+            bool canEmitir = Perms.Has("BILL_FACTURA_EMITIR");
+            bool canConsultar = Perms.HasAny("BILL_FACTURA_CONSULTAR", "BILL_FACTURA_ANULAR");
+            bool canAcceso = Perms.HasAny("BILL_FACTURA_ACCESO", "BILL_FACTURA_CONSULTAR", "BILL_FACTURA_EMITIR", "BILL_FACTURA_ANULAR");
+
+            if (!canAcceso)
+            {
+                MessageBox.Show("Acceso denegado. No tiene permisos para Facturación.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Enabled = false;
+                return;
+            }
+
+            if (btn_Consultar_View != null)
+                btn_Consultar_View.Visible = canConsultar;
+
+            SetEmitUIEnabled(canEmitir);
+        }
+
+        private void SetEmitUIEnabled(bool enabled)
+        {
+            Control[] controls =
+            {
+        txt_cedula_VentasFacturas,
+        txt_buscar_VentasFacturas,
+        cmbox_tipo_VentasFacturas,
+        flowCatalog,
+        btn_añadir_VentasFacturas,
+        flowDetalleItems,
+        cmbox_descuento_VentasFacturas,
+        btn_aplicar_descuento_VentasFacturas,
+        cmbox_TipoPago_Factura,
+        btn_Guardar_Factura_VentasFacturas,
+        btn_Nueva_Factura_VentasFacturas
+    };
+
+            for (int i = 0; i < controls.Length; i++)
+                if (controls[i] != null)
+                    controls[i].Enabled = enabled;
+        }
 
         public Form_Facturacion() : this(null)
         {
@@ -139,10 +189,17 @@ namespace Union_Formularios_SISV.Forms.Ventas
             LoadCatalogFromProcedures();
             LoadTiposPago();
             ResetFacturaNueva();
+            ApplyPermisosFacturacionUI();
         }
 
         private void btn_Consultar_View_Click(object sender, EventArgs e)
         {
+            if (!Perms.HasAny("BILL_FACTURA_CONSULTAR", "BILL_FACTURA_ANULAR"))
+            {
+                MessageBox.Show("No tiene permisos para consultar/anular facturas.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             var main = Application.OpenForms.OfType<Form_Panel_Principal>().FirstOrDefault();
             if (main == null)
             {
@@ -617,6 +674,13 @@ namespace Union_Formularios_SISV.Forms.Ventas
 
         private void btn_Guardar_Factura_VentasFacturas_Click(object sender, EventArgs e)
         {
+            if (!Perms.Has("BILL_FACTURA_EMITIR"))
+            {
+                MessageBox.Show("No tiene permisos para emitir facturas.", "SISV",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var items = GetDetalleFacturaItems();
 
             if (items.Count == 0)

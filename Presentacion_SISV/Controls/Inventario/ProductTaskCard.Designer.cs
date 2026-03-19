@@ -133,7 +133,7 @@
             this.Panel_Estado_Producto_USC.Controls.Add(this.lbl_Estado_USC);
             this.Panel_Estado_Producto_USC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
             this.Panel_Estado_Producto_USC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(238)))));
-            this.Panel_Estado_Producto_USC.Location = new System.Drawing.Point(685, 17);
+            this.Panel_Estado_Producto_USC.Location = new System.Drawing.Point(700, 17);
             this.Panel_Estado_Producto_USC.Name = "Panel_Estado_Producto_USC";
             this.Panel_Estado_Producto_USC.ShadowDecoration.BorderRadius = 20;
             this.Panel_Estado_Producto_USC.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -178,7 +178,7 @@
             this.Panel_ProductTask.Controls.Add(this.lbl_Proveedor_Producto_USC);
             this.Panel_ProductTask.Location = new System.Drawing.Point(0, 0);
             this.Panel_ProductTask.Name = "Panel_ProductTask";
-            this.Panel_ProductTask.Size = new System.Drawing.Size(783, 66);
+            this.Panel_ProductTask.Size = new System.Drawing.Size(812, 66);
             this.Panel_ProductTask.TabIndex = 74;
             // 
             // ProductTaskCard

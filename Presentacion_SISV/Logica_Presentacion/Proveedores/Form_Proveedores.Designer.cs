@@ -31,8 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Proveedores));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btn_Actualizar_Proveedor = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_Limpiar_Proveedor = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Limpiar_Proveedor = new Guna.UI2.WinForms.Guna2Button();
             this.txt_UltimaAct_Proveedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbox_Estado_Proveedor = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -104,8 +103,7 @@
             this.guna2GradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientPanel5.Controls.Add(this.btn_Actualizar_Proveedor);
-            this.guna2GradientPanel5.Controls.Add(this.txt_Limpiar_Proveedor);
+            this.guna2GradientPanel5.Controls.Add(this.btn_Limpiar_Proveedor);
             this.guna2GradientPanel5.Controls.Add(this.txt_UltimaAct_Proveedor);
             this.guna2GradientPanel5.Controls.Add(this.label10);
             this.guna2GradientPanel5.Controls.Add(this.cmbox_Estado_Proveedor);
@@ -132,51 +130,28 @@
             this.guna2GradientPanel5.Size = new System.Drawing.Size(585, 541);
             this.guna2GradientPanel5.TabIndex = 64;
             // 
-            // btn_Actualizar_Proveedor
+            // btn_Limpiar_Proveedor
             // 
-            this.btn_Actualizar_Proveedor.Animated = true;
-            this.btn_Actualizar_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Actualizar_Proveedor.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Actualizar_Proveedor.BorderRadius = 15;
-            this.btn_Actualizar_Proveedor.BorderThickness = 1;
-            this.btn_Actualizar_Proveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Actualizar_Proveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Actualizar_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Actualizar_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Actualizar_Proveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btn_Actualizar_Proveedor.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Actualizar_Proveedor.ForeColor = System.Drawing.Color.Black;
-            this.btn_Actualizar_Proveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.btn_Actualizar_Proveedor.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Actualizar_Proveedor.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Actualizar_Proveedor.Location = new System.Drawing.Point(210, 470);
-            this.btn_Actualizar_Proveedor.Name = "btn_Actualizar_Proveedor";
-            this.btn_Actualizar_Proveedor.Size = new System.Drawing.Size(166, 44);
-            this.btn_Actualizar_Proveedor.TabIndex = 99;
-            this.btn_Actualizar_Proveedor.Text = "Actualizar";
-            // 
-            // txt_Limpiar_Proveedor
-            // 
-            this.txt_Limpiar_Proveedor.Animated = true;
-            this.txt_Limpiar_Proveedor.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Limpiar_Proveedor.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_Limpiar_Proveedor.BorderRadius = 15;
-            this.txt_Limpiar_Proveedor.BorderThickness = 1;
-            this.txt_Limpiar_Proveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.txt_Limpiar_Proveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.txt_Limpiar_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.txt_Limpiar_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.txt_Limpiar_Proveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.txt_Limpiar_Proveedor.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Limpiar_Proveedor.ForeColor = System.Drawing.Color.Black;
-            this.txt_Limpiar_Proveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.txt_Limpiar_Proveedor.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txt_Limpiar_Proveedor.ImageSize = new System.Drawing.Size(28, 28);
-            this.txt_Limpiar_Proveedor.Location = new System.Drawing.Point(382, 470);
-            this.txt_Limpiar_Proveedor.Name = "txt_Limpiar_Proveedor";
-            this.txt_Limpiar_Proveedor.Size = new System.Drawing.Size(181, 44);
-            this.txt_Limpiar_Proveedor.TabIndex = 98;
-            this.txt_Limpiar_Proveedor.Text = "Limpiar";
+            this.btn_Limpiar_Proveedor.Animated = true;
+            this.btn_Limpiar_Proveedor.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Limpiar_Proveedor.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Limpiar_Proveedor.BorderRadius = 15;
+            this.btn_Limpiar_Proveedor.BorderThickness = 1;
+            this.btn_Limpiar_Proveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpiar_Proveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpiar_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Limpiar_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Limpiar_Proveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.btn_Limpiar_Proveedor.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Limpiar_Proveedor.ForeColor = System.Drawing.Color.Black;
+            this.btn_Limpiar_Proveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.btn_Limpiar_Proveedor.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Limpiar_Proveedor.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_Limpiar_Proveedor.Location = new System.Drawing.Point(311, 470);
+            this.btn_Limpiar_Proveedor.Name = "btn_Limpiar_Proveedor";
+            this.btn_Limpiar_Proveedor.Size = new System.Drawing.Size(252, 44);
+            this.btn_Limpiar_Proveedor.TabIndex = 98;
+            this.btn_Limpiar_Proveedor.Text = "Limpiar";
             // 
             // txt_UltimaAct_Proveedor
             // 
@@ -188,15 +163,14 @@
             this.txt_UltimaAct_Proveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_UltimaAct_Proveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_UltimaAct_Proveedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_UltimaAct_Proveedor.Enabled = false;
             this.txt_UltimaAct_Proveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_UltimaAct_Proveedor.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txt_UltimaAct_Proveedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_UltimaAct_Proveedor.Location = new System.Drawing.Point(308, 368);
             this.txt_UltimaAct_Proveedor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_UltimaAct_Proveedor.MaxLength = 13;
             this.txt_UltimaAct_Proveedor.Name = "txt_UltimaAct_Proveedor";
             this.txt_UltimaAct_Proveedor.PlaceholderText = "00/00 00:00";
+            this.txt_UltimaAct_Proveedor.ReadOnly = true;
             this.txt_UltimaAct_Proveedor.SelectedText = "";
             this.txt_UltimaAct_Proveedor.Size = new System.Drawing.Size(255, 48);
             this.txt_UltimaAct_Proveedor.TabIndex = 97;
@@ -258,7 +232,6 @@
             this.txt_Direccion_Proveedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Direccion_Proveedor.Location = new System.Drawing.Point(26, 282);
             this.txt_Direccion_Proveedor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_Direccion_Proveedor.MaxLength = 10;
             this.txt_Direccion_Proveedor.Name = "txt_Direccion_Proveedor";
             this.txt_Direccion_Proveedor.PlaceholderText = "Av. SiempreViva, Guayaquil";
             this.txt_Direccion_Proveedor.SelectedText = "";
@@ -293,7 +266,6 @@
             this.txt_Correo_Proveedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Correo_Proveedor.Location = new System.Drawing.Point(26, 200);
             this.txt_Correo_Proveedor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_Correo_Proveedor.MaxLength = 10;
             this.txt_Correo_Proveedor.Name = "txt_Correo_Proveedor";
             this.txt_Correo_Proveedor.PlaceholderText = "proveedor@correo.com";
             this.txt_Correo_Proveedor.SelectedText = "";
@@ -359,9 +331,9 @@
             this.btn_Registrar_Proveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
             this.btn_Registrar_Proveedor.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_Registrar_Proveedor.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_Registrar_Proveedor.Location = new System.Drawing.Point(26, 470);
+            this.btn_Registrar_Proveedor.Location = new System.Drawing.Point(30, 470);
             this.btn_Registrar_Proveedor.Name = "btn_Registrar_Proveedor";
-            this.btn_Registrar_Proveedor.Size = new System.Drawing.Size(166, 44);
+            this.btn_Registrar_Proveedor.Size = new System.Drawing.Size(252, 44);
             this.btn_Registrar_Proveedor.TabIndex = 64;
             this.btn_Registrar_Proveedor.Text = "Registrar";
             // 
@@ -428,7 +400,6 @@
             this.txt_Nombre_Proveedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Nombre_Proveedor.Location = new System.Drawing.Point(26, 40);
             this.txt_Nombre_Proveedor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_Nombre_Proveedor.MaxLength = 10;
             this.txt_Nombre_Proveedor.Name = "txt_Nombre_Proveedor";
             this.txt_Nombre_Proveedor.PlaceholderText = "Distribuidor Manzano";
             this.txt_Nombre_Proveedor.SelectedText = "";
@@ -805,13 +776,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Direccion_Proveedor;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txt_Correo_Proveedor;
-        private Guna.UI2.WinForms.Guna2Button txt_Limpiar_Proveedor;
+        private Guna.UI2.WinForms.Guna2Button btn_Limpiar_Proveedor;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel16;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.FlowLayoutPanel flowProveedor;
-        private Guna.UI2.WinForms.Guna2Button btn_Actualizar_Proveedor;
     }
 }
